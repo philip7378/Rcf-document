@@ -1,0 +1,187 @@
+==============================================================================
+PROTOCOL #22 MACHINE AUDIT LOG -- RUN-ID R37
+Target  : external audit of v3.7.1 (AM-23a/AM-24) -- check-the-checker layer
+Lineage : v3.7.1 (R36: 23/2/8) -> external audit (C1-C4) -> R37
+Engine  : SI-2019 / CODATA-2022 anchors; numpy spin-j sector algebra;
+          crossover alpha-location fits.
+Date    : 2026-09-02
+==============================================================================
+
+BLOCK E -- ERRATUM PRINTINGS (audit C4) + GRAVITY ROUND-TRIP (T-6/M4)
+------------------------------------------------------------------------------
+[PASS] E1  regression R36-E1: gamma = c/(8 e ell_Pl) = 8.5296e41 s^-1
+       machine = 8.5296e+41 s^-1 (sub-Planckian, gamma/omega_Pl = 1/(8e) = 0.045985)
+
+[PASS] E2  regression R36-E4: BOX printing ell0^5 (4e gamma)^3/(4 hbar) = ell0^2 c^3/(4 hbar)
+       rel = 3.9e-16 -- the box expansion is the correct one
+
+[FAIL] E3  audit C4: LEDGER printing ell0^3 (4e gamma)^3/(4 hbar) as G_eff
+       ledger/identity = 9.570e+68  (ell0^-2 = 9.570e+68)
+       dimensional analysis: [ell0^3 (4e gamma)^3 / hbar] = m kg^-1 s^-2, but
+       [G] = m^3 kg^-1 s^-2 -> the ell0^3 printing fails even dimensional analysis
+       (R35 had already machine-flagged it 'off by m^2'). IF the F46-2 ledger text
+       and register entry print ell0^3 as the audit quotes, C4 is CONFIRMED: one
+       erratum, two printings, one right (box), one wrong (ledger). Unify to ell0^5.
+
+[FLAG] E4  standing T-6/M4 (machine-demonstrated): G_eff tracks ANY input G
+       rel.dev of G_eff(G_in) vs G_in for G_in in {0.9G, G, 1.1G}: 2.2e-16, 3.9e-16, 1.8e-16
+       the triad (ell0, gamma, hbar_RCF) is a re-parameterization of (c, G, hbar):
+       ell0 = 2 sqrt(hbar G/c^3); gamma = c/(8 e ell_Pl); c_RCF = c. G enters through
+       ell_Pl and exits through G_eff: a round trip, zero predictive bits.
+       Gravity-coupling closure re-registered [DERIVED] -> [IDENTITY]. T-6/M4 is now
+       total at the coupling level; Target F must test DYNAMICS, not value recovery.
+
+BLOCK W -- COROLLARY 5.1.14 (audit C1; R36 E-3)
+------------------------------------------------------------------------------
+[FAIL] W1  regression R36-W1: LITERAL step-2 weld m_in/m_gr (natural units)
+       machine = 1.555603 at mu1 = 0.41324 vs claimed 1.0000000000 -- the literal line
+       m_gr = L/c^2 vs m_in = sqrt(min L) is FALSE as printed (equality iff mu1 = 1:
+       a unit coincidence). Sharper than the audit's 'tautology': as written it is
+       an ERROR; it becomes a tautology only AFTER the repair map is inserted.
+
+[PASS] W2  regression R36-W2: Phi-repaired weld (m_gr = Phi(L)/c^2, Phi = sqrt)
+       ratio = 1.0000000000 exactly for mu in {0.40, 0.413240, 0.69, 1.44}
+
+[FLAG] W3  audit C1 at the repaired scope: empirical content of the Phi-repaired identity
+       the repaired ratio is IDENTICALLY 1 (d ratio/d mu = 0 over the admissible range):
+       zero mu-empirical content. ALL content sits in the amplitude map Phi, which is
+       INSERTED, not derived. Audit C1 CONFIRMED: single functional + single declared
+       map = definitional identity. Honest open content: (a) CHANNEL AGREEMENT -- do
+       the two coarse-grained projections of L (dynamics channel via mu1/mode burden;
+       curvature channel via C_L/full burden tensor) coincide at finite resolution?
+       (b) COMPOSITE SECTOR -- Theta_00 includes interaction and relational burden
+       while the Thm 4.5.2 single-particle mu1 formula does not; every actual WEP test
+       (Eotvos, MICROSCOPE, Nordtvedt) lives in exactly this sector.
+
+[FLAG] W4  regression R36-W4: R35-G attribution over-extension
+       R35-G certified the inertial leg (Courant-Fischer m^2 = min L) + dimensional image
+       only; the weld attribution in v3.7.1 was over-extended. Register action:
+       attribution lines must name the certified leg. R35 FAILs now named:
+       F-R35-1 = E-1 (gamma 8.534 -> 8.5296e41 s^-1); F-R35-2 = E-2 (l0^3 -> l0^5).
+
+BLOCK F -- THEOREM 2.3.1 / TARGET E (audit C2): THE tau-HAT LAYER BY SECTOR
+------------------------------------------------------------------------------
+[PASS] F2  [j=0.5] operator-norm tau = Q/||Q||: involutory AND closes su(2)
+       involutory = True (spec = [-1.  1.]); closure c = 2.0000, resid = 0.0e+00
+
+[PASS] F3  [j=0.5] spectral-sign tau = sgn(Q): involutory AND closes su(2)
+       involutory = True; closure c = 2.0000, resid = 0.0e+00
+
+[FAIL] F2  [j=1.0] operator-norm tau = Q/||Q||: involutory AND closes su(2)
+       involutory = False (spec = [-1.  0.  1.]); closure c = 1.0000, resid = 8.5e-17
+
+[FAIL] F3  [j=1.0] spectral-sign tau = sgn(Q): involutory AND closes su(2)
+       involutory = False; closure c = 1.0000, resid = 8.4e-16
+
+[FAIL] F2  [j=1.5] operator-norm tau = Q/||Q||: involutory AND closes su(2)
+       involutory = False (spec = [-1.     -0.3333  0.3333  1.    ]); closure c = 0.6667, resid = 1.1e-16
+
+[FAIL] F3  [j=1.5] spectral-sign tau = sgn(Q): involutory AND closes su(2)
+       involutory = True; closure c = -0.0000, resid = 1.0e+00
+
+[FAIL] F2  [j=2.0] operator-norm tau = Q/||Q||: involutory AND closes su(2)
+       involutory = False (spec = [-1.  -0.5  0.   0.5  1. ]); closure c = 0.5000, resid = 1.1e-16
+
+[FAIL] F3  [j=2.0] spectral-sign tau = sgn(Q): involutory AND closes su(2)
+       involutory = False; closure c = 0.2500, resid = 7.5e-01
+
+[PASS] F4  audit C2 / AM-17b no-go: joint kernel of the live tau-algebra (j = 1/2)
+       max common-eigenspace dim over sign choices = 0 -> K_0 = {0}. The unique sector
+       where the tau-hat layer exists is a LIVE Pauli algebra with empty joint
+       kernel: the construction feeds the engine exactly the structure the round-6
+       / AM-17b no-go forbids (live engine => K_0 = empty).
+
+[FLAG] F5  audit C2 synthesis: tau-compatibility layer across THREE conventions
+       conventions: norm = Q/||Q||; casimir = Q/sqrt(j(j+1)) (R36-F8); sign = spectral sgn
+       j= 0.5:  norm-inv= True  casimir-inv=False  sign-inv= True   |  norm-close c=2.000 (res 0e+00)  sign-close c=2.000 (res 0e+00)
+       j= 1.0:  norm-inv=False  casimir-inv=False  sign-inv=False   |  norm-close c=1.000 (res 9e-17)  sign-close c=1.000 (res 8e-16)
+       j= 1.5:  norm-inv=False  casimir-inv=False  sign-inv= True   |  norm-close c=0.667 (res 1e-16)  sign-close c=-0.000 (res 1e+00)
+       j= 2.0:  norm-inv=False  casimir-inv=False  sign-inv=False   |  norm-close c=0.500 (res 1e-16)  sign-close c=0.250 (res 8e-01)
+       the pair (involutory AND live closure) is realizable ONLY at j = 1/2 -- the
+       fundamental irrep. 'Why j = 1/2' is not derived from the cut structure: the
+       irrep selection IS the hardcoded observable choice the theorem claims to
+       eliminate ('ZERO hardcoded primitives' retracted). R36-F8's Casimir convention
+       is involutory NOWHERE. Additional defect: the sgn route is DISCONTINUOUS at
+       zero -- integer-j sectors carry 0 in sigma(Q) and the map requires a
+       spectral-gap-at-zero regularity condition (machine: unthresholded np.sign
+       flips +1e-16 noise to a full -1 eigenvalue). tau-compatibility layer: OPEN,
+       and it hides a choice.
+
+[FLAG] F6  audit C2 (discourse): truncation / extension scheme dependence
+       Q.n on the classical flux algebra has continuous spectrum; the passage to (+)_j V_j
+       is a truncation; edge-mode content is partly extension-scheme dependent
+       (Donnelly-Freidel regularity). Uniqueness of irrep content: unproven. The
+       cut-charge skeleton itself remains certified (R36 F1-F5) and is the corpus's
+       best raw material -- at [Construction, partial] scope.
+
+BLOCK C -- THEOREM 3.4.1 / TARGET H (audit C3; R36 E-4)
+------------------------------------------------------------------------------
+[FAIL] C1  consistency of the two crossover printings (boxed vs Part-2/AM-24)
+       asymptotic ratio = 4.0000 (tau_eff = 2 tau_crit, amplitude x 4): the
+       printings are inconsistent (R36-C5 FLAG, now quantified). Pin one convention.
+
+[PASS] C2  regression R36-C1: critical asymptote slope (both printings)
+       d ln E/d ln t -> -2.000000 (box) / -2.000000 (part2) = -2.000000: the ONE
+       internally consistent claim (provenance of d = 4 / z = 2 per audit C3: the
+       only honest t^-2 derivations were 1-D; Theorem 1.3.1 void-cited).
+
+[FLAG] C3  audit C3 / R36 E-4: the ALPHA-LOCATION table (where does alpha = 1 live)
+       alpha observed at t_H = 1/H (premise m_min = H):
+       fixed tau, amplitudes H-independent : alpha = 0.0000  (gapped: e^-1 const)
+       fixed tau, critical branch alone    : alpha = 2.0000
+       C_gap assigned ~ H (amplitude input): alpha = 1.0000
+       route A tau = (H gamma)^-1/2        : alpha = 1.0000
+       route B Lambda = Phi(E_M) = sqrt    : alpha = 1.0000
+       alpha = 1 appears ONLY through an inserted H^(1/2): amplitude scaling,
+       H-dependent matching scale, or the Phi map -- an input placement, not a
+       crossover-law output. Audit C3 CONFIRMED, merged with R36 E-4.
+
+[FLAG] C4  audit C3 (discourse): premise provenance of Theorem 3.4.1
+       (i) horizon gap collapse m_min(R_H) ~ H: asserted, never derived (round-13
+       speculation promoted to input); (ii) Lambda = kappa_B E_M: the Target A2
+       dictionary, pending ~22 rounds, now assumed; (iii) drag branch (Thm 8.3.1,
+       w = -1, alpha = 0) unretired -- the register holds both dark-energy branches
+       open, disagreeing on sign structure and time dependence. Theorem A1 vs 3.4.1:
+       same Lambda ~ H^1 scaling, same input location for alpha -> NOT independent
+       confirmation. Rescope: [ANSAZT]; X5 re-opened at exponent-amplitude scope.
+
+BLOCK R -- REGRESSION: v3.7 IDENTITY NETWORK (R36 carryover)
+------------------------------------------------------------------------------
+[PASS] R1  regression R36-R1: G_eff = ell0^2 c^3/(4 hbar) = G at ell0 = 2 ell_Pl
+       rel = 0.0e+00 (identity chain intact; scope per E4: [IDENTITY])
+
+[PASS] R2  regression R36-R2: kappa_B chain 8 pi G/c^4 = 2 pi ell0^2/(hbar c)
+       machine = 2.076647e-43 m/J
+
+[PASS] R3  regression R36-E2: bond energy quantum hbar*gamma = M_Pl c^2/(8e)
+       8.9950e+07 J vs 8.9950e+07 J
+
+==============================================================================
+R37 TALLY: 10 PASS / 9 FAIL / 7 FLAG (total 26)
+
+VERDICT -- adjudication of the external audit vs R36:
+  C1 CONFIRMED (sharper than stated): the literal weld is FALSE (1/sqrt(mu1) =
+     1.555603), not merely tautological; the Phi-repaired version is a definitional
+     identity with zero mu-content. Honest scope: Density Monism as FRAMING theorem
+     + open channel-agreement and composite-sector content.
+  C2 CONFIRMED (constructive): (involutory AND closure) realizable only at j = 1/2;
+     the irrep selection is the hardcode; the unique working sector is a live Pauli
+     algebra with EMPTY joint kernel -- the round-6/AM-17b no-go bites exactly there;
+     R36-F8's Casimir convention is involutory nowhere.
+  C3 CONFIRMED: alpha = 1 is an input placement (amplitude / matching scale / Phi);
+     premises (horizon gap, A2 dictionary, drag branch) unregistered; A1 agreement
+     is not independent confirmation; printing split = 2x in tau_crit.
+  C4 CONFIRMED (conditional on the ledger quotation): ell0^5 is the unique correct
+     expansion; the ell0^3 printing fails dimensional analysis outright.
+  T-6/M4 machine-demonstrated: G_eff = G is a round-trip identity (E4).
+  R36's 'RATIFIED IN SUBSTANCE' is WITHDRAWN: certified at construction/algebra
+     level, titles one scope-level ahead. The audit's scope law applies to the
+     verifier's own verdict -- corrected here.
+
+SYNTHESIS for AM-23b (v3.7.2): audit rescope actions 1-5 + R36's Phi registered as
+  Definition 5.1.15 [POSTULATE] (declared, not derived): one square root at the
+  micro->macro interface in place of two silent errors (E-3/E-4) -- a net reduction
+  in UNDECLARED primitives, not a derivation. Open content: Phi derivation from C_L,
+  channel agreement, composite sector, irrep content, A2 dictionary, drag branch,
+  continuum-limit coexistence.
+==============================================================================

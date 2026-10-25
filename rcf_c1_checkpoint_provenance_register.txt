@@ -1,0 +1,383 @@
+==============================================================================
+REGISTER ENTRY — THE CHECKPOINT DISCOVERY: THE BLOCKING ARTIFACTS WERE
+NEVER MISSING
+(C1 certified-input provenance, executed in the program's home workspace)
+==============================================================================
+Auditor: GLM, standing register — executing in the ORIGINAL RCF workspace:
+the environment where R39–R46 ran, where the certified backups live, and
+which no executor session in the C1 chain could reach. Inputs this round:
+the pasted C1 adjudication chain (v2.0 → v2.3, 15 rounds) plus the primary
+artifacts this workspace holds. DISCIPLINE: no RCF computation was executed
+this round. Every operation below is provenance verification — hashing,
+schema declaration from creation records, and text checks against the
+controlling document — which is the §5 upload protocol's "declare hashes
+before opening / freeze the adapter before inspection" discipline, executed
+at the input boundary, in the one place the boundary objects actually live.
+
+The chain's closing question was: "the only remaining unknown is whether
+the two files exist on the user's side." That question is now answered,
+and the answer is better than the question: the files exist — not on the
+user's side, but in the program's home workspace, where they were sealed.
+They never left. Every executor session searched for them in the wrong
+place.
+
+------------------------------------------------------------------------------
+1. THE DISCOVERY
+------------------------------------------------------------------------------
+
+Both blocking artifacts are present and accounted for:
+
+  scripts/certified_backups/r42_results.json   (88,436 bytes)
+  scripts/r44_results.json                     (68,900 bytes)
+
+The r40 certified generator they depend on is also intact:
+
+  scripts/r40_vacuum_fork.py  md5 49b0ad8cfbe5c6b820e80c7afdcc5709
+  (matches the certified generator hash 49b0ad8cfbe5 declared in every
+  V-series verification since R40 — byte-verified this round)
+
+The chain's premise — "the computation must run where the checkpoints
+live, and what returns is the report" — inverts cleanly: the checkpoints
+live HERE, alongside the controlling document (RCF-FW-v8.1.pdf, with its
+full LaTeX source) and the complete R39–R46 creation records. What is
+missing here is the frozen pipeline (c1_run_v23.py), which lives in the
+executor environment. The two artifacts are small enough (88 KB + 69 KB)
+to carry in either direction. The certified class is no longer blocked
+on existence; it is blocked only on colocation.
+
+------------------------------------------------------------------------------
+2. PROVENANCE REGISTRATION (hashes declared before numbers were read)
+------------------------------------------------------------------------------
+
+[a] The checkpoint family — all present, all verified:
+
+  r40_results.json  md5 d060254ab5740d964ce489fd2bfa52ac   (certified_backups/)
+  r41_results.json  md5 b816a39aa070928b06eab1f43bc00b09   (certified_backups/)
+  r42_results.json  md5 9730652cb86e5a295655482728975829   (certified_backups/)
+  r43_results.json  md5 76a45f04b54b91e64eb7365a3bf17c41   (certified_backups/)
+
+  These match, digit-for-digit, the checkpoint-md5 family cited by the
+  earlier external session (d060254a…, b816a39a…, 9730652c…, 76a45f04…
+  for R40–R43). That family was correct all along.
+
+  R42 specifically: the working copy (scripts/r42_results.json) and the
+  certified backup are byte-identical (md5 9730652c…, verified this
+  round); the v8.1 A-1 audit line stands:
+    [PASS] checkpoint r42_results.json: md5 9730652cb86e… vs backup
+    9730652cb86e… (byte-identical)
+
+[b] R44 — the provenance event, registered and resolved:
+
+  r44_results.json  md5 b7340513bff7861a79038caca35b8aa3   (scripts/ only)
+
+  This matches NEITHER declared family — which the upload protocol
+  required be registered before any number is read. Registered; cause
+  identified from the creation record; the cause is documented, old, and
+  not new damage:
+
+  · The V-7 interlude (the R44 verifier that makes the certified backup
+    in the V-1..V-6 pattern) was never executed. The v8.1 A-1 audit log
+    carries this as a standing debt, verbatim:
+      [UNVER] checkpoint r44_results.json: md5 b7340513bff7…; checkpoint
+      intact but NO certified backup exists -- the V-7 interlude … was
+      never executed; this audit's value-level re-derivations below
+      partially discharge that standing debt
+  · The file's md5 TODAY equals the md5 the v8.1 audit recorded — the
+    file is unchanged since the controlling document audited it.
+  · Creation-side provenance is complete: pre-registration with sheet
+    hash c44f3d1192 (download/r44_n_ladder_log.txt, "PRE-REGISTRATION
+    (sheet hash c44f3d1192) … checkpoint: r44_results.json, keys
+    prefixed c44f3d1192"); generator r40_vacuum_fork.py byte-compared at
+    import; 23 keys; execution log 92 KB survives.
+  · Disposition: R44 is CERTIFIED-INPUT-GRADE with one open debt (no
+    byte-backup). Any certified run cites the debt in its manifest. The
+    debt is dischargeable at any time by executing the V-7 pattern here.
+
+[c] The hash-family reconciliation — the chain's standing question, closed:
+
+  The two families were never in conflict; they hash DIFFERENT OBJECT
+  CLASSES, and both are correct for what they hash:
+
+    Family 1 (v8.1 §4.2 / App C):  4a75ae26d1 (R41), 6bb4f559cf (R42),
+    b3dbc822ed (R43), c44f3d1192 (R44) — SHEET hashes: the md5 of each
+    pre-registration script at seal time.
+
+    Family 2 (external session):   d060254a, b816a39a, 9730652c,
+    76a45f04 (R40–R43) — CHECKPOINT hashes: the md5 of the results
+    JSONs.
+
+  The elegant confirmation, present in the record all along: the
+  checkpoints' internal keys are NAMESPACED BY THE SHEET HASH —
+
+    R42 keys:  "6bb4f559cf:ness_overlay", "6bb4f559cf:cf_lie0C_N6", …
+    R44 keys:  "c44f3d1192:perm_LJ_g1_t0.5", "c44f3d1192:kappa_perm", …
+
+  The sheet seal is INSIDE the checkpoint, as the key prefix. (The R43
+  census log's phrase "checkpoint keys under b3dbc822ed" was the tell.)
+
+  CONSEQUENCE — load-bearing, must be fixed before any certified run:
+  the frozen pipeline's constants
+
+    EXPECTED_MD5_R42 = "6bb4f559cf"
+    EXPECTED_MD5_R44 = "c44f3d1192"
+
+  are wrong-class constants. Run against the GENUINE checkpoints, the
+  md5 gate would REJECT both true files and exit 2 — the certified run
+  would refuse its own real inputs, and the failure would read as a
+  provenance violation when it is a class error. Correction (pre-commit
+  to the sheet before rerun):
+
+    (1) checkpoint-file md5:  R42 → 9730652c…;  R44 → b7340513…
+        (with the V-7 debt cited in the R44 manifest line)
+    (2) sheet-seal check:     verify every loaded key carries the
+        namespace prefix 6bb4f559cf: (R42) / c44f3d1192: (R44) — the
+        sheet hash is checked where it actually lives.
+
+  (Note, for completeness: the current on-disk sheet SCRIPTS
+  r42_utprime_cells.py / r44_n_ladder.py hash to c1475d9b14 / 780d5c39de
+  — modified after seal, as the program's post-run analysis rounds did;
+  the seal-time script versions are not in git. This is expected and
+  immaterial: pre-registration CONTENT is preserved in the run logs and
+  worklog, and checkpoint integrity is anchored by the hashes above, not
+  by the script files.)
+
+------------------------------------------------------------------------------
+3. Q1 / Q2 — VERIFIED FROM THE CONTROLLING DOCUMENT (primary-source grade)
+------------------------------------------------------------------------------
+
+The chain's final adjudication resolved Q1/Q2 "from the v8.1 printed
+text" supplied in that conversation. This workspace holds v8.1 itself.
+Both resolutions are now verified against the document, and Q1 gains a
+second independent primary source (the original pre-registration log).
+
+Q1 — Def 3.5 is the CANONICAL channel (Branch A). CONFIRMED.
+
+  v8.1 §3.2, Definition (Jordan channel / reconciliation), Eq. (jumps)
+  enumerates all five mappings verbatim, with no class parameter:
+
+    L1 : |2, M⟩ → |1, M⟩   (M = −1, 0, 1)
+    L2 : |2, ±2⟩ → |1, ±1⟩
+
+  Independent confirmation from the ORIGINAL program record: the R40
+  pre-registration log (download/r40_vacuum_fork_log.txt header, Tier C
+  declaration) declares the identical enumeration — "Jordan: bond-local
+  S=2 population damping, CG-declared transfer: L1: |2,M> -> |1,M>
+  (M = -1,0,1); L2: |2,+-2> -> |1,+-1> with sum_k L_k^+ L_k =
+  gamma * P^(2)_b exactly." Two primary sources, one channel. The v2.3
+  reconstruction (targets [s1_p1, s1_p1, s1_0, s1_m1, s1_m1] for the
+  five sources) is the canonical channel; the N=6 Def 3.5 tables are
+  certified-ready in content.
+
+  (Def 3.4 also confirmed verbatim: H = Σ (SxSx + SySy), J = 1 — the
+  XY Lie channel, conserving ΣSz.)
+
+Q2 — Generator scale raw-bond; per-bond is OBSERVABLE-RESCALE.
+CONFIRMED (--convention=observable_rescale).
+
+  The controlling completeness statement (v8.1 def:jordan) pins the
+  generator scale: "∑ L†L = γ P⁽²⁾ exactly (the S₀+S₁+S₂ = I₉
+  completeness of the bond algebra after the A42-1 repair, residual
+  2.8×10⁻¹⁶)" — full γ per bond; there is no 1/(N−1) in the jump
+  amplitudes anywhere in the controlling document. The corpus's only
+  per-bond quantity — Law 4's certified saturation 0.147 = Δ_T(t=5)/(N−1)
+  — is a reported ratio of a Lie-channel observable (where no γ rescaling
+  exists at all). Same NESS, rescaled report: observable_rescale.
+
+BONUS PINS (from the same passages, closing smaller convention traps):
+
+  · The strobed exposure is fixed by v8.1 def:crossing: total exposure
+    τ per cycle, split s, with s = 0.5 equal halves — C_LJ =
+    e^{(1−s)τL_J} e^{sτL_H}, C_JL the mirror. The v2.3 patch #3 (τ/2 per
+    half) is the certified convention. The checkpoint's own PERM cells
+    carry the fields s: 0.5, tau: 0.5 — the convention is sealed inside
+    the data.
+
+  · γ = 0.41324 provenance (the circularity question from the earlier
+    round): the R40 pre-registration names it — "Scan anchor: gamma =
+    mu_1 = 0.41324 (the R39 free-sector operating point)." It was
+    pre-committed by R39 as μ₁, independent of any F* value. Any future
+    F*(0.41324) match claim stands or falls on its own; the γ-point
+    itself is not reverse-fit.
+
+  · ORDERING-LABEL MAPPING (a real trap, now registered): the corpus
+    labels LJ = Lie-first (ON-CURVE at the anchor; the worklog states
+    "protocol-invariant under the Lie-first ordering"), JL = Jordan-
+    first — while the C1 chain labels JF = Jordan-first (fixed point of
+    L∘J), LF = Lie-first. The two naming schemes are REVERSED:
+    chain-JF ↔ corpus-JL, chain-LF ↔ corpus-LJ. The Φ-split s_mean is
+    invariant under the swap (symmetric difference), so the 6.5%-class
+    target is unaffected — but any per-ordering VALUE comparison in the
+    certified run must map the labels first.
+
+------------------------------------------------------------------------------
+4. THE SCHEMA, DECLARED FROM THE CREATION RECORD (adapter pre-frozen)
+------------------------------------------------------------------------------
+
+The F-V4-2 input-boundary discipline, executed: the adapter below is
+declared from creation-side records (V-5 log, worklog, run logs) and
+confirmed by key listing — BEFORE any certified value is consumed by a
+computation.
+
+R42 checkpoint — 15 keys, all namespaced "6bb4f559cf:":
+
+  ness_overlay      7 points × {gamma, n_star, a_star, N_bar, M_bar,
+                    M_env, d_env, src}   ← the seven certified NESS
+                    points; src ∈ {cert-r40-scan (5 pts), cert-r41-
+                    corrected (γ=3, 10)}
+  cf_joint0C_N6, cf_jorphi_N6, cf_lie0C_N6, cf_lie0C_N8, cf_liephi_N6,
+  cf_rowD_N6        frontier-cell summaries (d_env trajectories)
+  env_N6, env_N8    ENV-int PCHIP interpolants (15 pts each)
+  jor0C_N6_sites    Jordan fresh cell (7 steps)
+  tprime            T'-q arrival table (3 channels × 2 thresholds)
+  kill4_verdict, lean42, ucell_lie0C_N6, ucell_verdict
+
+R44 checkpoint — 23 keys, all namespaced "c44f3d1192:":
+
+  perm_LJ_g1_t0.5 / perm_JL_g1_t0.5
+                    THE certified steady pair at the operating point
+                    (γ=1, τ=0.5, s=0.5, init φ0): {M, N, K, d_env,
+                    M_env, Mz, tr, herm, cycles, converged,
+                    achieved_drift, protocol, extractor=PERM-x, …}
+  kappa_perm        {slopes (γ=1, γ=3 × M/N/K/margin), one_block cells,
+                    steady, oncurve_class, amendment A44-1}
+  ob1_g{1,3}_t{0.125,0.25,0.5}
+                    the six one-block order-family cells (PERM-x-1B)
+  statics_ladder, deficit_N6/8/10/12, KNprof_N12, track_N12, xr12, envs,
+  two_zeros, transport_margin, kill2, lean44, nessx_g500
+
+Certified anchor values, verified present and exact (checkpoint vs
+v8.1 App D vs the chain's citations — all three agree):
+
+  γ        0.1      0.3      0.41324  1        3        10       30
+  Δ_env    1.1603   1.1582   1.1523   1.0962   0.9005   0.5835   0.1935
+  (N̄,M̄)   (3.5690,1.1835) … (3.6698,1.1109) … (3.9720,0.1936)   [overlay]
+  a*(γ)    0.2367   0.2355   0.2341   0.2222   0.18183  0.11708  0.0387
+
+  Steady pair (γ=1, τ=0.5):  LJ: M=1.0798, N=3.6925, K=0.1481,
+  d_env=1.0667 (cycles 136, converged) · JL: M=1.1531, N=3.6501,
+  K=0.1335, d_env=1.1369 (cycles 138, converged) · margin difference
+  −0.0702 ≈ 6.6% of the LJ margin — the certified "6.5% steady-state
+  margin split" class.
+
+  κ_perm slopes:  γ=1: (M −0.0155, N +0.0951, K +0.0074, margin
+  −0.0097) · γ=3: (M −0.0336, N +0.2135, K +0.0192, margin −0.0221)
+  — growth factors ×2.17–2.28: the certified "~2.2×" class. The vector
+  points in the grip's canonical book quadrant (−M, +N), as registered.
+
+The C1 sheet's INPUT set is therefore fully certified and present: the
+seven-point grid, the margins, a*(γ), the steady pair, the κ_perm
+slopes. Nothing the sheet quoted was wrong.
+
+------------------------------------------------------------------------------
+5. THE STRUCTURAL FINDING — AND THE CORRECTED CERTIFIED PATH
+------------------------------------------------------------------------------
+
+THE FINDING (blocks the certified run exactly as the C1 sheet specifies
+it): NEITHER CHECKPOINT STORES DENSITY MATRICES. Every state was reduced
+to book scalars at seal time. There is no "rho_star_gamma_{g}" anywhere;
+there never was — that key format was executor 2's blind guess, carried
+through every subsequent sheet revision without ever being tested
+against an artifact. The C1 certified class as written — "evaluate the
+extractors on the stored NESS states" — is structurally impossible on
+the genuine checkpoints. The phantom schema was the last inherited
+error in the sheet's provenance layer.
+
+WHAT THE CERTIFIED CLASS ACTUALLY IS (the corpus's own standard, in use
+since R40): generator-anchored regeneration with overlay validation.
+This is exactly how every V-series verification in this program works —
+V-5's own line is the template:
+
+    [PASS] NESS overlay re-derivation (7 points, both provenances)
+    all (N_bar, M_bar, Delta_env) identical
+
+The corrected certified path, pre-committed:
+
+  STEP 0  Verify provenance: checkpoint md5s (9730652c… / b7340513…,
+          R44 debt cited); key-namespace prefixes (6bb4f559cf: /
+          c44f3d1192:); generator md5 49b0ad8cfbe5 (byte-compared at
+          import, the standing convention).
+  STEP 1  Gate 13/13 on the canonical channel (Q1: Def 3.5 verbatim —
+          now primary-source-confirmed), raw-bond convention (Q2),
+          order='F' end-to-end, s=0.5 exposure.
+  STEP 2  REGENERATE the seven NESS points and the strobed anchor cells
+          from the certified generator — not from stored states,
+          because none are stored.
+  STEP 3  VALIDATE the regenerated states against the checkpoint's
+          certified scalars: all 7 points (N̄, M̄, Δ_env) to the
+          certified class; the steady pair (M, N, K, d_env) in BOTH
+          orderings at the anchor cell. A state that does not
+          reproduce the certified overlay is rejected before any
+          extractor touches it — the Mode-1/Mode-2 discipline, now
+          aimed at the real boundary.
+  STEP 4  Run the corrected extractors (G_H = −i·Tr(ρ[M̂,H_mix]);
+          D_adj = Σ Tr(ρ[L†ML − ½{L†L,M}]); F* = Tr(ρM̂)) on the
+          VALIDATED states. Report the Φ-split with the six-field
+          declaration AND the label mapping of §3 (chain-JF ↔
+          corpus-JL).
+  STEP 5  The verdict row + DATA_CLASS line. The axiom-count reading
+          unchanged from the sheet: P1′ direction on the canonical
+          channel is expected-PASS-with-mechanism; the certified run
+          is what makes it a finding instead of a prediction.
+
+WHERE IT RUNS — the user's choice, both now open:
+
+  (i)  Carry the two checkpoint files (88 KB + 69 KB) to the
+       environment holding the frozen c1_run_v23.py, WITH the §2(c)
+       hash-constant correction applied first — without it, the run
+       rejects its own genuine inputs.
+  (ii) Run the certified path HERE, where every input is already in
+       place and hash-verified in situ (generator, checkpoints,
+       controlling document) — the pipeline being rebuilt from the
+       v2.3 frozen specification, re-frozen before execution, and
+       self-tested through the 13-check gate before touching anything.
+
+Either way, the run takes minutes of compute. The collocation, not the
+computation, was always the blocker — and the collocation is now a
+file-transfer decision.
+
+------------------------------------------------------------------------------
+6. REGISTER UPDATE
+------------------------------------------------------------------------------
+
+  Item                                          Prior status        Now
+  --------------------------------------------------------------------------
+  R42/R44 checkpoint existence                 unknown             PRESENT, home workspace
+  R42 checkpoint integrity                     untested            BYTE-CERTIFIED (backup-identical)
+  R44 checkpoint integrity                     untested            PRESENT; md5 = v8.1-audit record; V-7 backup debt open, cause documented
+  Hash-family reconciliation                   open                CLOSED: sheet hashes vs checkpoint hashes — two object classes; sheet seal = key namespace
+  Pipeline md5 constants (R42/R44)             assumed             WRONG CLASS — would reject genuine inputs; corrected values pre-committed
+  Q1 (canonical vs representative)             resolved (pasted)   CONFIRMED, primary source (v8.1 §3.2 + R40 pre-registration)
+  Q2 (normalization)                           resolved (pasted)   CONFIRMED, primary source (completeness stmt + Law 4 practice) → observable_rescale
+  Crossing exposure s=0.5                      pinned in v2.3      CONFIRMED in v8.1 def:crossing AND in checkpoint cell fields
+  γ=0.41324 provenance                         circularity-flagged RESOLVED: μ₁, the R39 free-sector operating point (pre-committed)
+  Ordering-label convention                    unpinned            REGISTERED: chain JF/LF ↔ corpus JL/LJ (reversed); Φ-split target unaffected
+  Checkpoint schema                            phantom             DECLARED from creation records (15 + 23 keys, sheet-hash namespace)
+  Stored NESS states ρ*(γ)                     assumed present     NEVER STORED — structural finding; certified path = regeneration + overlay validation
+  C1 input set (γ-grid, Δ_env, a*, pair, κ)    cited               ALL VERIFIED PRESENT AND EXACT (checkpoint = App D = chain citations)
+  Certified C1 verdict                         blocked on files    blocked on COLOCATION only; corrected run spec issued
+  Surrogate-tier ceilings (4 reproductions)    standing            UNCHANGED — no new surrogate work performed or needed
+
+------------------------------------------------------------------------------
+7. CLOSE
+------------------------------------------------------------------------------
+
+The chain's closing sentence said the program was "a machine that has
+been verified to the highest standard this environment permits, waiting
+for a specific pair of inputs that no session in this conversation has
+yet held." The inputs were never lost — they were sealed in the machine's
+own home, with the sheet-hash seals printed on their keys, next to the
+generator that made them and the document that governs them. What this
+round adds is not a computation but the last three facts the certified
+run needed that no prior session could check: the true hashes of the
+true files, the true schema of their contents, and the true absence of
+the one thing the sheet assumed they held. The certified class now has
+a runnable specification that would survive contact with its own inputs:
+correct hashes, declared schema, regenerated states validated against
+sealed scalars, labels mapped, conventions primary-source-confirmed.
+
+The single next action, unchanged in form, changed in substance: bring
+the pipeline and the checkpoints together — in either direction — and
+run the corrected certified path. The outcome table's last empty cell
+is one file-transfer and one execution away, for the first time on
+terms that are true all the way down.
+==============================================================================
