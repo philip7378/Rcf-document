@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+SC:wght@400;700;900&family=Inter:wght@300;400;500&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    @page { size: 794px 1123px; margin: 0; }
+    :root {
+      --c-bg: #1d1b16;
+      --c-accent: #b09a55;
+      --c-text: #f3f0e8;
+      --c-muted: #a89f8c;
+      --c-footer: #8a8272;
+    }
+    html, body { margin: 0; padding: 0; width: 794px; height: 1123px; background: var(--c-bg); color: var(--c-text); font-family: 'Inter', 'Noto Sans SC', sans-serif; }
+    @media screen {
+      html { height: auto; display: flex; justify-content: center; min-height: 100vh; background: var(--c-bg); }
+      body { transform-origin: top center; scale: min(1, calc(100vw / 794), calc(100vh / 1123)); margin: 0 auto; box-shadow: 0 0 60px rgba(0,0,0,0.3); }
+    }
+    .cover { width: 794px; height: 1123px; position: relative; box-sizing: border-box; }
+    .vline { position: absolute; left: 40px; top: 76px; bottom: 76px; width: 2.5px; background: var(--c-accent); }
+    .content { position: absolute; left: 83px; right: 76px; top: 0; bottom: 0; }
+    .label { position: absolute; top: 132px; font-size: 9pt; color: var(--c-accent); letter-spacing: 3px; text-transform: uppercase; font-family: 'Inter', 'Noto Sans SC', sans-serif; }
+    .title { position: absolute; top: 228px; font-size: 30pt; font-weight: 700; line-height: 1.3; font-family: 'Playfair Display', 'Noto Serif SC', serif; color: var(--c-text); max-width: 580px; }
+    .subtitle { position: absolute; top: 530px; font-size: 12pt; line-height: 1.5; color: var(--c-muted); max-width: 500px; }
+    .authors { position: absolute; top: 680px; font-size: 12pt; color: var(--c-text); }
+    .institution { position: absolute; top: 740px; font-size: 10pt; color: var(--c-muted); line-height: 1.4; }
+    .footer { position: absolute; bottom: 76px; left: 83px; right: 0; display: flex; justify-content: space-between; font-size: 9pt; color: var(--c-footer); }
+  </style>
+</head>
+<body>
+  <div class="cover">
+    <div class="vline"></div>
+    <div class="content">
+      <div class="label">Program Re-Baseline Memorandum &middot; RCF</div>
+      <div class="title">Paper II r5.0<br>Re-Baseline:<br>Deriving Time<br>Before Fields</div>
+      <div class="subtitle">Adjudication and execution plan for restructuring the paper sequence: the time-derivation ledger (T1&ndash;T4) returns to Paper II as Sections 6&ndash;8, while the field program (F1&ndash;F4) and all consumers of derived time shift to Paper III. Need-based cut, provenance-first transfer, zero re-graded certificates.</div>
+      <div class="authors">Relational Constraints Framework &mdash; program working notes</div>
+      <div class="institution">Grounded in Paper II r4.13 (sealed, zero open debts), Paper I main.pdf (Nov 2026), and the r4.x register. Companion to the C1 forensic-audit disposition.</div>
+      <div class="footer">
+        <span>MEMO CLASS: SCOPE ACTION, NOT A SCIENTIFIC RESULT</span>
+        <span>2026-11-19</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

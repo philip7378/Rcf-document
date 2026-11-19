@@ -1,0 +1,16 @@
+{
+  "N": 6,
+  "dim": 729,
+  "bonds": 5,
+  "G1_dim_ker_Mhat": 4,
+  "G1_sealed": 4,
+  "G2_commutator_norm_HXY": 31.937438845342307,
+  "G2_sealed": 31.937439,
+  "G2_mutant_2HXY_norm": 63.87487769068461,
+  "G2_mutant_expected": 63.874878,
+  "G3_dyad_completeness_residual_bond": 4.440892098500626e-16,
+  "G3_dyad_completeness_residual_full": 3.9968028886505635e-15,
+  "H2_identity_residual": 0.0,
+  "engine": "numpy/scipy, fresh re-derivation from definitions",
+  "elapsed_s": 0.6
+}

@@ -1,0 +1,174 @@
+==============================================================================
+REGISTER ENTRY — PAPER II r5.0 RE-BASELINE: DERIVING TIME BEFORE FIELDS
+(Scope action, not a scientific result; companion memo
+RCF_Paper2_r50_ReBaseline_Memo.pdf is the full document)
+==============================================================================
+Executor: GLM, standing register — this entry registers the program-level
+scope decision and the machine gate-check that anchors it. DISCIPLINE
+statement: one RCF computation was executed this round (the gate-check
+r50_gate_check.py, a fresh-engine re-derivation of three sealed v8.1
+quantities from the definitions); no NESS solve, no strobe run, no
+re-grading of any certificate. Everything else below is scope
+adjudication grounded in the sealed documents (Paper II r4.13 text
+layer, Paper I main.pdf text layer, rcf_c1_checkpoint_provenance_register).
+
+The decision registered here answers the diagnosis raised at the close of
+the C1 forensic chain: the corpus entered field constructions before it
+had derived time. The proposed repair was to derive time in Paper II
+first, then shift Paper II contents to Paper III. The registered verdict:
+
+  ACCEPT, WITH ONE BINDING MODIFICATION — the transfer is a need-based
+  cut, not a whole-content migration.
+
+A wholesale move would strip the time derivation of its substrate (the
+H_eff assembly, the slow-mode spectrum, the NESS anchors are the inputs
+time is derived FROM) and leave Paper II an identification paper whose
+identifications no longer close. The cut inverts the r4.13 scope split
+in one direction only.
+
+------------------------------------------------------------------------------
+1. THE DEFECT, AS THE SEALED RECORD SHOWS IT
+------------------------------------------------------------------------------
+
+Three layers, each machine-readable in the sealed text:
+
+  (a) Paper II r4.13 §10 closes with the field reading at grade E0
+      (F1 as a vector fiber on V_{1/2}: hypothesis; population-field
+      language withdrawn at r4.9/r4.10 after the q-resolved response
+      measurement). The corpus was CONSTRUCTING fields it could not
+      derive.
+
+  (b) The r4.13 scope seal defers every temporal statement — rates,
+      relaxation times, the strobed clock tau, order memory, the arrow
+      of time, NESS mechanisms — to Paper III, "which opens with the
+      non-Hermiticity-of-H_eff arrow claim." The program's architecture
+      had time entering through the paper that also carries the field
+      constructions: a reader meets constructed fields (E0) before
+      derived time.
+
+  (c) The staged temporal ledger (Paper II §8 and the §11 debt list) is
+      exactly the set of ingredients a time derivation consumes:
+      kappa_OE and its three-way comparison, mu_even,1(N) = lambda(N),
+      the M_b(t) transients, the strobed family, the tau-scan, the
+      second-tau O(tau^2) measurement.
+
+Two facts make the re-baseline cheap, both verified against the text
+layers this round:
+
+  - Paper I main.pdf contains NO forward reference to a Paper III; its
+    forward pointers end at Paper II. The renumbering surface is
+    confined to Paper II's own scope language and the staging ledger.
+  - The H_eff = H - (i/2)M assembly is ALREADY designated Paper II §5
+    material (r4.11b), machine-certified through the r4.12 battery.
+    The time ledger plugs into an existing socket.
+
+------------------------------------------------------------------------------
+2. THE CUT (need-based; nothing outside these lists moves)
+------------------------------------------------------------------------------
+
+  PAPER II r5.0 RETAINS (substrate + statics, grades unchanged):
+    - §§1–4 unchanged (stock identity, bond ledger, cross-bond leak,
+      spillover partition)
+    - §5 material: H_eff assembly, Theorem 6, Peirce blocks V1/V1_2/V0,
+      norm-loss identity — PROMOTED from notation to the T2 basis
+    - §7 static spectrum (dark census, lambda = 0.448955866, three-gap
+      taxonomy as static gap data) — becomes the T3 rate input
+    - §9 static wall verdict (conduit, 10:17 split, 9-l refutation,
+      Gamma_{J=2} = 0.314115)
+    - NESS anchor table (0.250588/1.605638; 0.549879338/2.605367;
+      0.398159/1.803984) — now with derivations supplied by T3
+    - §11 audit trail
+
+  PAPER III r5.0 RECEIVES (fields and consumers of derived time):
+    - F1–F4 field program with grades carried verbatim (fiber reading
+      still E0; no-auto-upgrade rule restated in the transfer note)
+    - all staged temporal debts: f_N(1) plateau N-dependence,
+      kappa_OE from slow modes, tau-scan, PR-XY6, coherence-seeded
+      two-timescale probe, second-tau measurement, dark branch
+      mu_{(J=1)dark}(N) trajectory
+    - strobed family (JL/LJ 0.579321/0.524789, G_H = 0.217268,
+      sealed-s grading) — Paper II's T4 CITES the family, does not
+      re-derive it
+    - driven-wall steady state, valve-not-tank statement
+    - N=7,8 hardware-ceiling note (unchanged, optional check)
+
+------------------------------------------------------------------------------
+3. THE T1–T4 LEDGER (new Paper II §§6–8)
+------------------------------------------------------------------------------
+
+  T1  Clock observable: the strobed cycle and order memory s_mean,
+      tau-linearity s_mean/tau = G_H/2M (Paper I Eq. 12) re-derived on
+      the cov3 substrate. E4 identity / E3 re-derivation. Falsifier:
+      departure from the sealed ladder (10.6775 / 12.0412 / 9.8780 /
+      9.8759 / 9.3009 % at N=4..8) beyond solver tolerance flags the
+      SUBSTRATE, not the theorem.
+  T2  Arrow of time: pulled back from Paper III's opening claim to its
+      derivation site; readouts the commutator imbalance and
+      L†L - LL† on the §5 blocks. E4 (assembled identities certified).
+  T3  NESS mechanism and rates: G_H + D_J = 0 per bond, G_H/2M, the
+      secular pinch O(r^-2), slow-mode rates. E3/E4 mixed; the Gibbs
+      ansatz stays E2.
+  T4  Cadence family: the strobed pair straddling the continuous NESS,
+      G_H = 2Ms/tau, O(tau^2) with one-tau datum m - M_cont =
+      +0.002176 (E2 until second tau lands).
+
+  CONTAMINATION GUARD: T1–T4 inputs are confined to the retained list;
+      any field-program citation inside T1–T4 other than a forward
+      pointer is struck in review.
+
+  ABORT CRITERION: if T2's pulled-back arrow statement yields no E4-grade
+      readout pair on the cov3 substrate, the arrow claim returns to
+      Paper III as its opening (restoring the r4.13 architecture) and
+      the ledger shrinks to T1/T3/T4. The r4.13 static seal is
+      unaffected either way. Abort is a boundary decision logged as its
+      own D6 instance, not a scientific retraction.
+
+------------------------------------------------------------------------------
+4. MACHINE GATE-CHECK (the one computation executed this round)
+------------------------------------------------------------------------------
+
+Fresh engine, definitions only, scripts/r50_gate_check.py (pushed with
+this entry); results in r50_gate_check.json:
+
+  G1  dim ker(M_hat), N=6 ..................... 4            [sealed 4]
+  G2  ||[M_hat, H_XY]||_F ..................... 31.937438845 [sealed
+                                                     31.937439]
+  G2' ||[M_hat, 2 H_XY]||_F (the mutant) ...... 63.874877691 [the
+                                                     audit's 63.874878]
+  G3  sum L†L - P^(2), five Def 3.5 dyads ..... 4.4e-16      [machine]
+  ID  2 H_XY = sum(S+S- + S- S+) ............. exact         [confirms
+      the missing 1/2 is precisely the H-doubling signature]
+
+Purpose: the re-baseline edits scope language, and scope language is
+where the C1 chain was shown vulnerable (prose rebuilds silently
+substitute generators). The gate-check anchors the substrate the
+re-baseline presumes, independent of any prior session's artifacts.
+
+------------------------------------------------------------------------------
+5. REGISTER UPDATE
+------------------------------------------------------------------------------
+
+  Item                                          Prior status      Now
+  --------------------------------------------------------------------------
+  Field-before-time sequencing                 implicit defect   REGISTERED as program defect; repair issued (r5.0)
+  r5.0 re-baseline verdict                     proposed          ACCEPTED, need-based cut (this entry)
+  Paper II scope (r5.0)                          statics-only      statics + time derivation (T1–T4)
+  Paper III opening claim                        arrow of time     field program, after derived time
+  T1–T4 ledger                                   unstaged          STAGED with grades and falsifiers
+  Paper I sync patches (5 items)                identified        STAGED: Eq. 12/13 shift; No-Go IV 9-l citation w/ bi-cone caveat; lambda(N) gap-definition erratum; Instance #10 generator-frame terminology; h_4 referent slip
+  Execution gates                                none              G0–G4 pre-committed (memo Ch. 9)
+  Gate-check of the presumed substrate          not run this env  RUN: G1/G2/G3 all PASS (§4 above)
+  r4.13 static seal                              closed           UNTOUCHED (nothing certified re-run or re-graded)
+  Next action                                    —                 G0: stage the memo + add the r5.0 column to paper3/STAGED_FROM_PAPER2.md BEFORE any text edit
+
+==============================================================================
+CLOSE
+==============================================================================
+r4.13 moved time out because it was temporal; r5.0 moves the DERIVATION
+of time back in, because a derivation is static mathematics about a
+generator — and leaves the READINGS of that clock (trajectories,
+cadence scans, field constructions) where r4.13 put them, in Paper III,
+now genuinely downstream. The memo (RCF_Paper2_r50_ReBaseline_Memo.pdf)
+is the full specification; this entry is the register record. The single
+next action is G0, and it is a ledger edit, not a computation.
+==============================================================================

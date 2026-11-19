@@ -1,0 +1,110 @@
+==============================================================================
+REGISTER ENTRY — C1 FORENSIC DISPOSITION: THE OTHER SESSION'S
+RE-EXECUTION REPORT IS REJECTED (mutant-substrate identification,
+machine-verified)
+==============================================================================
+Auditor: GLM, standing register. This entry records the disposition of
+RCF_C1_Canonical_ReExecution_Report.pdf produced in the external sandbox
+session, and the machine evidence behind it. DISCIPLINE: the verdict
+below is grounded in (i) a fresh-engine re-derivation of the sealed gate
+quantities (r50_gate_check.py, pushed with this entry), and (ii) the
+number-level reproductions stated in the forensic chain. The external
+session's artifacts were NOT re-run here; its numbers are read as
+reported and matched against the mutant signature.
+
+DISPOSITION: DO NOT ACCEPT AS CANONICAL. Do not merge into the
+certified chain. Provenance class: UNVALIDATED_PROSE_SURROGATE with a
+CONFIRMED substrate mutation (the double-bugged mutant below).
+
+------------------------------------------------------------------------------
+1. THE MACHINE IDENTIFICATION (gate-check evidence)
+------------------------------------------------------------------------------
+
+The external session's substrate is not the canonical v8.1 Def 3.5
+channel. Two silent bugs, both now anchored by this round's gate-check:
+
+  (a) H-DOUBLING. The session's H equals 2 H_XY (missing the 1/2 in
+      SxSx+SySy = 1/2(S+S- + S- S+)). Machine anchor:
+        canonical  ||[M, H_XY]||_F  = 31.937438845  [sealed 31.937439]
+        mutant     ||[M, 2 H_XY]||_F = 63.874877691 [audit's 63.874878]
+      The identity 2 H_XY = sum(S+S- + S- S+) is EXACT (residual 0.0),
+      so writing the bare raising/lowering sum is precisely the doubling.
+      The session's gate narrative lists local SU(2) algebra, P^2
+      projector, and closed-form-vs-adjoint as its repaired checks —
+      the ONE check that discriminates ([M, H] norm, sealed 31.937)
+      was never reported.
+
+  (b) UNBUNDLED 5-DYAD JUMPS. The session rebuilt Def 3.5 as five
+      separate dyads per bond. This satisfies the completeness gate
+      (sum L†L = P^(2), residual 4.4e-16 machine-verified this round)
+      but is NOT the sealed bundling: on the true H_XY with the five
+      dyads, NESS M_bar(1) = 0.9949 — the session's 1.0562 requires
+      the doubled H. Both signatures together reproduce every printed
+      number of the session to all published digits.
+
+  The certified overlay consequence stands as the forensic chain
+  stated it: the session's gamma=1 M_bar = 1.0562 sits BELOW the sealed
+  Delta_env(1) = 1.0962, implying negative M_env — algebraically
+  impossible under Law 5. The gamma=30 comparison used a misattributed
+  anchor (1.1109 is the gamma~1 scale; certified Delta_env(30) = 0.1935
+  forces M_bar(30) ~ 0.19-0.20, never 1.1109), and the "cold-start vs
+  warm-start continuation" explanation is invalid: with dim ker L = 1
+  and GMRES residual <= 3e-9, the fixed point is unique and
+  initial-guess-independent.
+
+------------------------------------------------------------------------------
+2. WHAT THE REJECTION DOES NOT MEAN
+------------------------------------------------------------------------------
+
+  - The v8.1 corpus is NOT struck. It is internally consistent
+    (frontier, eps(6), [M,H], Law 5/7 cohere); the defect is in the
+    re-execution, not in the sealed record.
+  - No-Go II (Paper I) is CONFIRMED constructively: gate-passing
+    Kraus-bundling variants (cov3 / bundled 2-jump / unbundled 5-dyad,
+    all with sum L†L = P^(2) exact) produce inequivalent NESSs. The
+    overlay cannot be closed from published docs alone; it requires
+    the home-workspace generator (r40_vacuum_fork.py, md5
+    49b0ad8cfbe5...) — exactly the colocation registered in
+    rcf_c1_checkpoint_provenance_register.txt.
+  - The r5.0 re-baseline entry (companion file) is unaffected: it
+    operates on the sealed papers, not on the rejected report.
+
+------------------------------------------------------------------------------
+3. REGISTER UPDATE
+------------------------------------------------------------------------------
+
+  Item                                          Prior status        Now
+  --------------------------------------------------------------------------
+  RCF_C1_Canonical_ReExecution_Report.pdf       claimed canonical    REJECTED; class UNVALIDATED_PROSE_SURROGATE; H-doubling + 5-dyad mutation confirmed
+  "12/12 gate PASS, canonical Def 3.5"          claimed              REFUTED as stated (the [M,H] gate item absent)
+  gamma=1.0 overlay                             claimed match        FAIL (M_bar below sealed Delta_env; algebraic violation)
+  gamma=30 anchor 1.1109                        quoted               MISATTRIBUTED (gamma~1 scale; sealed Delta_env(30)=0.1935)
+  "cold-start vs warm-start" explanation        offered              INVALID (unique fixed point; D7 interpretation error)
+  P4'/C2' verdict (41% spread)                  issued               VOID (cross-substrate comparison; repeat of the logged C1_Execution_Report flaw)
+  D-series entries                               open                 LOG: D2 (H x2 convention mutation), D2/D5 (anchor misattribution) against the report; D5 provenance gap on any fresh rebuild attempt stands
+  pat.docx containing a live GitHub PAT         uploaded to a sandbox ROTATION RECOMMENDED (see §4)
+
+------------------------------------------------------------------------------
+4. SECURITY HOUSEKEEPING (recorded for the register, action is the
+   owner's)
+------------------------------------------------------------------------------
+
+  A GitHub PAT was uploaded as pat.docx into an external agent sandbox
+  (this one). The token has since been used, at the owner's explicit
+  instruction, to push THIS entry set to philip7378/Rcf-document (write
+  access). Standard hygiene: rotate this token after the session set
+  it is needed for is complete, and keep PATs out of document bundles.
+
+==============================================================================
+CLOSE
+==============================================================================
+The rejected report remains useful as a witness document: it is the
+cleanest recorded instance of No-Go II acting at N=6 — a prose rebuild
+passing every check it thought to run, on a substrate that was not the
+one it claimed, with numbers that match a mutant to all printed digits.
+The canonical path is the one already registered in the provenance
+entry: colocation with r40_vacuum_fork.py (md5 49b0ad8cfbe5...),
+generator-anchored regeneration, overlay validation BEFORE extractors.
+This entry closes the C1 forensic chain with the verdict REJECT and the
+substrate identification machine-verified in a fresh engine.
+==============================================================================
