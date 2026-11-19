@@ -1,0 +1,197 @@
+==============================================================================
+PRE-REGISTRATION — r5.1a CORRIGENDUM & METRIC BATTERY
+(declares every check, expected value and falsifier BEFORE any number is
+read; companion to the r5.1a corrigendum register entry; md5 of this sheet
+and of r51a_battery.py registered in that entry)
+==============================================================================
+Executor: GLM, standing register. Discipline: exact arithmetic where the
+object is rational; float only where declared (finite differences, ray
+limits, NESS solve, eigenvalues). One script, one results JSON, compared
+line-by-line against this sheet after the run.
+
+Corpus anchors verified before this sheet was written (grep on extracted
+texts, quoted verbatim in the entry):
+  - Paper I Eq. (6):  L_cov3_{b,q} = (1/sqrt 2) (1 - P_b^(2)) X_q P_b^(2),
+    X_q = (S_b - S_{b+1})_q, q in {x,y,z};  [p1_main_text.txt lines
+    429-437]; Paper I Eq. (7): L†L = P^(2), L L† = (5/3) P^(1).
+  - Five-dyad eliminated: "Ad-hoc jump sets (the two-jump and five-dyad
+    constructions of the early arc) break the symmetry by hand..." [line 419].
+  - Paper II §12.2 stationary table, N=4 row "XXX cont. r=1":
+    M̄ = 0.250588, <Φ1> = 1.605638; and §12.5: the N=4 cross-check
+    "reproduces 0.250588/1.605638 and the non-flat profile
+    [0.061203, 0.128182, 0.061203] (interior 2.09x boundary)".
+
+------------------------------------------------------------------------------
+GATE 0 (repair of r5.1 PR-NOGO-RAW) — cov3 built from the printed Eq. (6)
+------------------------------------------------------------------------------
+Build: P_b^(2) = the J=2 projector on bond (b, b+1) via CG on the 9-dim
+       pair space (5 J=2 states); X_q = (S_b - S_{b+1})_q embedded; the
+       three jumps L_{b,q}, q in {x,y,z}; D = sum_b sum_q (L rho L† -
+       1/2 {L†L, rho}); gamma = 1, N = 4.
+Solves: continuous NESS, BOTH transports H_XXX (sum S.S) and H_XY
+        (sum SxSx+SySy), ladder seed (the Paper II 12.5 N=4 cross-check
+        convention: maximally-mixed seed, r = 1 continuous).
+Declared expected (from Paper II §12.2/§12.5, 6-digit class):
+  H_XXX: bond burdens M_b = [0.061203, 0.128182, 0.061203],
+         sum M̄ = 0.250588 (profile sum; interior/boundary = 2.09x),
+         <Φ1> = 1.605638.
+  H_XY:  sum M̄ = 0.398159 (cont. r=1 row), <Φ1> = 1.803984.
+  rho PSD, stationarity residual <= 1e-9 on both.
+  AND the raw clock class claim on the CANONICAL channel: omega_raw
+  interior vs boundary ratio reported per transport (sign of the r5.1
+  class claim re-anchored on cov3; the r5.1 five-dyad numbers
+  1.2795x / 0.8817x are RETIRED from the register as retired-channel
+  data, retained only as historical archive).
+Falsifier: |M_b - declared| > 5e-4 on any bond, or M̄ off by > 5e-4, or
+residual > 1e-9, or rho not PSD. Then Gate 0 FAILS and the corrigendum
+is NOT issued as "repaired" — the discrepancy is registered instead.
+
+------------------------------------------------------------------------------
+THEOREM A (E4) — exact closed-form scaling metric on the state space
+------------------------------------------------------------------------------
+Object: Phi(rho) = -ln det C(rho), C_ij(rho) = Tr(rho (S_i o S_j)) -
+        <S_i><S_j>, S = spin-1 matrices, rho any state of C^3.
+Declared closed form (the certificate TARGET, from the owner's message):
+  C(rho + t d) = C + t dC - t^2 dm dm^T   with dm = Tr(d S) (3-vector)
+  g_rho(d, d) = Tr(C^{-1} dC C^{-1} dC) + 2 dm^T C^{-1} dm  >= 0
+Checks (all expected PASS):
+  A1  closed form vs symmetric finite differences on 8 random Hermitian
+      directions at 8 random interior states: agreement <= 1e-6.
+  A2  at rho = I/3 exactly: spectrum of g on the 8-dim tangent space
+      = {9/4 (x5), 6 (x3)} (the owner's declared exact values).
+  A3  PSD on 200 random interior states (mixed rho with det C > 0):
+      min eigenvalue of the 8x8 g matrix > 0; declared global min
+      >= 1.16 (owner's value; certificate must not go below it by
+      more than 1e-3 tolerance on the sampled set).
+  A4  coherent ray I/3 -> |+1><+1| and nematic ray I/3 -> |0><0|:
+      with rho_p = (1-p) I/3 + p |m><m|, (1-p)^2 g_pp -> 1.000000 as
+      p -> 1^- on both rays (logarithmic divergence of the line
+      element ds ~ dp/(1-p); geodesic distance to the boundary = inf).
+      Declared checkpoints p = 0.9, 0.99, 0.999, 0.9999 on both rays,
+      each |value - 1| <= 5e-3 (approach).
+  A5  TRAP for PR-SCALE-3 (now STRUCK as a gate): triangle inequality
+      for the path-infimum distance of a smooth PSD Riemannian metric
+      is automatic (concatenation argument); the non-trivial content
+      is metricity (A1-A4) + injectivity (Theorem B) + the boundary
+      (A4). Registered here so the strike is pre-registered, not
+      post-hoc.
+
+------------------------------------------------------------------------------
+THEOREM B (E4) — rank of the centered correlation map by spin
+------------------------------------------------------------------------------
+Object: the linear map rho -> (dC, dm) components, i.e. the differential
+of rho -> C at fixed zero mean; kernel dimension = dim S - rank.
+Declared:
+  S = 1/2 (dim S(C^2) = 3):  rank 3/3   (su(2) span, non-degenerate
+                               on the Bloch ball)
+  S = 1   (dim S(C^3) = 8):  rank 8/8   (3 dipole + 5 quadrupole span
+                               su(3); g non-degenerate on M_full even
+                               though dC/dx alone has rank 6 — the 2
+                               extra dimensions come through the dm
+                               term of Theorem A)
+  S = 3/2 (dim S(C^4) = 15): rank 8/15  (7 exact zero eigenvalues =
+                               the octupole k=3 kernel)
+  Corollary (registered): for S >= 3/2, g_rho is degenerate and is NOT
+  a Riemannian metric on the full state space. With Paper I Theorem 1
+  (monogamy kills S=1/2 on a chain), S=1 is the unique spin where both
+  the zero-closure composition survives AND the log-volume Hessian is
+  non-degenerate on the local state space.
+Falsifier: any rank off by one from declared; or the S=1/2 or S=1
+kernels non-zero.
+
+------------------------------------------------------------------------------
+PR-T1b-2 TRAP ANCHORS (pre-registration of the NEXT gate's known traps;
+run here so the numbers enter the register before that gate's sheet)
+------------------------------------------------------------------------------
+Substrate: N=3 open spin-1 chain, bonds 0 = (0,1), 1 = (1,2), overlap
+site 1; h_b = S_b . S_{b+1}; NO dissipation (pure Lie algebra facts).
+Declared (from the owner's message, to be reproduced exactly):
+  T1  || i [h_1, h_0] ||_F = sqrt(48) = 6.928203...  and the
+      commutator equals 2i x (chiral current structure
+      S_0 . (S_1 x S_2) type — verify the commutator's action on the
+      chiral scalar is real-scaled, i.e. [h1,h0] = c * (chirality
+      operator) with c real; report c).
+  T2  || e^{-i t h0} e^{-i t h1} (S_{1,z}) - e^{-i t h1} e^{-i t h0}
+      (S_{1,z}) ||_F = 0.056403 at t = 0.1 (O(t^2) desynchronization,
+      the non-Abelian time holonomy seed).
+  T3  Lie-Trotter: || (e^{-i (t/n) h0} e^{-i (t/n) h1})^n - e^{-i t(h0+h1)} ||
+      -> 0 as O(t^2/n): declared checkpoints n = 2, 5, 10, 20, 50 at
+      t = 0.1, each <= 1.2 x (0.1^2 / n) with the prefactor read off
+      the fit.
+Falsifier: any anchor off by more than 1e-3 relative.
+
+All values above are frozen BEFORE the run; results JSON is compared
+line-by-line against this sheet, and the corrigendum entry quotes only
+numbers that appear in BOTH.
+==============================================================================
+
+==============================================================================
+POST-RUN ADJUDICATION (appended AFTER the run; the declarations above are
+frozen and were NOT edited)
+==============================================================================
+Verified as declared (PASS):
+  GATE 0   cov3 from printed Eq. (6): identities Eq. (7) at 4.4e-16;
+           H_XXX M_b = [0.061203, 0.128182, 0.061203], Mbar = 0.250588,
+           Phi1 = 1.605638; H_XY Mbar = 0.398159, Phi1 = 1.803984;
+           residuals 0, rho PSD. omega_raw ratios: XXX 2.2831 interior
+           FASTER, XY 0.7705 interior SLOWER — the class claim CONFIRMED
+           on the canonical channel.
+  A1       closed form g = Tr(C^-1 dC C^-1 dC) + 2 dm^T C^-1 dm matches
+           FD to < 1e-6 relative (kernel directions skipped: g = 0 there).
+  T1       ||i[h1,h0]||_F = sqrt(48) EXACT; [h1,h0] = i * (chirality
+           operator S0.(S1xS2)) EXACTLY (alignment residual < 1e-10) —
+           the Paper II F3a chiral energy current, machine-stated.
+  T2       desync ||...||_F = 0.056404 at t = 0.1 (declared 0.056403).
+  T3       Lie-Trotter error = (sqrt(48)/2) * t^2/n + O(t^3): constant
+           3.4641 = sqrt(48)/2 EXACT, O(t^2/n) scaling exact (ratio
+           constant to < 0.5% across n = 2..50).
+
+Refuted as declared (FAIL — the declared values are wrong, the correct
+values are registered here):
+  A2       TRUE spectrum of g at I/3: {0 (x4), 2.564146, 4.935854,
+           8.25 (x2)}. NOT {9/4 (x5), 6 (x3)}. The kernel is 4-dimensional
+           (not 0): the four band directions unseen by BOTH the dipole
+           and quadrupole functionals. FD cross-check: g(kernel element)
+           = 0 exactly; g(E(12 symmetric)) = 8.25; g(diag pair) = 4.875
+           (eigendecomposition consistent).
+  A3       TRUE min eigenvalue over 200 random interior states: 1.059
+           (declared bound 1.16 violated). g is PSD everywhere sampled
+           (0 negatives) — convexity itself held — but the claimed uniform
+           lower bound 1.16 is false; 17/200 sampled states sit below it.
+           The 4 zero eigenvalues at I/3 (A2) show the infimum is 0,
+           reached ON the interior at isotropic points.
+  A4       TRUE ray limits: coherent ray (1-p)^2 g_pp -> 3.000000;
+           nematic ray -> 1.000000. The declared "1.000000 on both rays"
+           is wrong for the coherent ray by a factor of 3. BOTH rays
+           still diverge logarithmically (ds ~ dp/(1-p), infinite
+           geodesic distance; det C -> 0), so Theorem A's CONCLUSION
+           (infinite evaluation) survives; the claimed CONSTANT does not.
+  THEOREM B  TRUE ranks of the functional family {Tr(. S_i)} + {Tr(. S_i o S_j)}:
+           S=1/2: 1/3 (declared 3/3);
+           S=1:   4/8 (declared 8/8);
+           S=3/2: 9/15 (declared 8/15 — right rank, wrong by one in the
+                   kernel count: kernel is 6, not 7).
+           Root cause (machine-exhibited): in the |m> Jz-eigenbasis,
+           Sx o Sy and Sy o Sz vanish identically (real-symmetric x
+           imaginary-antisymmetric); the six Jordan products span only
+           {2 diagonal + 1 off-diagonal band} = 3 dims; plus the 3
+           dipoles = 4 total at S=1. The kernel at S=1 (4-dim) is
+           spanned by the lam1, lam2, lam4, lam5 Gell-Mann bands —
+           imaginary/symmetric off-diagonal combinations invisible to
+           every correlation functional of the spin vector.
+           CONSEQUENCE: the S=1 "uniqueness" corollary of Theorem B
+           (8/8 non-degenerate on M_full) is REFUTED. g is a DEGENERATE
+           positive form on the state space of every spin S (kernel >= 3
+           everywhere), and the scaling metric on states is a
+           PSEUDOMETRIC unless the state space is quotiented by the
+           correlation kernel or the frame is enlarged beyond the spin
+           vector. The honest statement the register adopts: the scaling
+           metric is a genuine Riemannian metric on the CORRELATION-FRAME
+           manifold Sym_+^3 (PR-SCALE-2's substrate), and a pseudometric
+           on state space, with the fibers being the A2 kernel cosets.
+           This coincidentally matches the audit's independent warning
+           (many-to-one rho -> C) — both cracks land in the same place.
+
+The four pre-declared FAILs stand as registered refutations of the
+round's inputs; no declaration was retro-edited.
+==============================================================================

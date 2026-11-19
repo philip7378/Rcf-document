@@ -1,0 +1,254 @@
+==============================================================================
+REGISTER ENTRY — r5.1a CORRIGENDUM ON COMMIT 5f0d524 + THE METRIC BATTERY
+(Corrects the r5.1 amendment entry (5f0d524) on one fact, re-grades two
+claims, strikes one proposed gate, and registers the r5.1a certificate
+run: Gate 0 cov3 repair, Theorem A partial verification with two declared
+values refuted, Theorem B refuted, PR-T1b-2 trap anchors certified)
+==============================================================================
+Auditor: GLM, standing register — the owner's round. Inputs: three external
+adjudications of 5f0d524 (two full audits plus a gate-choice brief), the
+owner's Theorem A/B claims and PR-T1b-2 pre-registration warning, and the
+owner's weak-vs-strong cocycle framing question. This entry records the
+register's own verdicts, every one of them machine-anchored this round
+(pre-registration sheet pr_r51a_battery_sheet.txt, md5 91227940; script
+r51a_battery.py, md5 cfaf9c72; results r51a_results.json, md5 f1e87103;
+sheet declared BEFORE any number was read, post-run adjudication appended
+after, no retro-editing).
+
+------------------------------------------------------------------------------
+1. CORRIGENDUM ON 5f0d524 — Defect A (the false D2 note), RETRACTED
+------------------------------------------------------------------------------
+
+The r5.1 entry §5 said the cov3 absolute values (M_b = 0.061203 /
+0.128182; omega 0.129/0.295) belonged to a "sealed cov3-bundled substrate
+behind a home-workspace colocation boundary," and called five-dyad "the
+canonical Def 3.5 channel." Both halves are WRONG and are retracted:
+
+  - cov3's closed form is PRINTED in the corpus: Paper I Eq. (6)
+    L_cov3_{b,q} = (1/sqrt 2)(1 - P_b^(2)) X_q P_b^(2), verbatim in
+    p1_main_text.txt lines 429-437 (with Eq. (7) L†L = P^(2),
+    L L† = (5/3) P^(1)), and again in Paper II §1 (line 29). No external
+    checkpoint exists. Gate 0 this round built it from the printed text
+    and reproduced the entire declared family in this environment:
+    Eq. (7) identities at 4.4e-16; H_XXX NESS M_b = [0.061203, 0.128182,
+    0.061203], M̄ = 0.250588, <Φ1> = 1.605638; H_XY M̄ = 0.398159,
+    <Φ1> = 1.803984; stationarity residual 0; rho PSD.
+  - Five-dyad is the RETIRED channel: Paper I No-Go II context
+    (line 419) names "the two-jump and five-dyad constructions of the
+    early arc" as the ad-hoc jump sets that break symmetry by hand and
+    were eliminated. The r5.1 run used it anyway (built from a Def-3.5-
+    style construction) — the class finding survived but on the wrong
+    substrate, and the "canonical" label was backwards.
+
+Consequences registered: (i) the D2 "colocation boundary" note is
+STRUCK from the record; (ii) the r5.1 PR-NOGO-RAW five-dyad absolutes
+(1.2795x / 0.8817x) are re-labeled "retired-channel archive"; (iii) the
+CANONICAL cov3 values are now on the machine record: omega_raw ratios
+XXX 2.2831 (interior FASTER) vs XY 0.7705 (interior SLOWER) — the
+probe-dependence class claim CONFIRMED on the canonical channel, and it
+now matches the pasted adjudication's own cov3 numbers (2.283x vs
+0.771x) exactly. Credit where due: the external session's arithmetic
+cross-check of the five-dyad run was itself accurate; the lineage error
+was mine.
+
+------------------------------------------------------------------------------
+2. THE r5.1 ENTRY's OTHER TWO DEFECTS — re-graded
+------------------------------------------------------------------------------
+
+Defect B (PR-DIM-1 "Local 3D: E4" = container circularity): ACCEPTED.
+PR-DIM-1 computed the 3x3 dipole-frame covariance and got rank 3 because
+3 su(2) generators were put in. The full single-site algebra is
+8-dimensional; the "3" is an input, not an output. PR-DIM-1 is
+RE-LABELED: "dipole-frame covariance rank on SU(2) spin-1 (E4 algebraic
+fact)". Local 3D grade: E4 for the link-space tier dimension (sandwich
+forcing, unchanged), E0 for "state-independent settles-to-3" (now
+refuted by the r5.1 machine data itself: coherent 2 / mixed 3). The
+top-form route (four-condition uniqueness) remains the only
+non-circular D=3 program.
+
+Defect C (PR-SCALE-3 is a tautology): ACCEPTED — PR-SCALE-3 as
+"numerical triangle-inequality sweep" is STRUCK. Path-infimum distances
+of a genuine Riemannian metric satisfy the triangle inequality by
+concatenation; running a sweep would certify a definition. What survives
+is the owner's own reframing, which this round's machine run settles
+differently in one place — see §3.
+
+------------------------------------------------------------------------------
+3. THEOREM A — CLOSED FORM VERIFIED; TWO DECLARED VALUES REFUTED
+------------------------------------------------------------------------------
+
+The owner's Theorem A (exact closed form for the log-volume Hessian on
+the STATE space):
+  g_rho(d,d) = Tr(C^-1 dC C^-1 dC) + 2 dm^T C^-1 dm >= 0, with
+  C(rho + t d) = C + t dC - t^2 dm dm^T
+is VERIFIED at machine grade: FD agreement < 1e-6 relative across 8
+random interior states x 8 directions (A1 PASS), including the exact
+quadratic map identity C(rho + t d) (residual 0). The convexity reading
+(both terms manifestly >= 0 on det C > 0 states) also held: 0 negative
+eigenvalues in 200 random interior states (A3's PSD component PASS).
+
+But two of the round's declared SPECIFIC values are REFUTED by the same
+machine:
+
+  (i) SPECTRUM AT I/3: declared {9/4 (x5), 6 (x3)}; measured
+      {0 (x4), 2.564146, 4.935854, 8.25 (x2)} (FD cross-checked: kernel
+      elements give exactly 0; E(12) gives 8.25; diag pair 4.875). The
+      kernel is 4-dimensional — see §4, because this IS Theorem B's
+      failure showing up inside Theorem A.
+  (ii) RAY CONSTANTS: declared (1-p)^2 g_pp -> 1 on both rays; measured
+      coherent ray -> 3.000000, nematic ray -> 1.000000. The coherent
+      ray's divergence constant is 3, not 1. The CONCLUSION survives
+      (both rays logarithmic, ds ~ dp/(1-p), geodesic distance to the
+      rank-deficient boundary = infinity; det C -> 0 on both) — infinite
+      evaluation is real — but the printed constant must be per-ray.
+      The uniform bound claim (min lambda >= 1.16) also fails: sampled
+      min 1.059, and at I/3 itself the infimum is 0 (the 4 zero
+      eigenvalues).
+
+Registered grade: Theorem A = E4 for the closed form, the PSD
+convexity, and the logarithmic boundary divergence (per-ray constants
+3 and 1); the "strictly positive-definite Riemannian metric on the
+full state space" clause is REFUTED (kernel 4-dim at I/3, so g is a
+DEGENERATE form on states — see §4).
+
+------------------------------------------------------------------------------
+4. THEOREM B — REFUTED IN ALL THREE ROWS; THE S=1 UNIQUENESS DIES
+------------------------------------------------------------------------------
+
+The round claimed: S=1/2 rank 3/3; S=1 rank 8/8 ("non-degenerate
+everywhere on M_full"); S=3/2 rank 8/15 (7-dim octupole kernel); and
+the corollary "S=1 is the unique spin where the log-volume Hessian is a
+non-degenerate Riemannian metric on the full local state space."
+
+Machine verdict (complexified rank of {Tr(. S_i)} + {Tr(. S_i o S_j)},
+kernel exhibited element-by-element):
+    S=1/2:  rank 1/3  (declared 3/3)
+    S=1:    rank 4/8  (declared 8/8)
+    S=3/2:  rank 9/15 (declared 8/15; kernel is 6-dim, not 7)
+
+Root cause, machine-exhibited: in the Jz eigenbasis Sx, Sz are real
+symmetric and Sy imaginary antisymmetric, so Sx o Sy and Sy o Sz vanish
+IDENTICALLY — the six Jordan products span only 3 dimensions (2 diagonal
++ 1 off-diagonal band), plus the 3 dipoles = 4 at S=1. The 4-dim kernel
+at S=1 is exactly the Gell-Mann lam1/lam2/lam4/lam5 band directions —
+the same 4-dim kernel that appears as the zeros in Theorem A's I/3
+spectrum. The two theorems fail for the SAME reason, and that reason
+also falsifies "dC/dx has rank 6, the dm term adds 2": the dm term adds
+the dipoles, which are already in the span; nothing adds the four
+unseen bands.
+
+REGISTERED CONSEQUENCES (this is the substantive physics finding of the
+round): for EVERY spin S, the correlation functionals of the spin vector
+leave a kernel of dimension >= 3 on the state space. The log-volume
+Hessian g is therefore a DEGENERATE positive form on states — a
+PSEUDOMETRIC, not a Riemannian metric, unless the state space is
+quotiented by the kernel cosets or the frame is enlarged (e.g. to the
+full Jordan algebra of the site). The scaling metric's honest home,
+machine-confirmed from both directions this round: a genuine Riemannian
+metric on the CORRELATION-FRAME manifold Sym_+^3 (PR-SCALE-2's substrate,
+where it is the affine-invariant/log-barrier metric, PSD and complete),
+and a pseudometric on state space with fibers = kernel cosets. The
+owner's "S=1 uniqueness" corollary is retired; the audit's many-to-one
+warning (rho -> C) lands on the same crack from the other side — the
+kernel is the algebraic name for it. The multi-site fence (global C on a
+chain has rank <= 8, needs a bond-product metric) is registered
+unchanged as the separate step.
+
+------------------------------------------------------------------------------
+5. PR-T1b-2 TRAP ANCHORS — CERTIFIED (the next gate's ground truth)
+------------------------------------------------------------------------------
+
+The owner's warning ("do not pre-register naive commutativity expecting
+PASS — the non-commutativity IS the finding") is adopted and anchored:
+  T1: ||i[h1, h0]||_F = sqrt(48) = 6.928203 EXACT, and [h1, h0] = i x
+      (chiral operator S_0.(S_1 x S_2)) EXACTLY (alignment residual
+      < 1e-10) — the desynchronization generator IS the chiral energy
+      current of Paper II F3a, now machine-stated on the nose.
+  T2: ||e^{-ith0}e^{-ith1}(S1z) - e^{-ith1}e^{-ith0}(S1z)||_F
+      = 0.056404 at t = 0.1 (declared 0.056403) — the O(t^2)
+      desynchronization magnitude.
+  T3: Lie-Trotter synchronized-cocycle limit: the Trotter error is
+      EXACTLY (sqrt(48)/2) t^2/n (constant 3.4641, O(t^2/n) scaling
+      exact to < 0.5% across n = 2..50) — the prefactor is the SAME
+      sqrt(48): the holonomy magnitude and the synchronization rate are
+      one number. Synchronized (strobe) clocks converge to the global
+      flow; free-running bond clocks desynchronize at the chiral rate.
+
+These anchors take the three-part PR-T1b-2 pre-registration as declared
+by the round (O(t) additivity / O(t^2) holonomy identification /
+Lie-Trotter cocycle limit) from speculation to machine-ground truth on
+every leg that can be checked without the dissipation channel. The
+branch structure is adopted from the round's sealed three-branch space
+(flat / lapse-gradient / genuine holonomy), with branch B's "holonomy =
+burden-lapse gradient" remaining the pre-registered bet.
+
+------------------------------------------------------------------------------
+6. THE OWNER'S WEAK-VS-STRONG QUESTION — DECLARATION (before the run)
+------------------------------------------------------------------------------
+
+Per the C1 discipline the declaration comes from the register now, in
+this entry, before PR-T1b-2 runs: PR-T1b-2 is pre-registered as the
+WEAK cocycle on the minimal two-bond chain — a necessary condition,
+explicitly NOT sufficient. PASS grants only: "local time is consistent
+as an equivalence class of clock readings on one overlap, up to a
+monotone relabeling that may depend on the overlap." Strong/global time
+(a single relabeling across all overlaps) is a SEPARATE gate (PR-T1b-3),
+conditional on T1b-2's outcome, and is not claimed by the title's
+proof obligations. The T3 anchor above already fixes the synchronized
+reading as the Lie-Trotter limit — the global flow is the n->inf
+attractor of the synchronized strobe protocol, which is exactly the
+weak->strong bridge candidate the round must test at N=3 with
+dissipation on.
+
+TIME GRADE entering the paper (adopting the round's grading calculus,
+min over dependencies): local time derivation = E2-PENDING-COCYCLE
+(seed theorems E4, clock observable E3, derivation blocked on the open
+cocycle). The r5.1 entry's "E4/E3" for the time pillar is corrected
+accordingly.
+
+------------------------------------------------------------------------------
+7. REGISTER UPDATE
+------------------------------------------------------------------------------
+
+  Item                                       Prior status        Now
+  --------------------------------------------------------------------------
+  r5.1 §5 "sealed cov3 / colocation"        standing (wrong)   RETRACTED (Gate 0: cov3 printed + reproduced, 6 digits, residual 0)
+  "canonical five-dyad Def 3.5"              standing (wrong)   RETIRED label; five-dyad = eliminated early-arc channel (No-Go II)
+  PR-NOGO-RAW absolutes                      five-dyad values   cov3 canonical values machine-anchored: ratios XXX 2.2831 / XY 0.7705; class claim (sign flip) CONFIRMED on canonical channel
+  PR-DIM-1 "Local 3D: E4"                    standing            RE-LABELED dipole-frame fact (E4 algebra, D3 circularity conceded); "settles to 3" stays refuted; top-form route unchanged
+  PR-SCALE-3 (numerical triangle sweep)       queued             STRUCK (tautology); PR-SCALE-3' = non-degeneracy/injectivity ALSO re-scoped: the injectivity FAILS on states (Theorem B) and holds on frames
+  Theorem A closed form                       owner claim        VERIFIED E4 (A1 PASS, FD < 1e-6 rel)
+  Theorem A spectrum {9/4 x5, 6 x3}           owner claim        REFUTED: {0 x4, 2.564146, 4.935854, 8.25 x2}
+  Theorem A rays -> 1.000000 both             owner claim        REFUTED for coherent ray (-> 3); nematic -> 1. Infinite-evaluation CONCLUSION survives (both logarithmic)
+  min lambda >= 1.16                          owner claim        REFUTED (sampled min 1.059; infimum 0 at I/3)
+  Theorem B ranks 3/3, 8/8, 8/15              owner claim        REFUTED: 1/3, 4/8, 9/15 (kernels machine-exhibited; Sx o Sy vanishes identically)
+  S=1 uniqueness of the metric on states      owner claim        RETIRED (g degenerate on states for all S; kernel >= 3 everywhere)
+  Scaling metric on Sym_+^3 (frames)          E0 w/ 2 E4 certs   CONFIRMED genuine Riemannian metric on frames; PSEUDOMETRIC on states (both cracks coincide: kernel = many-to-one fibers)
+  [h1,h0] vs chiral current                   claimed            CERTIFIED: = i x chiral EXACTLY, norm sqrt(48)
+  Trotter prefactor                           O(t^2/n) declared  CERTIFIED EXACT: (sqrt(48)/2) t^2/n
+  Time pillar grade                           E4/E3 (r5.1)       E2-PENDING-COCYCLE (min-over-deps rule; r5.1 corrected)
+  PR-T1b-2 formulation                        two options        DECLARED: weak cocycle, canonical cov3 channel, three-part check, three-branch outcome space; strong/global deferred to PR-T1b-3
+
+------------------------------------------------------------------------------
+8. CLOSE
+------------------------------------------------------------------------------
+The round began with an instruction to correct the register before it
+propagates, and the correction is now complete and machine-anchored:
+the colocation fiction is dead (cov3 was printed in the corpus all
+along), the retired channel is labeled retired, the canonical numbers
+are reproduced from first principles at residual zero, and the probe-
+dependence class claim is confirmed on the correct substrate. What the
+round ADDED beyond the correction is equally registered: Theorem A's
+closed form is real and E4, but its specific spectral values were wrong
+by more than rounding — the true spectrum carries a 4-dim kernel, and
+that kernel is the round's substantive discovery, because it fells
+Theorem B's S=1 uniqueness and forces the scaling metric to live
+honestly: Riemannian on correlation frames, pseudometric on states.
+The chiral commutator, the O(t^2) desynchronization, and the
+sqrt(48)/2 synchronization prefactor are now exact — the next gate's
+ground truth is set before its sheet is written. Queue, unchanged in
+form: PR-T1b-2 on canonical cov3 (weak cocycle, three parts, three
+branches, with the non-vacuity gate the round's brief demanded),
+PR-T1b-3 conditional, then the frame-side uniqueness program (four
+conditions on Sym_+^3) with the state-side bridge explicitly fenced.
+==============================================================================

@@ -1,0 +1,217 @@
+{
+  "GATE0_cov3": {
+    "identities_eq7": [
+      {
+        "bond": 0,
+        "LdL_minus_P2": 4.440892098500626e-16,
+        "LLd_minus_5_3_P1": 2.220446049250313e-16
+      },
+      {
+        "bond": 1,
+        "LdL_minus_P2": 4.440892098500626e-16,
+        "LLd_minus_5_3_P1": 2.220446049250313e-16
+      },
+      {
+        "bond": 2,
+        "LdL_minus_P2": 4.440892098500626e-16,
+        "LLd_minus_5_3_P1": 2.220446049250313e-16
+      }
+    ],
+    "H_XXX": {
+      "M_b": [
+        0.061203,
+        0.128182,
+        0.061203
+      ],
+      "Mbar": 0.250588,
+      "Phi1": 1.605638,
+      "omega_raw": [
+        0.129041,
+        0.294609,
+        0.129041
+      ],
+      "omega_ratio_interior_boundary": 2.2831,
+      "residual": 0.0,
+      "eig_at_zero": 1.6877489919273106e-16,
+      "rho_min_eig": -0.0
+    },
+    "H_XY": {
+      "M_b": [
+        0.120796,
+        0.156567,
+        0.120796
+      ],
+      "Mbar": 0.398159,
+      "Phi1": 1.803984,
+      "omega_raw": [
+        0.273019,
+        0.21037,
+        0.273019
+      ],
+      "omega_ratio_interior_boundary": 0.7705,
+      "residual": 0.0,
+      "eig_at_zero": 1.0769645866007997e-16,
+      "rho_min_eig": -0.0
+    },
+    "declared_match_XXX": true,
+    "declared_match_XY": true,
+    "verdict": "PASS"
+  },
+  "THEOREM_A1_closed_form": {
+    "max_rel_err": 9.99216381197923e-07,
+    "tolerance": 1e-06,
+    "note": "kernel directions (g=0) skipped; relative to |g|",
+    "verdict": "PASS"
+  },
+  "THEOREM_A2_spectrum_I3": {
+    "eigenvalues": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      2.564146,
+      4.935854,
+      8.25,
+      8.25
+    ],
+    "kernel_dim": 4,
+    "declared": "9/4 (x5), 6 (x3)",
+    "verdict": "FAIL"
+  },
+  "THEOREM_A3_PSD_200": {
+    "min_eig": 0.0,
+    "declared_lower_bound": 1.16,
+    "verdict": "FAIL"
+  },
+  "THEOREM_A4_rays": {
+    "rays": {
+      "coherent_|+1>": {
+        "checkpoints": [
+          {
+            "p": 0.9,
+            "(1-p)^2 g_pp": 3.004074,
+            "detC": 0.00017407407407407405
+          },
+          {
+            "p": 0.99,
+            "(1-p)^2 g_pp": 3.000036,
+            "detC": 1.8407407407407395e-07
+          },
+          {
+            "p": 0.999,
+            "(1-p)^2 g_pp": 3.0,
+            "detC": 1.8507407407406322e-10
+          },
+          {
+            "p": 0.9999,
+            "(1-p)^2 g_pp": 3.0,
+            "detC": 1.851740740739569e-13
+          }
+        ],
+        "converges_to_1": false
+      },
+      "nematic_|0>": {
+        "checkpoints": [
+          {
+            "p": 0.9,
+            "(1-p)^2 g_pp": 1.002378,
+            "detC": 0.015574074074074079
+          },
+          {
+            "p": 0.99,
+            "(1-p)^2 g_pp": 1.000022,
+            "detC": 0.001655574074074076
+          },
+          {
+            "p": 0.999,
+            "(1-p)^2 g_pp": 1.0,
+            "detC": 0.00016655557407407415
+          },
+          {
+            "p": 0.9999,
+            "(1-p)^2 g_pp": 1.0,
+            "detC": 1.666555557407225e-05
+          }
+        ],
+        "converges_to_1": true
+      }
+    },
+    "verdict": "FAIL"
+  },
+  "THEOREM_B_ranks": {
+    "S=0.5": {
+      "rank": 1,
+      "tangent_dim": 3,
+      "declared": 3,
+      "verdict": "FAIL"
+    },
+    "S=1.0": {
+      "rank": 4,
+      "tangent_dim": 8,
+      "declared": 8,
+      "verdict": "FAIL"
+    },
+    "S=1.5": {
+      "rank": 9,
+      "tangent_dim": 15,
+      "declared": 8,
+      "verdict": "FAIL"
+    },
+    "S=3/2_kernel_dim": 6
+  },
+  "T1b2_T1_commutator": {
+    "norm_i_commutator": 6.928203,
+    "sqrt48": 6.928203,
+    "match": true,
+    "comm_equals_i_times_chiral": true,
+    "c_factor": 0.9999999999999997,
+    "verdict": "PASS"
+  },
+  "T1b2_T2_desync": {
+    "norm": 0.056404,
+    "declared": 0.056403,
+    "verdict": "PASS"
+  },
+  "T1b2_T3_trotter": {
+    "t": 0.1,
+    "points": [
+      {
+        "n": 2,
+        "err": 0.01729526,
+        "t^2/n": 0.005,
+        "ratio": 3.4591
+      },
+      {
+        "n": 5,
+        "err": 0.00691811,
+        "t^2/n": 0.002,
+        "ratio": 3.4591
+      },
+      {
+        "n": 10,
+        "err": 0.00345905,
+        "t^2/n": 0.001,
+        "ratio": 3.4591
+      },
+      {
+        "n": 20,
+        "err": 0.00172953,
+        "t^2/n": 0.0005,
+        "ratio": 3.4591
+      },
+      {
+        "n": 50,
+        "err": 0.00069181,
+        "t^2/n": 0.0002,
+        "ratio": 3.4591
+      }
+    ],
+    "ratios_bounded_by_1.2": false,
+    "prefactor": 3.4591,
+    "sqrt48_over_2": 3.464102,
+    "monotone_decreasing": true,
+    "O_t2_over_n_scaling": true,
+    "verdict": "PASS"
+  },
+  "elapsed_s": 13.77
+}
