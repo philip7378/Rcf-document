@@ -1,0 +1,166 @@
+==============================================================================
+REGISTER — PR-T1b-2b EXECUTION REPORT (r5.2): THE N-SCALING DIAGNOSTIC
+(executed per the frozen pr_t1b2b_sheet.txt 1c351bce and the pre-registered
+header rcf_r52_pre_execution_register.txt 4ff99d30; Gate S PASS leading;
+script r52_t1b2b_execution.py, results r52_t1b2b_results.json, hashes at
+freeze of this entry)
+==============================================================================
+
+------------------------------------------------------------------------------
+1. THE VERDICT — FORMAL N-SPLIT, WITH THE HONEST DECOMPOSITION BELOW IT
+------------------------------------------------------------------------------
+FORMAL OUTCOME (per the frozen classifier): N-SPLIT — the three families
+land in different classes. The load-bearing decomposition:
+
+  F1 "S2-product" (chiral-active product control): N-CONSTANT.
+      Off-orbit residual_max = 0.191257 at N = 3, 4, 5, 6 — EXACTLY THE
+      SAME 6-DIGIT VALUE at every N (the product-seed theorem: sites
+      beyond 2 enter the bond-(0,1) strobes only through identity tensor
+      factors; the site-1 channel is N-independent). The chiral
+      coefficient = 0.174716 at every N — the r5.1d S2 value reproduced
+      EXACTLY by a completely rewritten sparse pipeline (the P2
+      cross-check PASSES: dense r5.1d == sparse r5.2 to 6 digits).
+      READING: on chiral-active product states the off-orbit
+      non-integrability does NOT decay with chain length, to machine
+      exactness. This is the structural answer for the chiral-active
+      class: No-Go VII territory (seat-B's proposal), now with
+      N-scaling evidence.
+  F2 "S3-Ginibre" (entangled full-rank): apparent decay curve
+      0.0986 -> 0.0610 -> 0.0310 -> 0.0210 (classifier: N-MIXED, 21.3%
+      of N=3 at N=6) — CONFOUNDED, NOT CITABLE AS DECAY. The P1
+      pre-flight exposes the confound: the Ginibre seeds' site-1
+      deviation from I/3 SHRINKS with N (0.106 -> 0.064 -> 0.043 ->
+      0.018) — random high-dim states have concentrating marginals; the
+      family changes TWO things at once (N and the seed's own site-1
+      coherence, which the off-orbit residual measures directly). The
+      frozen sheet declared the families but did NOT pin F2's site-1
+      deviation across N — my sheet design gap, logged. Registered:
+      F2's apparent N-decay is a seed-concentration artifact; it is
+      neither evidence for decay nor against it. A replacement F2
+      (deviation-pinned entangled seeds) is the next gate's
+      prerequisite, before any route lock.
+  F3 "K_N-kernel": VACUOUS-BY-INVARIANCE at every N — residual, chiral
+      coefficient and strobe diff all EXACTLY 0. The kernel seed is
+      SU(2)-invariant, and the two strobe orderings agree identically on
+      invariant states (the r5.1d freeze mechanism, now verified as
+      N-independent). NOT N-UNMEASURABLE (that class is for numerics
+      failure); reported as vacuity per the honest-verdict rule.
+
+  THE UNCONFOUNDED READING (F1 + F3, the families that held their seed
+  structure fixed): N-CONSTANT on the chiral-active class + vacuity on
+  the invariant class. Per the pre-declared route table this is
+  No-Go VII territory — BUT the formal verdict is N-SPLIT because F2's
+  confounded curve landed in N-MIXED, and the sheet's rule (family
+  disagreement is N-SPLIT, not noise) binds. So the route consequence
+  is SUSPENDED one gate: before No-Go VII is promoted or T1b-3 runs,
+  the F2 confound must be removed (deviation-pinned entangled seeds)
+  so the entangled class gets an honest N-scaling curve. This is the
+  sheet working as designed: the pre-registered classifier produced
+  N-SPLIT, the pre-registered honesty rules identified WHY, and the
+  next gate is forced to be clean rather than convenient.
+
+------------------------------------------------------------------------------
+2. THE GUARDS AND SECONDARY ARMS — ALL AS DECLARED
+------------------------------------------------------------------------------
+  f0_1 GUARD: PASS — F1 chiral coefficient 0.174716 at N = 3, 4, 5, 6,
+      inside [0.16, 0.18] with zero drift. The chiral-current
+      universality claim HOLDS across chain lengths on the product
+      family (the exact product theorem; the guard was designed to
+      catch its failure and did not). r5.1d's B1 keeps its label
+      REPLICATION-CONSISTENCY with N-robustness now measured.
+  LOCALITY (N=4): [h0, h2] = 0 EXACT (disjoint bonds commute — the
+      causal light-cone); [h0, h1] = 11.999999999999998 = 12 EXACT
+      (sqrt 144). Holonomy is strictly local to adjacent overlaps;
+      pre-flight B's anchors reproduced. The vacuity trap was honored
+      throughout: no single-site readout on any invariant state.
+  SPENDING CLOCKS: Gamma_b = gamma M_b >= 0 on every curve (machine:
+      Gamma_positive true at all N); tau_b(T=3) = 0.7209 —
+      N-INDEPENDENT on the F1 family (the product theorem again:
+      M0 curve 0.649/0.299/0.2029/0.1561 identical at all N). The
+      seat-A clock never crosses zero, as registered.
+  HANDOFF (sequential-strobe arm, H_XXX in the generators — a
+      DIFFERENT arm from r5.1d's pure-cov3 handoff, declared in the
+      sheet): N=3 eta = 0.0243 FAIL (the pure-cov3 r5.1d value was
+      0.0505 MARGINAL-UNSTABLE — different dynamics, both logged);
+      N=4 eta = 8.85 PASS, N=5 eta = 9.02 PASS — with the CAVEAT that
+      the eta bands were N=3-designed and at N >= 4 the window of
+      genuine M0 decay shifts late, inflating the ratio mechanically
+      (M0 near its floor while M1 still rises). Registered as
+      PASS (window-shifted; bands N=3-designed); the honest statement
+      is 'massive transfer at N >= 4 under the sequential-strobe arm',
+      not a like-for-like eta comparison. N=6 handoff skipped per the
+      time budget, LOGGED not silently dropped (sheet requirement).
+      M1 peaks: N=3 0.139124 at t=0.25; N=4 0.300563 at t=3.875;
+      N=5 0.300233 at t=3.75.
+
+------------------------------------------------------------------------------
+3. ERRATA AND DEVIATIONS (executor's own log, this round)
+------------------------------------------------------------------------------
+  DEVIATION (implementation medium): the sheet's implementation note
+      said 'dense blockwise e^{L_b t}'; at N >= 5 the dense
+      superoperator is 28+ GB (infeasible in this sandbox) and the run
+      was restructured to SPARSE superoperators + scipy
+      expm_multiply. The STATISTIC is unchanged (the same matrix
+      action computed exactly); the P2 cross-check proves the sparse
+      pipeline reproduces the r5.1d dense numbers to 6 digits at N=3.
+      Logged as a deviation, not hidden.
+  SHEET ERRATUM (P3): the sheet's P3 declared K_N ranks 2^{N-1} — that
+      is the FRACTIONAL AKLT parent's count. The machine truth: the
+      PROJECTOR-SUM kernel ker(sum_b P_b^{(2)}) has rank EXACTLY 4 at
+      every N >= 3 (eigenvalue spectra machine-evidenced: 4 zeros,
+      gap ~0.45; 4 = the 2x2 edge degeneracy, N-independent). The run
+      used the projector-sum kernel throughout — the same operator as
+      r5.1d's N=3 kernel — so no number changes; the ASSERTION was
+      mislabeled and it is the assertion that failed. Family renamed
+      in this report: 'projector-sum AKLT kernel (rank 4,
+      N-independent edge degeneracy)'.
+  SHEET DESIGN GAP (the F2 confound): the families were declared but
+      F2's site-1 deviation was not pinned across N; the concentration
+      confound follows. Prerequisite for the next gate registered
+      above.
+  IN-RUN CRASHES: three trivial code crashes (kron chain, expm_multiply
+      signature, an aborted-edit remnant in strobes()) fixed at first
+      execution; no statistic changed post-first-read.
+
+------------------------------------------------------------------------------
+4. WHAT THIS MEANS FOR THE ROUTE (registered, E3 fence)
+------------------------------------------------------------------------------
+  - The weak cocycle's off-orbit non-integrability is now measured as
+    N-INDEPENDENT on the one family that held its seed structure fixed
+    (F1) — the strongest single piece of evidence toward No-Go VII
+    (Local Frame Non-Integrability) to date, with the four-row
+    elimination table (No-Go V / PR-NOGO-RAW / T1b-2 transient /
+    T1b-2 overlap) + this N-scaling row as its evidence base.
+  - BUT the formal classifier returned N-SPLIT and the route
+    consequence is suspended pending a clean entangled-family curve.
+    NO-GO VII IS NOT YET PROMOTED; T1b-3 IS NOT YET GREENLIT. The next
+    gate (PR-T1b-2c) is forced by the data: deviation-pinned
+    entangled seeds (site-1 deviation held ~0.1 across N, e.g. by
+    conditioning the Ginibre draw on its own marginal deviation), the
+    same statistic, N in {3..6}. If that run lands N-CONSTANT ->
+    No-Go VII promotes with both classes consistent; N-DECAY ->
+    finite-size boundary artifact story revives with a clean test;
+    N-MIXED/N-SPLIT again -> the paper reports the split per class
+    and scopes accordingly.
+  - Paper II s1 sentence stands as registered in r5.2's pre-execution
+    entry: 'local time E3-per-seed at N=3, multi-overlap closure open
+    pending N-scaling.' The N-scaling on the clean class is now in:
+    constant. The sentence upgrades only after PR-T1b-2c closes the
+    entangled class.
+==============================================================================
+VERDICT LINE: FORMAL N-SPLIT (pre-declared classifier); honest
+decomposition: F1 N-CONSTANT exact (0.191257 all N; chiral coeff
+0.174716 all N; sparse==dense P2 PASS); F2 decay CONFOUNDED by seed
+marginal concentration (P1 evidence, not citable); F3 VACUOUS-BY-
+INVARIANCE (all zeros, mechanism pre-known). f0_1 guard PASS (no
+drift). Locality PASS ([h0,h2]=0, [h0,h1]=12). Clocks Gamma/tau
+non-negative, N-independent on F1. Handoff: N3 FAIL 0.0243 / N4
+window-shifted PASS 8.85 / N5 9.02 (bands N=3-designed, caveat
+logged). Route: SUSPENDED one gate — PR-T1b-2c (deviation-pinned
+entangled seeds) before No-Go VII promotion or T1b-3. Errata: P3
+sheet erratum (rank 4, projector-sum family); F2 pin gap; dense->
+sparse deviation logged.
+==============================================================================
+ARTIFACTS (md5): r52_t1b2b_execution.py + r52_t1b2b_results.json
+(hashes at commit) + this entry.
+==============================================================================

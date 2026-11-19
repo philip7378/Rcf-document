@@ -1,0 +1,102 @@
+{
+  "GATE_S": {
+    "max_comm": 3.1718998303807225e-16,
+    "verdict": "PASS"
+  },
+  "commutators_h": {
+    "[h0,h2]": 0.0,
+    "[h0,h1]": 11.999999999999998,
+    "[h1,h2]": 11.999999999999998,
+    "declared": "0 / 12 / 12",
+    "verdict": "PASS"
+  },
+  "NESS": {
+    "residual": 6.843793480383159e-16,
+    "declared": 4.5e-15,
+    "M_b": [
+      0.061203,
+      0.128182,
+      0.061203
+    ],
+    "M_sum": 0.250588,
+    "declared_Mbar": 0.250588,
+    "verdict": "PASS"
+  },
+  "marginals": {
+    "max_err": 2.8844440350112435e-16,
+    "declared": 2.4e-16,
+    "verdict": "PASS"
+  },
+  "commutator_actions": {
+    "adjacent_01": 0.679584,
+    "adjacent_12": 0.679584,
+    "disjoint_02": 0.0,
+    "declared": "0.679584 / 0.679584 / 1.27e-16",
+    "single_site_trace_01_at1": 1.8001269633901294e-16,
+    "declared_iii": 8.25e-17,
+    "verdict": "PASS"
+  },
+  "individual_generators": {
+    "norms": [
+      0.282455,
+      0.380218,
+      0.282455
+    ],
+    "declared_norms": [
+      0.282455,
+      0.380218,
+      0.282455
+    ],
+    "self_drainage": [
+      -0.061203,
+      -0.128182,
+      -0.061203
+    ],
+    "declared_drainage": [
+      -0.061203,
+      -0.128182,
+      -0.061203
+    ],
+    "drain_equals_minus_M": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "verdict": "PASS"
+  },
+  "holonomy_burden_rows": {
+    "row_10": [
+      -0.166844,
+      0.289246,
+      -0.119031
+    ],
+    "row_21": [
+      0.119031,
+      -0.289246,
+      0.166844
+    ],
+    "declared_10": [
+      -0.166844,
+      0.289246,
+      -0.119031
+    ],
+    "declared_21": [
+      0.119031,
+      -0.289246,
+      0.166844
+    ],
+    "middle_bond_cancellation": 0.0,
+    "boundary_dipole": [
+      -0.047814,
+      0.0,
+      0.047814
+    ],
+    "declared_boundary": [
+      -0.047813,
+      0.0,
+      0.047813
+    ],
+    "verdict": "PASS"
+  },
+  "elapsed_s": 1.46
+}

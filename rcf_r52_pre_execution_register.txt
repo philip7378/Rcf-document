@@ -1,0 +1,209 @@
+==============================================================================
+REGISTER ADDENDUM — r5.2 PRE-EXECUTION: SEAT CLAIMS MACHINE-VERIFIED (BOTH
+PRE-FLIGHTS GREEN), CLASSIFIER CORRECTION ADOPTED WITH RETRACTION, B1
+RELABELS REPLICATION-CONSISTENCY (r3.4 FIREWALL), ROUTE ADJUDICATED:
+PR-T1b-2b (N-SCALING DIAGNOSTIC) NOW, PR-T1b-3 CONDITIONAL ON N-DECAY
+(sits on top of the r5.1d execution register a7c96e19, commit e9fe30c;
+this entry pre-registers the r5.2 execution header and freezes
+pr_t1b2b_sheet.txt BEFORE any T1b-2b number is read)
+==============================================================================
+Auditor: GLM, standing register. Inputs adjudicated: the three sign-off
+messages on commit e9fe30c (seat-A: ACCEPT + the seed-B dipole/quadrupole
+split + the N=4 pre-flight anchors + the vacuity trap; seat-B: ACCEPT
+with two classifier/grading catches + the strategic stop-sign + No-Go
+VII proposal + Paths 1/2; seat-C: ACCEPT + the D2 self-erratum + the
+MIXED-verdict stand + the PR-T1b-2b N-scaling recommendation with the
+f0_1 guard clause; seat-D: resolution confirmed + the seed-map-A
+eigenvalue naming + the T1b-3 fork declaration).
+
+------------------------------------------------------------------------------
+1. PRE-FLIGHT A — THE FOUR SEAT CLAIMS, MACHINE-VERIFIED (all PASS)
+------------------------------------------------------------------------------
+(r52_preflightA.py / r52_preflightA.json, Gate-S leading)
+  A1 (seat-A + seat-B classifier correction): ADOPTED, WITH RETRACTION.
+      The seed-B chiral channel matrix decomposes EXACTLY as
+      M_chir = -0.35 S_z - 0.7 (S_x o S_z), with ad_{J^2} eigenvalues
+      {2, 6} (k=1 dipole / k=2 quadrupole), norm^2 0.245 + 0.245 =
+      50.00%/50.00% Hilbert-Schmidt shares, pieces orthogonal, machine
+      error 2.6e-16 (exact). RETRACTED: my r5.1d pre-flight-2 note
+      "purely symmetric = 100% quadrupole" — matrix symmetry was
+      conflated with spherical-tensor rank (in the S_z basis S_x, S_z
+      are REAL SYMMETRIC k=1 dipole matrices). Register rule adopted
+      for all future scripts: classify dipole vs quadrupole ONLY via
+      the SU(2) spherical-tensor projection (ad_{J^2} eigenspaces
+      k(k+1) = 2 / 6), never matrix transpose symmetry. One line for
+      Paper II's prose so "symmetric = quadrupole" cannot creep in.
+  A1b: M_chir = -0.7i[S_y, |+x><+x|] EXACT (2.6e-16). Tr(S_z M_chir) =
+      -0.7 machine; seat-B's +1 belongs to their delta-rho convention
+      sign — magnitude exact, sign is convention; registered as such.
+  A2 (seat-B, B1 provenance): CONFIRMED. (1/4)||delta C_chiral(rho_B)||_F
+      = 1/(4 sqrt 2) = 0.176777 vs the r5.1d measured 0.174716 (1.2%
+      apart): the B1 coefficient on |+x,+x,+z> is the SEED-SPECIFIC
+      covariance-norm coefficient, not a universal constant fixed by
+      ||J_hat||_F = sqrt(48).
+  A3 (seat-B, r3.4 firewall): EVIDENCE-LOCATED. The 0.17/0.176 family
+      appears in pr_r51c_prep_sheet.txt, rcf_r51c_register_addendum.txt,
+      r51c_results.json AND the frozen pr_t1b2_sheet.txt — all
+      pre-/at-freeze artifacts: the diff/t^2 ~ 0.17 value was known on
+      this seed family before the sheet froze. Under Paper I Appendix
+      A's r3.4 firewall the B1 label is therefore REPLICATION /
+      BCH-CONSISTENCY, not blind prediction. REGISTER RELABEL (retro-
+      active label only, no number changes): r5.1d's B1 line reads
+      "REPLICATION-CONSISTENCY: 0.174716 vs 0.17 (2.8%), value known
+      pre-freeze per r3.4; the √48 det-C derivation stands as the
+      mechanism, not a blind-prediction seal."
+  A4 (seat-D naming): ADOPTED. The seed map A = sum_q L^dag P_K3 L
+      (WITHOUT the /4) has eigenvalues {3/7 (x5), 50/63 (x3)}, trace
+      95/21, rank 8 — machine-verified by exact scaling (my script
+      computed (1/4)A, trace 95/84, same spectrum/4). The {1/36 x3,
+      1/4 x5, 1 x7} spectrum belongs to the DIFFERENT object
+      P_{12}^{(2)}|ran(P_{01}^{(2)}) (trace 25/3, rank 15). Naming
+      lines registered: "seed-map A" vs "overlap-restriction spectrum"
+      — the two must not be cross-cited (seat-D's hygiene catch).
+  Also registered from seat-C's message: their own D2 erratum
+      ("M0(0)=1 forces bond-0 J=2 support, not uniform marginals") —
+      their r5.1c adjudication error, self-logged, mirroring my helper
+      erratum. Both seats' logs now carry the round's two errata.
+
+------------------------------------------------------------------------------
+2. PRE-FLIGHT B — SEAT-A'S N=4 ANCHORS, ALL MACHINE-VERIFIED (all PASS)
+------------------------------------------------------------------------------
+(r52_preflightB.py / r52_preflightB.json, dim 81, Gate S PASS,
+H_XXX + cov3, gamma = 1)
+  [h0,h2] = 0 EXACT; [h0,h1] = [h1,h2] = 12.000000 EXACT (sqrt 144).
+  NESS residual 6.8e-16; M_b = (0.061203, 0.128182, 0.061203), sum
+  0.250588 EXACT. Marginals frozen: max err 2.9e-16 (seat's 2.4e-16
+  bound holds at solver tolerance). THE VACUITY TRAP CONFIRMED: the
+  single-site partial trace of [L1, L0] rho_ss at site 1 = 1.8e-16
+  (identically zero — seat-A's (iii)). Adjacent commutator actions at
+  the NESS: 0.679584 / 0.679584 EXACT; disjoint (0,2): 0.0 EXACT.
+  Individual generators ||L_b(rho_ss)||_F = (0.282455, 0.380218,
+  0.282455) EXACT; self-drainage Tr(L_b(rho_ss) P_b^{(2)}) = -M_b
+  EXACT (machine: drain + M_b = 0 to 1e-9 per bond). Holonomy burden
+  rows EXACT to 6 digits: [-0.166844, +0.289246, -0.119031] and the
+  mirror [+0.119031, -0.289246, +0.166844]; middle-bond cancellation
+  0.0 EXACT; boundary dipole [-0.047814, 0, +0.047814] (seat's
+  0.047813, 6-digit agreement).
+  THE N=4 DESIGN CONSEQUENCES ADOPTED INTO THE SHEET (vacuity trap +
+  locality split + boundary dipole):
+  - NO single-site rho_i / det C^{(1)} readout on the N=4 NESS:
+    identically vacuous (iii). The T1b-2b comparison objects are the
+    BOND-LEVEL observables (P_b^{(2)} burdens, the holonomy burden
+    rows) and/or SU(2)-breaking transient seeds.
+  - The N=4 locality arm carries seat-A's exact split: disjoint-bond
+    commutators identically zero (exact cocycle closure across
+    non-overlapping bonds), non-zero holonomy strictly confined to
+    adjacent overlaps. [h0,h2] = 0 is provable a priori (disjoint
+    supports commute); the machine certificate is registered as the
+    anchor.
+  - The boundary dipole [-0.047813, 0, +0.047813] (sum of the two
+    adjacent overlap curvatures) is registered as a named observable
+    for the N-scaling arm: its N-scaling is the multi-overlap
+    cancellation diagnostic.
+  - Seat-A's Gamma_b(t) = gamma M_b(t) >= 0 anti-Hermitian spending
+    clock (cumulative tau_b(T) = int_0^T gamma M_b dt) is REGISTERED
+    as a co-equal clock observable for T1b-2b: it never crosses zero
+    on any trajectory (ties to Paper II's norm-loss law d/dt
+    ||psi||^2 = -gamma <M-hat>); logged alongside omega_raw, not
+    replacing it.
+
+------------------------------------------------------------------------------
+3. ROUTE ADJUDICATION — ALL THREE SEATS CONVERGE, ONE GATE DECIDES
+------------------------------------------------------------------------------
+Seat-B's stop-sign (T1b-3's precondition was falsified at N=3), seat-C's
+recommendation (PR-T1b-2b N-scaling diagnostic, T1b-3 conditional), and
+seat-D's fork (N-scaling decides structural vs finite-size) are the SAME
+decision tree. Adjudicated as the binding route (this register):
+  NOW: PR-T1b-2b — the N-scaling diagnostic, sheet frozen below.
+  THEN: IF N-DECAY (residual at N=6 <= 20% of N=3, monotone) -> the N=3
+        failure is a boundary artifact; PR-T1b-3 proceeds, re-scoped per
+        seat-B's Path 2 (locality light-cone + non-dark cadence at N=4,
+        both already anchored by pre-flight B) with the strong-cocycle
+        framing REPLACED by the causal-cone/cadence framing.
+  IF N-CONSTANT (residual at N=6 >= 80% of N=3): fundamental non-
+        integrability; No-Go VII (Local Frame Non-Integrability) is
+        PROMOTED with the four-row elimination table (No-Go V /
+        PR-NOGO-RAW / T1b-2 transient / T1b-2 overlap) as its evidence
+        base, and Paper II re-scopes to the directional-local-time
+        architecture (seat-B Path 1: H_eff non-Hermiticity + Link-1
+        spillover cascade + Theorem-10 localization/cadence).
+  IF N-MIXED: T1b-3 with a boundary-correction layer.
+  IF N-SPLIT (families disagree): registered as its own outcome (new
+        this sheet — entangled vs product seeds may scale differently;
+        the sheet declares it rather than discovering it).
+  IF N-UNMEASURABLE: diagnose numerics first (the N=6 superoperator is
+        729^2 = 531441 — dense strobes stay feasible blockwise; the
+        NESS solve is NOT needed for the primary arm).
+  The MIXED verdict of r5.1d STANDS AS WRITTEN (seat-C: no softening;
+  handoff eta = 0.0505 relabels MARGINAL-UNSTABLE, not PASS — the
+  pre-declared band structure below replaces the bare threshold).
+  Paper II s1 sentence registered (seat-C's wording): "local time
+  E3-per-seed at N=3, multi-overlap closure open pending N-scaling."
+
+------------------------------------------------------------------------------
+4. NAMING LINES (registered, effective immediately)
+------------------------------------------------------------------------------
+  N1: "chiral-current" = the antisymmetric transport coefficient
+      (the det-C/BCH holonomy driver, ~0.174716 on |+x,+x,+z>, 0 on
+      SU(2)-invariant states) vs "chiral-channel" = the symmetric
+      dissipation matrix of the seat-1 decomposition (M_chir above).
+      The two are DIFFERENT objects; no reader may assume they
+      coincide. (Seat-C's disambiguation, adopted verbatim in
+      spirit.)
+  N2: "seed-map A" (eigs {3/7 x5, 50/63 x3}, trace 95/21, rank 8) vs
+      "overlap-restriction spectrum" ({1/36 x3, 1/4 x5, 1 x7}, trace
+      25/3, rank 15). Distinct objects, distinct names.
+  N3: dipole/quadrupole classification = spherical-tensor projection
+      only (A1). Matrix symmetry carries NO tensor-rank information.
+
+------------------------------------------------------------------------------
+5. THE FROZEN SHEET pr_t1b2b_sheet.txt (pre-registered BEFORE the run)
+------------------------------------------------------------------------------
+The sheet follows in the next artifact (its own file, hash on freeze).
+Its decisive content is summarized here for the register:
+  Setup: canonical cov3 channel, gamma = 1, H_XXX; N in {3, 4, 5, 6};
+  Gate-S pre-flight; the SAME two-ordering strobe construction and the
+  SAME Branch-C off-orbit statistic as r5.1d (interpolated monotone
+  reparametrization + SU(2)-tangent-complement projection), computed
+  BLOCKWISE-EXACT (bond superoperators e^{L_b t} in dim 9^N, applied to
+  the strobe sequence; NO full 9^{2N} superoperator and NO NESS solve
+  needed for the primary arm).
+  Seeds per N (three families):
+    F1 "S2-product": 0.7|+x,+x,+z,...,+z> + 0.3 I/9^N (chiral-active
+        product control; the r5.1d S2 extended by +z sites. The
+        r5.1c/r5.1d exact-product theory predicts the O(t^2) site-1
+        chiral coefficient EXACTLY N-INDEPENDENT — the control family).
+    F2 "S3-Ginibre": entangled full-rank (rng 20261119 per N, one
+        master rng, per-N draws declared).
+    F3 "K_N-kernel": the global AKLT kernel seed at each N (rank
+        2^{N-1}, the N-extension of the resolved r5.1d handoff seed).
+  Primary measurement: max off-orbit residual (the Branch-C statistic)
+  per N per family, on the t in [0,3] window, 13-point grid, site-1 (=
+  the middle overlap site for even N; the shared site of bonds (0,1)).
+  f0_1 guard IN THE SHEET (seat-C's clause, pre-declared): the F1
+  chiral coefficient must stay in [0.16, 0.18] for all N; ANY drift
+  outside -> the chiral-current universality claim is N-scoped and
+  B1's PASS downgrades to "N=3-specific" — a NEGATIVE outcome with a
+  pre-registered consequence, not a post-hoc discovery.
+  eta bands pre-declared (replaces the bare 0.05 threshold):
+  eta < 0.04 FAIL / [0.04, 0.06) MARGINAL-UNSTABLE / >= 0.06 PASS.
+  The r5.1d handoff value 0.0505 relabels MARGINAL-UNSTABLE
+  retroactively under this band structure (label-only relabel, no
+  number changes).
+  Outcome space: N-DECAY / N-CONSTANT / N-MIXED / N-SPLIT /
+  N-UNMEASURABLE with the route consequences of section 3 attached to
+  each, pre-declared.
+  N=4 locality arm (pre-flight B's anchors as the machine targets):
+  the disjoint/adjacent commutator split + the boundary dipole
+  observable + the vacuity-trap certificate (single-site trace of the
+  overlap commutator at the NESS = 0) re-verified at execution.
+  Clocks logged: omega_raw (r5.1d convention) AND Gamma_b/tau_b
+  (seat-A's spending clock) on the primary arm.
+  Honest-verdict rule: vacuity is reported as vacuity; family
+  disagreement is N-SPLIT, not noise; no re-interpretation after the
+  numbers.
+==============================================================================
+ARTIFACTS (md5 on freeze): r52_preflightA.py/.json, r52_preflightB.py/.json,
+this entry, pr_t1b2b_sheet.txt, then the execution script + results +
+report after the run.
+==============================================================================

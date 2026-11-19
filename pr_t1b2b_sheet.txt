@@ -1,0 +1,139 @@
+==============================================================================
+PR-T1b-2b FROZEN SHEET — N-SCALING DIAGNOSTIC OF THE OFF-ORBIT OVERLAP
+HOLONOMY (declared BEFORE any number is read; md5 frozen on save)
+==============================================================================
+Question: is the r5.1d branch-C off-orbit residual (the seed-dependent
+piece of the overlap cocycle curvature) an N=3 finite-size artifact or a
+structural non-integrability? Pre-declared decider for the route:
+N-DECAY -> PR-T1b-3 proceeds (re-scoped, locality/cadence framing);
+N-CONSTANT -> No-Go VII promoted, Paper II re-scopes to directional
+local time; N-MIXED -> T1b-3 with boundary-correction layer; N-SPLIT ->
+families scale differently (its own registered outcome); N-UNMEASURABLE
+-> diagnose numerics first.
+
+SETUP (canonical, unchanged from the certified chain):
+  - Spin-1 chain, N sites, bonds b = 0..N-2 on (b, b+1).
+  - cov3 dissipator, gamma = 1 (canonical), H_XXX per bond h_b =
+    sum_q S_q^b S_q^{b+1}. Gate-S pre-flight leads every script.
+  - Comparison site: the SHARED site of bonds (0,1) = site 1 (the
+    middle-overlap site at every N in this sheet; site 1 is interior
+    for all N >= 3).
+  - Two-ordering strobe construction (same as r5.1d):
+    rho_01(t) = e^{L_1 t} e^{L_0 t} rho_0,
+    rho_10(t) = e^{L_0 t} e^{L_1 t} rho_0, with L_b = the FULL bond-b
+    generator (h_b + its cov3 dissipator).
+    BLOCKWISE-EXACT: e^{L_b t} is a 9^N x 9^N dense matrix built from
+    the bond-b superoperator acting on vec(rho) — computed per bond;
+    the strobe products are exact matrix actions. NO full-chain NESS
+    solve is needed for the primary arm.
+  - Window: t in [0, 3], 13 points (0, 0.25, ..., 3.0), the r5.1d H2
+    window.
+
+SEEDS (three families, per N in {3, 4, 5, 6}):
+  F1 "S2-product" (chiral-active product control): 0.7 |+x,+x,+z,...>
+    + 0.3 I/9^N, the r5.1d S2 seed extended by +z coherent sites.
+    PREDICTION (pre-registered, from the exact product-state theory of
+    r5.1c/r5.1d): the site-1 O(t^2) chiral coefficient is EXACTLY
+    N-INDEPENDENT for this family (the product-state site-1 channel
+    depends only on sites 0,1,2 marginals). This is the CONTROL: if
+    even this family drifts, the numerics are suspect.
+  F2 "S3-Ginibre" (entangled full-rank): one master rng 20261119; per
+    N a Ginibre-conditioned draw (declared: rng(N) advance per N in
+    the script, seed sequence fixed at freeze).
+  F3 "K_N-kernel" (global AKLT kernel seed): rho_sm ~ sum_q L_{0,q}^dag
+    (P_{K_N}/rank) L_{0,q} normalized, K_N = ker(sum_b P_b^{(2)}) the
+    AKLT ground space (rank 2^{N-1}); the N-extension of the resolved
+    r5.1d handoff seed.
+
+PRIMARY MEASUREMENT (the Branch-C statistic, per N per family):
+  max over the window of the off-orbit residual: site-1 states of
+  rho_01 vs rho_10 under INTERPOLATED MONOTONE REPARAMETRIZATION
+  (det-C progress-fraction matching, the r5.1d fixed statistic), the
+  residual projected orthogonal to the SU(2) orbit tangent space
+  T = span{i[S_q, rho_1]} at the matched midpoint (H4 convention).
+  Residual_max per (N, family); the N-scaling curve is the outcome.
+
+THE f0_1 GUARD (seat-C's clause, IN the sheet, pre-declared):
+  the F1 chiral coefficient (site-1 diff/t^2 whole-window mean, the
+  B1 statistic) must stay within [0.16, 0.18] for all N in {3,4,5,6}.
+  ANY value outside -> the chiral-current universality claim is
+  N-SCOPED, and r5.1d's B1 PASS downgrades to "N=3-specific". This is
+  a NEGATIVE outcome with a pre-registered consequence — declared now,
+  discovered never.
+
+OUTCOME SPACE (pre-declared, on the PRIMARY curve, F1/F2/F3 each):
+  N-DECAY   : residual(N=6) <= 20% of residual(N=3) AND monotone
+              non-increasing N-trend, for the family.
+  N-CONSTANT: residual(N=6) >= 80% of residual(N=3) (no material decay).
+  N-MIXED   : strictly between (20%, 80%).
+  N-SPLIT   : the families land in DIFFERENT classes (e.g. F1 decays,
+              F2 constant) — registered as its own outcome; the paper
+              reports the split, not an average.
+  N-UNMEASURABLE: residuals not computable to tolerance (diagnose
+              numerics; the primary arm does NOT require the NESS
+              solve, so this would indicate a blockwise bug).
+  ROUTE CONSEQUENCES attached to the AGGREGATE (dominant family call,
+  ties broken toward the ENTANGLED families F2/F3 since product states
+  are the control):
+    N-DECAY  -> PR-T1b-3 proceeds (seat-B Path-2 re-scope: locality
+                light-cone + non-dark cadence at N=4).
+    N-CONST  -> No-Go VII promoted; Paper II -> directional local time
+                (seat-B Path 1); T1b-3-as-cocycle moot.
+    N-MIXED  -> T1b-3 with boundary-correction layer.
+    N-SPLIT  -> paper registers the split; both routes scoped per
+                family.
+
+eta BANDS (pre-declared, replaces the bare 0.05 threshold; applies to
+the r5.1d value retroactively as a LABEL-ONLY relabel):
+  eta < 0.04          FAIL
+  0.04 <= eta < 0.06  MARGINAL-UNSTABLE
+  eta >= 0.06         PASS
+  (r5.1d's 0.0505 -> MARGINAL-UNSTABLE.)
+
+N=4 LOCALITY ARM (pre-flight B anchors as machine targets):
+  - [h0, h2] = 0 (disjoint) vs [h0, h1] = [h1, h2] = 12 (adjacent),
+    machine-verified at execution.
+  - Disjoint superoperator commutator action on any strobe state ~ 0
+    vs adjacent non-zero — the causal-cone locality certificate.
+  - THE VACUITY TRAP honored: NO single-site rho_i / det C^{(1)}
+    readout on any SU(2)-invariant state (NESS, K_N seeds); the
+    comparison objects are bond burdens + the off-orbit residual on
+    the transient seeds (which are NOT invariant).
+  - The boundary dipole observable (sum of adjacent overlap burden
+    rows) = [-0.047813, 0, +0.047813] at N=4 NESS re-verified; its
+    N-scaling is LOGGED (feeds T1b-3's multi-overlap cancellation
+    question).
+
+CLOCKS (both logged on the primary arm, every N):
+  - omega_raw(b, t) = G_b / (2 M_b), the r5.1d H1 convention (with
+    sign-crossing logging).
+  - Gamma_b(t) = gamma M_b(t) >= 0 and tau_b(T) = int_0^T gamma M_b dt
+    (seat-A's spending clock; never crosses zero; ties to the norm-loss
+    law).
+
+HANDOFF ARM (N in {3, 4, 5}; N=6 logged if feasible):
+  - The K_N-kernel spillover: window with dM1/dt > 0 while dM0/dt < 0,
+    eta per the bands above, front consistency, M1 peak value+t.
+  - N=6 superoperator scale (729^2 = 531441) is LOGGED, not silently
+    skipped; blockwise strobes remain feasible.
+
+HONEST-VERDICT RULES (unchanged from r5.1d, restated):
+  - Vacuity reported as vacuity; marginal reported as marginal; family
+    disagreement is N-SPLIT, not noise.
+  - No single-trajectory readout cited for a cocycle verdict; the
+    cross-family comparison carries it.
+  - Discrepancies to the register FIRST (as r5.1c/r5.1d demonstrated
+    twice, resolved twice).
+  - No sheet change after the first number is read; deviations logged
+    as deviations.
+
+PRE-FLIGHT ASSERTIONS (checked before the primary runs):
+  P1: F1 seeds are non-stationary, non-invariant (site-1 != I/3).
+  P2: the F1 chiral coefficient at N=3 equals the r5.1d S2 value
+      (0.174716) to 1e-3 (the N=3 run is the same computation — the
+      cross-check that the blockwise construction reproduces the
+      r5.1d dense result).
+  P3: K_N kernel ranks: 2^{N-1} at each N (2, 4, 8, 16).
+==============================================================================
+[freeze: r5.2, declared by GLM, standing register; md5 on save]
+==============================================================================

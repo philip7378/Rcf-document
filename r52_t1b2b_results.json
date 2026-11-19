@@ -1,0 +1,241 @@
+{
+  "GATE_S": {
+    "max_comm": 3.1718998303807225e-16,
+    "casimir": 5.438959822042073e-16,
+    "verdict": "PASS"
+  },
+  "PRE_FLIGHT": {
+    "N3_kernel_rank": 4,
+    "P1_F1_product_N3": 0.571548,
+    "P1_F2_ginibre_N3": 0.106042,
+    "P1_F3_kernel_N3": 0.0,
+    "N4_kernel_rank": 4,
+    "P1_F1_product_N4": 0.571548,
+    "P1_F2_ginibre_N4": 0.064432,
+    "P1_F3_kernel_N4": 0.0,
+    "N5_kernel_rank": 4,
+    "P1_F1_product_N5": 0.571548,
+    "P1_F2_ginibre_N5": 0.043395,
+    "P1_F3_kernel_N5": 0.0,
+    "N6_kernel_rank": 4,
+    "P1_F1_product_N6": 0.571548,
+    "P1_F2_ginibre_N6": 0.018075,
+    "P1_F3_kernel_N6": 0.0,
+    "P3_declared_ranks": "2^{N-1}: 2, 4, 8, 16"
+  },
+  "PRIMARY": {
+    "N3": {
+      "F1_product": {
+        "residual_max": 0.191257,
+        "residual_mean": 0.14272,
+        "tangfrac_mean": 0.4307,
+        "chiral_coeff_mean": 0.174716,
+        "diff_at_t3": 0.283579
+      },
+      "F2_ginibre": {
+        "residual_max": 0.098598,
+        "residual_mean": 0.05435,
+        "tangfrac_mean": 0.1116,
+        "chiral_coeff_mean": 0.057806,
+        "diff_at_t3": 0.035274
+      },
+      "F3_kernel": {
+        "residual_max": 0.0,
+        "residual_mean": 0.0,
+        "tangfrac_mean": 0.0,
+        "chiral_coeff_mean": 0.0,
+        "diff_at_t3": 0.0
+      }
+    },
+    "N4": {
+      "F1_product": {
+        "residual_max": 0.191257,
+        "residual_mean": 0.14272,
+        "tangfrac_mean": 0.4307,
+        "chiral_coeff_mean": 0.174716,
+        "diff_at_t3": 0.283579
+      },
+      "F2_ginibre": {
+        "residual_max": 0.060961,
+        "residual_mean": 0.029352,
+        "tangfrac_mean": 0.3693,
+        "chiral_coeff_mean": 0.034083,
+        "diff_at_t3": 0.042416
+      },
+      "F3_kernel": {
+        "residual_max": 0.0,
+        "residual_mean": 0.0,
+        "tangfrac_mean": 0.0,
+        "chiral_coeff_mean": 0.0,
+        "diff_at_t3": 0.0
+      }
+    },
+    "N5": {
+      "F1_product": {
+        "residual_max": 0.191257,
+        "residual_mean": 0.14272,
+        "tangfrac_mean": 0.4307,
+        "chiral_coeff_mean": 0.174716,
+        "diff_at_t3": 0.283579
+      },
+      "F2_ginibre": {
+        "residual_max": 0.031019,
+        "residual_mean": 0.018689,
+        "tangfrac_mean": 0.1619,
+        "chiral_coeff_mean": 0.023973,
+        "diff_at_t3": 0.021488
+      },
+      "F3_kernel": {
+        "residual_max": 0.0,
+        "residual_mean": 0.0,
+        "tangfrac_mean": 0.0,
+        "chiral_coeff_mean": 0.0,
+        "diff_at_t3": 0.0
+      }
+    },
+    "N6": {
+      "F1_product": {
+        "residual_max": 0.191257,
+        "residual_mean": 0.14272,
+        "tangfrac_mean": 0.4307,
+        "chiral_coeff_mean": 0.174716,
+        "diff_at_t3": 0.283579
+      },
+      "F2_ginibre": {
+        "residual_max": 0.02097,
+        "residual_mean": 0.016872,
+        "tangfrac_mean": 0.1279,
+        "chiral_coeff_mean": 0.011299,
+        "diff_at_t3": 0.011857
+      },
+      "F3_kernel": {
+        "residual_max": 0.0,
+        "residual_mean": 0.0,
+        "tangfrac_mean": 0.0,
+        "chiral_coeff_mean": 0.0,
+        "diff_at_t3": 0.0
+      }
+    }
+  },
+  "F01_GUARD": {
+    "N3": {
+      "F1_coeff": 0.174716,
+      "in_band": true
+    },
+    "N4": {
+      "F1_coeff": 0.174716,
+      "in_band": true
+    },
+    "N5": {
+      "F1_coeff": 0.174716,
+      "in_band": true
+    },
+    "N6": {
+      "F1_coeff": 0.174716,
+      "in_band": true
+    },
+    "verdict": "PASS (universality holds)"
+  },
+  "OUTCOME": {
+    "F1_product": {
+      "curve": [
+        0.191257,
+        0.191257,
+        0.191257,
+        0.191257
+      ],
+      "class": "N-CONSTANT"
+    },
+    "F2_ginibre": {
+      "curve": [
+        0.098598,
+        0.060961,
+        0.031019,
+        0.02097
+      ],
+      "class": "N-MIXED"
+    },
+    "F3_kernel": {
+      "curve": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "class": "N-UNMEASURABLE"
+    },
+    "aggregate": "N-SPLIT",
+    "route": "paper registers the split; routes scoped per family"
+  },
+  "LOCALITY_N4": {
+    "h0_h2_commutator": 0.0,
+    "h0_h1_commutator": 11.999999999999998,
+    "declared": "0 / 12",
+    "verdict": "PASS",
+    "note": "disjoint bonds commute exactly (causal light-cone); holonomy strictly local to adjacent overlaps"
+  },
+  "SPENDING_CLOCKS": {
+    "N3": {
+      "M0_curve": [
+        0.649,
+        0.299,
+        0.2029,
+        0.1561
+      ],
+      "tau_b_T3": 0.7209,
+      "Gamma_positive": true
+    },
+    "N4": {
+      "M0_curve": [
+        0.649,
+        0.299,
+        0.2029,
+        0.1561
+      ],
+      "tau_b_T3": 0.7209,
+      "Gamma_positive": true
+    },
+    "N5": {
+      "M0_curve": [
+        0.649,
+        0.299,
+        0.2029,
+        0.1561
+      ],
+      "tau_b_T3": 0.7209,
+      "Gamma_positive": true
+    },
+    "N6": {
+      "M0_curve": [
+        0.649,
+        0.299,
+        0.2029,
+        0.1561
+      ],
+      "tau_b_T3": 0.7209,
+      "Gamma_positive": true
+    }
+  },
+  "HANDOFF": {
+    "N3": {
+      "M1_peak": 0.139124,
+      "M1_peak_t": 0.25,
+      "best_eta": 0.0243,
+      "band": "FAIL"
+    },
+    "N4": {
+      "M1_peak": 0.300563,
+      "M1_peak_t": 3.875,
+      "best_eta": 8.8507,
+      "band": "PASS"
+    },
+    "N5": {
+      "M1_peak": 0.300233,
+      "M1_peak_t": 3.75,
+      "best_eta": 9.0235,
+      "band": "PASS"
+    },
+    "N6_superoperator_scale": "729^2 = 531441: logged per sheet; blockwise strobes feasible; skipped this run (time budget), logged not silently dropped"
+  },
+  "elapsed_s": 235.92
+}

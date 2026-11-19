@@ -1,0 +1,81 @@
+{
+  "A1_spherical_split": {
+    "reconstruction_err": 2.5253169416816768e-05,
+    "ad_J2_eigenvalue_k1": 2.0,
+    "declared_k1": 2,
+    "ad_J2_eigenvalue_k2": 6.0,
+    "declared_k2": 6,
+    "norm_k1": 0.494975,
+    "norm_k2": 0.494975,
+    "norm2_k1": 0.245,
+    "norm2_k2": 0.245,
+    "orthogonality": 0.0,
+    "HS_share_k1_pct": 50.0,
+    "HS_share_k2_pct": 50.0,
+    "declared": "50.00 / 50.00, ad eigenvalues {2, 6}, orthogonal",
+    "verdict": "FAIL"
+  },
+  "A1b_chiral_generator": {
+    "derived_minus_Mchir_err": 2.5253169417038812e-05,
+    "note": "-0.7i[S_y, |+x><+x|] matches the r5.1d channel matrix",
+    "verdict": "FAIL",
+    "Tr_Sz_Mchir": -0.7
+  },
+  "A2_quarter_norm_dC": {
+    "derived_value": 0.176777,
+    "1_over_4sqrt2": 0.176777,
+    "measured_B1_r51d": 0.174716,
+    "note": "(1/4)||dC_chiral||_F ~ 0.1768 vs the r5.1d measured 0.174716 on |+x,+x,+z> -- 1.2% apart, seed-specific coefficient, NOT the universal sqrt(48)-fixed constant",
+    "verdict": "CONFIRMED-DERIVATION"
+  },
+  "A3_r34_firewall_evidence": {
+    "files_scanned": {
+      "pr_r51c_prep_sheet.txt": [
+        "0.17",
+        "0.176",
+        "0.14659"
+      ],
+      "r51c_prep_t1b2.py": [
+        "0.17",
+        "0.176",
+        "0.14659"
+      ],
+      "rcf_r51c_register_addendum.txt": [
+        "0.17",
+        "0.176",
+        "0.14659"
+      ],
+      "r51c_results.json": [
+        "0.17",
+        "0.176"
+      ],
+      "pr_t1b2_sheet.txt": [
+        "0.17",
+        "0.176",
+        "sqrt(48)"
+      ]
+    },
+    "verdict": "EVIDENCE-LOCATED"
+  },
+  "A4_operator_spectra": {
+    "seed_map_A": {
+      "eigenvalues": [
+        0.0,
+        0.107142857,
+        0.198412698
+      ],
+      "multiplicities": {
+        "0.0": 19,
+        "0.107142857": 5,
+        "0.198412698": 3
+      },
+      "trace": 1.130952381,
+      "declared_trace": "95/21",
+      "rank": 8
+    },
+    "declared_seed_map": "eigs {3/7 x5, 50/63 x3}, trace 95/21, rank 8",
+    "verdict_seed_map": "FAIL",
+    "note": "A is the UNNORMALIZED seed map sum_q L^dag (P_K3/4) L (trace 95/21); the {1/36, 1/4, 1} spectrum belongs to the DIFFERENT object P12^{(2)} restricted to ran(P01^{(2)}) (trace 25/3) \u2014 both real, both named distinctly henceforth"
+  },
+  "elapsed_s": 0.13
+}
