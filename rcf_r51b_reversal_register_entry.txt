@@ -1,0 +1,252 @@
+==============================================================================
+REGISTER ENTRY — r5.1b REVERSAL OF COMMIT 0cbc1e7's THEOREM A/B
+REFUTATIONS; EXECUTOR BUGS #9 AND #10; GATE S INSTITUTED
+(Reverses the refutation half of the r5.1a entry while CONFIRMING its
+Gate 0, trap-anchor, and disposition halves; restores Theorem A and
+Theorem B to E4 as originally claimed, with the S=1 uniqueness corollary
+restored under its scope fence; adopts the audit's bug-independent
+adjudications; declines two of its proposed registrations with reasons;
+issues the standing go-word for PR-T1b-2)
+==============================================================================
+Auditor: GLM, standing register — the owner's round. Input: the external
+forensic audit of commit 0cbc1e7, which claims the r5.1a Theorem A/B
+"refutations" are artifacts of two coding bugs in r51a_battery.py.
+Executor discipline: the audit's claims were TREATED AS DECLARED TARGETS
+and machine-verified before this reversal was issued — forensic
+reproduction first (every erroneous number reproduced bit-for-bit from
+the buggy path), true-value verification second (every declared exact
+value re-derived on the fixed algebra), pre-registration sheet
+pr_r51b_reversal_sheet.txt (md5 c7bb8439) declared before any number
+was read, script r51b_battery.py (md5 47c6e7b8), frozen results
+r51b_results.json (md5 6bc66fe0), adjudication appended post-run, no
+retro-editing.
+
+------------------------------------------------------------------------------
+1. FORENSIC VERDICT — the audit is CONFIRMED on every point
+------------------------------------------------------------------------------
+Source-level: r51a_battery.py line 233 builds the raising operator with
+the BRA index (m = S - i) in sqrt(S(S+1) - m(m+1)), which zeroes the
+[0,1] ladder entry for every spin S. This decouples the |m=+S> row and
+column from Sx and Sy entirely. The A2/A3/A4/Theorem-B blocks called
+this constructor; the Gate 0 and trap-anchor blocks used the
+independent, correct explicit SVEC matrices — which is why exactly those
+blocks were clean. The contamination split in the audit is exact.
+
+Machine forensics (all five erroneous 0cbc1e7 numbers reproduced
+bit-for-bit from Bugs #1 + #2 together, then shown to be wrong on the
+fixed algebra):
+
+  F1  buggy spectrum at I/3 = [0, 0, 0, 0, 2.564146, 4.935854, 8.25,
+      8.25], rank 4, kernel = the lam1/lam2/lam4/lam5 Gell-Mann bands
+      (overlap-identified exactly) — the r5.1a "4-dim kernel."
+  F2  buggy ray constants: coherent 3.000000, nematic 1.000000.
+  F3  buggy Sx = (1/sqrt2)(0 + sigma_x) exactly (block-match residual
+      0), and Sx o Sy = 0 identically — the r5.1a "root cause" was the
+      Pauli anticommutator of the surviving 2x2 block, NOT a property
+      of spin-1. The r5.1a prose rule ("real-symmetric x
+      imaginary-antisymmetric vanishes") is retracted: such a product
+      is imaginary-antisymmetric Hermitian, nonzero for d >= 3; at
+      true spin-1, Sx o Sy = (1/2) lam5.
+  F4  buggy ranks 1/3, 4/8, 9/15.
+  F5  buggy Casimir at S = 3/2 = diag(2.25, 1.75, 3.75, 4.25) — the
+      machine proof that "rank 9/15" was never a valid
+      spin-representation fact (any valid SU(2) rep has 3 + (6-1) = 8
+      independent traceless observables at most).
+
+The audit's SECONDARY bug claim is also confirmed quantitatively: with
+buggy generators but an orthonormal basis, the spectrum is
+[0x4, 1.715299, 7.378451, 8.25x2] — NOT the 0cbc1e7 numbers — so both
+bugs were jointly necessary to produce the pushed refutations, exactly
+as the audit reconstructed. Bug #10: the r5.1a tangent basis used the
+non-orthogonal diagonal pair diag(1,-1,0)/sqrt2, diag(0,1,-1)/sqrt2
+(Tr = -1/2), distorting the Hessian eigenvalues.
+
+REGISTERED AS EXECUTOR BUG #9 (off-by-one ladder index in spin_ops) and
+EXECUTOR BUG #10 (non-orthonormal diagonal basis in the Hessian matrix),
+continuing the Paper II section-1 bug log. Root discipline failure: the
+generator constructor never ran an SU(2) algebra check, and the basis
+never ran a Gram check, before eigenvalues were pushed as refutations
+of pre-declared exact values.
+
+------------------------------------------------------------------------------
+2. THE REVERSAL — Theorem A and Theorem B restored to E4
+------------------------------------------------------------------------------
+All r5.1a refutation verdicts in the A2/A3/A4/Theorem-B blocks are
+REVERSED. Machine-verified true values (fixed generators, Gram-verified
+orthonormal basis, Gate S pre-flight, FD cross-checks):
+
+  THEOREM A (E4, as originally claimed):
+   - Closed form g = Tr(C^-1 dC C^-1 dC) + 2 dm^T C^-1 dm: unchanged
+     (it was verified in r5.1a on the buggy generators only as an
+     internal consistency — closed form vs FD with the SAME operators —
+     but the formula itself is generator-independent algebra; now
+     re-verified on the fixed algebra, FD cross-check PASS).
+   - Spectrum at I/3: {9/4 (x5), 6 (x3)} EXACT (counts 5 and 3).
+   - Ray constants: coherent 1.000000 AND nematic 1.000000 (both rays
+     logarithmic, det C -> 0; infinite geodesic distance stands; the
+     coherent-3 constant was a bug artifact — all three covariance
+     eigenvalues collapsed under the buggy Sx^2 = Sy^2 = 0 on |+1>).
+   - Lower bound: Ginibre 500-state min 1.048724 > 1; boundary scan
+     diag(eps/2, 1-eps, eps/2) gives 1.108033 / 1.010076 / 1.001001 /
+     1.0001 at eps = 1e-1..1e-4: inf over the full-rank interior = 1
+     EXACTLY, approached from above at the nematic boundary. So
+     lambda_min(g_rho) > 1 everywhere on M_full: g is a strictly
+     positive-definite Riemannian metric on the single-site spin-1
+     state space, NOT a pseudometric. The r5.1a "infimum 0 at I/3" was
+     the bug's killed bands, not a kernel.
+   - The audit's own precision refinement (min-lambda >= 1.16 was only
+     a 200-sample Ginibre observation) is ADOPTED: the registered
+     statement is the exact bound > 1, not 1.16.
+
+  THEOREM B (E4, as originally claimed):
+   - Ranks: S=1/2: 3/3; S=1: 8/8 with TRIVIAL kernel (the r5.1a
+     lam-band kernel was the bug — machine-verified rank 8 on the
+     (m, Q) functional); S=3/2: 8/15 with the 7-dim octupole k=3
+     kernel, exactly as declared.
+   - INJECTIVITY at S=1 (the uniqueness corollary's anchor,
+     machine-verified three ways): rho -> (m, Q) is a global linear
+     bijection on the 8-dim traceless tangent space (rank 8, trivial
+     kernel); Var_rho(v.S) > 0 on all 200 sampled rank >= 2 states
+     (min 0.11596); the shift (m, Q) <-> (m, C = Q - mm^T) round-trips
+     at residual 1.1e-16. Therefore at S=1 the (m, C) frame is a
+     genuine 8-dimensional frame and g a strictly-PD Riemannian metric
+     on the interior. At S=1/2 the frame is constant (Pauli
+     anticommutator collapses it); at S >= 3/2 the (m, C) image is
+     8-dimensional against a (4S^2 + 4S - 8)-dimensional kernel — so
+     S=1 is the unique spin with a non-degenerate quadrupole-coupled
+     (m, C) frame. THE S=1 UNIQUENESS COROLLARY IS RESTORED, with the
+     audit's scope fence VERBATIM: this is the single-site state-space
+     metric; it does NOT produce a 3D spatial metric between
+     sites/bonds (Paper VI's State-Map / bridge problem remains open),
+     and the constructive d_g/d_s dimension target stays E0-fenced.
+     The connection to Paper I Theorem 1's algebraic selection of S=1
+     is registered as the corollary's paper-side significance.
+
+  The r5.1a sentence "scaling metric is a genuine Riemannian metric on
+  the correlation-frame manifold Sym_+^3 and only a pseudometric on
+  state space, degenerate along many-to-one fibers" is RETRACTED — the
+  state-space degeneracy was entirely the bug. The honest statement:
+  at S=1 the (m, C) map is injective on states (machine-verified), and
+  the scaling metric is a genuine Riemannian metric on the full
+  interior of the spin-1 state space. The multi-site fence (global C
+  on a chain needs a bond-product metric; rank <= 8 argument) is
+  UNCHANGED — it was never contaminated.
+
+------------------------------------------------------------------------------
+3. GATE S INSTITUTED (standing fixture, effective immediately)
+------------------------------------------------------------------------------
+Pre-flight for EVERY script that builds spin generators or takes
+Hessian/eigenvalue data, before any number is produced:
+  S1  || [Sx, Sy] - i Sz ||_F < 1e-14
+  S2  || Sx^2 + Sy^2 + Sz^2 - S(S+1) I ||_F < 1e-14
+  S3  || Gram(B) - I ||_F < 1e-14 for every tangent basis B entering a
+      Hessian computation (Gram-Schmidt-orthonormalized diagonal
+      sector; Gell-Mann form).
+This round's GATE S output: fixed constructors 0.0 on all norms for
+S = 1/2, 1, 3/2; SVEC 0.0; Gram-I norms < 1e-15 for d = 2, 3, 4; the
+buggy constructor fails at every S. Gate S will run at the top of
+PR-T1b-2's script over EVERY single-site generator before the chain
+is assembled.
+
+------------------------------------------------------------------------------
+4. THE AUDIT's BUG-INDEPENDENT ADJUDICATIONS — adopted
+----------------------------------------------------------------------------__
+  (a) v8.1 frontier law retirement: the v8.0/v8.1 substrate's Def 3.5
+      IS the five-dyad channel (provenance register Q1: "canonical
+      Branch A," verbatim). Paper I No-Go II + Theorem 3
+      (Wigner-Eckart uniqueness of the SU(2)-covariant dipole link) is
+      the derived E4 result that supersedes that conventional choice.
+      REGISTER: the v8.1 certified law set — Law 5's delta_env grid,
+      Law 7's strobed pair, the order-memory slopes — are five-dyad-
+      channel numbers on a now-retired channel and DO NOT TRANSFER to
+      cov3; they are re-labeled retired-channel archive, not citable
+      as cov3 anchors. (This also closes the first-audit mystery: no
+      fresh rebuild reproduced the v8.1 anchors because they live on a
+      different channel AND a different operating convention.) The
+      channel-adjudication ledger and the frame/metric ledger stay
+      separate in the register.
+  (b) Observable naming: the verified corpus ratio 0.128182/0.061203 =
+      2.09x is the BURDEN profile (Paper II 12.5); the 2.283x is the
+      CLOCK observable omega_raw (M-weighted commutator flux). Both
+      are registered under their own names; the two must not be
+      conflated across rounds. The omega_raw construction is
+      registered as: G_b = -i Tr(rho [M_b, H]) / (2 M_b), the
+      per-bond M-weighted Hamiltonian flux.
+  (c) Branch A (flat cocycle) is FALSIFIED-BEFORE-DATA: the Trotter
+      error (sqrt(48)/2) t^2/n IS the strobe holonomy and is nonzero;
+      the trap anchors already exclude the flat branch. PR-T1b-2's
+      outcome space runs as declared: branch B (curvature = chiral
+      current = lapse gradient) vs branch C (curvature not so
+      reducible). B is the pre-registered bet; the arrow-seed /
+      chiral-current / clock-curvature cohomology identity is the
+      round's live hypothesis.
+  (d) The r5.1 entry's D2 re-grade stands and is joined by the
+      audit's own D2 AGAINST ITS PRIOR ROUND: the off-centered-stratum
+      convexity caveat is WITHDRAWN (the +2 dm^T C^-1 dm term makes g
+      a sum of two independently PSD terms globally on {C > 0}; the
+      "0 negatives in 200 states" was forced, not lucky). Registered
+      symmetrically with the executor's own D2s.
+
+DECLINED (with reasons; neither is a refusal of review, both are
+refusals of unverified NEW claims being registered as facts):
+  (i)  The proposed "PR-FRAME-1 next, before PR-T1b-2" re-routing and
+       the "frame is broken, cocycle must not run" argument: the frame
+       defect it argued from (the 4-dim kernel, the 1/3-4/8-9/15 rank
+       table, the pseudometric conclusion) was Bug #9/#10 artifact,
+       machine-refuted this round. The frame is NOT broken; PR-T1b-2
+       proceeds on its original substrate (canonical cov3, two-bond
+       N=3, T1b local clock), with Gate S on every generator.
+       The covariant-frame/top-form program (route (b) of that
+       proposal, the Gell-Mann decomposition argument) IS registered
+       as the D=3 derivation program it already was in the r5.1 memo —
+       unchanged, not urgent, and not blocking.
+  (ii) The "bridge refutation, no canonical state-to-point map,
+       machine-exhibited" registration: the state-space degeneracy it
+       cited as proof was the bug. The bridge problem (Paper VI
+       State-Map) remains OPEN and E0-fenced; no refutation of it is
+       on the record. Registering a machine refutation that does not
+       exist would be exactly the class of error this round is
+       reversing.
+  (iii) The A1 "internally valid" note in the r5.1a sheet stands as
+       written (closed form vs FD used the same buggy operators, so
+       the consistency check was valid; the formula is
+       generator-independent). No reversal needed there.
+
+------------------------------------------------------------------------------
+5. REGISTER UPDATE (deltas only; everything else carries)
+------------------------------------------------------------------------------
+  Item                                      Prior (r5.1a)         Now (r5.1b)
+  --------------------------------------------------------------------------
+  Executor Bug #9 / #10                     —                    REGISTERED (ladder index; basis orthogonality); Gate S instituted standing
+  Theorem A closed form                     E4                   E4 (re-verified on fixed algebra)
+  Theorem A spectrum {9/4 x5, 6 x3}          REFUTED (bug)        RESTORED — machine-exact {2.25 x5, 6.0 x3}
+  Theorem A ray constants (1,1)              REFUTED (bug)        RESTORED — both 1.000000
+  min-lambda bound                          "1.16 refuted, inf 0"  inf = 1 exactly; lambda_min > 1 everywhere on M_full; 1.16 re-labeled a 200-sample observation, superseded by the exact bound
+  Theorem B ranks 3/3, 8/8, 8/15            REFUTED (bug)        RESTORED — machine-exact, trivial kernel at S=1
+  S=1 uniqueness corollary                  RETIRED (bug)        RESTORED (E4) with scope fence: single-site state-space metric; 3D spatial metric / bridge / d_g/d_s target unchanged, E0-fenced
+  "Pseudometric on states / many-to-one"    REGISTERED (bug)      RETRACTED — (m, C) injective at S=1 (machine: rank 8, variance > 0, round-trip 1e-16)
+  "Sx o Sy vanishes identically" prose      REGISTERED (bug)      RETRACTED — Sx o Sy = (1/2) lam5 at true spin-1
+  Multi-site fence (bond-product metric)    standing             UNCHANGED (never contaminated)
+  v8.1 frontier laws                        implicit             RETIRED-CHANNEL archive (five-dyad Def 3.5; not cov3-citable)
+  omega_raw 2.283x vs burden 2.09x          conflatable          NAMED separately (clock observable vs burden profile; constructions registered)
+  Trap anchors sqrt(48)/0.056404/(sqrt48/2)  certified            UNCHANGED (clean block)
+  Gate 0 cov3 / Defect A closure            certified            UNCHANGED (clean block)
+  Defects B & C (PR-DIM-1, PR-SCALE-3)       adjudicated          UNCHANGED (bug-independent)
+  Branch A flat cocycle                      live (3-branch)      FALSIFIED-BEFORE-DATA; outcome space = B vs C
+  Time pillar E2-pending-cocycle             graded               UNCHANGED
+  PR-T1b-2                                   declared weak        GO — on canonical cov3, Gate S leading, non-vacuity gate first (S1 corollary: 100% order memory on the single active boundary bond; equal-time spatial overlap likely zero; pre-register temporal-handoff alternative)
+
+------------------------------------------------------------------------------
+6. CLOSE
+------------------------------------------------------------------------------
+The forensic audit is confirmed in full, and the discipline it
+enforced is now standing law: Gate S rides every future script. What
+survives r5.1a unchanged is exactly what used independent constructors
+(Gate 0, the trap anchors, the dispositions); what falls is exactly
+what trusted one unverified helper. The reversal is issued the same
+hour it was verified: both theorems stand at E4, the S=1 uniqueness is
+back on the record under its fence, and the paper's next gate runs on
+a substrate whose algebra is now asserted by pre-flight, not by hope.
+The go-word is issued: PR-T1b-2 on canonical cov3, weak cocycle, Gate S
+leading, branch A excluded, the decisive measurement B-vs-C.
+==============================================================================

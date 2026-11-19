@@ -1,0 +1,167 @@
+==============================================================================
+PRE-REGISTRATION — r5.1b REVERSAL BATTERY (FORENSIC + REPAIR)
+(declares every check, expected value and falsifier BEFORE any number is
+read; companion to the r5.1b reversal register entry; md5 of this sheet and
+of r51b_battery.py registered in that entry)
+==============================================================================
+Executor: GLM, standing register. Trigger: the external forensic audit of
+commit 0cbc1e7 claims the r5.1a Theorem A/B "refutations" are artifacts of
+one coding bug (off-by-one ladder index in spin_ops(S)) plus a secondary
+basis-nonorthogonality distortion, and that the pre-declared values
+(spectrum {9/4 x5, 6 x3}, ray constants (1,1), ranks 3/3, 8/8, 8/15, and
+the S=1 uniqueness) are exact. Source-level check by this executor
+CONFIRMS the bug exists at r51a_battery.py line 233 (m = S - i used in
+sqrt(S(S+1)-m(m+1)) zeroes the [0,1] ladder entry for every S), and
+CONFIRMS the contamination split: the A2/A3/A4/Theorem-B blocks call
+spin_ops(S); the Gate 0 and trap-anchor blocks use the independent
+explicit SVEC matrices (correct). Discipline: the audit's "true values"
+are TREATED AS DECLARED TARGETS, not accepted facts — every one is
+re-derived here by machine before the reversal is issued. If any target
+fails to reproduce, the reversal is NOT issued as stated and the
+discrepancy is registered instead.
+
+------------------------------------------------------------------------------
+GATE S (NEW STANDING FIXTURE) — algebra & basis non-vacuity, pre-flight
+------------------------------------------------------------------------------
+For every S in {1/2, 1, 3/2} and BOTH generator constructors (fixed
+spin_ops; explicit SVEC at S=1):
+  S1  || [Sx, Sy] - i Sz ||_F  <  1e-14
+  S2  || Sx^2 + Sy^2 + Sz^2 - S(S+1) I ||_F  <  1e-14
+  S3  || Gram(B) - I ||_F < 1e-14 for every tangent basis B used in a
+      Hessian/eigenvalue computation (orthonormalized diagonal pair
+      diag(1,-1,0)/sqrt2, diag(1,1,-2)/sqrt6 replaces the non-orthogonal
+      r5.1a pair).
+GATE S must run BEFORE any A/B number is produced. For the forensic
+reproduction block only, the BUGGY constructor is run deliberately with
+its Gate S FAILURES printed (expected: [Sx,Sy]-iSz norm = sqrt(2) at
+S=1; Casimir norm = sqrt(2) at S=1; exact values printed per S).
+
+------------------------------------------------------------------------------
+FORENSIC BLOCK — bit-for-bit reproduction of 0cbc1e7's five erroneous
+numbers from the buggy path (this proves the causal attribution, it does
+not merely assert it)
+------------------------------------------------------------------------------
+Declared expected (all must reproduce to the printed digits of
+r51a_results.json / the 0cbc1e7 entry):
+  F1  buggy A2 spectrum at I/3: [0, 0, 0, 0, 2.564146, 4.935854,
+      8.25, 8.25] with 4-dim kernel = Gell-Mann lam1/lam2/lam4/lam5.
+  F2  buggy ray constants: coherent -> 3.000000, nematic -> 1.000000.
+  F3  buggy Sx o Sy at S=1: identically 0 (matrix norm 0), and buggy
+      Sx = (1/sqrt2)(0 (+) sigma_x) block form, Sy likewise.
+  F4  buggy Theorem B ranks: 1/3, 4/8, 9/15.
+  F5  buggy Casimir at S=3/2: diag(9/4, 7/4, 15/4, 17/4) (not 15/4 I),
+      which is the machine proof that rank 9/15 was never a valid
+      spin-representation fact.
+Falsifier: any of F1-F5 not reproducing to 1e-6 relative. Then the
+audit's causal story is wrong somewhere and BOTH the refutations and the
+reversal go to arbitration instead.
+
+------------------------------------------------------------------------------
+REPAIR BLOCK — true-value verification (the reversal's substance)
+------------------------------------------------------------------------------
+A2' spectrum of g at rho = I/3 (fixed spin_ops + orthonormal basis):
+  declared {9/4 (x5), 6 (x3)}, from the audit's derivation
+  (C = 2/3 I at I/3: g = 9/4 Tr((dC)^2) + 3||dm||^2; dipole directions
+  give dm-only 6; quadrupole directions give dC-only 9/4). Tolerance
+  1e-9; also FD cross-check at 1e-4 step.
+A3' PSD + lower bound on the true algebra: 500 Ginibre interior states,
+  declared min eigenvalue > 1 (audit: pure-Ginibre min 1.0366);
+  PLUS boundary scan: rho_eps = diag(eps/2, 1-eps, eps/2) for eps in
+  {1e-1, 1e-2, 1e-3, 1e-4}, declared lambda_min -> 1.000000 from above
+  (audit checkpoints 1.1080, 1.0101, 1.0010, 1.0001). The registered
+  uniform statement: inf over the full-rank interior = 1 EXACTLY (never
+  attained: the nematic boundary is rank-deficient), so
+  lambda_min(g_rho) > 1 everywhere on M_full. The r5.1a "infimum 0 at
+  I/3" claim is a bug artifact (the 4 zero eigenvalues were the bug's
+  killed bands, not a real kernel).
+A4' ray constants (fixed): coherent ray (1-p)^2 g_pp -> 1.000000 AND
+  nematic ray -> 1.000000, checkpoints p = 0.9, 0.99, 0.999, 0.9999,
+  tolerance 5e-3. The r5.1a coherent constant 3 is a bug artifact
+  (buggy Sx^2 = Sy^2 = 0 on |+1> collapsed all three covariance
+  eigenvalues; the true state has Var(Sx) = Var(Sy) = 1/2 > 0 and only
+  the Sz direction collapses).
+B'  Theorem B ranks (fixed, complexified rows as in r5.1a):
+  S=1/2: 3/3; S=1: 8/8; S=3/2: 8/15 with 7-dim kernel = octupole k=3
+  sector. Also verify the audit's structural claim 3 + (6-1) = 8
+  (Casimir removes one traceless quadrupole) and, at S=1, the kernel
+  is TRIVIAL: dim 0 (the r5.1a lam-band kernel was the bug).
+INJ' injectivity / diffeomorphism at S=1 (the uniqueness corollary's
+  machine anchor): (i) the linear map rho -> (m, Q), Q_ij = Tr(rho
+  (S_i o S_j)) (6 components, Tr Q = 2), restricted to the 8-dim
+  traceless tangent space, has rank 8 (trivial kernel — check by
+  direct SVD, tolerance 1e-10); (ii) v^T C(rho) v = Var_rho(v . S) > 0
+  for every v and every sampled rank >= 2 state (200 Ginibre states x
+  100 random v: declared strictly positive, min > 1e-6); (iii) the
+  shift (m, Q) -> (m, C = Q - m m^T) with exact inverse Q = C + m m^T
+  (machine-check the composite map round-trips, residual < 1e-12).
+  Consequence registered (with the audit's scope fence): at S=1 the
+  (m, C) frame is a global linear parametrization of the state space
+  and g is a genuine strictly-PD Riemannian metric on the interior —
+  the S=1 uniqueness corollary is RESTORED. Scope fence kept: this is
+  the single-site state-space metric; it does NOT produce a 3D spatial
+  metric between sites/bonds (the r5.1 bridge problem stands), and the
+  constructive d_g/d_s dimension target stays E0-fenced.
+Standing carry-overs unchanged (not re-run, already machine-clean):
+  Gate 0 cov3 values, T1/T2/T3 trap anchors, A1 closed-form-vs-FD
+  (note: A1 in r5.1a used spin_ops(1) — the buggy generators — yet
+  PASSED because the closed form and the FD used the SAME buggy
+  operators, so the consistency check was internally valid; the closed
+  FORMULA is generator-independent algebra and its r5.1a E4 grade
+  stands, now re-confirmed on fixed generators by A2' consistency).
+
+All values above are frozen BEFORE the run; results are compared
+line-by-line against this sheet, and the reversal entry quotes only
+numbers that appear in BOTH.
+==============================================================================
+
+==============================================================================
+POST-RUN ADJUDICATION (appended AFTER the run; declarations above frozen)
+==============================================================================
+GATE S PASS: fixed spin_ops gives commutator/Casimir norms 0.0 (exactly)
+for S = 1/2, 1, 3/2; SVEC (the Gate-0/trap-anchor matrices) 0.0; orthonormal
+basis Gram-I norms < 1e-15 for d = 2, 3, 4; the buggy constructor FAILS
+Gate S at every S (norms sqrt(3)/2 ... 2.5495), as the audit stated.
+
+FORENSIC PASS — every 0cbc1e7 erroneous number reproduced bit-for-bit from
+the buggy path (Bugs #1 + #2 together: buggy generators + r5.1a's
+non-orthonormal diagonal pair):
+  F1 spectrum [0, 0, 0, 0, 2.564146, 4.935854, 8.25, 8.25], rank 4, kernel
+     = lam1/lam2/lam4/lam5 bands (exact overlap identification);
+  F2 rays: coherent -> 3.000000, nematic -> 1.000000;
+  F3 buggy Sx = (1/sqrt2)(0 (+) sigma_x) exactly (block-match 0) and
+     Sx o Sy = 0 identically;
+  F4 buggy ranks 1/3, 4/8, 9/15;
+  F5 buggy Casimir at S = 3/2 = diag(2.25, 1.75, 3.75, 4.25) — the
+     machine proof that 9/15 was never a valid spin-representation fact.
+The audit's Bug #2 claim is ALSO confirmed quantitatively: with the buggy
+generators but an ORTHONORMAL basis the spectrum is
+[0x4, 1.715299, 7.378451, 8.25x2] — NOT 0cbc1e7's values — so both bugs
+were jointly necessary, exactly as the audit reconstructed.
+
+REPAIR PASS — all declared true values verified on the fixed algebra:
+  A2' spectrum at I/3 = {2.25 (x5), 6.0 (x3)} EXACT (counts 5 and 3);
+     FD cross-check agrees (8.25-type diag pair values consistent).
+  A3' Ginibre 500-state min eigenvalue 1.048724 (> 1; audit's 1.0366
+     same class); boundary scan diag(eps/2, 1-eps, eps/2):
+     1.108033 / 1.010076 / 1.001001 / 1.0001 at eps = 1e-1..1e-4 ->
+     infimum over the full-rank interior = 1 EXACTLY, approached from
+     above at the nematic boundary; lambda_min(g_rho) > 1 everywhere
+     on M_full. The r5.1a "infimum 0 at I/3" was a pure bug artifact.
+  A4' ray constants: coherent 1.000000, nematic 1.000000 (both rays
+     logarithmic, det C -> 0; infinite geodesic distance stands).
+  B'  true ranks: S=1/2: 3/3; S=1: 8/8 (trivial kernel); S=3/2: 8/15
+     with 7-dim octupole kernel — exactly the declared values.
+  INJ' rho -> (m, Q) has rank 8 on the tangent space (trivial kernel);
+     Var(v.S) strictly positive on all 200 rank>=2 states (min
+     0.11596); (m, C) <-> (m, Q) round-trip residual 1.1e-16. The S=1
+     uniqueness corollary is RESTORED with its scope fence (single-site
+     state-space metric; NOT a 3D spatial metric; Paper VI bridge and
+     the d_g/d_s constructive target remain E0-fenced).
+
+All five 0cbc1e7 refutation verdicts (A2, A3, A4, Theorem B, S=1
+uniqueness death) are REVERSED: they were artifacts of Executor Bug #9
+(off-by-one ladder index) compounded by Executor Bug #10
+(non-orthonormal diagonal basis in the Hessian matrix). Theorem A and
+Theorem B stand at E4 as originally claimed. Nothing in this sheet's
+declaration section was retro-edited.
+==============================================================================

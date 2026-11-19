@@ -1,0 +1,213 @@
+{
+  "GATE_S": {
+    "S=0.5": {
+      "fixed_comm_norm": 0.0,
+      "fixed_casimir_norm": 0.0,
+      "buggy_comm_norm": 0.7071067811865476,
+      "buggy_casimir_norm": 0.7071067811865476,
+      "fixed_ok": true,
+      "buggy_ok": false
+    },
+    "S=1.0": {
+      "fixed_comm_norm": 3.2540521572534756e-16,
+      "fixed_casimir_norm": 4.440892098500626e-16,
+      "buggy_comm_norm": 1.4142135623730951,
+      "buggy_casimir_norm": 1.414213562373095,
+      "fixed_ok": true,
+      "buggy_ok": false
+    },
+    "S=1.5": {
+      "fixed_comm_norm": 4.440892098500626e-16,
+      "fixed_casimir_norm": 0.0,
+      "buggy_comm_norm": 2.1213203435596424,
+      "buggy_casimir_norm": 2.5495097567963922,
+      "fixed_ok": true,
+      "buggy_ok": false
+    },
+    "SVEC_S=1": {
+      "comm_norm": 3.1718998303807225e-16,
+      "casimir_norm": 5.438959822042073e-16,
+      "ok": true
+    },
+    "orthonormal_basis_gram": {
+      "d=2": 3.8459253727671276e-16,
+      "d=3": 6.473657049138938e-16,
+      "d=4": 8.741904837807691e-16
+    },
+    "verdict": "PASS"
+  },
+  "FORENSIC": {
+    "F1_buggy_spectrum": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      2.564146,
+      4.935854,
+      8.25,
+      8.25
+    ],
+    "F1_buggy_rank": 4,
+    "F1_buggy_kernel_labels": [
+      [
+        "lam5",
+        0.948683
+      ],
+      [
+        "lam4",
+        1.0
+      ],
+      [
+        "lam2",
+        0.948683
+      ],
+      [
+        "lam1",
+        1.0
+      ]
+    ],
+    "F2_buggy_ray_coherent": [
+      3.004074,
+      3.000036,
+      3.0,
+      3.0
+    ],
+    "F2_buggy_ray_nematic": [
+      1.002378,
+      1.000022,
+      1.0,
+      1.0
+    ],
+    "F3_buggy_SxoSy_norm": 0.0,
+    "F3_buggy_Sx_block_match": 1.5700924586837752e-16,
+    "F5_buggy_casimir_3half_diag": [
+      2.25,
+      1.75,
+      3.75,
+      4.25
+    ],
+    "F4_buggy_ranks": {
+      "S=0.5": {
+        "rank": 1,
+        "tangent_dim": 3
+      },
+      "S=1.0": {
+        "rank": 4,
+        "tangent_dim": 8
+      },
+      "S=1.5": {
+        "rank": 9,
+        "tangent_dim": 15
+      }
+    },
+    "declared_match": {
+      "F1": true,
+      "F2": true,
+      "F3": true,
+      "F4": true,
+      "F5": true
+    },
+    "verdict": "PASS"
+  },
+  "A2_true_spectrum_I3": {
+    "eigenvalues": [
+      2.25,
+      2.25,
+      2.25,
+      2.25,
+      2.25,
+      6.0,
+      6.0,
+      6.0
+    ],
+    "count_9/4": 5,
+    "count_6": 3,
+    "declared": "{9/4 x5, 6 x3}",
+    "verdict": "PASS"
+  },
+  "A2_FD_crosscheck": {
+    "pairs_fd_vs_closed": [
+      [
+        4.125,
+        4.125
+      ],
+      [
+        5.0625,
+        5.0625
+      ]
+    ],
+    "verdict": "PASS"
+  },
+  "A3_true_PSD_500": {
+    "kept": 500,
+    "min_eig": 1.048724,
+    "declared_ginibre_min": 1.0366,
+    "verdict": "PASS"
+  },
+  "A3_true_boundary_scan": {
+    "points": [
+      {
+        "eps": 0.1,
+        "lambda_min": 1.108033
+      },
+      {
+        "eps": 0.01,
+        "lambda_min": 1.010076
+      },
+      {
+        "eps": 0.001,
+        "lambda_min": 1.001001
+      },
+      {
+        "eps": 0.0001,
+        "lambda_min": 1.0001
+      }
+    ],
+    "declared": "1.1080 -> 1.0001",
+    "verdict": "PASS"
+  },
+  "A4_true_rays": {
+    "coherent": [
+      1.006155,
+      1.000059,
+      1.000001,
+      1.0
+    ],
+    "nematic": [
+      1.002378,
+      1.000022,
+      1.0,
+      1.0
+    ],
+    "verdict": "PASS"
+  },
+  "B_true_ranks": {
+    "rows": {
+      "S=0.5": {
+        "rank": 3,
+        "tangent_dim": 3
+      },
+      "S=1.0": {
+        "rank": 8,
+        "tangent_dim": 8
+      },
+      "S=1.5": {
+        "rank": 8,
+        "tangent_dim": 15
+      }
+    },
+    "declared": "3/3, 8/8, 8/15",
+    "S=3/2_kernel_dim": 7,
+    "verdict": "PASS"
+  },
+  "INJ_S1": {
+    "rank_mQ_on_tangent": 8,
+    "trivial_kernel": true,
+    "n_rank2_states_checked": 200,
+    "variance_min": 0.11596511,
+    "variance_strictly_positive": true,
+    "roundtrip_residual": 1.1274368112207335e-16,
+    "verdict": "PASS"
+  },
+  "elapsed_s": 9.65
+}
