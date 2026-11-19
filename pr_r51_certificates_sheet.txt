@@ -1,0 +1,153 @@
+==============================================================================
+PRE-REGISTRATION — r5.1 CERTIFICATE SET
+(sheet declares all checks, expected outcomes and falsifiers BEFORE any
+number is read; companion to the r5.1 amendment register entry; hashes of
+this sheet and of r51_certificates.py are registered in the entry)
+==============================================================================
+Executor: GLM, standing register. Discipline: exact arithmetic (Fraction)
+wherever the object is rational; float only where declared (boundary
+approach, log/sqrt evaluations). One script, one results JSON, compared
+line-by-line against this sheet after the run.
+
+------------------------------------------------------------------------------
+PR-SCALE-1 (E4) — the cubic invariant is independent 1D log-data
+------------------------------------------------------------------------------
+Object: 3x3 correlation frames C(a,b,c), unit diagonal, off-diagonals
+        (a,b,c). Pairwise kernel K_ij = c_ij^2; pairwise log-distance
+        d_ij = -ln K_ij.
+Frames: all 8 sign patterns at magnitude (1/2, 1/2, 1/2).
+Declared:
+  - every frame has the IDENTICAL pairwise K-multiset {1/4, 1/4, 1/4}
+    (all pairwise log-distances equal, d = ln 4);
+  - det C = 1 - 3/4 + 2abc takes exactly TWO values across the 8 frames:
+      abc > 0 (0 or 2 minus signs)  -> det = 1/2, rank 3
+      abc < 0 (1 or 3 minus signs)  -> det = 0,   rank 2
+  - at fixed magnitudes the pairwise logs determine NOTHING about det
+    except through sgn(abc): the orientation sign is the independent
+    3-point datum.
+Falsifier: any two frames in the family with identical pairwise K-multiset
+but EQUAL det C would kill the foundation of the scaling metric (volume
+not a function of pairwise logs). PASS requires: K-multisets identical,
+det values split exactly as declared, ranks split {3, 2}.
+
+------------------------------------------------------------------------------
+PR-SCALE-2 (E4) — the log-volume Hessian metric g_ab = d_a d_b (-ln det C)
+------------------------------------------------------------------------------
+Parametrization: coordinates (a,b,c) = the three off-diagonal entries.
+Exact Hessian (declared closed form, Fraction arithmetic):
+  D    = det C = 1 - (a^2+b^2+c^2) + 2abc
+  D_a  = 2(bc - a), D_b = 2(ac - b), D_c = 2(ab - c)
+  D_aa = -2, D_ab = 2c, D_ac = 2b, D_bc = 2a
+  H_ij = (D_i D_j - D * D_ij) / D^2
+Checks:
+  (i) PSD, EXACT (Sylvester, all principal minors) at the interior grid
+      G = {(1/4,1/4,1/4), (1/2,1/2,1/2), (1/2,1/3,1/4), (2/5,1/5,1/10),
+           (3/10,1/5,1/10)} — each grid point first certified an SPD
+      frame (1-a^2, 1-b^2, 1-c^2 > 0 and det > 0, exact).
+      Expected: H strictly positive definite at every grid point (classical
+      log-det barrier convexity restricted to the affine slice).
+      Falsifier: any principal minor < 0.
+  (ii) Boundary degeneration along the path (t, t, -t), t -> 1/2^-:
+      D(t) exact = 1 - 3t^2 - 2t^3; declared checkpoints t = 2/5, 9/20,
+      49/100, 499/1000 -> D = 49/125, 841/4000, 44402/10^6, 4494002/10^9.
+      Expected: Phi = -ln D monotone increasing without bound, and
+      lambda_max(H) monotone increasing (norm ~ O(D^-2)); the metric is
+      singular at the rank-deficient boundary.
+      Falsifier: lambda_max bounded, or Phi non-monotone.
+  (iii) Strata complementarity (Pauli convention sigma for qubit; S
+      matrices for spin-1; frame = covariance of the component vector):
+        qubit pure |0>, |+x>, |+y>   -> rank 2 (one zero-variance axis;
+      the two transverse bands carry the Bloch anisotropy, non-zero
+      eigenvalue product = 1/4 each — the |0> covariance is
+      diag(0, 1/2, 1/2))
+        qubit mixed diag(3/4,1/4)    -> rank 3, product = 4 p(1-p) = 3/4
+        qubit fully mixed I/2        -> rank 3, frame = I/2, product 1/4
+        spin-1 coherent |m=+1>,|m=0>-> rank 2, zero determinant on the
+      FULL frame (axial zero band + det-0 in the 2x2 block)
+        spin-1 fully mixed I/3      -> rank 3, frame = (2/3) I,
+      determinant 8/27
+      Declared expected: the scaling metric's volume form det G vanishes
+      IDENTICALLY on the spin-1 coherent stratum and survives on the
+      mixed stratum (8/27); rank is 2 on ALL coherent/pure frames (the
+      dimension of the frame is state-dependent). The complementarity
+      claim graded E4 here: (rank: pure 2 vs mixed 3 on both qubit and
+      spin-1) + (full-frame determinant: 0 exactly on spin-1 coherent
+      states). The non-vanishing anisotropy product on qubit pure
+      frames is a qubit-specific Bloch anisotropy, NOT a metric volume
+      — recorded as a caveat in the entry, no theorem attached to it.
+      Falsifier: any coherent frame with rank 3, or mixed frame with
+      rank < 3.
+
+------------------------------------------------------------------------------
+PR-DIM-1 (E4) — tier-3 is structural; frame-rank is state-dependent
+------------------------------------------------------------------------------
+Checks:
+  (a) rank(Cov(S_alpha), S_z eigenstate |m>) = 2 for m = +1, 0, -1
+      (expectation of the axial operator is sharp -> its variance band
+      vanishes; the other two bands 1/2 each).
+      Falsifier: rank 3 on any coherent axial state.
+  (b) rank(Cov(S), I/3) = 3, det = 8/27 exact.
+      Falsifier: det != 8/27.
+  Declared reading: the "3" that is structural is the TIER dimension
+  (2k+1 = 3 components of the rank-1 dipole sector, sandwich-forced by
+  the Peirce projection (1-P^2) X P^2); the FRAME rank on states is
+  state-dependent (2 on coherent, 3 on mixed). Any "settles to 3 uniquely"
+  claim must target a CONSTRUCTIVE dimension (spectral/Hausdorff) of a
+  full-rank correlation metric space, never the frame rank. This is the
+  D3 strike fence, machine-anchored.
+
+------------------------------------------------------------------------------
+PR-T1b (E4, local-time algebra) — Lie flow transports Jordan frames
+------------------------------------------------------------------------------
+Substrate: single spin-1 bond, Jordan product X o Y = (XY+YX)/2 on the
+27-dim self-adjoint space (basis: the 3 Peirce blocks of P^(2), trace
+basis). Unitary u = exp(i theta Sx), alpha_t(X) = u^t X u.
+Checks:
+  (a) DERIVATION: ||[A, B o C] - [A,B] o C - B o [A,C]|| == 0 exactly
+      for the test family {A,B,C} = {Sx, Sy, Sz, SxSy, SzSx, SxSySySz}
+      (Fraction-converted after float construction; tolerance 1e-12).
+      Falsifier: residual > 1e-12.
+  (b) JORDAN AUTOMORPHISM: alpha_t(B) o alpha_t(C) - alpha_t(B o C)
+      == 0 exactly for theta = 0.3, 0.7, 1.1 and all pairs from the test
+      family. Falsifier: residual > 1e-12.
+  (c) NON-INVERSE: (A o [B,C]) - [A o B, C] - [B, A o C] == (CAB - BAC)/2
+      != 0 for at least one test triple (the converse derivation fails;
+      this is the directedness seed). Falsifier: identically zero.
+  Declared: this is the two-clock consistency LEMMA in miniature — the
+  Lie flow (global clock) transports Jordan frames (local correlational
+  structure) EXACTLY, so local clocks defined on Jordan sub-sectors are
+  carried along the global flow without distortion. The cocycle
+  (overlap agreement up to monotone reparametrization) remains an open
+  lemma, registered, NOT certified here.
+
+------------------------------------------------------------------------------
+PR-NOGO-RAW (E4) — raw-clock monotonicity is PROBE-DEPENDENT (audit
+anchored, one certified reproduction)
+------------------------------------------------------------------------------
+Substrate: N=4 open spin-1 chain, cov3 channel, gamma = 1, both
+generators H_XXX = sum_b S_b . S_{b+1} and H_XY = sum_b (SxSx + SySy),
+NESS by GMRES on the transpose system with residual <= 1e-9, 600+
+steps, tol 1e-10, restart 60. Reported per bond b: M_b = Tr(rho P_b^2),
+G_{H,b} = -i Tr(rho [P_b^2, H]), omega_raw(b) = G_{H,b}/(2 M_b).
+Declared expected values (certified class from the corpus):
+  H_XXX: M_b = [0.061203, 0.128182, 0.061203],
+         G_b = [0.015795, 0.075528, 0.015795],
+         omega_raw = [0.129041, 0.294609, 0.129041]
+         -> omega_raw INTERIOR 2.28x FASTER than boundary.
+  H_XY:  M_b = [0.120796, 0.156567, 0.120796],
+         G_b = [0.065959, 0.065874, 0.065959],
+         omega_raw = [0.273019, 0.210370, 0.273019]
+         -> omega_raw INTERIOR 23% SLOWER than boundary.
+Declared conclusion: the sign of d omega_raw / d M across bonds FLIPS
+with the generator (XXX: positive; XY: negative). No monotone burden law
+alpha(B) holds for the raw observable. The canonical-clock question
+(open) is which reparametrization of the local observable — if any — is
+probe-independent. Registered as the audit anchor; the reparametrized
+search is future work, NOT certified here.
+Falsifier: either substrate failing to reproduce the declared value
+class to 3 decimals.
+
+All certificates above are the ones whose numbers will be frozen in
+r51_certificates.json and cross-checked against this sheet before the
+register entry is finalized.
+==============================================================================

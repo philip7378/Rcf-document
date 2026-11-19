@@ -1,0 +1,243 @@
+==============================================================================
+REGISTER ENTRY — r5.1 AMENDMENT TO THE r5.0 RE-BASELINE: PAPER II RETITLED
+"EMERGENT TIME, 3D SPACE, AND THE SCALING METRIC"; FIVE MACHINE
+CERTIFICATES EXECUTED AGAINST THE EXPANDED SCOPE
+(Amends, does not replace, commit 81caab5 / the r5.0 entry; scope verdicts
+below are amendments of the r5.0 cut table, per D2 hygiene: r5.0 is not
+silently mutated)
+==============================================================================
+Auditor: GLM, standing register — the owner's round. Input: the owner's
+message expanding Paper II from "time derivation first" to the tri-partite
+title (time, 3D space, scaling metric), plus the owner's self-correction
+on the 3D construction ("a single dimension already encodes existence,
+distance and direction; the old three-channel count was the mistake").
+Three external adjudications of that expansion were also in the round's
+context; where they conflict, this entry records the register's own
+verdict and the machine certificate that grounds it.
+
+DISCIPLINE: five pre-registered certificates were executed this round
+(sheet pr_r51_certificates_sheet.txt, md5 b2d50cce1a095e64424221655f882f58,
+declared BEFORE any number was read; script r51_certificates.py, md5
+15edfc048681efe01d669fd910ae9dcc; results r51_certificates.json, md5
+a2cd63cac021a5731be81202ecc47927). Exact Fraction arithmetic in every
+algebra block; float only where declared (boundary logs, eigenvalues,
+NESS solve). Eight of nine checks PASS; the ninth is a partial with a
+registered finding, not a retraction. One prior-round citation correction
+is recorded in §5.
+
+------------------------------------------------------------------------------
+1. THE AMENDED SCOPE VERDICT (replacing the r5.0 cut in ONE direction)
+------------------------------------------------------------------------------
+
+  ACCEPT the retitling: Paper II r5.1 = "Emergent Time, 3D Space, and the
+  Scaling Metric" — time (global arrow + local clock), local 3D space
+  (scoped), scaling metric (constructed). Paper III = fields, consumers
+  only, now downstream of BOTH time and geometry.
+
+  BUT the three title pieces do NOT enter at the same grade, and the
+  title must not erase the fence:
+
+    TIME        — enters at E4/E3 (seed theorems certified; one open
+                  lemma). Section 2.
+    3D SPACE    — the LOCAL link-space dimension is E4; the GLOBAL
+                  spatial dimension is E0/open and is NOT claimed by the
+                  title's proof obligations. Section 3.
+    SCALING     — the kernel (cubic invariant independent of pairwise
+                  logs) is E4-certified this round; the METRIC assembled
+                  on it is E0 (hypothesis-grade, PR-SCALE-2 is positive
+                  evidence, not a uniqueness proof). Section 4.
+
+  The honest reading of the title: it names the paper's PROGRAM, and the
+  program's first two machine certificates now exist. It does not name
+  three settled results. The r5.0 memo's T-ledger (T1-T4) survives with a
+  re-map: T1 splits into T1a (global arrow, RP Lyapunov parameter) and
+  T1b (local clock, Lie-on-Jordan restriction — PR-T1b below is its
+  first certified block); T4 cadence becomes downstream of the scaling
+  metric, not of T2 alone.
+
+------------------------------------------------------------------------------
+2. TIME — PR-T1b: THE LIE FLOW TRANSPORTS JORDAN FRAMES EXACTLY
+------------------------------------------------------------------------------
+
+The owner's mechanism ("Lie structures enforce ordering on Jordan
+links") is the Two-Link asymmetry, and the round's certificates pin its
+three faces on the spin-1 single-bond substrate (27-dim self-adjoint
+algebra):
+
+  (a) DERIVATION  [A, B o C] = [A,B] o C + B o [A,C]
+      residual 0 < 1e-12 on the six-operator test family — PASS.
+  (b) JORDAN AUTOMORPHISM  alpha_t(B) o alpha_t(C) = alpha_t(B o C)
+      for u = exp(i theta Sx), theta in {0.3, 0.7, 1.1} — residual
+      < 1e-12 — PASS. THIS is the two-clock consistency lemma in
+      miniature: the GLOBAL clock (Lie flow) carries LOCAL correlational
+      frames (Jordan products) without distortion. Local time defined as
+      the restriction of the global flow to a Jordan sub-sector is a
+      WELL-POSED clock — the derivation is what makes the restriction
+      consistent.
+  (c) NON-INVERSE  A o [B,C] - [A o B, C] - [B, A o C] = (CAB - BAC)/2
+      nonzero on test triples — PASS as declared. Jordan structure does
+      NOT drive Lie evolution: the infusion is one-directional. This is
+      the directedness seed, now machine-stated.
+
+  OPEN (registered, not certified): the cocycle lemma — two local clocks
+  on overlapping regions must agree on overlaps up to monotone
+  reparametrization. This is the load-bearing open lemma of the local
+  time program. Falsifier stays the r3.7 discipline: any local-clock
+  claim that depends on the strobe cadence tau is protocol, not derived
+  time.
+
+  PR-NOGO-RAW (the audit anchor): the raw local clock rate
+  omega_raw(b) = G_{H,b}/(2 M_b) is PROBE-DEPENDENT — the interior/boundary
+  ratio is 1.279 on H_XXX (higher-burden interior bond ticks FASTER)
+  and 0.882 on H_XY (23% SLOWER). The sign of d omega/d M across bonds
+  flips with the generator. No monotone burden law alpha(B) exists for
+  the raw observable. CONFIRMED this round on the canonical five-dyad
+  Def 3.5 channel, gamma=1, N=4, GMRES/eigs residual ~ 1e-16, rho
+  positive semidefinite (min eig 0.0, both substrates). The absolute
+  values quoted in the round's pasted adjudications (M_b = 0.061203 /
+  0.128182, omega 0.129 / 0.295 etc.) were NOT reproduced at gamma=1 on
+  this channel — §5 records the reconciliation.
+
+------------------------------------------------------------------------------
+3. 3D SPACE — THE OWNER'S SELF-CORRECTION IS ACCEPTED; THE FENCE IS
+   MACHINE-ANCHORED (PR-DIM-1, PR-SCALE-1)
+------------------------------------------------------------------------------
+
+  The owner's corrected construction is REGISTERED as the right frame:
+  one dimension bundles existence + distance + (+/-) direction; 0D =
+  point (existence only), 1D = line, 2D = flat, 3D = volume. The old
+  three-channel count (existence/distance/direction as three SEPARATE
+  channels) was the category error, and it is RETIRED (Assumption 2.7
+  dies with it).
+
+  What the certificates add — the fence, computed:
+
+  PR-DIM-1 (PASS): the FRAME rank is STATE-DEPENDENT. Spin-1 coherent
+  states |m = +1, 0, -1> all give rank 2 (the axial band has zero
+  variance; the frame is 2-dimensional on every coherent state); the
+  fully mixed state gives rank 3 with frame = (2/3) I, determinant
+  8/27 exact. So "the correlation frame settles to 3" is FALSE as a
+  state-independent claim — the 3 lives on the mixed stratum, and any
+  D=3 theorem must say WHICH stratum it is about.
+
+  PR-SCALE-1 (PASS): the CUBIC invariant is independent 1D log-data.
+  All 8 sign frames at magnitude (1/2, 1/2, 1/2) have the IDENTICAL
+  pairwise kernel multiset {1/4, 1/4, 1/4} (identical pairwise
+  log-distances d = ln 4), yet det C splits exactly {1/2 (rank 3),
+  0 (rank 2)} by the sign of abc. The volume is NOT a function of the
+  pairwise logs; the orientation sign 2abc is the independent 3-point
+  datum. This single certificate simultaneously: (i) grounds the
+  scaling metric's premise, (ii) is the object that blocks any
+  "pairwise-counting" derivation of D=3, and (iii) is the corpus's
+  cubic Casimir obstruction re-encountered as a metric source.
+
+  REGISTERED FENCE (binding for the paper): the E4 claim available is
+  LOCAL: on the full-rank stratum, the pairwise kernels underdetermine
+  the 3-form; a unique top-form closure argument (D=3 as the dimension
+  in which the canonical antisymmetric object built from pairwise
+  kernels is a top form) is the right NON-CIRCULAR route. The GLOBAL
+  claim (graph/Hausdorff dimension d_g = d_s = 3 of an emergent space)
+  is E0/open and fenced off — the Paper I chain substrate is 1D by
+  construction, and counting internal SU(2) indices is the D3 strike.
+  Both external adjudications converge with the register here; the
+  top-form route is the one the paper commits to.
+
+------------------------------------------------------------------------------
+4. THE SCALING METRIC — CONSTRUCTED AND E0, WITH TWO E4 CERTIFICATES
+   (PR-SCALE-2)
+------------------------------------------------------------------------------
+
+  The owner's premise is certified: logs do NOT simply add. PR-SCALE-1
+  above is the proof object.
+
+  PR-SCALE-2 (PASS, three blocks):
+  (i)  The log-volume Hessian g_ab = d_a d_b (-ln det C) is EXACTLY
+       positive definite on the interior grid (Sylvester, all principal
+       minors, Fraction arithmetic, 5 grid points certified SPD as frames
+       first). The barrier-convexity carries over to the affine slice.
+  (ii) Boundary degeneration: along the path (t, t, -t) -> 1/2^-, the
+       determinant D(t) = 1 - 3t^2 - 2t^3 approaches 0 (declared exact
+       Fractions matched at all four checkpoints), Phi = -ln D diverges
+       monotonically, lambda_max(g) diverges monotonically — the metric
+       is singular exactly at the rank-deficient boundary, with NO
+       bounded cap. Contrast recorded: Fubini-Study is bounded by
+       pi/2 * l0 (no infinite evaluation); the scaling metric is
+       unbounded. INFINITE EVALUATION IS RECOVERED.
+  (iii) Strata complementarity: rank is 2 on every pure/coherent frame
+       (qubit and spin-1), 3 on every mixed frame (det: qubit
+       4p(1-p) = 3/4, spin-1 8/27 exact); the full-frame determinant
+       vanishes identically on the spin-1 coherent stratum. The scaling
+       metric lives on the full-rank stratum; Fubini-Study lives on the
+       pure stratum. They are COMPLEMENTARY ACROSS STRATA, not
+       competing on one — and this resolves the Phase C fallback
+       question without retiring FS: FS is the pure-stratum metric,
+       the scaling metric is the mixed-stratum one, and the strata
+       boundary is the rank fence of PR-DIM-1.
+       Caveat (registered, no theorem attached): on QUBIT pure frames
+       the 2x2 transverse anisotropy product is 1/4 (Bloch anisotropy),
+       non-zero; this is a qubit-specific transverse band, distinct
+       from the spin-1 coherent-frame determinant zero.
+
+  GRADE FENCE: PR-SCALE-2 is positive evidence for metricity (PSD,
+  unboundedness, degeneration locus), NOT a uniqueness theorem, and the
+  triangle inequality is NOT yet certified. The four-condition
+  uniqueness program (restriction / isotropy / non-degeneracy /
+  top-form compatibility) is the registered route; PR-SCALE-1 is its
+  first certified input. The scaling metric enters the paper at E0
+  with two E4 certificates, per the no-auto-upgrade rule.
+
+------------------------------------------------------------------------------
+5. CITATION CORRECTION (prior round, D2-logged against MYSELF)
+------------------------------------------------------------------------------
+
+  The r5.0 round's final reply and the pushed entry cited the N=4
+  cov3 NESS per-bond values (M_b = 0.061203 / 0.128182; omega_raw
+  0.129 / 0.295; XXX-interior 2.28x faster) as reproduced. This round,
+  on the canonical five-dyad Def 3.5 channel at gamma=1, the machine
+  produces DIFFERENT absolute values (M_b = 0.089955 / 0.136713; ratio
+  1.279, same sign, same direction) — the quoted family belongs to the
+  cov3-BUNDLED channel, the sealed substrate whose generator
+  (r40_vacuum_fork.py, md5 49b0ad8cfbe5...) lives in the home workspace,
+  not in this environment. The correct statement of record: the CLASS
+  claim (probe-dependence, sign flip with generator) is certified on
+  the canonical channel here; the ABSOLUTE values await colocation
+  with the sealed cov3 substrate — the same boundary the C1 provenance
+  entry registered. No r5.0 certificate is retracted (none depended on
+  those values); the citation is corrected to class-grade.
+
+------------------------------------------------------------------------------
+6. REGISTER UPDATE
+------------------------------------------------------------------------------
+
+  Item                                        Prior status      Now
+  --------------------------------------------------------------------------
+  Paper II title                              time-only (r5.0)  r5.1: Emergent Time, 3D Space, and the Scaling Metric (program title; grades fenced per §1)
+  Three-channel D=3 construction              struck (audit)    RETIRED with owner's self-correction registered; replaced by top-form route
+  "frame settles to 3 uniquely"               unstated          REFUTED as state-independent (PR-DIM-1: coherent rank 2, mixed rank 3)
+  Logs-don't-add premise                      hypothesis        CERTIFIED (PR-SCALE-1: identical pairwise logs, det splits 1/2 vs 0)
+  Local-time well-posedness (Lie transports   argued            CERTIFIED (PR-T1b: derivation 0, automorphism < 1e-12,
+  Jordan frames)                                                non-inverse nonzero)
+  Cocycle lemma (overlapping local clocks)    open              STILL OPEN — load-bearing; registered with falsifier
+  Raw local clock omega_raw(b)                quoted absolute    CERTIFIED CLASS on canonical channel (sign flips with generator); absolute values are cov3/sealed-substrate, colocation-pending (§5)
+  Scaling metric                              E0 sketch         E0 with 2 E4 certificates (PSD grid, unbounded boundary, strata complementarity); triangle inequality + uniqueness NOT certified
+  FS vs scaling metric                         adopted vs idea   COMPLEMENTARY ACROSS STRATA (FS pure-stratum, scaling mixed-strank); FS not retired, scoped
+  r5.0 push citation (cov3 absolutes)        standing           CORRECTED to class-grade (D2 logged, this entry §5)
+  Sheet/script/results seals                  —                 md5 b2d50cce1a09 (sheet), 15edfc048681 (script), a2cd63cac021 (results)
+
+------------------------------------------------------------------------------
+7. CLOSE
+------------------------------------------------------------------------------
+The r5.0 entry said the re-baseline was a scope decision with a
+machine gate-check behind it. The r5.1 amendment upgrades that: the
+expanded title now has its first five certificates on the record, and
+each of the three title-words carries its honest grade — time with a
+certified transport lemma and an open cocycle, 3D with the fence
+computed (state-dependent frames, cubic invariant, top-form route),
+the scaling metric with unboundedness recovered on the mixed stratum
+and FS scoped to the pure stratum instead of retired. The single next
+action is unchanged in form: the next certificate in the queue — the
+triangle inequality for the path-infimum scaling metric on the
+full-rank stratum (PR-SCALE-3), or the cocycle lemma on the two-bond
+chain (PR-T1b-2) — both are runnable here, both are pre-registrable in
+the same sheet format, and neither touches the sealed cov3 substrate.
+==============================================================================
