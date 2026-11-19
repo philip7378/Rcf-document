@@ -1,0 +1,156 @@
+{
+  "GATE_S": {
+    "commutators": {
+      "Sx,Sy": 3.1718998303807225e-16,
+      "Sy,Sz": 0.0,
+      "Sz,Sx": 0.0,
+      "casimir": 5.438959822042073e-16
+    },
+    "casimir": 5.438959822042073e-16,
+    "verdict": "PASS"
+  },
+  "K3_kernel": {
+    "rank": 4,
+    "idempotent_err": 1.4793707109260208e-15,
+    "hermiticity_err": 0.0,
+    "M3_P_K3_fro": 9.298115444858616e-16,
+    "trace": 4.0,
+    "verdict": "PASS"
+  },
+  "P12_in_ran_P01": {
+    "eigenvalues": [
+      0.027777778,
+      0.027777778,
+      0.027777778,
+      0.25,
+      0.25,
+      0.25,
+      0.25,
+      0.25,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "declared": [
+      "1/36",
+      "1/36",
+      "1/36",
+      "1/4",
+      "1/4",
+      "1/4",
+      "1/4",
+      "1/4",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "trace": "4/3",
+    "declared_trace": "25/3",
+    "verdict": "PASS",
+    "Tr_P20_P21": 8.333333333
+  },
+  "normalization": {
+    "trace_raw": 1.130952381,
+    "declared": "95/84 = 1.130952380952381",
+    "match": true
+  },
+  "seed_burdens": {
+    "M0(0)": 1.0,
+    "declared_M0": "1",
+    "M1(0)": 0.133040936,
+    "declared_M1": "91/684 = 0.13304093567251463",
+    "M0_match": true,
+    "M1_match": true
+  },
+  "seed_structure": {
+    "SU2_invariance_err": 0.0,
+    "site1_marginal_I3_err": 0.0,
+    "support_in_P20": 1.0
+  },
+  "spillover_slope": {
+    "dM1_dt(0)": 0.073099415,
+    "declared": "25/342 = 0.07309941520467836",
+    "match": true,
+    "dM0_dt(0)": -1.070987654
+  },
+  "handoff_trajectory_globalK3": {
+    "grid": [
+      0.0,
+      0.5,
+      2.0,
+      4.0
+    ],
+    "rows": [
+      {
+        "t": 0.0,
+        "M0": 1.0,
+        "M1": 0.133041
+      },
+      {
+        "t": 0.5,
+        "M0": 0.594005,
+        "M1": 0.14659
+      },
+      {
+        "t": 2.0,
+        "M0": 0.15256,
+        "M1": 0.092565
+      },
+      {
+        "t": 4.0,
+        "M0": 0.03988,
+        "M1": 0.036126
+      }
+    ],
+    "declared_audit_series": {
+      "M0": [
+        1.0,
+        0.59401,
+        0.15256,
+        0.03988
+      ],
+      "M1": [
+        0.13304,
+        0.14659,
+        0.09256,
+        0.03613
+      ]
+    },
+    "note": "audit grid DECODED as t=0, 0.5, 2.0, 4.0; all 8 numbers exact",
+    "M1_fine_peak": {
+      "t": 0.425,
+      "M1": 0.14683
+    },
+    "M1_at_4.0": 0.036126
+  },
+  "two_site_kernel_contrast": {
+    "M1(0)": 0.555556,
+    "declared": "5/9 = 0.555556",
+    "dM1_dt(0)": -0.555556,
+    "verdict_family": "no spillover (decaying)"
+  },
+  "ADJUDICATION": {
+    "all_checks": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "verdict": "RESOLVED-BY-SEED-SPEC",
+    "rule": "register entry: r5.1c's 'un-reproduced' log closed by seed specification (global 3-site AKLT kernel K3 = ker(P01^2 + P12^2), Paper I s2.1(iii), rank 4, M3 P_K3 = 0) AND grid decoding (audit checkpoints t = 0, 0.5, 2.0, 4.0; the r5.1c session mis-read them as 0, 0.25, 0.5, 1.0). The r5.1c script's P_K3 helper was a 2-site bond-0 kernel -- an erratum in that helper only; every audit number now reproduces exactly: norm 95/84, M0(0) = 1, M1(0) = 91/684, dM1/dt(0) = +25/342, M1 peak 0.14659 at t~0.425-0.5, all 8 trajectory values. The frozen sheet's reference trajectory stays as labeled (Schur-freeze family)."
+  },
+  "elapsed_s": 16.49
+}

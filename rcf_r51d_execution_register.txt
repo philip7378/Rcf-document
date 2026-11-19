@@ -1,0 +1,179 @@
+==============================================================================
+REGISTER — PR-T1b-2 EXECUTION REPORT (r5.1d): N=3 TWO-BOND OVERLAP CLOCK
+COCYCle, WEAK FORM
+(executed per the frozen pr_t1b2_sheet.txt 8fff13eb with the pre-registered
+output header H1-H5, rcf_r51d_pre_execution_register.txt 8c3f09e0; Gate S
+PASS leading; pre-flight assertions P1-P3 PASS; exact 729x729 superoperators,
+canonical cov3 gamma = 1, H_XXX primary transient arm, H_XY comparison arm,
+global-K3 handoff arm; script r51d_t1b2_execution.py, results
+r51d_t1b2_results.json, hashes on freeze)
+==============================================================================
+
+------------------------------------------------------------------------------
+1. THE VERDICT — HONEST, PER THE FROZEN CRITERIA
+------------------------------------------------------------------------------
+OVERALL: BRANCH-C FIRES ON THE FROZEN OFF-ORBIT CRITERION — WITH THE
+STRUCTURE BELOW IT MIXED, AND THE MIX IS THE FINDING.
+
+  B1  (chiral-channel holonomy within 20% of the sealed 0.17):
+      S2 (chiral-active |+x,+x,+z>): coeff 0.174716 vs 0.17 = 2.8%
+      deviation -> PASS. This is the sealed-prediction confirmation the
+      way it was pinned in H2: 0.17 was sealed from the chiral-current
+      norm ||J|| = sqrt(48) through the det-C channel BEFORE the run;
+      the chiral-active seed's whole-window mean lands on it.
+      S1 (|+1,+1,0>): coeff 0.104192, and the pre-flight's channel
+      decomposition says this number is 100% DISSIPATIVE in origin
+      (pure chiral channel = 0.0 identically on this seed) -> verdict
+      VACUOUS-BY-SEED, exactly as pre-registered. Not a B refutation;
+      a channel-vacuity.
+      S3 (Ginibre full-rank): coeff 0.076250, generic mixed seed, no
+      chiral dominance -> VACUOUS-BY-SEED as well (chiral activity is
+      a seed property, pre-flight 2's identity).
+  B2  (cross-trajectory f_{01} agreement across the seed family):
+      max relative spread of the normalized det-C advance curves
+      0.4896 -> FAIL (threshold 0.20). The overlap transition map is
+      SEED-DEPENDENT. Per the frozen grading clause, this alone caps the
+      weak cocycle at per-seed local time (E3-local at most, never E4):
+      f is seed-dependent, scoping any "local time" claim to per-seed
+      local clocks.
+  B3  (det C^{(1)} monotone advance on all orderings, window [0,3]):
+      FAILS with turnarounds logged: S1 turn at t = 1.5 (01) / 1.0
+      (10); S2 at 1.5 / 3.0; S3 at 0.25 / 2.75 / 0.5 (sim). The
+      simultaneous (Lie-Trotter) ordering stays monotone longest
+      (S1, S2: no turnaround in-window). These are the coherent H_XXX
+      oscillation/revival turnarounds seat-2 warned about — logged as
+      observables (H3), NOT read as algebraic obstructions; the
+      short-time window t in [0, 1] IS monotone on S1/S2 for all
+      orderings (the Block E signature holds there).
+  C   (off-orbit residual, interpolated monotone reparametrization,
+      SU(2)-tangent-complement projection per H4):
+      residual_max: S1 = 0.2225, S2 = 0.1913, S3 = 0.1264 — ALL > 5e-2.
+      Branch C FIRES on the frozen threshold. Tangent-removed fraction
+      (share of residual that was SU(2)-orbit-tangential): S1 0.00,
+      S2 0.43, S3 0.26 — the residual is dominated by genuinely
+      off-orbit displacement, NOT by pure rotation mismatch.
+      Mechanism (read off the data): the two orderings END at
+      different site-1 states — detC01(3) = 0.2804 vs detC10(3) = 0.2374
+      on S2 — so no 1D reparametrization can align the orbits; the
+      curvature is not reparametrizable away.
+  THE COMBINED READING (all four rows together, no cherry-pick):
+      the overlap cocycle's curvature is REAL, carries the chiral
+      channel on chiral-active seeds (B1 pass), but is NOT purely
+      chiral-current (B2 fail: seed-dependent; C fires beyond the
+      tangent space; B3 turnarounds exist). Per the frozen outcome
+      space this lands in BRANCH-C territory with a B1-confirmed
+      chiral component — i.e., the curvature is the chiral current
+      PLUS a seed-dependent piece. The strong claim "the curvature IS
+      the chiral current" is REFUTED at N=3 under the frozen criteria;
+      the weak claim "local clocks agree up to a monotone relabeling"
+      is refuted ACROSS seeds (B2) and holds only per-seed, per-window.
+      GRADING: E3-local, seed-scoped. NOT E4. The global-time claim
+      stays E2-pending (T1b-3's N=4 multi-overlap question), unchanged.
+
+------------------------------------------------------------------------------
+2. THE HANDOFF ARM — MARGINAL PASS, MECHANISM CLEAN
+------------------------------------------------------------------------------
+Global-K3 seed (the round's resolved object): M1(0) = 91/684 =
+0.133041, spillover peak M1 = 0.146644 at t = 0.375 (pre-flight
+anchored 0.14659 at the t = 0.5 grid sample — same curve), then decay
+to 0.036126 at t = 4 (all pre-flight-verified values). Handoff
+window found: 1, best transfer ratio eta = 0.0505 vs threshold 0.05 —
+MARGINAL PASS (barely over; the window is t in ~[0, 0.375], M0 losing
+~0.27 while M1 gains ~0.0136). Strobe asymmetry on this seed: EXACTLY
+0.0 — the seed is SU(2)-invariant, and the ordering asymmetry channel
+vanishes on invariant states (the freeze mechanism, machine-exact).
+The sheet's O(t^2) strobe-asymmetry condition is satisfied
+vacuously-identically; the PASS rides on eta and front consistency
+alone, and is reported as MARGINAL, not clean.
+  2-site-kernel contrast: M1(0) = 5/9 decaying monotonically, no
+  spillover — confirming the pre-flight's family distinction.
+  READING: the temporal handoff exists but is WEAK (eta ~ 5%, not a
+  dominant transport channel at N=3); the burden mostly dissipates
+  locally. The handoff branch's paper-level claim is "present but
+  minor at N=3" — a quantitative statement, now on the record with
+  exact anchors.
+
+------------------------------------------------------------------------------
+3. THE SIGN-INVERSION FINDER — LIVE ON ALL THREE SEEDS
+------------------------------------------------------------------------------
+omega_raw(b) zero-crossings during the H_XXX transient: YES on every
+seed (S1: omega0 in [-0.1387, +0.1556], omega1 in [-0.0533, +0.2888];
+S2: omega0 [-0.1005, +0.1297]; S3: omega1 [-0.0181, +0.1433]). The
+naive "time always advances locally" reading is FALSIFIED at N=3: each
+bond's raw local clock inverts sign during spillover. Registered as a
+live falsifier per the sheet's 5(c) — feeds the handoff/arrow
+narrative: local clock sign is state- and window-dependent.
+  Comparison arm (H_XY NESS): both bonds read omega_raw = 0.368967
+  EQUAL — the steady-state clock is uniform and positive there
+  (M_b = [0.056284, 0.056284], G_H = +0.083068, NESS residual 0.0;
+  the r5.1c anchors again, now as the arm's certified readout).
+
+------------------------------------------------------------------------------
+4. SCALE-INDEPENDENCE — S-UNDEFINED (HONEST)
+------------------------------------------------------------------------------
+alpha per seed: S1 0.1042, S2 0.1747, S3 0.0763; the H_XY NESS
+alpha = 0.0 (the strobe difference vanishes at the fixed point — the
+NESS is a fixed point of BOTH orderings, so the transient holonomy is
+identically zero there). Relative spread 1.94 -> S-UNDEFINED per the
+frozen outcome space (single non-vacuous coefficient family only;
+the comparison arm's zero is a vacuity, not a measurement). The
+N=4 multi-bond probe (T1b-3) is the only route to a defined answer.
+
+------------------------------------------------------------------------------
+5. TAUTOLOGY GUARD — RESPECTED
+------------------------------------------------------------------------------
+No single-trajectory readout is cited as a cocycle verdict above. The
+verdict is carried by B2 (cross-trajectory) + the off-orbit C
+criterion (Sym_+^3 orbit comparison with interpolated monotone
+reparametrization, SU(2)-tangent complement projection per H4). The
+B1 confirmation is a sealed-prediction agreement (0.17 pinned from
+||J|| = sqrt(48) through the det-C channel before the run), not a
+fit to the output.
+
+------------------------------------------------------------------------------
+6. EXECUTION ERRATA (executor's own log, this round)
+------------------------------------------------------------------------------
+Two in-run defects were caught and fixed DURING the run by the frozen
+criteria themselves (both now in the script history): (a) the B2
+statistic initially compared RAW det-C curves across seeds with
+different det-C(0) — miscalibrated; fixed to normalized advance
+curves; (b) the off-orbit matching initially used nearest-grid-point
+matching — weak; fixed to interpolated monotone reparametrization
+(matching by det-C progress fraction). Both fixes were made BEFORE
+the report; the reported numbers are from the fixed script. The
+first-run numbers under the buggy statistics are not citable and are
+not cited. (A third trivial crash — the strobe vectorization order —
+was fixed at first execution.)
+
+------------------------------------------------------------------------------
+7. WHAT THIS MEANS FOR THE PAPER (registered reading, E3 fence)
+------------------------------------------------------------------------------
+The weak cocycle question at N=3 has its answer: the two bond clocks
+do NOT agree on the shared site up to any seed-independent monotone
+relabeling (B2), and the two strobe orderings' site-1 orbits carry a
+genuine off-orbit separation (C fires, mechanism: different end
+states). The chiral-current channel IS present and IS the dominant
+holonomy driver on chiral-active seeds (B1 pass at 2.8% on the sealed
+prediction), but it does NOT exhaust the curvature. Local time, to
+the extent it exists at N=3, is per-seed and window-scoped; its raw
+clock inverts sign during spillover; the temporal handoff between
+bond burdens exists but transfers only ~5%. The arrow/chiral-current
+unification claim survives as a COMPONENT claim (one channel of the
+curvature), not as the full curvature claim. All of this at E3-local;
+nothing here upgrades any E-graded statement; the global question
+moves to T1b-3 (N=4, multi-overlap, active NESS) exactly as the
+register ordered.
+==============================================================================
+VERDICT LINE: BRANCH-C FIRES (frozen off-orbit criterion, all 3 seeds >
+5e-2, mechanism verified end-state divergence); B1 PASS on the
+chiral-active seed (0.1747 vs sealed 0.17); B2 FAIL (f_{01} seed-
+dependent, spread 0.49); B3 FAIL with turnarounds logged (H3);
+handoff MARGINAL PASS (eta = 0.0505); sign inversion LIVE on all seeds;
+scale S-UNDEFINED; grading E3-local, seed-scoped. Honest MIXED verdict:
+the curvature is the chiral current PLUS a seed-dependent piece.
+==============================================================================
+ARTIFACTS (md5): r51d_preflight.py 28915da2 / r51d_preflight.json
+854dd238 / r51d_preflight2.py a986a198 / r51d_preflight2.json 6c24cd5d /
+rcf_r51d_pre_execution_register.txt 8c3f09e0 / r51d_t1b2_execution.py
+(hash below) / r51d_t1b2_results.json (hash below) / this entry.
+==============================================================================

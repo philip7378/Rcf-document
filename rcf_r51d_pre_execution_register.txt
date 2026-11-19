@@ -1,0 +1,205 @@
+==============================================================================
+REGISTER ADDENDUM — r5.1d PRE-EXECUTION: THE 0.13304 DISCREPANCY RESOLVED
+BY MACHINE (SEED SPECIFICATION + GRID DECODE), SEAT-1 CHANNEL DECOMPOSITION
+REGISTERED, PR-SCALE-2 WORDING TIGHTENED, PR-T1b-2 GO CONFIRMED WITH THE
+OUTPUT HEADER FROZEN
+(sits on top of the r5.1c addendum 8fe552d0; the frozen pr_t1b2_sheet.txt
+8fff13eb is NOT touched — no retrofit; this entry pre-registers the
+execution header and closes the two audit seats' open items)
+==============================================================================
+Auditor: GLM, standing register. Inputs adjudicated: the two sign-off
+messages on commit 43885aa (seat-1: sign-off + the exact rational
+resolution of the 0.13304 discrepancy + the channel-decomposition
+watchlist; seat-2: ACCEPT the closures / HOLD for the P_K3 seed fix, with
+the 91/684 forensic chain; seat-3: sign-off with the SUSPENDED-PENDING
+provenance action and the two execution-time header declarations).
+
+------------------------------------------------------------------------------
+1. THE 0.13304 DISCREPANCY — RESOLVED BY MACHINE, BOTH SEATS ANSWERED
+------------------------------------------------------------------------------
+Pre-flight r51d_preflight.py (Gate S PASS leading; exact 729x729
+superoperators, canonical cov3 gamma = 1, N = 3) ran BEFORE any PR-T1b-2
+number was read. Verdict: RESOLVED-BY-SEED-SPEC, every audit number exact.
+  (a) The seed: the global 3-site AKLT kernel
+      K3 = ker(P_{01}^{(2)} + P_{12}^{(2)}), rank 4, Tr = 4, M3 P_K3 = 0
+      (machine: rank 4, idempotency 0, Hermiticity 0, ||M3 P_K3||_F = 0).
+      Seed rho_sm ~ sum_q L_{0,q}^dagger (P_K3/4) L_{0,q}.
+  (b) The exact rationals — ALL VERIFIED:
+      Tr(sum_q L^dag (P_K3/4) L) = 95/84 EXACT (1.130952381);
+      M0(0) = 1 EXACT; M1(0) = 91/684 = 0.133040936 EXACT;
+      dM1/dt(0) = +25/342 = +0.073099415 EXACT (positive spillover slope).
+  (c) The reachability mechanism — VERIFIED: the eigenvalues of
+      P_{12}^{(2)} restricted to ran(P_{01}^{(2)}) are exactly
+      {1/36 (x3), 1/4 (x5), 1 (x7)}, trace 25/3 = Tr(P2_0 P2_1) EXACT.
+      The r5.1c 4000-trial scan missed 0.13304 because it scanned
+      product states sigma_(01) (x) I/3 only; the true rho_sm is
+      3-site entangled through K3 (uniform single-site marginals I/3 by
+      SU(2) invariance, machine-checked 0 at 1e-12).
+  (d) THE GRID DECODE (new fact this pre-flight): the audit's four
+      checkpoints are t = 0, 0.5, 2.0, 4.0 — the r5.1c session had
+      mis-read them as 0, 0.25, 0.5, 1.0. On the decoded grid ALL EIGHT
+      trajectory values reproduce EXACTLY:
+        M0: 1.00000 / 0.59401 / 0.15256 / 0.03988  (machine 1.0 / 0.594005
+            / 0.15256 / 0.03988)
+        M1: 0.13304 / 0.14659 (peak, fine-scan max 0.14683 at t = 0.425
+            -- the declared 0.14659 is the t = 0.5 sample) / 0.09256 /
+            0.03613 (machine 0.133041 / 0.14659 / 0.092565 / 0.036126).
+  (e) The erratum on MY side, registered (seat-2's forensic is
+      CONFIRMED): the r5.1c script's P_K3 helper constructed the 2-site
+      bond-0 pair block (P^(0)+P^(1)) (x) I/3 — NOT the 3-site kernel.
+      That helper produced the 5/9-universal family (M1(0) = 5/9,
+      dM1/dt(0) = -5/9 < 0, no spillover; machine contrast re-verified).
+      The r5.1c "un-reproduced" log is closed: the audit series was
+      always the global-K3 seed's; the discrepancy was seed-definition
+      (helper erratum) + grid mis-read on my side, never an arithmetic
+      error on theirs. Registered as r5.1c-seed-erratum (D-class,
+      executor's own log, mirroring the seat's D2/D7 discipline).
+  (f) Seat-3's SUSPENDED action is therefore VACATED by resolution: the
+      series is now seed-specified AND grid-specified, both specification
+      gaps closed by machine. The r5.1c frozen-sheet reference trajectory
+      (M0 1.0 -> 0.36962, M1 0.556 -> 0.258 at t = 0, 0.25, 0.5, 1.0)
+      stays as labeled: reference for the 2-site-kernel / Schur-freeze
+      seed family — NOT the handoff series. The two objects are now
+      explicitly distinct in the register: 2-site kernel family
+      (decaying, no spillover) vs global-K3 family (spillover peak
+      0.14659, the genuine temporal-handoff signal). The handoff branch
+      of PR-T1b-2 runs on the global-K3 seed (pre-flight P2 assertion
+      satisfied by it: M0(0) = 1, M1(0) = 91/684, dM1/dt(0) = +25/342).
+
+------------------------------------------------------------------------------
+2. SEAT-1 CHANNEL DECOMPOSITION — REGISTERED, ONE CAVEAT
+------------------------------------------------------------------------------
+Pre-flight r51d_preflight2.py verified the O(t^2) site-1 channel
+decomposition on the two seeds (exact 729x729 superoperator commutators,
+site-1 partial traces, coefficient of t^2/2):
+  SEED A = 0.7|+1,+1,0><+1,+1,0| + 0.3 I/27 (the frozen sheet's Block-E
+  seed): pure chiral [L_H1, L_H0] site-1 channel = 0.000000 IDENTICALLY;
+  cross Lie-Jordan = 0.000000 at O(t^2); pure dissipative [D_1, D_0] =
+  0.147915 = 100% of the t->0 limit; at t = 0.25 the full finite-time
+  site-1 diff/t^2 = 0.176247 (the seat's 0.176, the growth being O(t^3)
+  cross terms). ALL EXACT.
+  SEED B = 0.7|+x,+x,+z><+x,+x,+z| + 0.3 I/27: pure chiral = 0.700000,
+  dissipative = 0.128689, cross = 0.430888, total = 0.886454 — ALL FOUR
+  EXACT. The chiral channel's off-orbit residual (component orthogonal to
+  the SU(2) orbit tangent span{i[S_q, rho_1]}) = 0.000000 EXACTLY,
+  confirming the seat's caution: a pure chiral displacement is SU(2)-
+  orbit-tangential even when it is 100% symmetric (quadrupole-direction)
+  as a matrix — so the C-criterion's off-orbit projection must be against
+  the orbit tangent space, NOT against raw quadrupole directions.
+  THE CAVEAT (logged, D-class, non-load-bearing): the seat's
+  dipole/quadrupole PERCENTAGES (50.00/50.00 chiral; 25.76/74.24 diss;
+  0.06/99.94 cross; 39.96/60.04 total) are NOT reproducible as norm
+  shares of the channel matrices in any fixed orthogonal su(3) split: the
+  chiral channel matrix on seed B is exactly
+  [[-0.35, -0.2475, 0], [-0.2475, 0, 0.2475], [0, 0.2475, 0.35]] —
+  PURELY SYMMETRIC (zero antisymmetric component; 100% quadrupole share
+  in the Gell-Mann split; 100% orbit-tangential in the rho1-relative
+  split). Their magnitude and residual-zero claims are exact; only the
+  percentages are convention-unspecified. Not load-bearing for B1/C
+  adjudication: what matters (and is verified) is WHICH seeds fire the
+  chiral channel and that the chiral channel never leaves the orbit
+  tangent space. Registered per the discipline: numbers adopted only when
+  specified; this sub-claim is marked non-citable until the seat
+  specifies its split.
+  THE IDENTITY (C5) — VERIFIED EXACT: on six random product states,
+  Tr_{0,2}([L_H1, L_H0] rho) = i[S_1 . (<S_0> x <S_2>), rho^(1)] with
+  max error 0.0 (machine exact). This is the mechanism behind B1's
+  adjudication guard below.
+  REGISTER EFFECT FOR THE FROZEN SHEET (interpretation, not retrofit):
+  the frozen sheet's primary seed family includes the |+1,+1,0> seed on
+  which the PURE CHIRAL CHANNEL VANISHES IDENTICALLY (<S_2> = 0 on
+  |0>_2; even |+x,+y,+z> leaves it zero since the cross product is
+  parallel- commuting with rho^(1)). Therefore B1 ("chiral-channel
+  holonomy within 20% of 0.17") is EXPECTED TO TRIP on the zero-chiral
+  seeds — not as a branch-B refutation but as a CHANNEL-VACUITY on that
+  seed: the 0.17 coefficient there is 100% dissipative (+ O(t^3) cross).
+  The pre-registered interpretation (this entry, BEFORE the run): on
+  zero-chiral seeds B1 reports VACUOUS-BY-SEED (log honestly, no
+  re-interpretation), and the branch-B confirmation is decided by the
+  CHIRAL-ACTIVE arm (|+x,+x,+z> family, declared in the header below as
+  an additional primary-arm seed within the sheet's own "at least 2
+  further seeds from a declared family" clause — coherent-product seeds
+  with site-1 polarization; |+x,+x,+z> IS such a seed, no sheet change
+  needed). The seat's offered PR-T1b-2b contingency (frozen separately
+  if needed) is noted as the escalation path ONLY if the chiral-active
+  arm also fails B1 on non-vacuity grounds.
+
+------------------------------------------------------------------------------
+3. PR-SCALE-2 WORDING — TIGHTENED (seat-2's precision note, adopted)
+------------------------------------------------------------------------------
+The registered phrasing becomes: "the log-volume Hessian tensor is
+COERCIVELY BOUNDED BELOW (lambda_min >= 1 on all of D_+(C^3), sharp
+infimum 1 at transverse boundary directions) and RADIALLY DIVERGENT
+(lambda_max ~ 1/eps^2 -> +infinity along rays hitting the rank-
+deficient boundary, which is why both -ln det C and the geodesic
+distance diverge); the log-volume FUNCTIONAL is divergent." The one-line
+proof is on the record from the prior round ((n.S)^2 <= I for spin-1
+gives C <= I hence C^{-1} >= I; in the C-eigenbasis g >= ||dC||^2_F +
+2|dm|^2). 'Tensor bounded' alone is retired as ambiguous (could
+misread as bounded above). PR-SCALE-2 stays E0 with its certificates;
+the split statement is now the citable form.
+
+------------------------------------------------------------------------------
+4. THE FROZEN OUTPUT HEADER (pre-registered BEFORE any PR-T1b-2 number
+   is read; seat-3's two declarations + the B1 provenance pin)
+------------------------------------------------------------------------------
+H1  M-CONVENTION: M_b(t) = Tr(rho(t) P_b^{(2)}) — the raw bond burden,
+    NOT normalized (Tr P_b^{(2)} = 5; fractions like 5/9, 91/684 are
+    values of this M on specific states). omega_raw(b) = G_b/(2 M_b)
+    with G_b = -i Tr(rho [M_b, H]) (the r5.1a Gate 0 construction).
+H2  B1 WINDOW: the "within 20% of 0.17" comparison is evaluated on the
+    whole-window mean of diff/t^2 over t in [0, 3] (cov3 timescale
+    units), the primary arm's transient grid — fixed BEFORE the
+    trajectories are seen (seat-3's anti-post-hoc declaration).
+    0.17's PROVENANCE is pinned as a PREDICTION from the det-C channel:
+    the O(t^2) site-1 overlap-holonomy coefficient derived from the
+    chiral-current norm ||J|| = sqrt(48) through the det-C map —
+    sealed here as the B1 target BEFORE the run; the preview's
+    agreement with it is the confirmation, never the definition
+    (seat-3's circularity pin, adopted). NOTE (from the pre-flight):
+    the 0.17 belongs to the DET-C channel observable; the state-norm
+    Trotter rate sqrt(48)/2 ~ 3.46 is a different observable's rate —
+    the two are not to be conflated (same discipline that separated
+    2.283x from 2.09x).
+H3  B3 WINDOW: det C^{(1)} monotonicity is evaluated on the short-time
+    window t in [0, 3] of the primary arm; ANY turnaround time (the
+    first t where d/dt det C^{(1)} changes sign, coherent H_XXX
+    oscillation/revival) is LOGGED with its value — so a late-time
+    unitary oscillation cannot be misread as an algebraic obstruction
+    (seat-2's watch-item, adopted as a logged observable, not a sheet
+    change).
+H4  OFF-ORBIT PROJECTION (C-criterion): the branch-C residual projects
+    orthogonal to the SU(2) orbit tangent space T = span{i[S_q, rho_1]}
+    at each compared state — per seat-1's verified caution (a pure
+    rotation is orbit-tangential regardless of its quadrupole matrix
+    share). The quadrupole directions ENTER only as the ambient
+    complement after the tangent is removed. Thresholds unchanged from
+    the frozen sheet (B: < 5e-3; C: > 5e-2 with > 20% of residual in
+    the tangent-complement; between: INCONCLUSIVE + declared grid
+    extension).
+H5  SEED ROSTER (within the frozen sheet's declared families):
+    primary arm: S1 = 0.7|+1,+1,0><| + 0.3 I/27 (zero-chiral; B1
+    expected VACUOUS-BY-SEED per 2 above), S2 = 0.7|+x,+x,+z><| +
+    0.3 I/27 (chiral-active; coherent-product family), S3 = Ginibre-
+    conditioned full-rank seed (rng 20261119 declared); handoff arm:
+    the global-K3 single-mismatch seed (this round's resolved object,
+    with its exact anchors 95/84, 91/684, +25/342, peak 0.14659) +
+    the 2-site-kernel family as the no-spillover contrast.
+    P1-P3 pre-flight assertions per the frozen sheet.
+
+------------------------------------------------------------------------------
+5. STANDING ORDERS (unchanged + this round's specifics)
+------------------------------------------------------------------------------
+PR-T1b-2 executes NOW per the frozen sheet 8fff13eb with the header
+above. Gate S rides. Honest verdicts: if B1 trips on zero-chiral seeds,
+the verdict line is VACUOUS-BY-SEED (logged, no re-interpretation);
+the chiral-active arm carries the branch-B decision. The handoff branch
+carries the global-K3 seed's spillover (its PASS shape: eta > 0.05
+transfer, front consistency, O(t^2) strobe asymmetry — the pre-flight
+already anchors its start and slope exactly). T1b-3's N = 4 pairing
+stands as the next gate. No sheet retrofits; discrepancies to the
+register first, as this round just demonstrated twice.
+==============================================================================
+ARTIFACTS THIS ROUND (md5): r51d_preflight.py + r51d_preflight.json;
+r51d_preflight2.py + r51d_preflight2.json; this entry. Hashes on freeze.
+==============================================================================

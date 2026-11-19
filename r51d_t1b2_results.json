@@ -1,0 +1,238 @@
+{
+  "GATE_S": {
+    "max_comm": 3.1718998303807225e-16,
+    "casimir": 5.438959822042073e-16,
+    "verdict": "PASS"
+  },
+  "PRE_FLIGHT": {
+    "S1_+1+10": {
+      "rho1_minus_I3": 0.571548,
+      "detC1": 0.124025
+    },
+    "S2_+x+x+z": {
+      "rho1_minus_I3": 0.571548,
+      "detC1": 0.124025
+    },
+    "S3_ginibre": {
+      "rho1_minus_I3": 0.165284,
+      "detC1": 0.283946
+    },
+    "K3_global": {
+      "rho1_minus_I3": 0.0,
+      "detC1": 0.296296
+    },
+    "K2_two_site": {
+      "rho1_minus_I3": 0.0,
+      "detC1": 0.296296
+    },
+    "P1_site1_seeds": {
+      "S1_+1+10": true,
+      "S2_+x+x+z": true,
+      "S3_ginibre": true
+    },
+    "P2_handoff_seed": {
+      "M0(0)": 1.0,
+      "M1(0)": 0.133041,
+      "M1_slope": "pre-verified +25/342 (r51d pre-flight)",
+      "verdict": "PASS"
+    },
+    "P3_arm_check": {
+      "primary_grid": "t in [0,3], 13 points",
+      "NESS_residual_XY": "checked below"
+    },
+    "verdict": "PASS"
+  },
+  "COMPARISON_ARM_XY": {
+    "NESS_residual": 0.0,
+    "M_b": [
+      0.056284,
+      0.056284
+    ],
+    "G_H": 0.0830681,
+    "omega_raw": [
+      0.36896721992992687,
+      0.36896721992992626
+    ]
+  },
+  "PRIMARY_ARM": {
+    "S1_+1+10": {
+      "B1_coeff_mean": 0.104192,
+      "B1_coeff_std": 0.065219,
+      "B1_vs_sealed_0.17": 0.3871,
+      "B1_verdict": "VACUOUS-BY-SEED",
+      "B3_monotone": {
+        "01": false,
+        "10": false,
+        "sim": true
+      },
+      "B3_turnaround_t": {
+        "01": 1.5,
+        "10": 1.0,
+        "sim": null
+      },
+      "C_off_orbit_residual_mean": 0.157222,
+      "C_off_orbit_residual_max": 0.222493,
+      "C_tangent_removed_frac_mean": 0.0,
+      "diff_at_t3": 0.222493,
+      "detC01_at_t3": 0.280398
+    },
+    "S2_+x+x+z": {
+      "B1_coeff_mean": 0.174716,
+      "B1_coeff_std": 0.164044,
+      "B1_vs_sealed_0.17": 0.0277,
+      "B1_verdict": "PASS",
+      "B3_monotone": {
+        "01": false,
+        "10": false,
+        "sim": true
+      },
+      "B3_turnaround_t": {
+        "01": 1.5,
+        "10": 3.0,
+        "sim": null
+      },
+      "C_off_orbit_residual_mean": 0.14272,
+      "C_off_orbit_residual_max": 0.191257,
+      "C_tangent_removed_frac_mean": 0.4307,
+      "diff_at_t3": 0.283579,
+      "detC01_at_t3": 0.237426
+    },
+    "S3_ginibre": {
+      "B1_coeff_mean": 0.07625,
+      "B1_coeff_std": 0.083996,
+      "B1_vs_sealed_0.17": 0.5515,
+      "B1_verdict": "VACUOUS-BY-SEED",
+      "B3_monotone": {
+        "01": false,
+        "10": false,
+        "sim": false
+      },
+      "B3_turnaround_t": {
+        "01": 0.25,
+        "10": 2.75,
+        "sim": 0.5
+      },
+      "C_off_orbit_residual_mean": 0.062532,
+      "C_off_orbit_residual_max": 0.126376,
+      "C_tangent_removed_frac_mean": 0.2595,
+      "diff_at_t3": 0.062569,
+      "detC01_at_t3": 0.292658
+    }
+  },
+  "B2_cross_trajectory": {
+    "max_relative_spread_detC01": 0.4896,
+    "criterion": "agreement within 20% (relative MAD) across the 3 seeds",
+    "verdict": "FAIL",
+    "note": "f_{01} maps estimated per seed via detC01(t)/detC01(0); the spread measures seed-dependence of the overlap transition"
+  },
+  "SIGN_INVERSION_CHECK": {
+    "S1_+1+10": {
+      "omega0_range": [
+        -0.138723,
+        0.155575
+      ],
+      "omega1_range": [
+        -0.053266,
+        0.288753
+      ],
+      "zero_crossing": true
+    },
+    "S2_+x+x+z": {
+      "omega0_range": [
+        -0.10047,
+        0.129701
+      ],
+      "omega1_range": [
+        -0.0123,
+        0.233054
+      ],
+      "zero_crossing": true
+    },
+    "S3_ginibre": {
+      "omega0_range": [
+        0.035873,
+        0.140004
+      ],
+      "omega1_range": [
+        -0.018115,
+        0.143296
+      ],
+      "zero_crossing": true
+    }
+  },
+  "HANDOFF_ARM": {
+    "seed": "K3_global (spillover) \u2014 2-site contrast below",
+    "M0_traj": [
+      1.0,
+      0.59401,
+      0.36433,
+      0.23148,
+      0.15256,
+      0.10422,
+      0.0736,
+      0.05351,
+      0.03988
+    ],
+    "M1_traj": [
+      0.13304,
+      0.14659,
+      0.13428,
+      0.1137,
+      0.09256,
+      0.07384,
+      0.05833,
+      0.0459,
+      0.03613
+    ],
+    "M1_peak": {
+      "t": 0.375,
+      "M1": 0.146644
+    },
+    "handoff_windows_found": 1,
+    "best_eta": 0.0505,
+    "eta_threshold": 0.05,
+    "strobe_asym_over_t2_at_0.25": 0.0,
+    "verdict": "PASS",
+    "two_site_contrast": {
+      "M0_start_end": [
+        1.0,
+        0.06848
+      ],
+      "M1_start_end": [
+        0.55556,
+        0.06731
+      ],
+      "M1_peak_t": 0.0,
+      "note": "no spillover: M1(0) = 5/9 decaying (pre-flight verified)"
+    }
+  },
+  "SCALE_INDEPENDENCE": {
+    "alpha_per_seed": {
+      "S1_+1+10": 0.104192,
+      "S2_+x+x+z": 0.174716,
+      "S3_ginibre": 0.07625
+    },
+    "alpha_XY_NESS": 0.0,
+    "relative_spread": 1.9365,
+    "outcome": "S-UNDEFINED",
+    "note": "S1 coefficient is 100% dissipative (zero-chiral); see B1"
+  },
+  "OVERALL": {
+    "branch_B_conditions": {
+      "B1_chiral_active_seed": "PASS",
+      "B1_S1_zero_chiral": "VACUOUS-BY-SEED",
+      "B2_cross_traj": "FAIL",
+      "B3_monotone_all": false
+    },
+    "branch_C_fire": true,
+    "C_residuals_max": [
+      0.222493,
+      0.191257,
+      0.126376
+    ],
+    "handoff": "PASS",
+    "tautology_guard": "verdict carried by B2 cross-trajectory + off-orbit criterion only; no 1D readout cited",
+    "verdict": "BRANCH-C (independent curvature piece)"
+  },
+  "elapsed_s": 145.4
+}

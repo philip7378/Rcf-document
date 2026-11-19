@@ -1,0 +1,93 @@
+{
+  "seed_A_+1+10": {
+    "chiral_F": 0.0,
+    "cross_F": 0.0,
+    "dissipative_F": 0.147914833,
+    "total_F": 0.147914833,
+    "declared": {
+      "chiral": 0.0,
+      "cross": 0.0,
+      "dissipative": 0.147915
+    },
+    "dissipative_su3": {
+      "total": 0.147915,
+      "dipole": 0.0,
+      "quadrupole": 0.147915,
+      "basis": "rho1-orbit-tangent (seat-1 convention)",
+      "dipole_pct": 0.0,
+      "quadrupole_pct": 100.0
+    },
+    "chiral_su3": {
+      "total": 0.0,
+      "dipole": 0.0,
+      "quadrupole": 0.0,
+      "basis": "rho1-orbit-tangent (seat-1 convention)"
+    },
+    "verdict_C1": "PASS",
+    "verdict_C2": "PASS",
+    "verdict_C3": "PASS"
+  },
+  "identity_C5_product": {
+    "max_err_over_6_trials": 0.0,
+    "verdict": "PASS"
+  },
+  "seed_B_+x+x+z": {
+    "chiral_F": 0.7,
+    "cross_F": 0.430888,
+    "dissipative_F": 0.128689,
+    "total_F": 0.886454,
+    "declared": {
+      "chiral": 0.7,
+      "dissipative": 0.128689,
+      "cross": 0.430888,
+      "total": 0.886454
+    },
+    "chiral_su3": {
+      "total": 0.7,
+      "dipole": 0.7,
+      "quadrupole": 0.0,
+      "basis": "rho1-orbit-tangent (seat-1 convention)",
+      "dipole_pct": 100.0,
+      "quadrupole_pct": 0.0
+    },
+    "dissipative_su3": {
+      "total": 0.128689,
+      "dipole": 0.06684,
+      "quadrupole": 0.10997,
+      "basis": "rho1-orbit-tangent (seat-1 convention)",
+      "dipole_pct": 51.94,
+      "quadrupole_pct": 85.45
+    },
+    "cross_su3": {
+      "total": 0.430888,
+      "dipole": 0.30625,
+      "quadrupole": 0.303109,
+      "basis": "rho1-orbit-tangent (seat-1 convention)",
+      "dipole_pct": 71.07,
+      "quadrupole_pct": 70.35
+    },
+    "total_su3": {
+      "total": 0.886454,
+      "dipole": 0.825732,
+      "quadrupole": 0.322441,
+      "basis": "rho1-orbit-tangent (seat-1 convention)",
+      "dipole_pct": 93.15,
+      "quadrupole_pct": 36.37
+    },
+    "chiral_off_orbit_residual": 0.0,
+    "total_off_orbit_residual": 0.322441246,
+    "verdicts": {
+      "chiral_0.700": true,
+      "dissipative_0.128689": true,
+      "cross_0.430888": true,
+      "total_0.886454": true,
+      "chiral_zero_off_orbit": true
+    }
+  },
+  "seed_A_t0.25_diff_over_t2": {
+    "site1_diff_over_t2_F": 0.176247,
+    "declared": 0.176,
+    "verdict": "PASS"
+  },
+  "elapsed_s": 2.39
+}
