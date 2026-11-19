@@ -1,0 +1,208 @@
+{
+  "GATE_S": {
+    "S=1.0": {
+      "comm_norm": 3.2540521572534756e-16,
+      "casimir_norm": 4.440892098500626e-16,
+      "ok": true
+    },
+    "S=0.5": {
+      "comm_norm": 0.0,
+      "casimir_norm": 0.0,
+      "ok": true
+    },
+    "SVEC_S=1": {
+      "comm_norm": 3.1718998303807225e-16,
+      "casimir_norm": 5.438959822042073e-16,
+      "ok": true
+    },
+    "verdict": "PASS"
+  },
+  "PR_SCALE_2_recheck": {
+    "detC_I3": {
+      "value": 0.296296296,
+      "declared": 0.2962962962962963,
+      "match": true
+    },
+    "detC_qubit_half": {
+      "value": 0.75,
+      "declared": 0.75,
+      "match": true
+    },
+    "tensor_side_boundary": [
+      {
+        "eps": 0.1,
+        "lambda_min": 1.108038
+      },
+      {
+        "eps": 0.01,
+        "lambda_min": 1.010072
+      },
+      {
+        "eps": 0.001,
+        "lambda_min": 1.000995
+      },
+      {
+        "eps": 0.0001,
+        "lambda_min": 1.000089
+      }
+    ],
+    "volume_side_boundary": [
+      {
+        "eps": 0.1,
+        "neg_log_detC": 2.405172
+      },
+      {
+        "eps": 0.01,
+        "neg_log_detC": 4.615195
+      },
+      {
+        "eps": 0.001,
+        "neg_log_detC": 6.908756
+      },
+      {
+        "eps": 0.0001,
+        "neg_log_detC": 9.21044
+      }
+    ],
+    "tensor_bounded_below_1": true,
+    "volume_divergent_monotone": true,
+    "split_confirmed": true,
+    "verdict": "PASS"
+  },
+  "BLOCK_B_dark_singlet": {
+    "H_XXX": {
+      "purity": 1.0,
+      "M_b": [
+        0.0,
+        0.0
+      ],
+      "G_H": 0.0,
+      "rho1_minus_I3_F": 0.0,
+      "liouvillian_gap_min_nonzero": 0.039826,
+      "declared": {
+        "purity": 1.0,
+        "Mbar": 0.0,
+        "G_H": 0.0,
+        "rho1_freeze": 7.16e-15,
+        "gap": 0.039826
+      }
+    },
+    "H_XY": {
+      "purity": 0.462261646,
+      "M_b": [
+        0.056284,
+        0.056284
+      ],
+      "G_H": 0.0830681,
+      "rho1_minus_I3_F": 0.160942292,
+      "liouvillian_gap_min_nonzero": 0.070988,
+      "declared": {
+        "Mbar": 0.112568,
+        "G_H": 0.083068,
+        "rho1": 0.161
+      }
+    },
+    "XXX_dead": true,
+    "XY_active": true,
+    "verdict": "PASS"
+  },
+  "BLOCK_C_schur_freeze": {
+    "C_i": {
+      "t=0.0": {
+        "rho1_freeze_F": 0.0,
+        "detC1": 0.2962963
+      },
+      "t=0.25": {
+        "rho1_freeze_F": 0.0,
+        "detC1": 0.2962963
+      },
+      "t=0.5": {
+        "rho1_freeze_F": 0.0,
+        "detC1": 0.2962963
+      },
+      "t=1.0": {
+        "rho1_freeze_F": 0.0,
+        "detC1": 0.2962963
+      }
+    },
+    "C_ii_handoff": {
+      "M0": [
+        1.0,
+        0.75571,
+        0.58334,
+        0.36962
+      ],
+      "M1": [
+        0.55556,
+        0.44015,
+        0.35973,
+        0.25806
+      ]
+    },
+    "handoff_match": true,
+    "C_iii_break_seed": {
+      "rho1_minus_I3_F": 0.571548,
+      "unfrozen": true
+    },
+    "verdict": "PASS"
+  },
+  "BLOCK_D_commutators": {
+    "D1_LH0_LH1": {
+      "value": 50.911688,
+      "declared": 50.911688,
+      "exact_identity": 50.911688
+    },
+    "D2_D0_D1": {
+      "value": 6.074875,
+      "declared": 6.074875
+    },
+    "D3_cross": {
+      "value": 31.87214,
+      "declared": 31.87214
+    },
+    "D4_L0_L1": {
+      "value": 58.49831,
+      "declared": 58.49831
+    },
+    "verdict": "PASS"
+  },
+  "BLOCK_E_holonomy_preview": {
+    "rows": [
+      {
+        "t": 0.05,
+        "diff": 0.000408,
+        "diff_over_t2": 0.1633,
+        "detC_01": 0.13557,
+        "detC_10": 0.13555,
+        "detC_sim": 0.13557
+      },
+      {
+        "t": 0.1,
+        "diff": 0.001731,
+        "diff_over_t2": 0.1731,
+        "detC_01": 0.14754,
+        "detC_10": 0.14737,
+        "detC_sim": 0.14753
+      },
+      {
+        "t": 0.25,
+        "diff": 0.011015,
+        "diff_over_t2": 0.1762,
+        "detC_01": 0.18417,
+        "detC_10": 0.18168,
+        "detC_sim": 0.18391
+      },
+      {
+        "t": 0.5,
+        "diff": 0.037789,
+        "diff_over_t2": 0.1512,
+        "detC_01": 0.23752,
+        "detC_10": 0.22168,
+        "detC_sim": 0.23547
+      }
+    ],
+    "monotone_detC_all_orderings": true,
+    "verdict": "PASS"
+  },
+  "elapsed_s": 10.7
+}

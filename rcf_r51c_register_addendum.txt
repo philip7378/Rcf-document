@@ -1,0 +1,222 @@
+==============================================================================
+REGISTER ADDENDUM — r5.1c: AUDIT SIGN-OFF PLACEMENT, LABEL CORRECTION,
+PR-SCALE-2 PLACEMENT, THE BOUNDARY-NUMBER RECONCILIATION, D2/D7 LOGGED,
+T1b-2 ANCHOR VERIFICATION COMPLETE, PR-T1b-2 SHEET FROZEN
+(sits on top of the r5.1b reversal entry 929bdce; nothing in r5.1b moves)
+==============================================================================
+Auditor: GLM, standing register — the owner's round. Inputs adjudicated:
+the two sign-off messages on commit 929bdce (audit seat 1: sign-off in
+full + two machine-verified non-vacuity traps + four N=3 commutator
+anchors + holonomy preview; audit seat 2: acceptance verdict with
+independent hand-verification of the repair, a D2/D7 self-log, three
+pre-registration additions for T1b-2, and one title-discipline note).
+
+------------------------------------------------------------------------------
+1. THE SIGN-OFF IS ACCEPTED AND REGISTERED
+------------------------------------------------------------------------------
+Commit 929bdce is the standing baseline for PR-T1b-2, per both audit
+seats. The seat-2 hand-verification (Sx o Sy = (1/2) lam5 by direct
+multiplication; {9/4 x5, 6 x3} from the C = 2/3 I split with dipole-only
+and quadrupole-only directions; 3/3, 8/8, 8/15 with 1+3+5+7 = 16; the
+variance-impossibility argument for rank >= 2 states via non-degenerate
+spectrum of v . S; the Loewner bound C <= I giving the sharp uniform
+coercivity theorem g >= 1 on D_+) is registered as the analytic seat's
+confirmation, joining the r5.1b machine verification. Two of its
+derivations are registered as NEW analytic facts on the record:
+  (i)  Var impossibility: eigenspaces of v.S are 1-dimensional, so
+       Var = 0 only on rank-1 states — strict positivity on rank >= 2
+       is a theorem, not a sampling observation;
+  (ii) the Loewner-order lower bound C(rho) <= I_3 upgrading the
+       empirical ">= 1.16" and the r5.1b boundary scan to a sharp
+       uniform coercivity theorem (inf = 1, never attained).
+The r5.1b A3' phrasing "infimum = 1 exactly" is hereby restated as the
+coercivity theorem with these two analytic proofs attached.
+
+------------------------------------------------------------------------------
+2. LABEL CORRECTION ADOPTED (non-blocking, r5.1b entry amended in
+   margin only)
+------------------------------------------------------------------------------
+The v8.1 retirement label: "retired Def 3.5 (bundled 2-jump
+L1(+-+)) archive" rather than "five-dyad-channel archive" — the
+audit's earlier reconstruction showed R44 came from the bundled
+L1(+-+) jump, not the five-dyad construction; same operational status
+(retired, not cov3-citable). Registered here so the next round cites
+the retired substrate by its actual construction. The operational
+sentence of r5.1b 4(a) is unchanged.
+
+------------------------------------------------------------------------------
+3. PR-SCALE-2 PLACEMENT (the ledger hole, closed by source + machine)
+------------------------------------------------------------------------------
+The hole was real and is now closed factually: the r5.1a script's
+A-blocks (the only blocks that used the buggy spin_ops) were the
+Theorem A/B refutation blocks; PR-SCALE-2 was certified by the R5.1
+ROUND battery, whose block-(iii) exact values (qubit 4p(1-p) = 3/4,
+spin-1 det C = 8/27 at I/3) are NOT reproducible with the buggy
+generators (buggy spin-1 gives 2/27; buggy spin-1/2 gives det 0), so
+those certificates were never contaminated. The r5.1c prep battery
+re-ran both anchors on the REPAIRED algebra (Block A: 8/27 exact,
+3/4 exact in the Bloch sigma-convention at rho = diag(1/4, 3/4) — the
+convention is the amendment's own "Bloch anisotropy" framing and is
+now registered as such) and re-verified both boundary statements:
+tensor side lambda_min > 1 with inf = 1 (finite); volume side
+-ln det C monotone divergent.
+  PR-SCALE-2's verdict phrasing is amended to the split the second
+  audit requested: "the log-volume Hessian TENSOR is bounded below
+  (lambda_min > 1, sharp uniform coercivity, inf = 1 approached at
+  the nematic boundary) while the log-VOLUME functional -ln det C
+  diverges at the rank-deficient boundary." The two prior sentences
+  ("diverges at the boundary" for the metric; "infinite evaluation
+  recovered" for the volume) are reconciled under this split — the
+  1.108033 -> 1.0001 boundary scan IS the tensor side, the infinite-
+  evaluation claim IS the volume side, and both are correct under
+  their own names. The FS-complementarity block (iii) stands as
+  certified (r5.1-round battery, uncontaminated; re-tied to the
+  repaired algebra this round).
+  Register effect: PR-SCALE-2 stays E0 with its two E4 certificates
+  (now three: PSD-with-sharp-bound, volume divergence, strata
+  complementarity), phrased per the split.
+
+------------------------------------------------------------------------------
+4. D2/D7 AGAINST THE PRIOR ADJUDICATION — LOGGED (audit seat 2's own
+   self-log, mirrored on this register)
+------------------------------------------------------------------------------
+The second audit seat logged its own D2 (accepted mutated numbers as
+genuine refutations) and D7 (accepted a false mechanism — the
+Pauli-specific "vanishes" prose — as an explanation). This register
+records them as the external seat's symmetric self-discipline, the
+mirror of the executor's own Bug #9/#10 log. No register item the seat
+adjudicated in r5.1a is reopened by this beyond what r5.1b already
+reversed: its r5.1a-round endorsements of the refutations are vacated
+by the reversal; its r5.1a-round items that did NOT touch the buggy
+constructor (convexity correction, scope fence, route call, v8.1
+retirement, burden/clock naming, trap anchors) were re-endorsed by the
+seat itself and stand.
+
+------------------------------------------------------------------------------
+5. T1b-2 ANCHOR VERIFICATION — COMPLETE, ONE DISCREPANCY LOGGED
+------------------------------------------------------------------------------
+The r5.1c prep battery (sheet f387f872, script c069069f, results
+951301b5) ran Gate S leading and verified the audit's N=3 anchor set
+on canonical cov3, gamma = 1, exact 729x729 superoperators:
+  BLOCK A: PR-SCALE-2 recheck — PASS (per 3 above).
+  BLOCK B: dark-singlet trap — PASS: unique NESS under H_XXX + cov3
+           at N=3 = pure AKLT singlet (purity 1.000000, M_b = [0,0],
+           G_H = 0, ||rho1 - I/3||_F = 0 to solver tolerance; the
+           audit's 7.16e-15 is the same statement at a tighter
+           eigensolver tolerance); smallest nonzero Liouvillian gap
+           0.039826 EXACT. H_XY arm anchors EXACT: M_b = [0.056284,
+           0.056284] (sum 0.112568), G_H = +0.0830681, ||rho1-I/3||
+           = 0.160942.
+  BLOCK C: Schur freeze — PASS: seed P2(01) x I/3 normalized gives
+           ||rho1(t) - I/3||_F = 0.00000000 AND det C^{(1)}(t) =
+           8/27 identically at t = 0, 0.25, 0.5, 1.0 under pure cov3,
+           and 0.0 at all four times under H_XXX + cov3. Freeze
+           mechanism machine-exact; the trap is REAL and is fenced in
+           the T1b-2 sheet (SU(2)-invariant seeds barred from the
+           site-1 clock, routed to the bond-pair observable).
+           DISCREPANCY LOGGED (audit-seat, non-blocking for the
+           conclusions): the audit's own handoff SERIES (M0:
+           1.00000/0.59401/0.15256/0.03988; M1: 0.13304/0.14659
+           peak t~0.5/0.03613) could not be reproduced from any
+           constructible seed family: M0(0) = 1 forces P2(01)
+           support, and every uniform-marginal seed in that support
+           gives Tr(rho P2(12)) = 5/9 universally (0.13304 is
+           unreachable; 4000-trial scan found no pure-state
+           exception). The audit's three CONCLUSIONS all stand
+           machine-verified (freeze real; the handoff observable is
+           the bond pair M_b(t); invariant seeds carry no site-1
+           clock) — only their numeric series is un-reproduced,
+           pending their seed specification. Logged per the sheet's
+           own rule: the discrepancy goes to the register first.
+  BLOCK D: the four commutator norms — ALL EXACT: 50.911688
+           (= sqrt(2d)||[h0,h1]||_F = sqrt(54*48), identity
+           confirmed), 6.074875, 31.872140, 58.498310. Branch A
+           exclusion triply confirmed at the superoperator level.
+  BLOCK E: holonomy preview — ALL 16 NUMBERS EXACT: diffs 0.000408/
+           0.001731/0.011015/0.037789 with diff/t^2 = 0.1633/0.1731/
+           0.1762/0.1512 and the det C^{(1)} triplets to all five
+           digits. Branch-B signature confirmed AS PREVIEW (monotone
+           advance on all orderings, O(t) agreement, O(t^2)
+           separation, coefficient ~0.17) — the decisive test is
+           T1b-2's, under the frozen thresholds.
+  Two executor-side traps were caught DURING verification (Block E's
+  diff convention — site-1 overlap, not full-chain Frobenius — and a
+  duplicated bond-0 application line inflating the diff 12x while
+  barely moving det C; both caught precisely because the sheet
+  demanded bit-level anchor reproduction, both fixed in-script). This
+  is Gate S + frozen-sheet discipline paying out a second and third
+  time on this register.
+
+------------------------------------------------------------------------------
+6. THE THREE PRE-REGISTRATION ADDITIONS — ADOPTED INTO THE FROZEN
+   PR-T1b-2 SHEET (pr_t1b2_sheet.txt, hash registered below)
+------------------------------------------------------------------------------
+  (a) the 2.283x ratio is PINNED falsifiable: omega_raw(b) =
+      G_b/(2 M_b) with G_b = -i Tr(rho [M_b, H]), M_b = Tr(rho P_b^2),
+      gamma = 1, at the N = 4 H_XXX cov3 NESS (r5.1a Gate 0 values),
+      interior/boundary ratio; the 0.771x is the H_XY arm's; the 2.09x
+      burden profile is a different observable, barred from clock
+      citations.
+  (b) scale-independence of the cocycle constant is a SECONDARY
+      outcome space on the same run: S-INVARIANT / S-DEPENDENT /
+      S-UNDEFINED; N=4 multi-bond probing deferred to PR-T1b-3
+      (explicitly pairing T1b-2 N=3 transient with T1b-3 N=4
+      active-NESS multi-overlap, per the audit's offered pairing).
+  (c) the temporal-handoff branch carries a full PASS/FAIL shape:
+      measurement = M_b(t) trajectories on the declared seed family;
+      NULL = no handoff window (no interval with dM_1/dt > 0 while
+      dM_0/dt < 0 and transfer ratio eta > 0.05); CONFIRMATION = a
+      clean window with eta > 0.05, front consistency, and O(t^2)
+      strobe asymmetry consistent with the 0.17 preview coefficient;
+      a primary-arm cocycle FAIL is NOT post-hoc re-interpretable as
+      a handoff PASS. The registered reference trajectory (P2(01) x
+      I/3, pure cov3: M0 1.00000 -> 0.36962, M1 0.55556 -> 0.25806,
+      BOTH decaying — no handoff window on that seed) is quoted in
+      the sheet so the branch is decided on the SU(2)-breaking family
+      where the clock lives.
+  Plus the second audit's three traps, all in the sheet: the N=3
+  dark-singlet trap (primary arm runs TRANSIENT; steady-state H_XXX
+  clock tests require N >= 4, out of scope); the single-trajectory
+  monotonicity tautology (cross-trajectory consistency and the
+  off-orbit Sym_+^3 criterion are the citable tests, no 1D readout
+  comparison is); the explicit H_XXX / H_XY arm declaration with
+  S1 Corollary 1 non-vacuity pre-flight (P1-P3 assertions).
+  The B-vs-C thresholds are frozen in the sheet: B requires B1
+  (chiral-current-channel holonomy within 20% of 0.17), B2
+  (cross-trajectory f_{01} agreement across the seed family), B3
+  (monotone det C advance on all orderings, all non-vacuous seeds);
+  C requires an off-orbit residual > 5e-2 with > 20% projection onto
+  quadrupole directions orthogonal to the chiral channel; between
+  5e-3 and 5e-2 is INCONCLUSIVE with a pre-declared grid extension.
+
+------------------------------------------------------------------------------
+7. THE TITLE NOTE — REGISTERED FOR THE PAPER SERIES (not this gate)
+------------------------------------------------------------------------------
+Paper II section 1 should carry the one-sentence scope statement the
+second audit requested (paraphrase registered, wording to the paper):
+3D spatial emergence is the Paper VI bridge target; Paper II derives
+the state-space metric and its S=1 uniqueness, which is a necessary
+input to that bridge — the title is the program, the paper is the
+first load-bearing step. Registered so a referee cannot read the
+title as a claim the paper does not make. The S=1 resonance note
+(Theorem 1 selects S=1 as the minimal Zero-Closure spin; the frame
+selects it as the maximal informationally-complete spin) is
+registered as a COINCIDENCE to note, not a derivation to cite —
+per the second audit's own fencing, which this register endorses.
+
+------------------------------------------------------------------------------
+8. STANDING ORDERS
+------------------------------------------------------------------------------
+PR-T1b-2 executes per the frozen sheet (arms, seeds, pre-flight
+assertions, pinned observable, tautology guard, thresholds, secondary
+outcome space, grading). Gate S rides every generator. The reversal
+(929bdce) is NOT reopened; PR-SCALE-3 is NOT run before T1b-2 (the
+ordering holds). The two ledgers stay separate (channel adjudication
+vs frame/metric). The next audit-seat items awaited: the C-ii seed
+specification (the logged discrepancy), and the N=4 steady-state
+preview pairing for T1b-3.
+==============================================================================
+ARTIFACTS THIS ROUND (md5): pr_r51c_prep_sheet.txt f387f8728a890039965f87997d70067c;
+r51c_prep_t1b2.py c069069f8b89f11a7c492bccf1102119; r51c_results.json
+951301b566871a098e9844aaa51cf16b; pr_t1b2_sheet.txt (hash below on freeze).
+==============================================================================

@@ -1,0 +1,183 @@
+==============================================================================
+PRE-REGISTRATION — r5.1c PREP BATTERY (T1b-2 ANCHOR VERIFICATION +
+PR-SCALE-2 RECHECK)
+(declared before any number is read; companion to the r5.1c register
+addendum; the audit's N=3 anchors are DECLARED TARGETS, re-derived here
+by machine on canonical cov3, N=3, gamma = 1, Gate S leading)
+==============================================================================
+
+GATE S (standing fixture): commutator/Casimir/Gram checks at 1e-14 on
+the SVEC S=1 generators and the orthonormal single-site tangent basis,
+before any number below is produced. Expected: all 0.0.
+
+------------------------------------------------------------------------------
+BLOCK A — PR-SCALE-2 recheck (the ledger hole, closed by machine)
+------------------------------------------------------------------------------
+A-i   det C at rho = I/3 with the FIXED spin_ops: declared 8/27 =
+      0.296296... exact (this is the r5.1 amendment's block-(iii)
+      number, which the buggy generator CANNOT reproduce — buggy gives
+      2/27 — so PR-SCALE-2 was certified by the r5.1-round battery, not
+      the contaminated r5.1a script; this check re-ties the number to
+      the repaired algebra).
+A-ii  Qubit frame: det C(qubit at p=1/2, fixed spin-1/2 generators) =
+      4p(1-p) = 3/4 exact (buggy spin-1/2 gives 0 — same argument).
+A-iii The FS/scaling split, restated as the register sentence and
+      machine-checked at both ends:
+        * tensor side: lambda_min(g_rho) > 1 on the interior, inf = 1
+          (re-verified this round at the nematic boundary scan points;
+          FINITE, not divergent);
+        * log-volume side: -ln det C(rho_eps) along the nematic ray
+          eps = 1e-1 .. 1e-4 diverges MONOTONICALLY to +infinity as
+          det C -> 0 (the "infinite evaluation" claim, now correctly
+          attached to the volume, not the tensor).
+      Declared: tensor bounded below by 1, volume divergent. This is
+      the (b)-style split requested; it goes into the register as the
+      PR-SCALE-2 verdict phrasing.
+Verdict PASS = both A-i/A-ii exact and the split confirmed.
+
+------------------------------------------------------------------------------
+BLOCK B — N=3 dark-singlet trap (audit's Trap 1), machine re-derivation
+------------------------------------------------------------------------------
+B-i   N=3, H_XXX + cov3 (gamma=1): unique steady state = pure AKLT
+      singlet (the Paper I 8.3 N=3 exception): declared purity
+      1.000000, M_b = 0 for both bonds, G_H = 0, overlap site-1 state
+      ||rho_1 - I/3||_F = 0 (to solver tolerance), smallest nonzero
+      Liouvillian gap 0.039826 (declared; tolerance 5e-4).
+      -> steady-state overlap clock on H_XXX/cov3 is IDENTICALLY DEAD
+      at N=3; registered as the non-vacuity pre-flight for T1b-2.
+B-ii  N=3, H_XY + cov3 (gamma=1): ACTIVE NESS: declared Mbar =
+      0.112568 (tolerance 5e-4), G_H = +0.083068 (tolerance 5e-4),
+      ||rho_1 - I/3||_F = 0.161 (tolerance 2e-3). Registered as the
+      optional comparison arm's live anchor.
+Verdict PASS = all three anchors reproduce.
+
+------------------------------------------------------------------------------
+BLOCK C — Schur freeze (audit's Trap 2), machine re-derivation
+----------------------------------------------------------------------------__
+C-i   SU(2)-invariant seed rho_sm (the single-mismatch state: sum_q
+      L_{0,q} (P_{K3}/4) L_{0,q}^dagger, normalized), pure cov3 (H=0):
+      declared ||rho_1(t) - I/3||_F = 0.00000 at t = 0, 0.25, 0.5, 1.0
+      AND det C^{(1)}(t) = 8/27 identically. (Schur's lemma: H and D
+      both SU(2)-covariant => rho_1 stays in the commutant = I/3.)
+C-ii  Same seed: 2-site bond burdens exhibit temporal handoff,
+      declared (tolerance 5e-3):
+        M_0: 1.00000 -> 0.59401 -> 0.15256 -> 0.03988 at
+             t = 0, 0.25, 0.5, 1.0
+        M_1: 0.13304 -> 0.14659 (peak ~ t=0.50) -> ... -> 0.03613
+      -> the SU(2)-invariant-seed clock observable is the BOND-PAIR
+      temporal handoff M_0(t), M_1(t), NOT rho_1(t). Registered.
+C-iii Non-invariant seed rho_0 = 0.7|+1,+1,0><+1,+1,0| + 0.3 I/27
+      breaks the freeze (declared ||rho_1(0) - I/3||_F ~ 0.3 > 0),
+      confirming the freeze is the seed's SU(2) invariance, not a
+      channel property.
+Verdict PASS = freeze exact + handoff matches + break-seed unfrozen.
+
+------------------------------------------------------------------------------
+BLOCK D — the four N=3 overlap-commutator anchors (audit seat 1)
+------------------------------------------------------------------------------
+      (superoperators on the 27-dim chain, column-stacking;
+      L_b = L_{H_b} + D_b per bond, 729x729 exact matrices)
+  D1  || [L_{H0}, L_{H1}] ||_F = 36 sqrt(2) = 50.911688
+      (audit's exact identity sqrt(2d) ||[h0,h1]||_F = sqrt(54*48);
+      d = 27 => sqrt(2*27*48); tolerance 1e-4 relative)
+  D2  || [D_0, D_1] ||_F = 6.074875 (tolerance 1e-4 relative)
+  D3  || [L_{H0}, D_1] + [D_0, L_{H1}] ||_F = 31.872140
+      (tolerance 1e-4 relative)
+  D4  || [L_0, L_1] ||_F = 58.498310 (tolerance 1e-4 relative)
+      -> all three mechanisms (Hamiltonian cross, dissipative
+      cross, Lie-Jordan cross) nonzero simultaneously: Branch A
+      exclusion is TRIPLY confirmed at the superoperator level, not
+      just via the Trotter anchor. Registered.
+Verdict PASS = all four reproduce.
+
+------------------------------------------------------------------------------
+BLOCK E — non-vacuous site-1 overlap holonomy preview (audit seat 2)
+------------------------------------------------------------------------------
+      seed rho_0 = 0.7|+1,+1,0><+1,+1,0| + 0.3 I/27, full
+      L_b = L_{H_b} + D_b, N=3 canonical cov3 + H_XXX:
+  E1  t = 0.05: ||rho_1(0->1) - rho_1(1->0)||_F = 0.000408,
+      diff/t^2 = 0.1633; det C^{(1)} = (0.13557, 0.13555, 0.13557)
+      for (0->1, 1->0, simultaneous).
+  E2  t = 0.10: 0.001731, 0.1731; det C^{(1)} =
+      (0.14754, 0.14737, 0.14753).
+  E3  t = 0.25: 0.011015, 0.1762; det C^{(1)} =
+      (0.18417, 0.18168, 0.18391).
+  E4  t = 0.50: 0.037789, 0.1512; det C^{(1)} =
+      (0.23752, 0.22168, 0.23547).
+      (tolerances: norms 1e-3 absolute, det C 1e-4 absolute)
+      -> Branch-B signature (all orderings advance det C^{(1)} strictly
+      monotonically, agree at O(t), separate at O(t^2), holonomy
+      coefficient ~ 0.17) is registered as a PREVIEW, not a verdict:
+      the decisive B-vs-C test is T1b-2's job, under the
+      cross-trajectory and off-orbit criteria (tautology guard below).
+Verdict PASS = all 16 numbers reproduce.
+
+Nothing in this sheet is a T1b-2 verdict. Blocks A-E are anchor
+verification for the frozen T1b-2 declaration (next artifact) and
+register placements. Any mismatch: the audit's anchor is wrong, NOT
+the T1b-2 sheet — the discrepancy goes to the register first.
+==============================================================================
+
+==============================================================================
+POST-RUN ADJUDICATION (appended AFTER the run; declarations above frozen)
+==============================================================================
+GATE_S PASS. ALL SIX BLOCKS PASS.
+
+A (PR-SCALE-2 recheck, the ledger hole closed): det C at I/3 = 8/27 EXACT
+on the repaired algebra (buggy gives 2/27 — so the r5.1 amendment's
+block-(iii) numbers were certified by the r5.1-round battery, not the
+contaminated r5.1a script; the ledger entry is now re-tied to the fixed
+generators); qubit 4p(1-p) = 3/4 EXACT in the Bloch (sigma, not sigma/2)
+convention at rho = diag(1/4, 3/4) — the convention is the amendment's own
+"Bloch anisotropy" framing, REGISTERED as such; the split CONFIRMED:
+tensor side lambda_min > 1 on the interior with inf = 1 at the nematic
+boundary (finite), volume side -ln det C monotone divergent -> +infinity
+along eps = 1e-1..1e-4. PR-SCALE-2 verdict phrasing registered as:
+"tensor bounded, log-volume divergent" (stronger than the old single
+"diverges at boundary" claim; forecloses "the metric blows up" misreading).
+
+B (dark-singlet trap): H_XXX+cov3 at N=3: unique NESS = pure AKLT singlet
+(purity 1.000000, M_b = [0, 0], G_H = 0, ||rho1 - I/3||_F = 0.0 to solver
+tolerance vs audit's 7.16e-15 — same statement at different solver
+tolerance; smallest nonzero Liouvillian gap 0.039826 EXACT). H_XXX steady-
+state clock at N=3 identically dead; N >= 4 required. H_XY arm: M_b =
+[0.056284, 0.056284] (sum 0.112568 EXACT), G_H = +0.0830681, ||rho1-I/3||
+= 0.160942 — all three audit anchors reproduced.
+
+C (Schur freeze): seed = P2(01) x I/3 normalized (Tr_{0,2}(P2_01) = 5 I_3
+=> rho1(0) = I/3 exactly; this is the natural "K3" reading of the audit's
+single-mismatch seed family): ||rho1(t) - I/3||_F = 0.00000000 AND
+det C^{(1)}(t) = 8/27 = 0.2962963 IDENTICALLY at t = 0, 0.25, 0.5, 1.0
+under pure cov3, and 0.0 at all four times under H_XXX+cov3 as well.
+The freeze mechanism is confirmed machine-exact. The temporal handoff on
+the same seed under pure cov3: M0: 1.00000 -> 0.75571 -> 0.58334 ->
+0.36962; M1: 0.55556 -> 0.44015 -> 0.35973 -> 0.25806 at t = 0, 0.25,
+0.5, 1.0. DISCREPANCY LOGGED (audit-seat): the audit's own C-ii series
+(M0: 1.00000/0.59401/0.15256/0.03988; M1: 0.13304/0.14659 peak t~0.5/
+0.03613) could NOT be reproduced from ANY seed family constructible in
+this framework (M0(0) = 1 forces P2(01) support, which forces
+Tr(rho P2(12)) = 5/9 universally for uniform-marginal seeds — 0.13304 is
+unreachable). The audit's three CONCLUSIONS stand (freeze real; handoff
+observable is the bond pair M_b(t), not rho1(t); SU(2)-invariant seeds
+need bond-pair observables, non-invariant seeds carry the site-1 clock);
+the audit's handoff NUMBERS are logged as un-reproduced, pending their
+seed specification. Their conclusions needed only the mechanism, which
+is machine-verified.
+
+D (commutators): all four EXACT — 50.911688 (= sqrt(2d)||[h0,h1]|| =
+sqrt(54*48) identity confirmed), 6.074875, 31.872140, 58.498310. Branch A
+exclusion triply confirmed at the superoperator level.
+
+E (holonomy preview): all 16 numbers EXACT — diff = 0.000408/0.001731/
+0.011015/0.037789 with diff/t^2 = 0.1633/0.1731/0.1762/0.1512, and the
+det C^{(1)} triplets (0.13557, 0.13555, 0.13557) etc. to all five digits.
+Branch-B signature confirmed as PREVIEW ONLY: strictly monotone det C
+advance on all three orderings, O(t) agreement, O(t^2) separation.
+Two executor-side traps were caught and fixed during verification (the
+Block-E diff convention — site-1 overlap, not full-chain state — and a
+duplicated L0 application line caught by exactly that mismatch); both
+fixes are in the script history.
+
+Nothing here is a T1b-2 verdict. The next artifact is the frozen T1b-2
+declaration sheet.
+==============================================================================

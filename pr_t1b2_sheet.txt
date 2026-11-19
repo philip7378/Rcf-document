@@ -1,0 +1,205 @@
+==============================================================================
+FROZEN PRE-REGISTRATION — PR-T1b-2: N=3 TWO-BOND OVERLAP CLOCK COCYCLE
+(weak cocycle, local time agreement on the shared site; declared BEFORE
+any T1b-2 execution; substrate and standing fixtures per the r5.1b
+reversal register entry; anchors verified by the r5.1c prep battery,
+sheet f387f872 / script c069069f / results 951301b5)
+==============================================================================
+Executor: GLM, standing register. Status: GO (the r5.1b go-word stands;
+this sheet freezes the run's declared shape per the audit's three
+pre-registration additions and the second audit's three traps).
+
+------------------------------------------------------------------------------
+0. STANDING FIXTURES (ride the run; failure aborts before any number)
+------------------------------------------------------------------------------
+GATE S on every generator (commutator, Casimir, basis-Gram at 1e-14)
+before the chain is assembled. Frozen-sheet discipline throughout:
+declarations before code, FAILs standing, no retrofit.
+
+------------------------------------------------------------------------------
+1. SUBSTRATE AND ARMS (explicit Hamiltonian declaration)
+------------------------------------------------------------------------------
+Chain: N = 3 open spin-1 chain, bonds 0 = (0,1) and 1 = (1,2), shared
+site 1. Channel: canonical cov3, gamma = 1 (Paper I Eq. 6; Gate 0
+certified r5.1a/r5.1b). Exact 27-dim (729x729) superoperators.
+  PRIMARY ARM: H_XXX + cov3, TRANSIENT protocol. The N=3 dark-singlet
+  trap is PRE-REGISTERED (r5.1c Block B: unique NESS = pure AKLT
+  singlet, M = 0, G_H = 0, gap 0.039826): a steady-state clock on this
+  arm is identically dead, so the arm runs transient evolution from
+  non-singlet burdened seeds. Steady-state H_XXX clock tests require
+  N >= 4 and are OUT OF SCOPE for T1b-2.
+  COMPARISON ARM: H_XY + cov3 (Paper II arm), active NESS at N=3
+  (M_b = [0.056284, 0.056284], G_H = +0.083068, ||rho1 - I/3|| =
+  0.160942 — r5.1c Block B anchors). One-NESS clock reading is
+  permitted on this arm as a secondary observable; the cocycle verdict
+  is carried by the primary arm.
+  Rationale on record: PR-NOGO-RAW showed H_XXX and H_XY give opposite
+  interior-to-boundary local clock ratios (2.283x vs 0.771x); both arms
+  are declared so neither ratio is silently conflated with the other.
+
+------------------------------------------------------------------------------
+2. SEED CLASS (non-vacuity pre-flight, Strike Protocol S1 Corollary 1)
+------------------------------------------------------------------------------
+  (a) SITE-1 CLOCK SEEDS (primary): SU(2)-BREAKING seeds with nontrivial
+      rho1 — class: rho0 = 0.7|+1,+1,0><+1,+1,0| + 0.3 I/27 (the
+      r5.1c Block E seed, holonomy preview verified on it) and at
+      least 2 further seeds from a declared family (rotated coherent
+      products |m0,m1,m2> mixtures with site-1 polarization, and a
+      Ginibre-conditioned full-rank seed). The Schur freeze is
+      pre-registered: SU(2)-invariant seeds hold rho1(t) = I/3 and
+      det C^{(1)}(t) = 8/27 IDENTICALLY (r5.1c Block C, machine-exact
+      under both pure cov3 and H_XXX + cov3) — such seeds are BARRED
+      from the site-1 clock and routed to (b).
+  (b) BOND-PAIR CLOCK SEEDS (the temporal-handoff alternative's
+      substrate): SU(2)-invariant seed class P2(01) x sigma2
+      normalized; observable M_b(t), b = 0, 1 (r5.1c Block C handoff:
+      M0: 1.00000 -> 0.75571 -> 0.58334 -> 0.36962; M1: 0.55556 ->
+      0.44015 -> 0.35973 -> 0.25806 at t = 0, 0.25, 0.5, 1.0 under
+      pure cov3 — the registered reference trajectory for this seed
+      family on this construction; the audit seat's own series is
+      logged un-reproduced pending their seed specification).
+  PRE-FLIGHT ASSERTIONS (before any clock readout):
+    P1  site-1 seeds: ||rho1(0) - I/3||_F > 0.1 AND
+        |det C^{(1)}(0) - 8/27| > 1e-3 (non-vacuous start);
+    P2  bond-pair seeds: M_0(0), M_1(0) both > 0.01 AND
+        dM_b/dt not identically zero on the sampled grid;
+    P3  arm check: primary arm transient grid t in [0, 1] with at
+        least 8 points; comparison arm NESS residual < 1e-8.
+  If P1 fails for a seed, that seed is reclassified to (b); if (b)
+  fails P2, the run halts as vacuous and the FAIL is registered.
+
+------------------------------------------------------------------------------
+3. THE PINNED CLOCK OBSERVABLE (2.283x definition, falsifiable)
+------------------------------------------------------------------------------
+Per-bond raw local clock, the r5.1a Gate 0 construction verbatim:
+  omega_raw(b) = G_b / (2 M_b),
+  G_b = -i Tr(rho [M_b, H])   (M-weighted Hamiltonian flux),
+  M_b = Tr(rho P_b^(2))       (bond burden = pair-multiplet projector),
+evaluated at gamma = 1 on the state in question (transient states on
+the primary arm; the NESS on the comparison arm). The 2.283x is
+omega_raw(interior bond)/omega_raw(boundary bond) at the N = 4 H_XXX
+cov3 NESS (r5.1a Gate 0 certified values); the 0.771x is the same ratio
+on the H_XY arm; the 2.09x burden profile (0.128182/0.061203) is a
+DIFFERENT observable and is not to be cited as a clock number. Reader
+reproducibility: all constructions are the r51-series scripts', Gate S
+stamped.
+
+------------------------------------------------------------------------------
+4. THE COCYCLE TEST (weak form) AND THE DECISIVE MEASUREMENT
+------------------------------------------------------------------------------
+Question: do the two bond clocks agree on the shared site 1, up to a
+monotone relabeling, across the strobe orderings? Branch A (flat
+cocycle) is EXCLUDED AS FALSIFIED-BEFORE-DATA (r5.1b register: Trotter
+holonomy (sqrt(48)/2) t^2/n != 0; triply confirmed by the r5.1c
+superoperator commutators 50.911688 / 6.074875 / 31.872140 / 58.498310).
+  OUTCOME SPACE: branch B (curvature = chiral current = lapse gradient,
+  reducible) vs branch C (curvature carries an independent piece).
+  B-vs-C THRESHOLDS (declared now, not after the run):
+    B requires ALL of:
+      (B1) holonomy 2-form Omega(0,1) = the F3a chiral-current
+           commutator channel: Omega recovered from strobe differences
+           matches i[h1,h0]-induced site-1 displacement at O(t^2) with
+           prefactor within 20% of the preview coefficient 0.17
+           (r5.1c Block E: diff/t^2 = 0.1633, 0.1731, 0.1762, 0.1512);
+      (B2) cross-trajectory consistency (the anti-tautology criterion,
+           see 5): the overlap transition maps f_{01}^{(seed)} coincide
+           across the seed family within declared tolerance, i.e. the
+           relabeling is a property of the BOND PAIR, not of the seed;
+      (B3) det C^{(1)}(t) advances strictly monotonically in the same
+           direction for all three orderings on every non-vacuous seed
+           (the Block E signature, now required to generalize).
+    C is any failure of B1-B3 with a NONZERO residual that is NOT
+           attributable to the chiral current: an off-orbit displacement
+           in Sym_+^3 between the two orderings' site-1 trajectories
+           that no 1D reparametrization aligns (registered with the
+           reparametrization-fit residual and its threshold below).
+  OFF-ORBIT CRITERION (the branch-C signature, quantitative): let
+      gamma_01(t), gamma_10(t) be the two site-1 covariance orbits
+      (C^{(1)} matrices, 3x3, t in the grid). Fit the best monotone
+      reparametrization s(t) minimizing sup_t ||gamma_01(s(t)) -
+      gamma_10(t)||_F. Branch B: residual < 5e-3 (reparametrizable).
+      Branch C: residual > 5e-2 AND the residual direction (in
+      Sym_+^3) projects nontrivially onto the quadrupole directions
+      orthogonal to the chiral-current channel (projection norm
+      > 20% of the residual). Between the thresholds: INCONCLUSIVE,
+      the run extends to a finer grid, declared before extension.
+
+------------------------------------------------------------------------------
+5. THE TAUTOLOGY GUARD (single-trajectory vacuity, pre-registered)
+------------------------------------------------------------------------------
+A monotonicity check along ONE trajectory is TAUTOLOGICAL (any two
+increasing readouts are monotone functions of each other on a 1D curve)
+and is NOT a cocycle verdict. The run therefore carries:
+    (a) CROSS-TRAJECTORY consistency: the seed family of 2(a) gives
+        >= 3 distinct trajectories; f_{01} maps are estimated per seed
+        and must agree across seeds (B2 above) — dependence on the seed
+        is itself a registered outcome ("f is seed-dependent", scopes
+        the weak cocycle to per-seed local time and is graded E3 local
+        at most, never E4);
+    (b) OFF-ORBIT path-compatibility: the B-vs-C off-orbit criterion
+        of 4 (Sym_+^3 orbit comparison, NOT any 1D readout comparison);
+    (c) SIGN INVERSION check (pre-registered): during transient
+        spillover, does any local bond clock invert sign (omega_raw(b)
+        crossing 0)? If yes on the primary arm, register it; it is a
+        live falsifier of naive "time always advances locally" claims
+        and feeds the handoff branch below.
+No single-trajectory number is citable as a cocycle PASS.
+
+------------------------------------------------------------------------------
+6. TEMPORAL-HANDOFF ALTERNATIVE (PASS/FAIL shape, pre-registered)
+------------------------------------------------------------------------------
+If the equal-time spatial overlap of the two bond clocks is
+non-vacuous only at second order (the Theorem 10 present-localization
+expectation), the primary weak-cocycle question becomes the TEMPORAL
+HANDOFF: does the clock carried by bond 0 forward to bond 1 through
+the shared site (M_0(t) decays as M_1(t) rises, front-consistently)?
+  MEASUREMENT: M_b(t) trajectories on the seed family (2(a) seeds AND
+  the 2(b) invariant class), t grid of 2.P3.
+  NULL (handoff FAILS): no interval [t1, t2] with dM_1/dt > 0 while
+        dM_0/dt < 0 AND the transfer ratio eta = (M_1(t2)-M_1(t1))/
+        (M_0(t1)-M_0(t2)) bounded away from 0 (eta > 0.05) on ANY
+        seed — i.e. the burdens decay independently.
+  CONFIRMATION (handoff PASSES): on at least one seed, a clean
+        handoff window with eta > 0.05 AND front consistency: the
+        window's bond-1 growth integrates to a positive fraction of
+        bond-0's loss; PLUS the ordering asymmetry: the strobe
+        0->1 vs 1->0 difference in the handoff window is O(t^2)
+        (consistent with the Block E holonomy coefficient 0.17),
+        not O(t).
+  A primary-arm cocycle FAIL is NOT re-interpretable as a handoff
+  PASS post hoc: handoff is a pre-registered co-equal branch with the
+  above shape, and its verdict is quoted only through these numbers.
+  On the registered reference seed (P2(01) x I/3, pure cov3):
+  M0 1.00000 -> 0.36962 vs M1 0.55556 -> 0.25806 at t = 1 — BOTH
+  decay; NO handoff window on that seed; the handoff question is
+  therefore LIVE only on the SU(2)-breaking seed family and the
+  H_XXX transient arm, exactly where the clock lives.
+
+------------------------------------------------------------------------------
+7. SECONDARY OUTCOME: SCALE-INDEPENDENCE OF THE COCYCLE CONSTANT
+------------------------------------------------------------------------------
+Same run, no new substrate: if branch B obtains, the constant alpha
+(seed-independent relabeling slope) is measured per bond PAIR at N = 3
+AND, where the seed family allows comparison across the two arms,
+across arms. Outcome space (pre-registered):
+    S-INVARIANT (alpha constant across pairs/arms within tolerance),
+    S-DEPENDENT (alpha varies — the cocycle holds at one scale only;
+        the paper must say so), S-UNDEFINED (single bond or
+        non-vacuity failed — no measurement).
+N = 4 multi-bond scale probing is deferred to PR-T1b-3 (pairing
+explicitly offered by the audit seat: N=3 transient T1b-2 + N=4
+active-NESS multi-overlap T1b-3).
+
+------------------------------------------------------------------------------
+8. GRADING (unchanged from the r5.5b register)
+------------------------------------------------------------------------------
+Weak PASS grants only "local readings consistent on one overlap up to
+a monotone relabeling" — E3/E4 LOCAL at most, seed-dependence caps it
+at E3. Strong/global flatness is PR-T1b-3's question, already known
+obstructed by the trap anchors. The global time claim stays
+E2-pending-cocycle. The local clock claim can carry E3/E4 through
+this run. Branch B confirming would register: local time is a genuine
+local clock; global time is curved; the curvature is the arrow
+(one cohomological object: arrow seed = chiral current = clock
+connection curvature).
+==============================================================================
