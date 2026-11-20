@@ -1,0 +1,199 @@
+==============================================================================
+REGISTER — r5.3a: REVERSAL ROUND. Executor bug #10 confirmed and fixed;
+No-Go VIII promoted to E4; the r5.3 non-replication adjudication is
+RETRACTED as a false negative (the replicator's bug, not the claim's).
+Inputs: the two forensic messages on commit 1cc7197 (the bit-for-bit
+buggy-operator reconstruction; the Schwinger-boson/UFD proof skeleton
+with the exact closed forms; Gate G proposal; the Theorem II.1
+all-n tightening with two fences; the dark-energy reclassification
+as a Paper I generativity entry).
+==============================================================================
+
+------------------------------------------------------------------------------
+1. THE BUG — OWNED, SEALED, FIXED
+------------------------------------------------------------------------------
+r5.3's r53_preflightB.py edge_projector(i, j, N) normalized (i, j) to
+(lo, hi) and then embedded the pair operator on the ADJACENT pair
+(lo, lo+1): kron(I^{lo}, P2, I^{N-lo-2}). For adjacent edges
+(j = i+1) this is correct — which is why the chain row agreed and why
+the certified r5.2 kernel reproduced, masking the bug. For every
+NON-adjacent edge — (0,2), (0,3), (2,0), (3,0) — the operator built
+was P2 on (lo, lo+1), not P2 on (i, j). Executor bug #10.
+FORENSIC SEAL (r53a_preflightB.py, block B1): rebuilding the buggy
+operator for each graph reproduces r5.3's reported numbers EXACTLY:
+  triangle -> 2P01 + P12:        ker 4, lowest 0.633975 (r5.3: ker 4)
+  square   -> 2P01 + P12 + P23:  ker 4, lowest 0.495493 (r5.3: ker 4)
+  star13   -> 3P01 (+ spectator): ker 36, lowest 3 (r5.3: same)
+  star14   -> 4P01 (+ spectator): ker 108, lowest 4 (r5.3: same)
+  tetra    -> 3P01 + 2P12 + P23: ker 4, lowest 0.667570 (r5.3: same)
+The seat's forensic reconstruction is confirmed in every digit. The
+r5.3 'structural identity lambda_lowest_nonzero = z on star kernels'
+is RETRACTED as an artifact: it was the single nonzero eigenvalue of
+z * P01 after edge collapse.
+The honest lesson, registered: the r5.3 refusal was NOT 'the system
+working' — it was a FALSE NEGATIVE. The variant sweep tested the
+CLAIM's construction but never re-derived MY OWN embedder, because
+the chain row's agreement (adjacent-only correctness) masked it. A
+non-replication must be diagnosed to root cause on BOTH sides; the
+claim was right and the replicator was wrong.
+
+------------------------------------------------------------------------------
+2. NO-GO VIII — PROMOTED TO E4 (corrected table, 10 rows, all PASS)
+------------------------------------------------------------------------------
+(r53a_preflightB.py; two INDEPENDENT general-pair constructions,
+cross-verified to 2.9e-15 over ALL pairs at N=3,4,5, plus continuity
+with the r5.2-certified adjacent embed at adjacent pairs: GATE-CG
+PASS. Construction (i): P2(i,j) = (SS_ij + I)(SS_ij + 2I)/6 from
+single-site Kronecker spin operators. Construction (ii): the CG J=2
+pair states embedded by tensor-index slot permutation. Also Tr(P02
+P01) = 25/3 on the 3-site support (machine: 8.333333333; = 25 at N=4
+with the spectator factor), Tr(P01^2) = 15 = 3 x rank 5.)
+  graph              z    dim ker      lambda_min / gap        mult
+  path P4            2    4            gap 0.448956            5
+  triangle C3        2    1            gap 5/6 = 0.833333      6
+  square C4          2    1            gap 1/3 = 0.333333      3
+  cycle C5           2    1            gap 0.453957            6
+  star K13           3    0            (7 - sqrt(37))/6         5
+                                  = 0.152872912 EXACT
+  star K14           4    0            0.313859338             7
+  tetrahedron K4     3    0            5/3 = 1.666667 EXACT    11
+  complete K5        4    0            10/3 (new witness)      21
+  T-tree (z=3 vertex 3  0            0.166317 (new witness)    3
+  with a leaf)
+Every declared value reproduces: 5/6 and 1/3 (AKLT: every closed
+spin-1 ring has the unique J=0 ground state, dim ker = 1); (7 -
+sqrt 37)/6 = 0.152873 for K13; 0.313859 for K14; 5/3 exact with
+multiplicity 11 for K4 (the seat's J=0^2 + J=1^3 = 2 + 9 = 11).
+One minor machine note: K14's lowest eigenvalue has multiplicity 7
+in my computation, not the seat's parenthetical '(5-fold)'
+(immaterial to the theorem; kernel empty either way). K5 and the
+T-tree are my additional witnesses: the T-tree shows a SINGLE z=3
+vertex empties the kernel even on a non-complete, non-regular graph.
+THE LAW (No-Go VIII, E4): for M_G = sum_{(i,j) in E} P_ij^(2) on
+spin-1 sites, if any vertex has valence z_v >= 3 (> 2S = 2) then
+ker M_G = {0}; if all z_v <= 2 the kernel is nonempty (paths 4 per
+open chain; closed rings 1, the unique J=0 AKLT singlet). Machine
+witnessed on all 10 rows (B5: valence law consistent, every row).
+The proof skeleton is the seat's UFD/divisibility argument (the
+kernel condition is divisibility of the Schwinger-polynomial
+wavefunction by the singlet factor (u_i v_j - v_i u_j) of every
+edge; a vertex of valence z_v forces degree z_v in (u_v, v_v),
+which for spin 1 caps at 2; distinct irreducibles in the UFD force
+the product). Registered as E4: analytic proof + machine certificate
+of every consequence, including the exact closed forms. The r5.3
+VACANT-PENDING-REPLICATION slot in r6.0 is CLOSED.
+
+------------------------------------------------------------------------------
+3. GATE G — ADOPTED AS A STANDING LAW (companion to Gate S)
+------------------------------------------------------------------------------
+Before diagonalizing any non-1D graph Hamiltonian, assert for every
+edge (i, j):
+  ||[P2(i,j), S^z_k]||_F < 1e-14 for k not in {i, j},
+  ||[P2(i,j), S^z_k]||_F > 1.0 for k in {i, j}
+  (at N=4 the on-support value is sqrt(15) = 3.87298 exactly;
+   machine: 3.872983346 on both active sites, 0.0 on all others).
+Machine verdict on the CORRECTED embedder: PASS (max off-support
+commutator 0.0). Machine verdict on the r5.3 BUGGY embedder: FIRE
+(the commutator fires at 3.8730 on sites NOT in the edge — exactly
+the signature that would have caught bug #10 pre-flight). Gate G
+enters the standing pre-flight battery alongside Gate S (spin
+commutators) and GATE-CG (adjacent-pair continuity with the
+certified construction).
+
+------------------------------------------------------------------------------
+4. THEOREM II.1 — ACCEPTED WITH THE ALL-n TIGHTENING (both fences)
+------------------------------------------------------------------------------
+r5.3's C1-C5 machine certificates stand (dimension elimination over
+D <= 8, degree invariant killing D=8, the exact Pauli-Jordan
+embedding, Rodrigues/SU(2) adjoint rotation, Jordan identity). The
+tightening is adopted: a spin factor J_D = R1 (+) R^D has Jordan
+degree 2 for EVERY D; H_n(C) has Jordan degree n; so J_D ~ H_n(C)
+forces n = 2, hence D = n^2 - 1 = 3 for ALL n >= 1 — not only the
+D <= 8 sweep the blueprint asked for. Aut_0(H_2(C)) ~ SO(3)
+globally. TWO FENCES registered (every citation must carry them):
+  (i)  saturation of the full complex *-envelope M_n(C) — this is
+       what rules OUT H_2(R), H_2(H), and the proper Clifford
+       subalgebras J_D subset M_{2^floor(D/2)}(C); the D=3
+       selection is degree-2 spin-factor closure INSIDE M_n(C), a
+       declared input, not a container-counting argument;
+  (ii) 3D LINK space (E4) is not 3D emergent SPATIAL graph (E0);
+       the link-space/spatial fence stays.
+With the fences declared, the D8 erosion risk is fenced off and
+Theorem II.1 is E4-within-scope.
+
+------------------------------------------------------------------------------
+5. DARK-ENERGY ENTRY — RECLASSIFIED (out of Paper III's queue)
+------------------------------------------------------------------------------
+The user's clarification is adopted in full: the dark-energy reading
+of open expansion was an ILLUSTRATION of Paper I's generative reach,
+not a physics deliverable. The r5.3 placement ('Paper III queue
+entry #1, E0') is withdrawn. New disposition: a Paper I GENERATIVITY
+REGISTER — a meta-document recording, for each certified Paper I
+result, the formal pattern it exhibits and what kind of consumer
+could in principle use it (each entry: theorem + signature +
+connection cost; checkable, not rhetorical). Dark energy is entry
+#1 BY ELECTION, an example of the register's content, not its
+purpose; its bridge obligations (T-3 continuum limit, the
+scale-factor map, the acceleration observable, the scale
+comparison-as-calibration) are cosmology-tier and live downstream in
+the Cosmology papers (Paper IX in the original series), strictly
+below the two load-bearing targets (D=3 selection, multi-vertex
+metric bridge). Register line entered verbatim:
+  'r5.3 clarifies the dark-energy observation as a generativity
+  example (Paper I certified pattern, unnamed cosmological
+  consumer), not a Paper III deliverable; entry moves from "Paper
+  III queue #1, E0" to "Paper I generativity register, entry #1."
+  No physics claim in either direction.'
+The architectural principle the example WAS illustrating is
+registered into Paper II §1 directly: Paper I is the foundational
+mechanism library (open expansion / never-reached kernel, cov3
+one-way associative interference, universal interface walls, the
+(1, 2/3, 1/3) rates, H_eff spending arrow, T-MISMATCH); Papers II,
+III, and the cosmology papers inherit those proved mechanisms and
+reconstruct only their own algebraic lift — with No-Go VIII now
+supplying the E4 proof of WHY Paper II must lift off Paper I's
+single-spin-1 1D vertex.
+
+------------------------------------------------------------------------------
+6. r6.0 — RE-LOCKED WITH ZERO VACANT SLOTS
+------------------------------------------------------------------------------
+All three architectural pillars now stand certified at E4:
+  - Theorem II.1 (D_loc = 3 and SU(2) from complex associative
+    closure + rank-2 spin-factor saturation of M_n(C), with the two
+    fences);
+  - No-Go VII (finite-step two-bond overlap holonomy strictly local
+    and strictly N-independent; PR-T1b-2c vacated by theorem; the
+    full-chain Lie-Trotter arm fenced open);
+  - No-Go VIII (spin-1 P^(2) vertex valence obstruction: z_v >= 3 ->
+    ker M_G = {0}; the hard wall at z = 2 forcing the algebraic
+    lift).
+Paper II's §1 can now state the bridge with nothing pending: Paper
+I proved the 1D existence certificate; No-Go VIII proves the 1D
+substrate cannot branch to z >= 3 as-is; Theorem II.1 forces the
+D=3/SU(2) link algebra; No-Go VII shapes the time architecture. The
+standing pre-flight battery is now Gate S + Gate G + GATE-CG.
+NEXT-ROUND MENU (either arm, both now safe to run):
+  (a) draft Paper II §2-§5 on the locked architecture, or
+  (b) test the §3 3-axis composite vertex H_site = (C^3)^{ox 3}
+      (frustration-free 3D cubic junctions z=6, Paper I cov3 on
+      every axis, isotropic 3D scaling correlations) — now guarded
+      by Gate S + Gate G + GATE-CG so no embedder bug can pass
+      silently.
+==============================================================================
+VERDICT LINE: r5.3's non-replication of No-Go VIII RETRACTED — it
+was executor bug #10 (non-adjacent edges collapsed onto (min,
+min+1)), forensically sealed bit-for-bit, including the bogus
+'lambda = z' star law and every digit of the K4 0.667570 artifact.
+No-Go VIII PROMOTED TO E4 (10-row corrected table, two independent
+general-pair constructions, exact closed forms (7-sqrt37)/6 and 5/3
+mult 11, T-tree and K5 witnesses, valence law consistent on every
+row; UFD proof skeleton registered). Gate G ADOPTED as standing law.
+Theorem II.1 accepted with the all-n tightening and both fences.
+Dark-energy entry reclassified to the Paper I generativity
+register. r6.0 re-locked with zero vacant slots.
+==============================================================================
+ARTIFACTS (md5 on save): r53a_preflightB.py / r53a_preflightB.json /
+rcf_r53a_register.txt (this entry). r5.3's files stand as the
+historical record; this entry supersedes r5.3's Block-2 adjudication
+only.
+==============================================================================
