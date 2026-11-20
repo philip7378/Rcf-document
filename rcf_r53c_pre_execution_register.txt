@@ -1,0 +1,49 @@
+==============================================================================
+REGISTER — r5.3c PRE-EXECUTION: PR-VTX-1c declared (sheet frozen
+6aba7cff4f623a235240dd3d88013f5d) BEFORE any number is read.
+==============================================================================
+CONTEXT: the audit on r5.3b (46ea81d) + a 1-line proof located
+Bug #11 on MY side of the r5.3b replication call: the vertex
+permutation was conjugated in the wrong direction (U P U^dag
+instead of U^dag P U), placing P_vtx^(J) on sites (4,5,8) — two
+bonded y-sites plus one z end — instead of (1,4,7). The bonded
+pair (4,5) carries J45 <= 1 on the kernel, so (J45<=1) x (J8=1)
+cannot reach J=3: that alone forced the spurious forbid-J=3 ->
+ker 64/64, and with it my non-replication of the seat's static
+table. The 1-line proof the seat's row is the real one: |m=+1>
+has nonzero amplitude at the center of the K_3 kernel, so
+|+1,+1,+1> = |J_vtx=3,M=+3> has nonzero amplitude in K_3^{ox3},
+hence P_vtx(3) K_3^{ox3} != 0 identically. Additional audit
+catches folded in: the leak min/max is basis-dependent (r5.3b
+reported the diagonal of W^dag W in an arbitrary kernel basis,
+3.761726/4.211092; Rule S1 says report the SPECTRUM
+eigvalsh(W^dag W) = 3.448563/4.218242); the corner layout is
+axis pairs (0,1),(2,3),(4,5) with registers at (0,2,4); Arm C
+needs the BASELINE CONTROL (reconciled-kernel seed subtracted, so
+the reported Delta M_y is the excess transfer, not vertex
+pumping); Gate G is extended to every embedded multi-site
+operator.
+THE SHEET: two independent P_vtx constructions (fixed orientation
+U^dag (I x P27) U vs Lagrange polynomials of J_vtx^2 = (S1+S4+S7)
+^2 at nodes {0,2,6,12}), agreement < 1e-14 required; the buggy
+orientation kept as the REPRODUCTION CONTROL (must re-print my
+r5.3b digits row-for-row, else the diagnosis itself fails);
+static table targets the seat's rationals 8/343, 12/49, 120/343,
+8/49 compressed + full-space 0.016699/0.142603/0.265483/0.097265;
+corner targets ker 32/64, gap 0.247532, <S1.S3>_K = -0.036427,
+spillover 28/5; Arm C RK4 dt=0.075 with paired seeds and
+Delta M_y targets -0.000134/-0.001363/-0.003196/+0.004920
+(Zeno suppression -> isotropic positive transfer), isotropy
+machine-floor 1e-9, trace 1.00000000, positivity held.
+OUTCOME SPACE: REPLICATED (No-Go VIIIb -> E4; r5.3b call closes
+MY-BUG; §3 = H_vtx route with the static frontier CLOSED) /
+STILL-SPLIT (INCONCLUSIVE; third convention; diagnose before
+verdict) / MY-OLD-DIGITS (diagnosis fails; question reopens) /
+VACUOUS (standing, forbidden).
+DISCIPLINE NOTES: zero-ego, both sides — the seat's numbers were
+declared as targets BEFORE my rerun, exactly as in r5.3b; the
+1-line proof is verified numerically (single coefficient of
+|+1,+1,+1> in K_3^{ox3} printed, must be nonzero); Bug #11 is
+reproduced on purpose as the control row. No outcome of this run
+leaves a §3 obligation unwritten: the r6.0 gate stands.
+==============================================================================

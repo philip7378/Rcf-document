@@ -1,0 +1,173 @@
+{
+  "GATE_S": {
+    "max_comm": 3.1718998303807225e-16,
+    "casimir": 5.438959822042073e-16,
+    "verdict": "PASS"
+  },
+  "GATE_CG": {
+    "max_diff": 5.020921489134356e-15,
+    "verdict": "PASS"
+  },
+  "bulk_kernel": {
+    "per_axis_dim": 4,
+    "total_dim": 64,
+    "residual": 1.2330016722981561e-15
+  },
+  "gate_G_multisite": {
+    "0": {
+      "active_sites": [
+        1,
+        4,
+        7
+      ],
+      "verdict": "PASS"
+    },
+    "1": {
+      "active_sites": [
+        1,
+        4,
+        7
+      ],
+      "verdict": "PASS"
+    },
+    "2": {
+      "active_sites": [
+        1,
+        4,
+        7
+      ],
+      "verdict": "PASS"
+    },
+    "3": {
+      "active_sites": [
+        1,
+        4,
+        7
+      ],
+      "verdict": "PASS"
+    },
+    "buggy_orientation_support_J3": [
+      4,
+      5,
+      8
+    ]
+  },
+  "construction_agreement_F": {
+    "0": 2.31e-13,
+    "1": 2.79e-13,
+    "2": 1.86e-13,
+    "3": 8.9e-14
+  },
+  "construction_agreement_verdict": "PASS",
+  "reproduction_control": {
+    "0": {
+      "ker_out_of_64": 16,
+      "lambda_comp": -0.0,
+      "lambda_full": -0.0
+    },
+    "1": {
+      "ker_out_of_64": 0,
+      "lambda_comp": 0.257682,
+      "lambda_full": 0.143455
+    },
+    "2": {
+      "ker_out_of_64": 16,
+      "lambda_comp": -0.0,
+      "lambda_full": -0.0
+    },
+    "3": {
+      "ker_out_of_64": 64,
+      "lambda_comp": -0.0,
+      "lambda_full": -0.0
+    }
+  },
+  "one_line_proof": {
+    "amplitude2_of_|+1,+1,+1>_centers_in_V64": 2.3703703703703725,
+    "nonzero": "True",
+    "implies": "P_vtx(3) K_3^ox3 != 0 identically -> forbid-J=3 ker 64/64 is IMPOSSIBLE; the r5.3b row was the bug"
+  },
+  "bulk_static": {
+    "0": {
+      "P_vtx_dim": 1,
+      "ker_out_of_64": 0,
+      "lambda_comp": 0.023323615,
+      "lambda_full": 0.016699,
+      "ker_full_lowest8": 0
+    },
+    "1": {
+      "P_vtx_dim": 9,
+      "ker_out_of_64": 0,
+      "lambda_comp": 0.244897959,
+      "lambda_full": 0.142603,
+      "ker_full_lowest8": 0
+    },
+    "2": {
+      "P_vtx_dim": 10,
+      "ker_out_of_64": 0,
+      "lambda_comp": 0.349854227,
+      "lambda_full": 0.265483,
+      "ker_full_lowest8": 0
+    },
+    "3": {
+      "P_vtx_dim": 7,
+      "ker_out_of_64": 0,
+      "lambda_comp": 0.163265306,
+      "lambda_full": 0.097265,
+      "ker_full_lowest8": 0
+    }
+  },
+  "target_check": {
+    "0": {
+      "comp_dev": 1.603498549218596e-10,
+      "full_dev": 0.0
+    },
+    "1": {
+      "comp_dev": 1.8367346532599527e-10,
+      "full_dev": 0.0
+    },
+    "2": {
+      "comp_dev": 4.0524777977779536e-10,
+      "full_dev": 0.0
+    },
+    "3": {
+      "comp_dev": 1.224489676321383e-10,
+      "full_dev": 0.0
+    }
+  },
+  "leak_spectrum": {
+    "trace": 251.142024,
+    "eig_min": 3.448563,
+    "eig_max": 4.218242,
+    "declared": {
+      "trace": 251.142024,
+      "min": 3.448563,
+      "max": 4.218242
+    },
+    "r53b_diagonal_minmax": [
+      3.761726,
+      4.211092
+    ],
+    "schur_horn_sandwich_holds": true
+  },
+  "corner": {
+    "kernel_dim": 8,
+    "kernel_residual": 1.9602710721163875e-16,
+    "construction_agreement": 1.722178092567798e-14,
+    "gate_G_active_sites": [
+      0,
+      2,
+      4
+    ],
+    "forbid_J3": {
+      "ker_full_space": 32,
+      "gap_above_ker": 0.247532,
+      "edge_kernel_overlap_sq": 32.0,
+      "declared_ker": "32/64 (seat); edge kernel here is 8D \u2014 the 64 counts a DIFFERENT basis (see register)"
+    },
+    "S1S3_in_kernel": -0.036427,
+    "S1S3_declared": -0.036427,
+    "spillover_F2": 42.0,
+    "spillover_declared_28_5": 5.6
+  },
+  "elapsed_s": 17.27
+}

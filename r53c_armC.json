@@ -1,0 +1,160 @@
+{
+  "GATE_S": {
+    "max_comm": 3.1718998303807225e-16,
+    "verdict": "PASS"
+  },
+  "seeds": {
+    "x_defect_trace": 1.0,
+    "baseline_trace": 1.0,
+    "x_defect_Mx0": 1.0,
+    "baseline_M0": 0.0
+  },
+  "trajectories": [
+    {
+      "step": 0,
+      "t": 0.0,
+      "defect": {
+        "Mx": 1.0,
+        "My": 0.0,
+        "Mz": 0.0,
+        "tr": 1.0,
+        "min_eig": -0.0
+      },
+      "baseline": {
+        "Mx": 0.0,
+        "My": 0.0,
+        "Mz": 0.0,
+        "tr": 1.0,
+        "min_eig": -0.0
+      },
+      "DeltaMy": -0.0,
+      "DeltaMz": -0.0,
+      "isotropy_def": 7.66312589676405e-18,
+      "isotropy_bg": 5.360777408400588e-18
+    },
+    {
+      "step": 2,
+      "t": 0.15,
+      "defect": {
+        "Mx": 0.848903,
+        "My": 0.016859,
+        "Mz": 0.016859,
+        "tr": 1.0,
+        "min_eig": -1.29e-07
+      },
+      "baseline": {
+        "Mx": 0.016993,
+        "My": 0.016993,
+        "Mz": 0.016993,
+        "tr": 1.0,
+        "min_eig": -8.4e-08
+      },
+      "DeltaMy": -0.000134,
+      "DeltaMz": -0.000134,
+      "isotropy_def": 0.0,
+      "isotropy_bg": 6.938893903907228e-18
+    },
+    {
+      "step": 5,
+      "t": 0.375,
+      "defect": {
+        "Mx": 0.640557,
+        "My": 0.085328,
+        "Mz": 0.085328,
+        "tr": 1.0,
+        "min_eig": -0.0
+      },
+      "baseline": {
+        "Mx": 0.086691,
+        "My": 0.086691,
+        "Mz": 0.086691,
+        "tr": 1.0,
+        "min_eig": -0.0
+      },
+      "DeltaMy": -0.001363,
+      "DeltaMz": -0.001363,
+      "isotropy_def": 1.3877787807814457e-17,
+      "isotropy_bg": 0.0
+    },
+    {
+      "step": 10,
+      "t": 0.75,
+      "defect": {
+        "Mx": 0.412887,
+        "My": 0.214407,
+        "Mz": 0.214407,
+        "tr": 1.0,
+        "min_eig": -0.0
+      },
+      "baseline": {
+        "Mx": 0.217603,
+        "My": 0.217603,
+        "Mz": 0.217603,
+        "tr": 1.0,
+        "min_eig": -0.0
+      },
+      "DeltaMy": -0.003196,
+      "DeltaMz": -0.003196,
+      "isotropy_def": 0.0,
+      "isotropy_bg": 2.7755575615628914e-17
+    },
+    {
+      "step": 20,
+      "t": 1.5,
+      "defect": {
+        "Mx": 0.317434,
+        "My": 0.272477,
+        "Mz": 0.272477,
+        "tr": 1.0,
+        "min_eig": -0.0
+      },
+      "baseline": {
+        "Mx": 0.267557,
+        "My": 0.267557,
+        "Mz": 0.267557,
+        "tr": 1.0,
+        "min_eig": -0.0
+      },
+      "DeltaMy": 0.004921,
+      "DeltaMz": 0.004921,
+      "isotropy_def": 5.551115123125783e-17,
+      "isotropy_bg": 0.0
+    }
+  ],
+  "targets": {
+    "0.15": -0.000134,
+    "0.375": -0.001363,
+    "0.75": -0.003196,
+    "1.5": 0.00492
+  },
+  "target_check": {
+    "0.15": {
+      "DeltaMy": -0.000134,
+      "target": -0.000134,
+      "dev": 0.0
+    },
+    "0.375": {
+      "DeltaMy": -0.001363,
+      "target": -0.001363,
+      "dev": 0.0
+    },
+    "0.75": {
+      "DeltaMy": -0.003196,
+      "target": -0.003196,
+      "dev": 0.0
+    },
+    "1.5": {
+      "DeltaMy": 0.004921,
+      "target": 0.00492,
+      "dev": 1e-06
+    }
+  },
+  "checks": {
+    "max_isotropy_def": 5.551115123125783e-17,
+    "max_isotropy_bg": 2.7755575615628914e-17,
+    "trace_def_min": 1.0,
+    "trace_def_max": 1.0,
+    "positivity_min": -1.29e-07
+  },
+  "elapsed_s": 339.63
+}

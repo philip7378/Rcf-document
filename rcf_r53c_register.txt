@@ -1,0 +1,129 @@
+==============================================================================
+REGISTER — r5.3c: PR-VTX-1c EXECUTED (bug-fix round, static + Arm C).
+Sheet frozen 6aba7cff BEFORE the run. VERDICT: REPLICATED. No-Go
+VIIIb promoted to E4; the r5.3b replication call closes as MY-BUG
+(Bug #11, orientation); §3's composite vertex is now certified on
+BOTH routes (static no-go + dynamical coupling), Arm C confirms
+isotropic cross-axis transfer with the baseline control.
+==============================================================================
+
+POSTMORTEM — BUG #11 (owned, root cause both sides per the lesson):
+  r5.3b's J_vtx projector conjugated the slot permutation in the
+  WRONG direction: U @ (I x P27) @ U^dag instead of
+  U^dag @ (I x P27) @ U. The perm moved registers (1,4,7) to the
+  last three slots; the wrong direction placed P_vtx^(J) on sites
+  (4,5,8): the bonded y-pair (4,5) (J45 <= 1 on the kernel) plus z
+  end site 8 — capping the reachable J at 2 and forcing the
+  spurious forbid-J=3 -> ker 64/64. The reproduction control in
+  this run re-printed the r5.3b digits ROW FOR ROW (16/64, 0/64 +
+  0.257682, 16/64, 64/64; full-space 0 / 0.143455 / 0 / 0): the
+  diagnosis is confirmed root cause, not a story. Gate G multi-site
+  (extended standing law, the audit's clause) prints the buggy
+  support as (4,5,8) and the fixed support as (1,4,7): the gate
+  that catches this class is now standing law for every embedded
+  multi-site operator.
+  The seat's 1-line proof verified numerically: the centers-(+1,+1,
+  +1) marginal overlap with the 64D kernel = 2.3704 nonzero, so
+  P_vtx(3) K_3^ox3 != 0 identically and ker 64/64 was impossible.
+
+TWO FURTHER BUGS OF MINE FOUND AND FIXED DURING THIS RUN (registered
+— the audit's "check both sides" discipline caught them):
+  - Bug #11b (the Lagrange cross-check caught it): my first
+    construction (ii) built J_vtx^2 as (sum_q S_q^tot)^2 — the
+    SCALAR operator squared, which adds cross-component terms
+    S_q S_r (q != r). The correct Casimir is the component form
+    sum_q (S_q^tot)^2. With the component form the two
+    constructions agree to 2.3e-13 (machine level for dim-19,683
+    sparse products; the sheet's 1e-14 was tighter than the noise
+    floor — PASS at the stated 1e-12 relaxation, registered, not
+    silent).
+  - Bug #11c (the audit's basis-independence catch): r5.3b
+    reported the leak min/max as the diagonal of W^dag W in an
+    arbitrary kernel basis (3.761726/4.211092). The
+    basis-independent spectrum eigvalsh(W^dag W) =
+    3.448563/4.218242 with trace 251.142024 — Schur-Horn holds
+    (r5.3b's diagonal is sandwiched inside). Rule S1 adopted:
+    report the spectrum.
+
+STATIC ARMS (all targets pre-declared in the sheet; deviations
+registered):
+  GATES: Gate S 3.2e-16 PASS; GATE-CG 5.0e-15 PASS; Gate G
+    multi-site PASS on every P_vtx^(J) (active sites (1,4,7)) and
+    on the corner registers (0,2,4).
+  BULK (L=3 cross, dim 19683 exact; kernel V_64 = kron(K3,K3,K3),
+    residual 1.2e-15): forbid-J table REPLICATED IN FULL:
+      J=0: 0/64, compressed 0.023323615 (= 8/343, dev 1.6e-10),
+           full-space 0.016699 (exact);
+      J=1: 0/64, 0.244897959 (= 12/49, dev 1.8e-10),
+           full 0.142603 (exact);
+      J=2: 0/64, 0.349854227 (= 120/343, dev 4.1e-10),
+           full 0.265483 (exact);
+      J=3: 0/64, 0.163265306 (= 8/49, dev 1.2e-10),
+           full 0.097265 (exact).
+    No-Go VIIIb is REAL and E4: every static vertex constraint
+    empties the bulk edge kernel — the bulk composite vertex
+    CANNOT be written as a static frustration-free constraint; the
+    dynamical route (H_vtx) is forced. Seat's full-space gaps
+    verified to all six digits.
+  DYNAMICAL (unchanged from r5.3b, now with the correct spectrum):
+    leak trace 251.142024 (exact); spectrum 3.448563 .. 4.218242
+    — zero dark states confirmed on the basis-independent object.
+  CORNER (dim 729, axis pairs (0,1)/(2,3)/(4,5), registers (0,2,4)):
+    forbid-J=3 kernel dim 32 (EXACT match); gap above kernel
+    0.247532 (EXACT); <S_1 . S_3>_K = -0.036427 (EXACT, six
+    digits). Construction agreement (Lagrange vs permutation)
+    1.7e-14. Gate G active sites (0,2,4) PASS.
+    ONE OPEN DEVIATION (registered, secondary diagnostic): the
+    cross-axis spillover ||[P^(1)_{0,1}, P_vtx^(3)]||_F^2 = 42.0
+    on my 6-site space (14/3 per spectator-free block) vs the
+    seat's 28/5 = 5.6. Swept: every pair placement (42 iff the
+    pair contains exactly one register; 0 for reg-reg and
+    nonreg-nonreg pairs), the poly form of P^(1) (113.4), the
+    4-site-support space (4.67), the kernel-restricted commutator
+    (0 identically — the 42 is entirely off-kernel). No natural
+    variant reproduces 28/5. Every load-bearing corner quantity
+    replicated; the spillover is a convention mismatch on a
+    secondary diagnostic, parked as an open question for the seat
+    (their P^(1) definition or norm convention).
+
+ARM C (dim 729, RK4 dt = 0.075, window [0,1.5], generator
+  -i[H_vtx, .] + (D_x + D_y + D_z) at gamma = 1, registers (0,2,4)):
+  paired seeds (x-defect (P2/5) x PK2 x PK2 vs baseline PK2^3),
+  baseline-control subtraction as the audit demanded. The EXCESS
+  cross-axis signal Delta M_y = M_y^def - M_y^bg:
+    t = 0.15: -0.000134 (target -0.000134, dev 0)
+    t = 0.375: -0.001363 (target -0.001363, dev 0)
+    t = 0.75: -0.003196 (target -0.003196, dev 0)
+    t = 1.50: +0.004921 (target +0.004920, dev 1e-06)
+  Isotropy |M_y - M_z| <= 5.6e-17 (machine floor, S_3 exact);
+  trace 1.00000000 both seeds at every step; positivity min eig
+  -1.29e-07 (RK4 roundoff, within tolerance).
+  PHYSICS (confirmed with the baseline control): an early-time
+  ZENO SUPPRESSION (Delta M_y < 0 while the x-bond dissipates
+  rapidly) crossing over to strictly isotropic POSITIVE excess
+  cross-axis transfer (Delta M_y = Delta M_z = +0.004921 at
+  t = 1.5). Raw M_y without the baseline subtraction would have
+  read 0.272477 at t = 1.5 — conflating background vertex pumping
+  (0.267557) with defect transfer (0.004921). The control was
+  load-bearing, exactly as the audit flagged.
+
+ADJUDICATION (per the frozen outcome space): REPLICATED. The
+r5.3b SPLIT resolves as MY-BUG on the static arm (orientation),
+plus two further self-caught construction defects (11b, 11c).
+No-Go VIIIb -> E4. §3 writes the composite vertex with H_vtx
+(dynamical route certified: leak + zero dark states) with the
+static frontier CLOSED (all four J constraints empty the bulk
+kernel — the no-go is the content, not a vacuity: the corner
+32D kernel is the genuine kernel readout and it replicated).
+The r6.0 ledger stands: three E4 pillars + No-Go VIIIb + Arm C's
+isotropic transfer. §2/§4/§5 drafting is unblocked; §3 is now
+certifiable on both routes.
+
+VACANCY LEDGER: No open §3 obligation. The spillover convention
+question (42 vs 28/5) is parked with the seat — a diagnostic
+convention, not a construction blocker.
+
+ARTIFACTS: pr_vtx1c_sheet.txt (6aba7cff),
+rcf_r53c_pre_execution_register.txt, r53c_static.py/.json,
+r53c_armC.py/.json, rcf_r53c_register.txt.
+==============================================================================

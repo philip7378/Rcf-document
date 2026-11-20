@@ -1,0 +1,120 @@
+==============================================================================
+PR-VTX-1c FROZEN SHEET — BUG-FIX ROUND: PERMUTATION ORIENTATION,
+BASIS-INDEPENDENT LEAK SPECTRUM, CORNER LAYOUT, ARM C BASELINE
+CONTROL (declared BEFORE any number is read; md5 frozen on save).
+==============================================================================
+Question: does the r5.3b SPLIT verdict survive the Bug #11 fix? The
+r5.3b register filed a replication call against the static No-Go
+VIIIb; the audit + a 1-line proof then located the bug on MY side:
+the permutation conjugation ran in the WRONG DIRECTION. This round
+re-runs the static table with the orientation fixed and
+cross-verified by an independent construction, upgrades Gate G to
+multi-site operators, and runs Arm C with the baseline control.
+Pre-declared decider: REPLICATED -> No-Go VIIIb promoted to E4 and
+the r5.3b replication call closes as MY-BUG (the seat's static table
+was right; my r5.3b non-replication was the artifact); STILL-SPLIT
+after both constructions agree < 1e-14 -> the deviation is a third
+convention, adjudicate INCONCLUSIVE (diagnose before verdict);
+MY-OLD-DIGITS-REPRODUCE -> the orientation diagnosis itself fails
+and the whole question reopens. VACUOUS trap (standing): no
+kernel-empty row read as a POSITIVE; the 0/64 rows ARE the no-go
+content.
+
+THE BUG (registered, to be reproduced on purpose as the control):
+  r53b_armsAB.py moved the vertex registers (1,4,7) to the last three
+  tensor slots via a permutation U with U[new, old] = 1, then
+  conjugated P as U @ (I x P27) @ U^dag. CORRECT is U^dag @ (I x
+  P27) @ U (conjugate INTO the permuted frame; the projector must be
+  PULLed back to site coordinates). The wrong direction placed the
+  vertex on sites (4,5,8): two bonded y-axis sites (4,5) + one z end
+  site 8 — which CANNOT reach J=3 (bonded pair has J45<=1, so
+  (J45<=1) x (J8=1) tops out at J=2), forcing the spurious
+  forbid-J=3 -> ker 64/64. The 1-line proof the seat's J=3 row is
+  the REAL one: |m_1=+1> has nonzero amplitude in the K_3 kernel
+  (the J=1,M=+1 AKLT chain state has site-1 amplitude on |+1>), so
+  |+1,+1,+1> = |J_vtx=3, M=+3> has nonzero amplitude in
+  K_3^{ox3}, hence P_vtx(3) K_3^{ox3} != 0 identically. This round
+  VERIFIES that amplitude numerically (single coefficient check).
+THE FIX (two independent constructions, agreement < 1e-14 required):
+  (i) FIXED ORIENTATION: U^dag @ (I_{3^{N-3}} x P27) @ U with the
+  same U the buggy build used.
+  (ii) LAGRANGE: J_vtx^2 on sites (1,4,7) built directly as
+  (S1+S4+S7)^2 from site operators (no permutation at all); the
+  four P_vtx^(J) = Lagrange interpolating polynomials of J_vtx^2
+  at the nodes J(J+1) in {0, 2, 6, 12}, evaluated as matrix
+  polynomials. Two routes, zero shared code paths.
+
+GATE G UPGRADE (standing law extended this round, the audit's
+clause): Gate G now runs on EVERY embedded multi-site operator, not
+just 2-site edges: for each P_vtx^(J) and H_vtx, the commutator
+[P, S_k^z] must be machine-zero for every k OUTSIDE the declared
+support and strictly positive on-support (support = the ACTUAL
+active sites printed by the gate; support mismatch vs declared
+(1,4,7) is a FIRE). The buggy orientation is kept in the run
+ONLY as the reproduction control: Gate G on the wrong-direction
+projector must print active sites (4,5,8) — that check IS the
+postmortem demonstration.
+
+PRIMARY MEASUREMENTS (declared targets from the seat, any
+deviation > 1e-6 on the rationals is a REPLICATION CALL):
+  1. BULK STATIC (full 19,683 space, both constructions):
+     ker(M_edges + P_J) = 0/64 for ALL FOUR J; compressed
+     lambda_min (on K_3^{ox3}, exact V_64 = kron(K3,K3,K3),
+     19683 x 64, no reshape/einsum shortcuts): J=0 -> 8/343 =
+     0.02332362, J=1 -> 12/49 = 0.24489796, J=2 -> 120/343 =
+     0.34985423, J=3 -> 8/49 = 0.16326531. Full-space lambda_min
+     (sparse eigsh): 0.016699 / 0.142603 / 0.265483 / 0.097265.
+  2. REPRODUCTION CONTROL (Bug #11): the WRONG-direction build must
+     reproduce r5.3b's digits row-for-row (16/64, 0/64+0.257682,
+     16/64, 64/64; full-space 0 / 0.143455 / 0 / 0) — if it does,
+     the bug diagnosis is CONFIRMED root cause, not a story.
+  3. LEAK SPECTRUM (basis-independent): W = (1 - P_K) H_vtx V_64;
+     eigvalsh(W^dag W) min = 3.448563, max = 4.218242, trace =
+     251.142024. The r5.3b per-basis-vector min/max (3.761726 /
+     4.211092) is basis-dependent diagonal (Schur-Horn sandwiched
+     inside the spectrum); Rule S1: report the SPECTRUM.
+  4. CORNER (Arm A, dim 729, layout per the seat): axis pairs
+     (0,1) x, (2,3) y, (4,5) z; vertex registers at (0,2,4); outer
+     ends (1,3,5); M_edges = P2(0,1)+P2(2,3)+P2(4,5); P_vtx^(3) on
+     (0,2,4). Targets: ker 32/64 (out of the 64D edge kernel
+     K_2^{ox3}); gap 0.247532; <S_1 . S_3>_K = -0.036427 (the
+     OUTER x-end and y-end sites); spillover ||[P^(1)_{0,1},
+     P_vtx^(3)]||_F^2 = 28/5 = 5.6 on the 4-site support
+     (0,1,2,4). Gate G verifies registers at (0,2,4).
+  5. ARM C (dim 729, the r5.3b sheet's preview with the audit's
+     baseline control): L = -i[H_vtx, .] + gamma (D_x + D_y + D_z)
+     with H_vtx = S_0.S_2 + S_2.S_4 + S_4.S_0 on the registers
+     (0,2,4); D_mu = cov3 dissipator on bond (v_mu, e_mu) = (0,1)
+     / (2,3) / (4,5) at gamma = 1 (standing formula, jumps
+     (X_q - P2 X_q) P2 / sqrt(2)). RK4, dt = 0.075, window
+     [0, 1.5]. TWO paired seeds:
+       - x-defect: rho_def(0) = (P2/5) (x-bond) x P_K2 (y) x P_K2
+         (z), the bond-defect seed (P2 on the x axis, reconciled
+         kernel sectors elsewhere);
+       - baseline: rho_bg(0) = P_K2 x P_K2 x P_K2 (reconciled
+         kernel everywhere, no defect).
+     Read M_mu(t) = Tr(rho P2_mu-bond); report the EXCESS
+     Delta M_y = M_y^def - M_y^bg (and Delta M_z identically).
+     Targets (declared): Delta M_y(0.15) = -0.000134,
+     (0.375) = -0.001363, (0.75) = -0.003196 (early Zeno
+     suppression), (1.50) = +0.004920 (positive isotropic excess
+     transfer). Isotropy |M_y - M_z| <= 1e-9 machine-floor (S_3
+     exact); Tr rho = 1.00000000 at every step; positivity
+     min eig >= -1e-9. THE POINT of the control: raw M_y without
+     baseline subtraction conflates vertex pumping with defect
+     transfer; only the EXCESS is the transfer signal.
+SEEDS / CANONICAL PARAMETERS: unchanged standing (gamma = 1,
+spin-1, Gate S + GATE-CG riding; Arm A/B site layouts as declared
+above; RK4 for Arm C at 729D density-matrix vectorization).
+OUTCOME SPACE (pre-declared): REPLICATED (No-Go VIIIb -> E4;
+r5.3b call closes MY-BUG; §3 keeps H_vtx route with static
+frontier CLOSED) / STILL-SPLIT (both fixed constructions agree
+< 1e-14 yet differ from seat targets -> INCONCLUSIVE, third
+convention) / MY-OLD-DIGITS (fix does not reproduce r5.3b's
+digits on the control -> diagnosis fails, question reopens) /
+VACUOUS (forbidden, standing).
+RUN BUDGET: static all-sparse or 19683x64 dense blocks (< 1 min);
+corner 729 dense (< 1 min); Arm C RK4 20 steps x 2 seeds on
+vectorized 729x729 (dense superoperator avoided — RK4 acts on the
+matrix directly, ~seconds).
+==============================================================================
