@@ -1,0 +1,119 @@
+==============================================================================
+REGISTER — r8.1: GEOMETRIC CONTROLS MACHINE-VERIFIED BEFORE ENTRY (the
+user's three experiments: circle removal; directed welding + circle;
+D-sweep). Script r81_geomctrl.py / r81_geomctrl.json (2.85 s, clean
+exit). §5 amended: new 5.3.1 (the bare-polygon foil vs. the inscribed
+circle); p2_sec5_draft.txt re-committed. Verdicts reported AS FOUND;
+the qualitative architecture of the incoming experiments SURVIVES,
+several specific numbers do NOT — all adjudications below.
+==============================================================================
+
+1. VERIFIED EXACT (incoming claims reproduced):
+   - G1 inside bare T_1: 1A Hilbert cross-ratio, 1B log-barrier l_2,
+     1C l_1-of-logs are EXACT METRICS (max violations 8.9e-16 / 0.0 /
+     2.0e-15 over 10,000 triples); boundary ladders diverge (ln(1/x)
+     law). "Removing the circle does not break metricity INSIDE one
+     cell" — CONFIRMED.
+   - G2 welding: CCW-directed shared-edge vectors cancel EXACTLY
+     (0.0 on both shared edges); interior walls drop from the
+     boundary (d(T1+T2+T3) = outer boundary only); welded union is
+     the convex trapezoid A-B-D-E with C the exact midpoint of E-A.
+     "Adding (existence, distance, direction) welds automatically" —
+     CONFIRMED, and registered as the exact topological mechanism of
+     Paper I's interface weld.
+   - G3 isotropy SIGN PATTERN: bare 1A/1C anisotropic (14.83% /
+     14.48% — matches the incoming ~15%); glued bare barrier strongly
+     anisotropic; inscribed-disk Beltrami-Klein EXACTLY isotropic
+     (spread 3.1e-16 over the full 360-degree sweep). "The circle
+     buys isotropy; isotropy survives gluing only with the circle" —
+     CONFIRMED.
+   - Tangency: the transfer point at exact circle tangency sits ON
+     both boundaries: Klein/log distance +infinity (machine inf).
+     Welding needs a delta-interior transfer = finite shared-edge
+     correlation K > 0 (Paper I's interface weld reading) — CONFIRMED
+     and SHARPENED: with the delta-transfer, cross-cell metricity is
+     an EXACT INHERITANCE from per-cell metricity (max violation
+     -1.1e-5 over 5,000 welded triples at delta = 0.01); transfer
+     cost ladder 0.78 -> 2.02 -> 3.18 = ln(1/delta) as
+     delta = 0.1 -> 0.01 -> 0.001.
+   - G4: C(D,2) = D ONLY at D = 3 among 1,2,3,4,5,7 (machine table;
+     D+1 = n^2 admits only (3,2),(8,3) — consistent with the
+     certified r53c C1 elimination); octonion associator witness
+     (e1 e2) e4 - e1 (e2 e4) = 2 ((e1 e2) e4 = +e7, e1 (e2 e4) =
+     -e7): D = 7 fails associativity BY MACHINE. "Geometry alone
+     works in every dimension; the algebraic direction closure
+     (Theorem II.1) is what selects D = 3" — CONFIRMED as the clean
+     division of labor, now carried in 5.3.1.
+
+2. NOT REPRODUCED AS STATED (incoming numbers corrected in 5.3.1;
+   the corrections are load-bearing, not cosmetic):
+   - (a) WELDED-UNION HILBERT TRIANGLE INEQUALITY: the incoming
+     "Hilbert max_viol = +4.44e-16 across T_1 -> T_2 -> T_3" is
+     CONTRADICTED for the naive construction: the machine gives
+     max_violation +5.24 over 5,000 generic cross-triangle triples.
+     The +4.44e-16 number is the SINGLE-CELL object (my G1: 8.9e-16,
+     same order — the cross-ratio restricted to one cell's
+     barycentrics). The correct statement (now in 5.3.1): the welded
+     Hilbert cross-ratio is a metric when the cross-ratio is taken on
+     chords of the CONVEX union's outer boundary (classic
+     convex-domain result); non-convex clusters fall to Theorem S2's
+     d_int. This SHARPENS the paper's commitment to d_int on general
+     welded clusters.
+   - (b) 1B SINGLE-CELL ISOTROPY: incoming "0.005% (circle at center
+     only)"; machine: 1.73% at the centroid (full sweep). The
+     log-barrier l_2 is NEARLY but not EXACTLY isotropic at the
+     centroid (its unit ball is the barycentric-exponential image,
+     not a circle); the EXACT circle belongs to the inscribed-disk
+     Klein metric and to the Hessian FORM (ds^2 = sum (d ln p_i)^2)
+     in the tangent space. Corrected wording in 5.3.1: "1B:
+     1.73% at the single-cell centroid — not the exact circle of
+     the Hessian idealization."
+   - (c) GLUED-BARRIER ANISOTROPY: incoming "82.57%"; machine:
+     93.8% (Hessian eigenvalues (-20.38, -7.37) at O_1 on the
+     4-facet hull). Order and direction confirmed (the outer
+     trapezoid's aspect ratio leaks into the interior); the
+     manuscript carries the machine number with the mechanism, not
+     the incoming percentage.
+   - (d) INCOMING "Welded-disk Klein max_viol = -2.63e-8 at exact
+     tangency": not attainable — exact tangency is +infinity under
+     the log family (machine). The -2.6e-8-class number belongs to
+     an implicit delta-interior transfer; with the transfer declared,
+     the machine gives -1.1e-5 (delta = 0.01) and the inheritance
+     proof (chain inequality reduces to per-cell metricity) makes
+     the epsilon irrelevant. Registered as the honest mechanism
+     rather than a magic epsilon.
+   - (e) The D-sweep table's per-D "FAIL" reasons (J_4 leaks into
+     Cl_4; J_5 = H_2(H)) are carried as DECLARED algebra (cited,
+     consistent with the certified r53c C2/C3 blocks), not
+     re-measured this round; the machine-measured items are the
+     C(D,2) = D table and the octonion associator.
+
+3. §5 AMENDED (p2_sec5_draft.txt): new subsection 5.3.1 "Geometric
+   Controls: the Bare-Polygon Foil vs. the Inscribed Circle"
+   carrying: the foil (metricity without the circle — the point
+   where the foil is RIGHT); the welding mechanism (directed sides =
+   Paper I's interface weld, topological form); the isotropy table
+   with machine numbers; the honest corrections (a)-(d); the
+   delta-transfer tangency law (ln(1/delta) divergence — the
+   infinite-evaluation law AT THE INTERFACE); the D-sweep division
+   of labor; and the physical-matching paragraph (rotational
+   isotropy of local frames, equivalence-principle quadratic line
+   element, spherical light cones; the circle is not an extra
+   postulate — H_2(C) positivity det(X) = x_0^2 - |s|^2 >= 0 carves
+   it algebraically; the bare polygon is the classical commutative
+   foil, dead by Paper I No-Go I-II). Baseline header and status
+   note updated (r8.1 in the chain; §1 last, with the
+   title-reconciliation instruction).
+
+4. LEDGER: one incoming-experiment correction cluster logged
+   ((a)-(d) above) — the pattern is the standing one (reported
+   numbers enter the manuscript only after machine reproduction;
+   sign patterns and mechanisms carried, un-reproducible numbers
+   replaced by the machine values WITH the mechanism that explains
+   the discrepancy). No new certificates claimed beyond
+   r81_geomctrl.json; J_3 = H_2(C) closure CITED from r53c
+   (6.28e-16, certified earlier).
+
+ARTIFACTS: r81_geomctrl.py / r81_geomctrl.json / p2_sec5_draft.txt
+(amended) / rcf_r81_register.txt (this entry) — one push.
+==============================================================================

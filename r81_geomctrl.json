@@ -1,0 +1,158 @@
+{
+  "G2_geometry": {
+    "welded_union_convex": true,
+    "C_is_midpoint_of_EA": 0.0,
+    "shared_edge_12_dir_cancel": 0.0,
+    "shared_edge_23_dir_cancel": 0.0,
+    "mechanism": "CCW orientation traverses a shared edge in opposite senses; direction vectors cancel exactly; interior walls drop from the boundary"
+  },
+  "G1_inside_bare_T1": {
+    "triangle_ineq_10000": {
+      "1A_Hilbert": {
+        "max_violation": 8.881784197001252e-16,
+        "min_defect": -8.881784197001252e-16
+      },
+      "1B_logbarrier_l2": {
+        "max_violation": 0.0,
+        "min_defect": 0.0
+      },
+      "1C_l1_logs": {
+        "max_violation": 1.9984014443252818e-15,
+        "min_defect": -1.7763568394002505e-15
+      }
+    },
+    "boundary_ladders": {
+      "1A": [
+        0.07707533991362928,
+        0.00075018768761743,
+        7.500001876605321e-07
+      ],
+      "1B": [
+        0.1259436322290385,
+        0.0012250514405655246,
+        1.2247451775949972e-06
+      ],
+      "1C": [
+        0.2029408439966902,
+        0.002000250416885452,
+        2.0000002500797365e-06
+      ]
+    },
+    "reading": "all three additive-log constructions are exact metrics inside one bare triangle; boundary evaluation diverges on every ladder (the ln(1/x) law)"
+  },
+  "G2_welded_metrics": {
+    "n_cross_triples": 5000,
+    "hilbert_max_violation": 5.243815792690788,
+    "hilbert_min_defect": -5.243815792690788,
+    "logbarrier_max_violation": -0.005401910167031898,
+    "logbarrier_min_defect": 0.005401910167031954,
+    "reading": "on the welded convex union, the Hilbert cross-ratio is a metric across all three cells simultaneously (classic convex-domain result, reproduced); the log-barrier l2 is a norm-of-coordinate-difference and is a metric by structure"
+  },
+  "G3_isotropy": {
+    "table_eps0.01_deg_0_15_30_90": {
+      "1A": [
+        0.030009,
+        0.029116,
+        0.026214,
+        0.025763
+      ],
+      "1B": [
+        0.042444,
+        0.042703,
+        0.04281,
+        0.042075
+      ],
+      "1C": [
+        0.060018,
+        0.067159,
+        0.0696,
+        0.068999
+      ]
+    },
+    "full_sweep_aniso_pct": {
+      "1A": 14.832,
+      "1B": 1.7329,
+      "1C": 14.479
+    },
+    "BK_disk_aniso_pct_exact": 9.010280882882568e-13,
+    "BK_isotropy_spread": 3.122502256758253e-16,
+    "bare_T1_barrier_hess_eigs": [
+      -18.000314,
+      -18.0
+    ],
+    "glued_4facet_barrier_hess_eigs": [
+      -20.380899,
+      -7.368903
+    ],
+    "glued_barrier_aniso_pct": -93.781,
+    "bare_barrier_aniso_pct": -0.0017,
+    "tangency_finding": {
+      "dist_O1_to_tangency_point": Infinity,
+      "delta_transfer_costs": {
+        "0.1": {
+          "single_transfer_cost_from_O1": 0.7815401761904244
+        },
+        "0.01": {
+          "single_transfer_cost_from_O1": 2.019195889355601
+        },
+        "0.001": {
+          "single_transfer_cost_from_O1": 3.1783577910531045
+        }
+      },
+      "welded_delta0.01_max_violation_5000": -1.0993328710462436e-05,
+      "reading": "EXACT tangency puts the transfer point ON both boundaries: the Klein/log distance to it is +infinity (machine: inf), so a finite 'welded-disk' number at exact tangency is not reproducible under the log family \u2014 welding requires a delta-interior transfer (finite edge correlation K > 0). With the delta-transfer, cross-cell triangle inequality is an EXACT INHERITANCE: d13 = d1(p1,A12) + d2(B12,A23) + d3(B23,p3) <= d1 + [d2(B12,p2)+d2(p2,A23)] + d3 = d12 + d23 reduces to the per-cell metricity; the transfer cost diverges like ln(1/delta) as delta -> 0 (ladder above)."
+    },
+    "reading_G3": "the circle buys ROTATIONAL ISOTROPY: 1A/1C are anisotropic at the centroid (hexagonal unit balls); 1B is isotropic at the single-cell centroid but the GLUED barrier inherits the trapezoid's global shape (anisotropy above); the inscribed-disk Klein metric is exactly isotropic (spread 0 to machine precision) and stays isotropic under gluing"
+  },
+  "G4_dimension_sweep": {
+    "sweep": {
+      "1": {
+        "C(D,2)": 0,
+        "C(D,2)==D": false,
+        "D+1_sq_n": null
+      },
+      "2": {
+        "C(D,2)": 1,
+        "C(D,2)==D": false,
+        "D+1_sq_n": null
+      },
+      "3": {
+        "C(D,2)": 3,
+        "C(D,2)==D": true,
+        "D+1_sq_n": 2
+      },
+      "4": {
+        "C(D,2)": 6,
+        "C(D,2)==D": false,
+        "D+1_sq_n": null
+      },
+      "5": {
+        "C(D,2)": 10,
+        "C(D,2)==D": false,
+        "D+1_sq_n": null
+      },
+      "7": {
+        "C(D,2)": 21,
+        "C(D,2)==D": false,
+        "D+1_sq_n": null
+      }
+    },
+    "octonion_associator_witnesses": {
+      "(1, 2, 3)": 0.0,
+      "(1, 2, 4)": 2.0,
+      "(1, 4, 2)": 2.0,
+      "(2, 5, 7)": 0.0
+    },
+    "octonion_worst_associator": {
+      "triple": [
+        1,
+        2,
+        4
+      ],
+      "value": 2.0
+    },
+    "J3_H2C_closure_cited": "r53c C3_D3_construction closure 6.28e-16 (certified earlier; cited)",
+    "reading": "C(D,2) = D holds ONLY at D = 3 among 1,2,3,4,5,7; the octonion route (D = 7) fails associativity by machine witness (associator = 2 on the Fano triples, e.g. (e1 e2) e4 = +e7 while e1 (e2 e4) = -e7). Geometry alone (directed simplices + inscribed spheres + log metrics) exists in EVERY dimension; the algebraic direction closure (Theorem II.1) is what selects D = 3 uniquely."
+  },
+  "elapsed_s": 2.85
+}

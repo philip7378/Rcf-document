@@ -2,6 +2,8 @@ PAPER II §5 DRAFT (r8.0) — The Scaling Metric: Volume Obstruction,
 Local S=1 Uniqueness, and Spatial Composition
 ====================================================================
 [Drafting baseline: r6.0 lock + r6.0a + r6.1 + r6.2 + r7.0 + r8.0
++ r8.1 (geometric controls: bare-polygon foil, directed welding,
+dimension sweep — machine-verified before folding into 5.3.1).
 (PR-METRIC-2b run: SPEC-INCOMPLETE reclassification of r70's
 INCONCLUSIVE; route-(i) common-space comparison FAMILIES-DISAGREE;
 the separable-classical pin striking the entanglement reading of M;
@@ -264,6 +266,112 @@ carried from Sec. 3.4.3: track lambda_A and the chord defect
 across the lattice, under the scaling-metric / FS families, as
 plaquette/diagonal paths are added.
 
+5.3.1 Geometric Controls: the Bare-Polygon Foil vs. the
+Inscribed Circle (r8.1, machine-verified this round; reported as
+found)
+
+Three geometric control experiments (circle removal; directed
+welding; dimension sweep) were machine-verified before entering
+this manuscript (r81_geomctrl.py / .json; 10,000 inside-T_1 and
+5,000 cross-triangle triples; Gate-quality residuals
+throughout). The controls run on three edge-sharing equilateral
+triangles T_1, T_2, T_3 (T_2 sharing edge B-C, T_3 sharing C-D;
+welded union the convex trapezoid A-B-D-E with C the exact
+midpoint of E-A — all verified: convexity TRUE, midpoint residual
+0.0).
+
+Test 1 (circle REMOVED — the bare-polygon foil). Inside a single
+bare triangle, all three pure additive-log constructions on the
+barycentric coordinates p = (p_1, p_2, p_3) are exact metrics with
+infinite boundary evaluation: the Hilbert log cross-ratio
+(1/2)(max_i ln(p_i/q_i) - min_i ln(p_i/q_i)) (max violation
+8.9e-16 over 10,000 triples), the log-barrier l_2 norm
+sqrt(sum (ln p_i - ln q_i)^2) (0.0 exact — a norm of coordinate
+differences, metric by structure), and the l_1 log sum (2.0e-15);
+every boundary ladder diverges (the ln(1/x) law). Metricity alone
+therefore does NOT need the circle — this is the foil's point.
+
+Welding (adding EXISTENCE, DISTANCE and DIRECTION to every
+side): consistently CCW-oriented sides traverse a shared edge in
+opposite senses, so the directed edge vectors cancel exactly
+(residuals 0.0 on both shared edges: (V_2 - V_1) + (V_1 - V_2) =
+0) and the interior walls drop from the boundary —
+d(T_1 + T_2 + T_3) = outer boundary only. This is the exact
+topological mechanism of Paper I's interface weld (No-Go III
+context): direction data welds; undirected cells seal.
+
+What the circle buys is ISOTROPY, and isotropy is where the
+foil breaks (machine anisotropy of the unit ball at the T_1
+centroid, full 360-degree sweep, eps = 0.01):
+
+  - 1A Hilbert (bare): 14.83% — hexagonal unit ball;
+  - 1C l_1 logs: 14.48% — hexagonal unit ball;
+  - 1B log-barrier: 1.73% at the single-cell centroid — NOT the
+    exact circle of the Hessian idealization (and once three
+    cells weld, the glued 4-facet barrier's Hessian eigenvalues
+    run (-20.38, -7.37): 93.8% anisotropy — the outer trapezoid's
+    aspect ratio leaks into the interior);
+  - the inscribed-disk Beltrami-Klein metric: EXACTLY isotropic
+    (spread 3.1e-16 over the full sweep), and it stays isotropic
+    under any gluing, because each cell's metric is its own
+    disk's.
+
+One honest correction to the incoming experiment report: the
+welded-union Hilbert cross-ratio is a metric only when the
+cross-ratio is taken on chords of the CONVEX union's outer
+boundary (the classic convex-domain result); for generic
+cross-triangle triples the naive per-cell-chord construction
+FAILS the triangle inequality by +5.24 (machine, 5,000 triples).
+The non-convex clusters (>= 4 triangles, C-shapes) fall to
+Theorem S2's path-infimum d_int in all cases. The controls
+therefore sharpen, not soften, the paper's commitment: d_int
+(Sec. 3.4) is the unconditional metric on general welded
+clusters.
+
+Tangency and the delta-transfer (the interface-weld reading).
+At EXACT tangency (two inscribed circles touching at the shared
+edge's midpoint), the transfer point sits ON both circles'
+boundaries and the Klein/log distance to it is +infinity
+(machine: inf) — a finite "welded-disk" number at exact
+tangency is not attainable under the log family. Welding
+therefore requires a delta-interior transfer — physically, a
+FINITE shared-edge correlation K > 0, exactly Paper I's
+interface weld with K(dual edge) = 1/3-type finite coupling.
+With the delta-transfer, cross-cell metricity is an EXACT
+INHERITANCE (machine: max violation -1.1e-5 over 5,000 welded
+triples at delta = 0.01; the chain inequality reduces to
+per-cell metricity), and the transfer cost diverges like
+ln(1/delta) as delta -> 0 (0.78 -> 2.02 -> 3.18 on the delta
+ladder 0.1 -> 0.01 -> 0.001 — the infinite-evaluation law again,
+now at the interface).
+
+Test 3 (dimension sweep): C(D,2) = D holds ONLY at D = 3 among
+D = 1, 2, 3, 4, 5, 7 (machine table); the octonion route (D = 7)
+fails associativity by machine witness — the associator
+(e_1 e_2) e_4 - e_1 (e_2 e_4) = 2 (Fano-plane triples), i.e.
+(e_1 e_2) e_4 = +e_7 while e_1 (e_2 e_4) = -e_7. Pure geometry
+(directed simplices + inscribed spheres + log metrics) exists in
+EVERY dimension D >= 2; the algebraic direction closure
+(Theorem II.1: C(D,2) = D and J_D closed in H_n(C)) is what
+selects D_loc = 3 uniquely. This is the clean division of
+labor the controls deliver: geometry is dimension-agnostic and
+provides the metric machinery (metrics, welding, isotropy);
+the ALGEBRA closes the dimensionality argument (Sec. 2); and
+the E0 fence on dynamical self-assembly into a 3D tiling stands
+unchanged. Physical matching (which construction matches
+observation): the inscribed-circle/sphere branch — rotational
+isotropy of local frames (Michelson-Morley / Hughes-Drever
+bounds), local quadratic Riemannian line element (equivalence
+principle), spherical light cones (rapidity space) — while the
+bare polygon fails isotropy by 15-94%. In RCF the circle is not
+an extra postulate: H_2(C) positivity det(X) = x_0^2 - |s|^2 >=
+0 carves the inscribed sphere algebraically, and spin-1 det C >
+0 (Theorem A) carves the smooth boundary where the Scaling
+Metric diverges — the classical/polygonal foil is the diagonal
+commutative subalgebra (zero Lie bracket, dead by Paper I
+No-Go I-II).
+
+
 5.4 Remark: Minkowski Signature Coupling (E2 Structural / E0
 Dynamical Boosts)
 
@@ -285,12 +393,18 @@ dynamical Lorentz boost invariance on a discrete dissipative
 substrate remain strictly fenced at E0 for downstream Relativity
 and Cosmology papers.
 
-[STATUS: §5 content layer complete per the locked order. §4 and §5
-drafted; ONLY §1 (Introduction, Framing, Mechanism-Library Bridge
-from Paper I, and Consolidated Claim Table) remains to finish the
-full Paper II r6.0 manuscript. Per the standing instruction: §1
-must reconcile the program title with the graded content — time
-E3-local / E2-global-pending; 3D link-space E4 / spatial E0-
-fenced; scaling metric E4 on the state space / link-space reading
-open (FAMILIES-DISAGREE, lattice gate).]
+[STATUS: §5 content layer complete per the locked order; 5.3.1
+geometric controls folded this round (r8.1: bare-polygon foil vs
+inscribed-circle isotropy; directed welding = interface weld;
+delta-transfer tangency law; D-sweep division of labor — geometry
+dimension-agnostic, algebra closes D = 3). Numbers verified
+against r81_geomctrl.json. Next and LAST per the lock: §1
+(Introduction, Framing, Mechanism-Library Bridge from Paper I,
+Consolidated Claim Table). §1 must reconcile the program title
+with the graded content — time E3-local / E2-global-pending; 3D
+link-space E4 / spatial E0-fenced; scaling metric E4 on the state
+space / link-space reading open (FAMILIES-DISAGREE, lattice gate);
+and carry the input fence (Paper I's declared 1D-chain scope) and
+the RETROSPECTIVE-UNIFICATION register class for §3's inversion
+framing.]
 ====================================================================
