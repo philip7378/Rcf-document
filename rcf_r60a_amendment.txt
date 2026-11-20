@@ -1,0 +1,88 @@
+==============================================================================
+AMENDMENT — r6.0 REGISTER, per the r5.3e T4 correction and the r6.1
+PR-LINK-1 execution. The r6.0 lock (rcf_r60_register.txt) stands;
+these lines amend specific entries WITHOUT unlocking drafting.
+
+A1. §5.3 (Inter-relation link distance) — AMENDED WORDING:
+    OLD: 'per-axis exact multiplicative decay K_a(0,n) = (2/3)^n ->
+    additive 1D log-distance' (the r5.3 hook-1 inheritance).
+    NEW: TWO certified objects, both stated:
+    (i)  The STATIC KERNEL correlation: <S_z^0 S_z^n>_K = (-1)^n
+         4/3^(n+1) — exact closed form (r5.3e T4 machine-confirmed
+         at L=6,7; multiplicative base EXACTLY 1/3 per bond, sign
+         alternating; the additive 1D log-distance d(n) = n ln 3).
+         [r6.1 CHK-3a certificate.]
+    (ii) The Paper I Thm-8 DIPOLE CHANNEL eigen-rate: r = 2/3 per
+         reconciled locality (the operator-blind extension map —
+         a RATE object, not a kernel correlation; log-distance
+         ln(3/2) per locality; FENCED as the rate object).
+    The d_scale = l_0 sqrt(sum (ln K_mu)^2) construction and the
+    super-multiplicativity statement are UNCHANGED (they apply to
+    the K objects' log-distances consistently under either
+    convention; prose must say which convention a given sentence
+    uses).
+
+A2. §7.1 / PR-LINK-1 — EXECUTED (see rcf_r61_register.txt): the
+    gate ran on the T4-corrected sheet; verdict SPLIT
+    (closure-at-3 + preservation certified at E3-corner; junction
+    cocycle defect +1.168796 measured, exactly C3-symmetric,
+    super-additive cross-axis distance). §3's link-frame sentence
+    upgrades to E3-corner; the junction defect is the new fenced-
+    open object for the multi-vertex lattice gate (6.1).
+    PR-LINK-3D (7.2) is FOLDED INTO this certificate (the stub
+    Gram is exactly (2/3)I on the bare kernel; det > 0; non-
+    degenerate in the coupled frame) — no separate gate.
+
+A3. §3 NEW LINE (3.7, the PR-LINK-1 certificate):
+    LINK-FRAME CLOSURE AT THE CORNER (E3): the three link
+    directions close as a rank-3, exactly isotropic frame on the
+    intact S=1 substrate — bare edge kernel: stub Gram = (2/3)I
+    EXACTLY (an exact Cartesian triple, stubs exactly
+    uncorrelated); forbid-J=3 kernel: the Gram is exactly
+    C3-circulant (diag 0.63209308 x3, offdiag -0.05110552 x3,
+    permutation-commutation 9.6e-16) — the vertex constraint
+    COUPLES the Cartesian triple isotropically; the H_vtx-coupled
+    frame preserves rank 3 (robust to the dynamical coupling).
+    Preservation gates all PASS (GATE-P/GATE-G/leak/FF); V8 kernel
+    dim 64 (the r53c_static.py '9x2/8D' label was a stale comment;
+    the machine object was always 729 x 64). JUNCTION COCYCLE
+    DEFECT: +1.168796 exactly C3-symmetric (barycenter anchor;
+    super-additive: direct stub-stub distance 4.4111 > additive
+    via-center 3.2423) — OPEN, the quantitative content of '3D
+    closure is non-trivial'; natural observable for the
+    multi-vertex lattice gate.
+    FENCE: corner-level E3 witness; the Addition-1 individuation
+    bridge (position = residual relational structure) has its
+    first positive instance; NOT a multi-vertex or continuum
+    statement (6.1-6.3 E0 fences untouched).
+
+A4. §1.3 (Paper-I generativity register) — ENTRY #2 ADDED:
+    'Lorentz symmetry candidate' (the audit's Addition-2
+    placement): Tier-1 E4 hooks machine-verified INSIDE Paper II's
+    certified object (r5.3e T1: the H_2(C) determinant det(X) =
+    x0^2 - |s|^2 is the exact (1,3) cone; SL(2,C) congruence
+    preserves det to 2.7e-13 = SO^+(1,3); SU(2) fixes x0; the
+    positive-Hermitian boost matches Lambda(eta) to 3.8e-15).
+    Tier-2 (sigma = -1 via the null-horizon argument combining
+    emergent time + the scaling metric) E2-structural. Tier-3
+    (dynamical boosts, the scalar-to-time bridge) E0 downstream.
+    PR-METRIC-1 pre-registered (not executed; deferred until the
+    time side is combinable). Downstream consumers: Relativity/
+    Cosmology papers; corpus hooks: Front.docx §5.3 Type-Sign
+    Coupling; RCF_Section_5 ADM ansatz with alpha = 1/(1+lambda B)
+    (Minkowski only in the zero-burden alpha -> 1 limit, after
+    the dimension bridge).
+
+A5. §4.1 fence (No-Go VII) — UNCHANGED (the Addition-1 framing
+    sharpens 'direction' but alters no certified scope).
+
+A6. BUG LEDGER — no new entries (the two sheet adjudications in
+    rcf_r61_register.txt are sheet-design corrections caught by
+    the run, both stricter; the r5.3e audit-slip note is an
+    audit-side arithmetic slip, non-load-bearing, registered in
+    rcf_r53e_register.txt item 3).
+
+Drafting order unchanged: §2 -> §3 -> §4/§5 -> §1 last. §3 now
+carries the E3-corner link-frame paragraph (A3) with the junction
+defect fenced open.
+==============================================================================

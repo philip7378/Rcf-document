@@ -1,0 +1,136 @@
+==============================================================================
+REGISTER — PR-LINK-1 EXECUTION REPORT (r6.1): THE LINK-LEVEL 3D FRAME
+(executed per the frozen pr_link1_sheet.txt with pinned operational
+definitions; Gate S PASS leading; script r61_link1.py, results
+r61_link1.json; hashes on freeze of this entry)
+==============================================================================
+
+1. THE VERDICT — SPLIT (the r5.3b precedent class; the frozen outcome
+   space's PASS clause was NOT met, and its failure mode is not one of
+   the enumerated negatives either — the split is the honest read):
+   - CLOSURE-AT-3: CERTIFIED at the corner (E3, machine-witnessed on
+     the certified composite-vertex corner; upgrades §3's link-frame
+     sentence).
+   - S=1 PRESERVATION: CERTIFIED (all CHK-2 gates PASS; the frame
+     construction broke no bond content).
+   - JUNCTION COCYCLE: OPEN — the triangle defect at the junction is
+     MEASURED, nonzero, exactly C3-symmetric (+1.168796, barycenter
+     anchor). The 1D (on-axis) cocycle closes exactly; the junction's
+     does not. Registered as the link-level analogue of the r5.1d
+     two-bond cocycle failure — now with an exact symmetric number.
+
+2. CHK-1 — THE STUB FRAME (closure at exactly 3).
+   Three frames measured (stub profiles Phi_mu(X) = <S_z^stub S_z^X>
+   as functions on the kernel; displacement profiles Delta_mu =
+   Phi_mu - Phi_center):
+   - BARE EDGE KERNEL V_64 (the L=2 per-axis kernel is FOUR-
+     dimensional — J=0 (1) + J=1 (3) per arm pair, so V_8's old
+     '8' label in r53c_static.py was a stale comment; the machine
+     object is 729 x 64 and always was; kernel_dim 64 confirmed):
+     stub Gram = (2/3) I EXACTLY — the three stubs are EXACTLY
+     UNCORRELATED and EXACTLY EQUIVALENT: the bare link frame is an
+     exact isotropic Cartesian triple BEFORE any vertex constraint.
+     Displacement rank 3 (sv 3.084 / 0.786 / 0.786).
+   - FORBID-J=3 CORNER KERNEL K_32: stub Gram is EXACTLY C3-CIRCULANT
+     (diag 0.63209308 x3, offdiag -0.05110552 x3; permutation
+     commutes with rho32 to 9.6e-16): the vertex constraint COUPLES
+     the Cartesian triple isotropically. Spectrum {0.683199 x2,
+     0.529882 x1} — the 2+1 irrep split of exact C3 symmetry, NOT
+     broken isotropy (sheet adjudication 1: my frozen criterion
+     'eigenvalues within 1e-9' was wrong — an exactly C3-symmetric
+     Gram NEVER has three equal eigenvalues unless off-diagonals
+     vanish; the correct criterion, EQUAL DIAGONALS + EQUAL OFF-
+     DIAGONALS, PASSES exactly). Displacement rank 3 (2.224 /
+     0.827 / 0.827).
+   - H_VTX-COUPLED FRAME (M + 0.01 H_vtx, lowest 32 states):
+     rank 3 (2.203 / 0.825 / 0.825), circulant structure preserved.
+     The frame is robust to the dynamical coupling.
+   READING (the §3 sentence this certifies): at the certified
+   composite-vertex corner, the three link directions close as a
+   rank-3, exactly isotropic (C3-circulant) frame on the static
+   kernel, the bare frame is an exact Cartesian triple, and the
+   vertex constraint and the dynamical coupling both preserve the
+   closure. The link-frame closure is REAL at the corner — and it
+   is exactly 3, not 2 and not more.
+
+3. CHK-2 — PRESERVATION (all PASS, the standing battery at work):
+   GATE-P: P^(0) Tr 81 (idem 5.4e-15), P^(1) Tr 243 (7.2e-15),
+   P^(2) Tr 405 (3.9e-15), P_vtx^(3) Tr 189 (8.8e-15) — every
+   projector in use is an exact projector with its declared trace.
+   GATE-G: P_vtx^(3) active sites = (0, 2, 4) exactly. Leak
+   spectrum on the corner: min 0, max 3.9375, non-negative.
+   Frustration-free residual 1.96e-16. No bond content was broken
+   anywhere in the frame construction — the distance and direction
+   objects are read OFF the intact S=1 substrate, exactly as the
+   Addition-1 architecture requires.
+
+4. CHK-3 — THE COCYCLE.
+   (a) ON-AXIS (1D): the static kernel correlation has the exact
+       infinite-chain closed form c(n) = (-1)^n 4/3^(n+1) —
+       multiplicative base EXACTLY 1/3 per bond, sign alternating
+       (finite chains deviate at the tail by finite-size effects
+       that vanish L=6 -> 7; deviations at n=1..3 are 5e-6..7e-5 at
+       L=6, 1e-6..8e-6 at L=7, converging to the closed form). THE
+       1D LOG-DISTANCE d = n ln 3 IS EXACTLY ADDITIVE: the 1D
+       cocycle closes. [Sheet adjudication 2: my sheet's ground-
+       truth '(1/3)^n' omitted the 4/3 prefactor — r5.3e T4 caught
+       the object confusion BEFORE the run; the multiplicative base
+       is what matters and it is exact.]
+   (b) JUNCTION TRIANGLE: with the barycenter anchor (symmetric —
+       the single-register anchor's 'both-signed' defect was MY
+       anchoring artifact, corrected this round), the three legs
+       are exactly equal, c(bary, stub) = -0.197674 x3, and the
+       defect d(stub_i, stub_j) - [d(stub_i, bary) + d(bary,
+       stub_j)] = +1.168796 on ALL THREE triangles, exactly
+       C3-symmetric. The triangle inequality HOLDS (direct >
+       via); what fails is ADDITIVE CLOSURE: the stub-stub
+       distance (4.4111) is strictly larger than the additive
+       1D-chain law through the center predicts (3.2423). The
+       junction is FARTHER than the 1D law composes — the
+       cross-axis distance is SUPER-ADDITIVE at the vertex.
+       Registered as the link-cocycle question's honest first
+       number: nonzero, symmetric, structural.
+   (c) The Thm-8 channel-rate object (r = 2/3 per locality,
+       log-distance ln(3/2)): reported, fenced as the extension-map
+       eigen-rate — NOT a kernel correlation (r6.0 §5.3's
+       '(2/3)^n multiplicative decay' wording is amended by
+       rcf_r60a_amendment.txt this round; the r5.3 hook-1 line
+       inherits the same correction).
+   HONEST SCOPE: the frozen PASS clause required 'defect = 0 or
+   strictly reduced vs the 2-link reference'. Measured: +1.1688,
+   no 2-link reference measured this run. The clause is not met.
+   The junction cocycle stays OPEN — a target for the multi-vertex
+   lattice gate, where the defect can be compared across junction
+   counts.
+
+5. CHK-4 — GUARDS: CLEAN (no ambiguity fired; the two sheet
+   adjudications above were MY sheet-design corrections, both
+   caught by the run itself and both in the direction of stricter
+   honesty).
+
+6. WHAT THIS MEANS FOR THE ROUTE (r6.0 ledger update):
+   - §3's link-frame sentence upgrades to E3-corner: 'the three
+     link directions close as an exactly isotropic rank-3 frame at
+     the certified composite-vertex corner (bare Cartesian triple;
+     vertex constraint and dynamical coupling both preserve it)'.
+   - The Addition-1 architecture is now machine-witnessed at its
+     first instance: distance and direction read off the intact
+     S=1 links DO close at 3 at the corner — the individuation
+     argument's bridge hypothesis has its first positive witness.
+   - The junction cocycle defect (+1.1688, super-additive
+     cross-axis distance) is the NEW open object — it is the
+     quantitative content of '3D closure is non-trivial' and the
+     natural observable for the multi-vertex lattice gate (6.1).
+   - PR-LINK-3D's det C_stubs question is ANSWERED POSITIVE at the
+     corner by CHK-1 (the stub Gram is exactly (2/3)I on the bare
+     kernel; det > 0 trivially; non-degenerate in the coupled
+     frame) — folded into PR-LINK-1's certificate as the sheet
+     allowed; no separate gate needed.
+   - Drafting (§2 -> §3 -> §4/§5 -> §1 last) now opens with §3's
+     link-frame paragraph writable at E3-corner and the junction
+     defect as the fenced-open object.
+
+ARTIFACTS: pr_link1_sheet.txt / r61_link1.py / r61_link1.json /
+rcf_r61_register.txt (this entry) / rcf_r53e_register.txt /
+rcf_r60a_amendment.txt — one push.
+==============================================================================

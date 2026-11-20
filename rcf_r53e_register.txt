@@ -1,0 +1,121 @@
+==============================================================================
+REGISTER — r5.3e: AUDIT SIGN-OFF ON 5ce7601 PROCESSED + THE AUDIT'S
+TWO NEW CLAIMS MACHINE-VERIFIED BEFORE ADOPTION + THE T4 CORRECTION.
+Script r53e_verify.py / r53e_verify.json (Gate S PASS leading).
+==============================================================================
+
+1. AUDIT ACCEPTANCE — 5ce7601 ACCEPT IN FULL.
+   Bug #11d closure, GATE-P standing law, the spillover family, the
+   8/343 analytic row, the middle-line adjudication, the r6.0 lock:
+   all stand as registered in r5.3d. No re-adjudication needed.
+
+2. THE AUDIT'S TIER-1 (E4) LORENTZ CLAIM — VERIFIED, ADOPTED.
+   The audit's sharpest new claim: the (1,3) cone is ALREADY inside
+   Theorem II.1's certified object. Machine-verified (r53e_verify.py
+   T1, 200 random draws + 100 boost draws):
+   - det(x0 I + s.sig) = x0^2 - |s|^2: max dev 3.6e-15.
+   - PSD cone <=> det >= 0 & x0 >= 0: equivalence exact on all draws
+     (the forward light cone).
+   - A in SL(2,C): det(A X A^dag) = det(X): max dev 2.7e-13 (the
+     SO^+(1,3) action is exact).
+   - SU(2) orbit fixes x0 (the SO(3) rotations): max dev 1.2e-15.
+   - Hermitian positive A = exp((eta/2) n.sig): the induced (x0,s)
+     transform matches the explicit Lorentz boost Lambda(eta) to
+     3.8e-15 (the audit declared 6.3e-16 on its own draw; same
+     scale, PASS).
+   ADOPTED as GENERATIVITY REGISTER ENTRY #2, Tier 1 (E4
+   algebraic hook, with the audit's own fences): the H_2(C)
+   determinant IS a (1,3) Lorentz cone with the exact SL(2,C)/Z_2
+   ~ SO^+(1,3) automorphism action; Tier 2 (the emergent-time +
+   scaling-metric combination forcing sigma = -1 via the null
+   horizon) stays E2-structural; Tier 3 (dynamical boost
+   invariance, the scalar-to-time bridge) stays E0-downstream
+   (Relativity/Cosmology papers). The T1 numbers make Entry #2's
+   hooks machine-certified INSIDE Paper II's own certified object.
+   PR-METRIC-1 pre-registered (NOT executed; the audit's optional
+   gate: state-space x time Lorentzian signature, derivable-vs-
+   postulated sign; outcome space POSITIVE-DERIVABLE / POSITIVE-
+   POSTULATED / NEGATIVE / INCONCLUSIVE; deferred until the time
+   side is combinable — exactly as the audit sequenced it).
+
+3. THE AUDIT'S BUG #11d RESTATEMENT — identity verified, ONE SLIP
+   FOUND AND REGISTERED (non-load-bearing).
+   - The operator identity is RIGHT: (SS+I)/2 = P^(2) - (1/2)
+     P^(0) to 1.5e-15 at both N=1 (pair) and N=6 (machine: spectrum
+     {1, 0, -1/2} on the J sectors, exactly the audit's statement).
+   - The audit's idempotency-defect FORMULA has a norm-convention
+     slip: '|| (3/4) P^(0) ||_F^2 = (9/16) Tr P^(0) = 6.75 at
+     Tr P^(0) = 12' — the trace is 12 only on SOME support (9D
+     pair-spectral gives 1; the 6-site full space gives 81), and
+     with Tr = 12 the squared norm would be 6.75 BUT my machine
+     value 6.75 was the UNSQUARED ||.||_F at Tr P^(0) = 81
+     (= ||(3/4) P^(0)||_F = (3/4) sqrt(81) = 6.75 EXACTLY; the
+     squared form gives 45.5625). Both routes to '6.75' exist but
+     the audit's stated one is not the object my r5.3d measured.
+     REGISTERED as the audit's first arithmetic slip — caught by
+     the standing discipline (verify every number before adopting
+     it, both directions), zero consequence for any certified
+     claim (the projector verdict is unchanged under either
+     convention), and a neat symmetry: the audit catches my bugs,
+     the discipline catches the audit's slips. E4 mutual-check
+     machinery working as designed.
+
+4. T4 — THE OBJECT CORRECTION (load-bearing for PR-LINK-1's sheet,
+   caught BEFORE the gate ran).
+   The audit's route text (and r6.0 §5.3's line, inherited from the
+   r5.3 hook-1 entry) says 'Paper I Thm 8 gives exact multiplicative
+   decay K_a(0,n) = (2/3)^n'. Machine check on the actual AKLT
+   kernel: <S_z^0 S_z^n>_K = (-1)^n 4/3^(n+1) (closed form
+   confirmed at L=6,7; e.g. c(1) = -4/9, c(2) = 4/27) — the KERNEL
+   correlation has multiplicative base 1/3, NOT 2/3. Paper I Thm
+   8's 2/3 is the DIPOLE CHANNEL's extension eigen-rate (the
+   operator-blind extension map over reconciled localities —
+   'the pure-dipole chain attenuates at 0.666667 per locality'),
+   a RATE object, not a static kernel correlation. TWO different
+   certified objects; the distance definition must say which one
+   it uses. CORRECTED IN THE PR-LINK-1 SHEET before the run: D-a =
+   the kernel correlation (base 1/3, sign-alternating, closed
+   form (-1)^n 4/3^(n+1)); D-b = the Thm-8 channel rate (2/3 per
+   locality, ln(3/2) per locality), reported and fenced as the
+   rate object. r6.0 §5.3's wording is amended by
+   rcf_r60a_amendment.txt (the '(2/3)^n' clause becomes the
+   channel-rate clause; the kernel-correlation clause carries the
+   exact closed form; the d_scale and super-multiplicativity
+   statements are UNCHANGED — they are statements about the K
+   objects' log-distances, and both conventions feed them
+   consistently).
+
+5. ADDITION 1 (position = relational individuation) — ADOPTED WITH
+   THE SHARPENING, then machine-witnessed by PR-LINK-1 this same
+   round: relations primitive; position = the residual relational
+   structure; distance/direction its two axes. The §1 conceptual
+   bridge (written last) and the PR-LINK-1 operational definitions
+   both carry it. The first witness: the corner's three link
+   directions DO close as an exactly isotropic rank-3 frame on the
+   intact S=1 substrate (r6.1 CHK-1) — the bridge hypothesis now
+   has a positive corner instance at E3.
+
+6. ADDITION 2 (Minkowski/Lorentz) — REGISTERED per the audit's
+   placement, with the corpus hooks the second seat named
+   (Front.docx §5.3 Type-Sign Coupling; RCF_Section_5's ADM ansatz
+   ds^2 = -alpha(B)^2 c^2 d sigma^2 + h_ij dx^i dx^j with alpha =
+   1/(1+lambda B)): Paper III queue entry, NOT a Paper II claim;
+   Generativity Entry #2 (T1-verified hooks); PR-METRIC-1 pre-
+   registered, deferred. The three fences stand: scaling metric is
+   Riemannian on state space (not spacetime); Minkowski only in
+   the zero-burden alpha -> 1 limit after the dimension bridge;
+   boosts E0 behind GAP-4.6.3. The T1 verification strengthens
+   Entry #2's Tier-1 content without touching any fence.
+
+7. SHEET ADJUDICATIONS (PR-LINK-1, registered in rcf_r61_register):
+   isotropy criterion corrected (exactly C3-circulant Gram splits
+   2+1 by symmetry — equal diagonals + equal off-diagonals is the
+   correct test, and it passes exactly); on-axis closed form
+   carries a 4/3 prefactor my sheet omitted. Both caught by the
+   run, both in the stricter direction.
+
+ARTIFACTS: r53e_verify.py / r53e_verify.json /
+rcf_r53e_register.txt (this entry) / pr_link1_sheet.txt /
+r61_link1.py / r61_link1.json / rcf_r61_register.txt /
+rcf_r60a_amendment.txt — one push.
+==============================================================================

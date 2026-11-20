@@ -1,0 +1,116 @@
+==============================================================================
+PR-LINK-1 PRE-EXECUTION SHEET (frozen BEFORE the run; hashes on save;
+the r6.0 register's item 7.1 gate). EXECUTION: r61_link1.py.
+==============================================================================
+
+0. THE GATE QUESTION (from r6.0 item 7.1 + r5.3d item 5).
+   Does the LINK algebra of the certified composite-vertex corner
+   close at exactly 3 independent directions, while preserving the
+   S=1 bond content at every link, with the direction structure
+   consistent across overlapping links? The definitions below are
+   PINNED (the r5.3d requirement: the question must be well-posed
+   before it is asked).
+
+1. OPERATIONAL DEFINITIONS (pinned; per Addition 1, adopted with the
+   sharpening: relations are primitive; position is the residual
+   relational structure; distance and direction are its two axes).
+   LINK: an AKLT bond (i, j) with its S=1 existence content
+   P^(<=1) = I - P^(2) restricted to the certified kernel. On the
+   certified corner (r53c_static.py layout): N=6, vertex registers
+   (0,2,4), stubs (1,3,5), bonds (0,1), (2,3), (4,5), H_vtx =
+   S_0.S_2 + S_2.S_4 + S_4.S_0.
+   DISTANCE (two candidate objects — BOTH pinned and BOTH reported;
+   the closure question is asked of each; the r5.3e T4 correction is
+   load-bearing here):
+   (D-a) d_corr(i, j) = -ln |K_corr(i, j)| with K_corr the STATIC
+         kernel two-point correlation <S_z^i S_z^j>_K (machine
+         ground truth r5.3e T4: on-axis |K_corr(n)| = (1/3)^n,
+         SIGN-ALTERNATING (c_1 = -4/9, c_2 ~ +2/15...); the additive
+         log-distance d(n) = n ln 3 EXACT per bond — a certified,
+         discrete, exactly-multiplicative distance.
+   (D-b) The Thm-8 CHANNEL rate object: the dipole channel's
+         extension eigen-rate r = 2/3 per locality (Paper I Thm 8:
+         the operator-blind extension map, NOT a kernel correlation
+         — the r6.0 §5.3 wording "(2/3)^n multiplicative decay" is
+         hereby corrected to the channel-rate object; amendment
+         registered). Log-distance per locality = ln(3/2).
+   DIRECTION: the oriented displacement profile
+   Delta_{A->B}(X) = d(B, X) - d(A, X) (Addition 1 / Glm 1.7 corpus
+   hook) read at the three stubs: for anchor A = vertex center and
+   B_mu = stub mu, the profile X -> (Delta over stubs) is the
+   coordinate of X relative to the link frame. The DIRECTION object
+   is the triple {Delta_{mu}}_{mu = x,y,z}: closure at 3 means the
+   three profiles are linearly independent as functions on the
+   kernel (rank 3), NOT merely nonzero. PLUS the chiral sign
+   (antisymmetric invariant) separating equidistant relations —
+   reported, not load-bearing for the rank question.
+
+2. THE FOUR CHK BLOCKS.
+   CHK-1 CLOSURE-AT-3 (static): build the three stub profiles
+   Phi_mu(X) = <S_z^{stub mu} S_z^X>_K for X over every site of the
+   corner kernel (both as functions on the 32D forbid-J=3 kernel
+   AND on the 8D bare edge kernel V_8); the 3x3 Gram of the profile
+   triple must have det > 0 with SO(3)-isotropy (eigenvalues within
+   1e-9 of each other after stub-orbit normalization); AND the
+   displacement profiles Delta_mu = Phi_mu - Phi_center must span
+   rank exactly 3. Repeat under the H_vtx-coupled frame (profiles
+   evaluated on the corner kernel of M + eps H_vtx, eps = 0.01:
+   the coupled frame must remain rank 3). A rank of 2 or less at
+   EITHER frame = closure failure at the corner.
+   CHK-2 S=1 PRESERVATION: GATE-P (every P^(J) in use: Tr + exact
+   idempotency <= 1e-12); GATE-G (active sites of every embedded
+   operator = declared support); frustration-free re-witness
+   (M_edges residual on V_8 <= 1e-12); leak non-negative
+   spectrum re-witness. Any violation = FAIL-preservation.
+   CHK-3 COCYCLE (the re-opened T1b-2c question at LINK level):
+   (a) on-axis: the static correlation decay must be EXACTLY
+   multiplicative per bond in n (|c(n)| = (1/3)^n machine-check at
+   L = 2..6, signed alternation included) — the 1D cocycle closes;
+   (b) junction triangle: sum of the three link log-distances
+   around the vertex triangle (stub-x -> center -> stub-y -> stub-x
+   inferred from profiles) must telescope to 0 within 1e-9 IF the
+   direction structure is consistent; a nonzero residual is the
+   TRIANGLE DEFECT, reported as its own number (the honest read:
+   the r5.1d two-bond cocycle failure says defect is EXPECTED at
+   the junction; the question is whether the 3-link frame REDUCES
+   it relative to the 2-link value).
+   (c) the multiplicative check on the Thm-8 channel object
+   (D-b): reported for completeness, fenced as the rate object.
+   CHK-4 INCONCLUSIVE GUARD: if any definition-level ambiguity
+   fires (profile degeneracy between stubs at 1e-9 scale, or the
+   kernel basis changes rank between the two frames), the verdict
+   is INCONCLUSIVE (diagnose), never a forced PASS/FAIL.
+
+3. PRE-COMMITTED OUTCOME SPACE (frozen; per the r5.3d item 5
+   declaration).
+   PASS            : CHK-1 rank 3 at both frames + isotropy +
+                     CHK-2 all pass + CHK-3(a) exact + CHK-3(b)
+                     defect = 0 or strictly reduced vs the 2-link
+                     reference. §3's link frame writes at E3.
+   FAIL-PRESERVATION: any CHK-2 violation. The strongest negative:
+                     no link algebra closes at 3 without breaking
+                     the S=1 content.
+   FAIL-CLOSURE    : rank < 3 at either frame, or isotropy broken,
+                     or CHK-3(b) defect grows. §3 re-scopes to
+                     "conditional on the link algebra"; Paper VI
+                     carries the load.
+   INCONCLUSIVE    : CHK-4 guard fires. Honest diagnosis, no
+                     verdict.
+   NOTE: no outcome in this space promotes anything to E4; PASS
+   upgrades §3's link-frame sentence to E3 (machine-witnessed on
+   the certified corner). The 6.1-6.3 E0 fences are untouched.
+
+4. STANDING BATTERY (all must PASS before any number is read):
+   Gate S, GATE-CG, Gate G, GATE-P, Rule S1, VACUOUS trap.
+
+5. REGISTERED INPUTS: the certified corner layout (r53c_static.py:
+   N=6, regs (0,2,4), stubs (1,3,5), K2 kernel 9x2, V_8, P_vtx^(J)
+   Lagrange + permutation, H_vtx corner form); the r5.3e T4 ground
+   truth (on-axis |c| = (1/3)^n); the r6.0 register lines 3.1-3.6.
+6. ARTIFACTS (declared): pr_link1_sheet.txt (this file),
+   r61_link1.py / r61_link1.json, rcf_r61_register.txt,
+   rcf_r53e_register.txt, rcf_r60a_amendment.txt (the §5.3 wording
+   correction), pushed as ONE commit.
+==============================================================================
+FROZEN. (hash recorded at save in the execution register)
+==============================================================================
