@@ -1,0 +1,75 @@
+{
+  "P1_defect_sign": {
+    "convention": "d = -ln|K|; d_defect = d(A,C) - [d(A,O)+d(O,C)]; D_K = ln[K(A,C)/(K(A,O)K(O,C))] = -d_defect",
+    "triangles": {
+      "01": {
+        "d_defect": 1.168796266,
+        "D_K_logratio": -1.168796266,
+        "sign_agreement_(d_defect = -D_K)": true
+      },
+      "02": {
+        "d_defect": 1.168796266,
+        "D_K_logratio": -1.168796266,
+        "sign_agreement_(d_defect = -D_K)": true
+      },
+      "12": {
+        "d_defect": 1.168796266,
+        "D_K_logratio": -1.168796266,
+        "sign_agreement_(d_defect = -D_K)": true
+      }
+    },
+    "reading": "SUPER-ADDITIVE distance (d_defect > 0) <=> SUB-MULTIPLICATIVE K (D_K < 0): the raw pairwise log-kernel VIOLATES the triangle inequality at the junction; it is a link-level separation, not a pseudometric on 3D frames; \u00a73 adopts the path-infimum distance (Theorem S2's d_int), with the raw -ln|K| reported as the direct-pair object whose junction violation is +1.168796"
+  },
+  "P2_four_arm_control": {
+    "construction": "4 DECOUPLED K2 arms \u2014 the tensor-product argument from the certified 2-site objects (analytic, Gate O route; the 6561-dim dense build is outside this sandbox's memory budget)",
+    "pair_diag_var": 0.666666666667,
+    "pair_offdiag": -0.416666666667,
+    "su2_invariance_check": "rho_pair = P_K2/4 is SU(2)-invariant (r6.1 CHK-1 certified: V8 stub Gram = (2/3)I exactly from the same route)",
+    "stub_Gram_4arm": "(2/3) I_4 (analytic: diag var 2/3, cross-arm marginals I/3 x I/3 -> 0)",
+    "rank": 4,
+    "reading": "rank 4 on 4 arms: PR-LINK-1's rank-3 certificate is the 3-ARM frame's non-degeneracy + C3-isotropy, NOT a 4-arm collapse claim; D=3 selection belongs to Theorem II.1 (E4) + No-Go VIII/VIIIb; \u00a73's sentence carries the 3-arm qualifier"
+  },
+  "P3_certificates": {
+    "jordan_closure_6.3e-16": 6.280369834735101e-16,
+    "jordan_det_3.6e-15": 3.552713678800501e-15,
+    "rodrigues_9.5e-16": 9.4623719602731e-16,
+    "jordan_identity_H2C_3.8e-15": 3.7751664318895325e-15,
+    "cubic_witness_1.4e-15": 1.4010381148703524e-15,
+    "cubic_no_quadratic_min": 2.449489742783178,
+    "dim_elimination_solutions": [
+      [
+        3,
+        2
+      ],
+      [
+        8,
+        3
+      ]
+    ],
+    "triplet_dm_diag": [
+      0.142857143,
+      0.285714286,
+      0.571428571
+    ],
+    "triplet_dm_product_8_343": 0.02332361519,
+    "static_table": "see r53c_static.json",
+    "lorentz_T1_boost_3.8e-15": 3.7829128801460545e-15,
+    "lorentz_T1_SL2C_2.7e-13": 2.6674831489956047e-13,
+    "r53c_keys": [
+      "GATE_S",
+      "GATE_CG",
+      "bulk_kernel",
+      "gate_G_multisite",
+      "construction_agreement_F",
+      "construction_agreement_verdict",
+      "reproduction_control",
+      "one_line_proof",
+      "bulk_static",
+      "target_check",
+      "leak_spectrum",
+      "corner",
+      "elapsed_s"
+    ]
+  },
+  "elapsed_s": 2.12
+}

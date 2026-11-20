@@ -1,0 +1,229 @@
+PAPER II §2 DRAFT (r6.2) — Reconstructed Local Algebra:
+Relational Differentiation, D_loc = 3, and Derived SU(2)
+====================================================================
+[Drafting baseline: r6.0 lock (rcf_r60_register.txt) + r6.0a
+amendment + r6.1 (PR-LINK-1 SPLIT) + r6.2 adjudications. Every
+certificate number below is machine-verified this round against the
+corpus JSONs (r62_adjudicate.py P3): r53_preflightC.json,
+r53d_closure.json, r53c_static.json, r53e_verify.json. §2 precedes
+§3 per the locked order §2 -> §3 -> §4/§5 -> §1 last. Target
+document class: the Paper II main text (LaTeX-ready paragraphs; this
+file is the certified content layer, not the final typesetting).]
+
+Section 2: Reconstructed Local Algebra — Relational Differentiation,
+D_loc = 3, and Derived SU(2)
+
+2.1 How Position Is Forced Without a Container: Existence, Distance,
+and Direction
+--------------------------------------------------------------------
+Paper I demonstrated on a concrete one-dimensional spin-1 substrate
+that constraint-driven dynamics, one-way reconciliation (cov3), and
+universal causal extension rates emerge from an associative
+*-algebra without being postulated. Two structural inputs, however,
+were imported rather than derived: SU(2) covariance of the local
+spin, and the 1D open-chain geometry (z <= 2). No-Go VIII (Sec. 3)
+proves that bare spin-1 bond constraints P^(2) enforce existence —
+admissibility, ker(M-hat) != {0} — only along strands with z <= 2 and
+cannot branch statically into higher dimensions; No-Go VIIIb proves
+that no static overload of that constraint can replace the
+dynamical vertex coupling. The reconstruction problem is therefore:
+which local algebra, built from relations alone, admits a branching
+three-dimensional link structure while preserving the S = 1 bond
+content Paper I certified?
+
+Ask first how two admissible existences A, B in A_loc can be
+differentiated at all inside (A, omega) when background coordinates
+are forbidden. Relations are primitive; position is derived. Three
+steps force the two axes of the derived object.
+
+(i) Relational indistinguishability. Without external labels, A and
+B are distinguishable only through their relational pairings with
+other elements of A, inducing the metric quotient
+X_omega = A_loc / ~_omega, where A ~_omega B iff d_omega(A, B) = 0:
+two relations with zero relational separation collapse to the same
+point. Existence alone does not individuate — on a homogeneous
+spin-1 substrate every site carries the identical local algebra
+M_3(C) and the identical marginal 1/3.
+
+(ii) Distance, the first axis. Differentiating coincident from
+separated existences requires a symmetric relational invariant: the
+correlation decay along links. On the certified AKLT kernel this is
+exact: the static two-point function obeys the closed form
+<S_z^0 S_z^n>_K = (-1)^n (4/3^{n+1}) (n >= 1), a multiplicative law
+of base exactly 1/3 with alternating sign, so the 1D log-distance
+d(n) = n ln 3 is exactly additive per bond (r6.1 CHK-3a; closed form
+machine-confirmed at L = 6, 7 with vanishing finite-size tails).
+Note the object discipline: this kernel correlation (base 1/3) and
+Paper I Theorem 8's dipole-channel extension rate 2/3 per reconciled
+locality are two different certified multiplicative laws on two
+different maps — the static kernel transfer and the operator-blind
+extension map — and every distance statement in this paper names
+which object it cites.
+
+(iii) Direction, the second axis. Scalar distance from one anchor
+cannot differentiate equidistant existences B_1, B_2 with
+d(A, B_1) = d(A, B_2). Distinguishing them requires a signed
+relative orientation. This is not a soft argument: PR-SCALE-1 (E4)
+proves algebraically that unsigned pairwise kernels cannot even
+separate a non-degenerate three-dimensional configuration
+(det C = 1/2) from a collapsed coplanar one (det C = 0) — all eight
+sign frames at |a| = |b| = |c| = 1/2 share the identical unsigned
+pairwise kernels {1/4, 1/4, 1/4} and split only by the
+gauge-invariant three-point orientation sign sgn(abc).
+
+The two axes are already latent in the corpus at link level: the
+distance profile Phi_A(X) := d_omega(A, X) and the displacement
+profile Delta_{A->B}(X) := Phi_B(X) - Phi_A(X). A single link
+dimension encodes all three primitives at once — presence
+(existence), magnitude (distance), sign (direction) — so the
+dimension question is exactly: how many independent 1D link
+directions can close consistently inside a complex associative
+*-algebra?
+
+2.2 Theorem II.1: Complex Associative Closure Uniquely Forces
+D_loc = 3 and Derives SU(2) [E4]
+--------------------------------------------------------------------
+Formalize a local Jordan link algebra built from D independent
+directions — each carrying existence (1), distance (r), and signed
+direction (+/- u-hat) — as the rank-2 Euclidean Jordan spin factor
+
+    J_D := R 1 (+) R^D,
+    (x_0, s) o (y_0, t) = (x_0 y_0 + s.t,  x_0 t + y_0 s).
+
+Every element X = (x_0, s) satisfies the universal degree-2
+characteristic identity
+
+    X^2 - 2 x_0 X + (x_0^2 - |s|^2) 1 = 0,
+
+with Jordan determinant det_J(X) = x_0^2 - |s|^2.
+
+Declared Algebraic Input (M_n(C) saturation fence). Require J_D to
+saturate the self-adjoint part H_n(C) = {X in M_n(C) : X^dag = X} of
+a simple finite-dimensional complex associative unital *-algebra
+M_n(C), so that the orthogonal Lie-Jordan split
+AB = A o B + (1/2)[A, B] (Paper I, Eq. 1) closes on the same space
+without leaking into higher-grade Clifford blades and carries a
+non-trivial Lie sector. This saturation condition rules out real
+H_2(R), quaternionic H_2(H), and proper Clifford subalgebras as a
+declared primitive input — a property-level requirement, not a
+container count.
+
+THEOREM II.1 (Local 3D uniqueness and derived SU(2)) [E4]. For all
+integers D >= 1 and n >= 1, J_D ~= H_n(C) as Euclidean Jordan
+algebras if and only if (D_loc, n) = (3, 2). Consequently:
+
+1. Dimension elimination. Real dimension matching requires
+   D + 1 = n^2. For n = 1 (D = 0) the algebra is trivial; for
+   n >= 3, H_n(C) has Jordan degree n >= 3 — verified explicitly at
+   n = 3 by the diagonal witness X = diag(1, omega, omega^2),
+   which satisfies X^3 = 1 to 1.4e-15 and admits no quadratic
+   relation (minimum quadratic residual 2.45; certificate
+   r53_preflightC C2) — contradicting J_D's universal degree 2.
+   All D in {1, 2, 4, 5, 6, 7} fail D + 1 = n^2 directly
+   (certificate C4); the only solutions of D + 1 = n^2 are
+   (D, n) = (3, 2) and (8, 3) (certificate C1), and the (8, 3)
+   branch is eliminated by the degree invariant. (D = 1 is
+   commutative and dynamically dead by Paper I No-Go I-II; D = 2 is
+   real H_2(R) with Abelian so(2), excluded by saturation; D = 4
+   embeds into the 16-dimensional Cl_4 ~= M_4(C), breaking
+   saturation.)
+2. Exact Pauli Jordan isomorphism at (D_loc, n) = (3, 2). The map
+   (x_0, s) |-> x_0 1_2 + s.sigma in H_2(C) is an exact Jordan
+   isomorphism: closure residual 6.28e-16, Jordan-determinant
+   residual 3.55e-15, trace residual 4.44e-16, and the Jordan
+   identity |x o (x^2 o y) - x^2 o (x o y)| verified with zero
+   residual on H_2(C) samples (worst 3.78e-15; certificates
+   r53_preflightC C3, C5).
+3. Derivation of SU(2) and SO(3). The identity component of the
+   Jordan automorphism group of H_2(C) is
+   Aut_0(H_2(C)) ~= SU(2)/Z_2 ~= SO(3), acting on s in R^3 by exact
+   Rodrigues rotations: U(s.sigma)U^dag = (R_U s).sigma with residual
+   9.46e-16 (certificate C3).
+
+Link back to Paper I and Theorem B. Theorem II.1 removes SU(2) as
+an unexplained input of Paper I Theorem 1. Feeding the derived SU(2)
+into Theorem 1's monogamy no-go rules out single-site S = 1/2 on
+multi-site bonds and selects S = 1 (Sym^2(C^2) = C^3) as the unique
+single-violation-sector spin; independently, Theorem B (Sec. 5)
+proves S = 1 is the unique spin S >= 1 for which the 3D covariance
+scaling metric -ln det C is non-degenerate on the full local state
+space (3/3 eigenvalues at S = 1/2, 8/8 at S = 1, degenerate 8/15 at
+S = 3/2).
+
+Mandatory scope fence. Theorem II.1 certifies the local link /
+directional dimension D_loc = 3 (E4). It does not by itself prove
+macroscopic spatial manifold dimension d_H = d_s = 3 (E0, fenced
+open pending multi-vertex lattice and continuum closure), and it
+makes no claim about 4-arm or N-arm junctions — the dimension
+selection here is algebraic, and the link-level witness (Sec. 3)
+is a 3-arm non-degeneracy and C3-isotropy certificate, not an
+N-arm collapse test.
+
+2.3 Remark: The Algebraic (1, 3) Lorentz Cone on H_2(C)
+(E4 algebraic hook; dynamical boosts fenced E0)
+--------------------------------------------------------------------
+Because the Jordan determinant on H_2(C) ~= J_3 is
+det(X) = x_0^2 - |s|^2, the positive-semidefinite cone
+X >= 0 (det X >= 0, x_0 >= 0) is algebraically identical to the
+forward (1, 3) Minkowski light cone, and the congruence action
+X |-> A X A^dag for A in SL(2, C) preserves det(X) — certificate
+r53e_verify T1: det preservation 2.7e-13 over 200 random SL(2, C)
+draws; the PSD-cone equivalence holds exactly on all draws. Unitary
+A in SU(2) fixes x_0 and generates SO(3) rotations (residual
+1.2e-15), while positive Hermitian A = exp((eta/2) n-hat.sigma)
+reproduces the exact Lorentz boost Lambda(eta) on (x_0, s) to
+3.8e-15 over 100 draws. The automorphism action realizes
+SL(2, C)/Z_2 ~= SO^+(1, 3), the proper orthochronous Lorentz group,
+with the SU(2) subgroup as its rotation subgroup.
+
+In keeping with the verification discipline (Generativity Register
+Entry #2), only this algebraic cone structure is certified at E4
+here. Identifying the Jordan scalar x_0 with dynamical emergent
+proper time d_tau (Sec. 4) and proving dynamical Lorentz boost
+invariance of low-energy excitations on a discrete dissipative
+substrate remain explicitly fenced at E0 for the downstream
+Relativity and Cosmology papers. The scaling metric of Theorem A
+(Sec. 5) is Riemannian on the state space D_+(C^3); the bridge from
+the algebraic (1, 3) cone on H_2(C) to any spacetime metric —
+through the Type-Sign Coupling argument of the field-program layer
+and the zero-burden limit — is PR-METRIC-1's pre-registered scope
+(deferred, not executed).
+
+[DRaftING NOTE for §3, resolved this round (r6.2 P1): the junction
+cocycle defect is d_defect = d(A, C) - [d(A, O) + d(O, C)] =
++1.168796 on all three triangles (exactly C3-symmetric, barycenter
+anchor), which equals -D_K with D_K = ln[K(A,C)/(K(A,O)K(O,C))]
+the K-space log-ratio: SUPER-additive distance <=> SUB-multiplicative
+K. The raw pairwise -ln|K| VIOLATES the triangle inequality at the
+junction; it is a link-level separation, not a pseudometric on 3D
+frames. §3's distance paragraph therefore adopts the path-infimum
+distance d_int (Theorem S2, which enforces the triangle inequality
+unconditionally), reports the raw -ln|K| as the direct-pair object
+whose junction violation is +1.168796, and pairs it with Theorem
+S1's isotropic l_2 scaling (the Euclidean chord sqrt(dx^2 + dy^2 +
+dz^2) of the orthogonal rank-3 stub frame: in flat 3D, perpendicular
+arms give d(x, y) = sqrt(2) d(x, c) < 2 d(x, c), a NEGATIVE chord
+defect — so the multi-vertex lattice gate's sharp question is
+whether plaquette/diagonal paths carry the corner defect from the
+positive tree value +1.1688 across to the negative Euclidean chord
+value). Also for §3: two distinct Gram objects, both C3-circulant —
+(i) the RAW spin Gram <S^z_mu S^z_nu> on the forbid-J=3 kernel:
+diag 2/3 EXACTLY (the SU(2)-invariance operator identity
+<S_z^2> = (1/3)<S.S> = 2/3; rho32 commutes with total SU(2) to
+1.2e-15), offdiag -0.012142; (ii) the PROFILE-vector Gram
+G[mu,nu] = Phi_mu . Phi_nu of the r6.1 construction: diag 0.632093,
+offdiag -0.051106 — this one shrinks from the bare 64D kernel
+(0.666667 diag) as the kernel tightens to 32D. §3 names the
+formula alongside every table. PR-LINK-1's rank-3 sentence carries
+the 3-arm qualifier: on four decoupled arms the same construction
+gives (2/3) I_4, rank 4 (r6.2 P2 analytic control) — non-degeneracy
+of the 3-arm frame is certified; the D = 3 selection is Theorem
+II.1's; the overload route is forbidden by No-Go VIII/VIIIb.]
+
+====================================================================
+STATUS: §2 content-layer complete per the locked drafting order.
+Numbers all verified against corpus JSONs this round (r6.2 P3).
+Next per the lock: §3 (No-Go VIII/VIIIb, dynamical H_vtx T-MISMATCH
++ Arm C, PR-LINK-1 E3-corner with the pinned Gram formulas and the
+path-infimum distance paragraph), then §4/§5, then §1 last.
+====================================================================

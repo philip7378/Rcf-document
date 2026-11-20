@@ -1,0 +1,144 @@
+==============================================================================
+REGISTER — r6.2: AUDIT SIGN-OFF ON 429579f PROCESSED; THE THREE
+PRE-DRAFTING PINS RESOLVED BY MACHINE; PAPER II §2 DRAFTED.
+Script r62_adjudicate.py / r62_adjudicate.json; draft
+p2_sec2_draft.txt. (Gate S PASS leading on every computation.)
+==============================================================================
+
+1. AUDIT ACCEPTANCE — 429579f ACCEPT WITH THE THREE MANDATORY NOTES:
+   all three notes are adopted and each is resolved by machine this
+   round BEFORE any §2/§3 prose was written:
+
+2. PIN 1 — THE +1.168796 DEFECT: SIGN CONVENTION RESOLVED.
+   The audit demanded the convention be pinned (K-space log-ratio vs
+   distance-additivity; the physical reading flips on it). Machine
+   resolution (r62_adjudicate.py P1): the two candidate quantities
+   are THE SAME OBJECT with opposite sign —
+     d_defect = d(A,C) - [d(A,O) + d(O,C)]  (d = -ln|K|)
+     D_K      = ln[ K(A,C) / (K(A,O) K(O,C)) ] = -d_defect,
+   verified exactly (sign agreement |d_defect + D_K| < 1e-12 on all
+   three triangles). Registered value: d_defect = +1.168796 on ALL
+   THREE triangles, exactly C3-symmetric (barycenter anchor).
+   Physical reading (the second audit case, now CONFIRMED): the raw
+   pairwise -ln|K| VIOLATES the triangle inequality at the junction —
+   the direct stub-stub distance 4.4111 EXCEEDS the via-center path
+   3.2423. In K-space: the weak cross-arm coupling makes
+   |K(e_mu, e_nu)| < |K(e_mu, c)| |K(c, e_nu)| — SUB-multiplicative
+   correlation, violating the multiplicative consistency condition
+   -ln K needs to be a pseudometric. On the BARE uncoupled kernel
+   K(e_mu, e_nu) = 0 exactly (the audit's +infinity limit); the
+   vertex coupling brings the corner-turning bottleneck down to a
+   finite, exactly C3-symmetric log-penalty +1.168796.
+   REGISTER CLASS: this is the machine-certified empirical proof of
+   the §4/§5 Scaling Metric thesis (the audit's reading, adopted):
+   1D on-axis logs add cleanly (base 1/3), but across a coupled
+   corner the raw pairwise logs break and cannot serve as the 3D
+   metric. §3's distance paragraph adopts the PATH-INFIMUM
+   distance d_int (Theorem S2: enforces the triangle inequality
+   unconditionally); the raw -ln|K| is reported as the direct-pair
+   object with its +1.1688 junction violation; Theorem S1's
+   isotropic l_2 scaling converts the orthogonal rank-3 stub frame
+   into the Euclidean chord (flat-3D perpendicular arms give
+   d(x,y) = sqrt(2) d(x,c) < 2 d(x,c), a NEGATIVE defect). The
+   sharp multi-vertex lattice question (does a 3D lattice with
+   plaquette/diagonal paths cross from the positive tree defect
+   +1.1688 to the negative Euclidean chord defect) is registered
+   as the lattice gate's pre-committed target.
+
+3. PIN 2 — THE 0.632 GRAM FORMULA: READING (a) PINNED, AND THE
+   AUDIT'S OPERATOR-IDENTITY PREDICTION CONFIRMED.
+   Machine resolution: TWO distinct Gram objects, both exactly
+   C3-circulant:
+   (i)  The RAW spin Gram <S^z_{e_mu} S^z_{e_nu}> on the forbid-J=3
+        kernel: diag 2/3 EXACTLY (0.666666667) — the operator
+        identity <(S^z)^2> = (1/3)<S^2> = 2/3 on any SU(2)-invariant
+        state; rho32 commutes with total SU(2) to 1.2e-15 (verified:
+        [rho32, S_tot^z] Frobenius 1.2e-15, [rho32, S^+_tot] 1.9e-15).
+        Offdiag -0.012142. The audit's prediction (the diagonal
+        CANNOT drop below 2/3 on an SU(2)-invariant kernel) is
+        CONFIRMED — reading (b) ruled out.
+   (ii) The PROFILE-vector Gram G[mu, nu] = Phi_mu . Phi_nu of the
+        r6.1 construction (6-dim displacement-profile vectors, dot
+        product): diag 0.632093, offdiag -0.051106 — THIS is the
+        0.632 the r6.1 register printed, and it shrinks from the
+        bare 64D kernel's 0.666667 because the profile vectors
+        live on the kernel that tightened 64D -> 32D. Reading (a)
+        pinned. §3 names the formula alongside every table.
+   CONSEQUENCE: the r6.1 register line "diag 0.63209308 x3" is
+   amended to carry the formula name (profile-vector Gram); the
+   raw spin Gram's 2/3 diagonal enters §3 as the SU(2)-invariance
+   cross-check (Gate O: object identified by property).
+
+4. PIN 3 — THE 4-ARM FENCE: REGISTERED, PR-LINK-1 SENTENCE TIGHTENED.
+   The audit's note adopted: the PR-LINK-1 junction was BUILT with
+   3 arms; rank-3 certifies non-degeneracy of THAT frame, not a
+   4-arm collapse. Analytic control (r62_adjudicate.py P2; the
+   6561-dim dense 8-site build is outside this sandbox's 2-core
+   3GB budget, so the control runs the tensor-product route from
+   the certified 2-site objects — the same route that certified the
+   3-arm V8 Gram): on four DECOUPLED K2 arms the stub Gram is
+   (2/3) I_4, RANK 4. Registered fence: PR-LINK-1's rank-3
+   certificate = 3-arm non-degeneracy + C3-isotropy on intact S=1
+   bonds; the D = 3 SELECTION is Theorem II.1's (E4); the static
+   overload route is forbidden by No-Go VIII/VIIIb. No 4-arm
+   collapse claim exists anywhere in the register; §3's sentence
+   carries the 3-arm qualifier.
+
+5. THE AUDIT'S OWN CERTIFICATE NUMBERS — machine-verified before
+   entering the §2 draft (r62_adjudicate.py P3; no number from
+   memory):
+   Jordan closure 6.28e-16; Jordan det 3.55e-15; trace 4.44e-16;
+   Rodrigues 9.46e-16; Jordan identity worst H2C 3.78e-15 (all
+   r53_preflightC C3/C5); the cubic witness diag(1, omega, omega^2):
+   X^3 = I at 1.40e-15, minimum quadratic residual 2.45 (C2);
+   dimension-elimination solutions exactly {(3, 2), (8, 3)} with
+   D = 1..7 all failing D+1 = n^2 (C1/C4); the triplet middle-dm
+   row (1/7, 2/7, 4/7) with product 8/343 = 0.0233236152
+   (r53d_closure C3: diag 0.142857143 / 0.285714286 / 0.571428571,
+   M-eigenvalue 1.0, trace 1.0); the static table 12/49 = 0.244897959
+   (comp), 120/343 = 0.349854227, 8/49 = 0.163265306 with full-space
+   targets hit to 0.0 deviation (r53c_static bulk_static +
+   target_check); the Lorentz tier det 2.7e-13 / boost 3.8e-15
+   (r53e_verify T1). ALL CONFIRMED — the audit's §2 draft numbers
+   were exact; the draft adopts them with corpus citations.
+
+6. STANDING BATTERY — THREE ADDITIONS (the audit's + the round's):
+   (a) GATE O (object identity): before any theorem-level identity
+       is cited, the object is identified by its DEFINING PROPERTY
+       (base rate, projector idempotency, kernel support, SU(2)
+       invariance), not by the appearance of its value. (The T4
+       class: kernel correlation base 1/3 vs channel rate 2/3 —
+       same failure class as the r5.3c projector and the r5.1c
+       mislabeled grid.)
+   (b) C3 = 1 + 2 LEMMA (sheet template): any exactly C3-symmetric
+       PSD operator on a 3-dimensional space splits into the
+       1D trivial irrep + the 2D irrep — it can never have three
+       equal eigenvalues unless scalar. Isotropy criteria must
+       state the expected irrep decomposition (equal diagonals +
+       equal off-diagonals for the circulant case), never "three
+       equal eigenvalues."
+   (c) NORM-CONVENTION HEADER (Gate S rider): every reported norm
+       declares squared vs unsquared Frobenius AND the support
+       trace, in the sheet, before the run. (The 6.75 slip class.)
+
+7. §2 DRAFTED (p2_sec2_draft.txt) — the content layer, per the
+   locked order §2 first: 2.1 individuation (relations primitive,
+   position derived; the two axes with the PR-SCALE-1 orientation
+   argument and the object-named distance laws); 2.2 Theorem II.1
+   (E4) with the M_n(C) saturation fence and the d_H = 3 scope
+   fence, numbers from item 5 certificates; 2.3 the (1, 3) Lorentz
+   cone remark (E4 hook; Tier-2/Tier-3 fences intact; PR-METRIC-1
+   deferred). The §3 drafting notes (path-infimum adoption, the two
+   named Gram formulas, the 3-arm qualifier, the lattice gate's
+   defect-sign target) are embedded at the draft's tail per Pins
+   1-3. §3/§4/§5 next per the lock; §1 last.
+
+8. LEDGER: no new defects; two register-wording amendments
+   (r6.1 item 4's "0.632" now carries the profile-Gram name; the
+   rank-3 sentence carries the 3-arm qualifier); the audit's three
+   notes all resolved to certificates.
+
+ARTIFACTS: r62_adjudicate.py / r62_adjudicate.json /
+p2_sec2_draft.txt / rcf_r62_register.txt (this entry) /
+rcf_r62a_amendment.txt — one push.
+==============================================================================

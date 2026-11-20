@@ -1,0 +1,74 @@
+==============================================================================
+AMENDMENT — r6.1 REGISTER (rcf_r61_register.txt), per the r6.2
+adjudications (audit 429579f's three mandatory notes). The r6.1
+SPLIT verdict STANDS; these lines pin the wording so §3 enters
+Paper II accurately. The r6.0 lock and drafting order are untouched.
+
+A1. r6.1 item 4 (CHK-3b) — AMENDED WORDING (defect sign convention
+    pinned; the audit's flag resolved):
+    The junction triangle defect is d_defect = d(A,C) - [d(A,O) +
+    d(O,C)] = +1.168796 on all three triangles (barycenter anchor,
+    exactly C3-symmetric), with d = -ln|K| the RAW pairwise
+    log-kernel distance. In K-space this is D_K =
+    ln[K(A,C)/(K(A,O)K(O,C))] = -d_defect = -1.168796:
+    SUB-multiplicative correlation across the junction. The
+    physical reading is the audit's case two, now CONFIRMED: the
+    raw -ln|K| VIOLATES the triangle inequality at the junction —
+    it is a link-level separation, not a pseudometric on 3D frames.
+    (The audit's Euclidean contrast stands: flat-3D perpendicular
+    arms give a NEGATIVE defect d(x,y) - 2 d(x,c) =
+    (sqrt(2) - 2) d < 0; the corner's positive defect is the
+    bottleneck signature, not a curvature.) REGISTER CLASS: the
+    machine-certified proof that raw pairwise logs cannot serve as
+    the 3D metric — the §4/§5 Scaling Metric thesis's empirical
+    anchor. §3 adopts the path-infimum distance d_int (Theorem S2,
+    triangle inequality enforced unconditionally); the +1.1688 is
+    reported as the direct-pair object's junction violation. The
+    multi-vertex lattice gate's pre-committed target: does a 3D
+    lattice with plaquette/diagonal paths carry the defect from the
+    positive tree value (+1.1688) across to the negative Euclidean
+    chord value — and under which metric (log / FS / scaling).
+
+A2. r6.1 items 2 & 4 (the 0.632 Gram) — AMENDED WORDING (formula
+    name pinned; the audit's operator-identity prediction
+    confirmed):
+    TWO distinct Gram objects, both exactly C3-circulant:
+    (i)  RAW spin Gram <S^z_{e_mu} S^z_{e_nu}> on K32: diag 2/3
+        EXACTLY (SU(2)-invariance operator identity; rho32
+        commutes with total SU(2) to 1.2e-15), offdiag -0.012142.
+        The audit's pin: the diagonal CANNOT drop to 0.632 on an
+        SU(2)-invariant kernel — CONFIRMED.
+    (ii) PROFILE-vector Gram G[mu,nu] = Phi_mu . Phi_nu (the r6.1
+        construction): diag 0.632093, offdiag -0.051106; shrinks
+        from the bare kernel's 0.666667 as the kernel tightens
+        64D -> 32D. This is the object the r6.1 tables printed.
+    §3 names the formula alongside every Gram table; both Grams are
+    C3-circulant (the 1+2 irrep lemma applies to both).
+
+A3. r6.1 item 2 / §3 sentence — AMENDED WORDING (3-arm fence):
+    'the three link directions close as a rank-3, exactly isotropic
+    frame' carries the qualifier: the PR-LINK-1 junction is a
+    3-ARM frame; rank 3 certifies its non-degeneracy and C3
+    isotropy. The D = 3 SELECTION is Theorem II.1's (E4); the
+    static overload route is forbidden by No-Go VIII/VIIIb; on four
+    decoupled arms the same construction gives (2/3) I_4 rank 4
+    (r6.2 analytic control). No 4-arm or N-arm collapse claim is
+    made or implied. (V8 kernel dim 64 confirmed; the r53c '9x2/8D'
+    label stays corrected per r6.1.)
+
+A4. STANDING BATTERY (new law, per the audit's register note):
+    GATE O (object identity — identify every cited object by its
+    defining property: base rate, idempotency, support, invariance);
+    the C3 = 1 + 2 irrep lemma (isotropy criteria state the
+    expected irrep decomposition; 'three equal eigenvalues' is a
+    false necessary condition for non-scalar circulants);
+    the Gate S norm-convention header (squared vs unsquared
+    Frobenius + support trace declared per quantity in the sheet).
+    T4 registered as the third instance of the object-identity
+    class (with r5.3c's projector and r5.1c's grid label).
+
+A5. §3 opens with all three pins resolved: the path-infimum
+    distance paragraph (A1), the two named Gram formulas (A2), the
+    3-arm qualifier (A3). §2 is drafted (p2_sec2_draft.txt); §4/§5
+    and §1 follow per the locked order.
+==============================================================================
