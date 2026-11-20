@@ -1,0 +1,138 @@
+==============================================================================
+PR-VTX-1 FROZEN SHEET — 3-AXIS COMPOSITE VERTEX: STATIC FRUSTRATION vs
+DYNAMICAL COUPLING (declared BEFORE any number is read; md5 frozen on
+save). Guards: Gate S + Gate G + GATE-CG riding as standing law.
+==============================================================================
+Question: can the three orthogonal spin-1 axes at a vertex couple into
+genuine 3D WITHOUT frustrating the edge-based AKLT kernel? Pre-declared
+decider for Paper II §3: STATIC-FRUSTRATED + DYNAMICAL-CLEAN -> No-Go
+VIIIb promoted (bulk static vertex constraints empty the kernel; 3D
+cross-axis coupling is FORCED to be dynamical) and §3 writes the
+composite vertex with H_vtx, not with P_vtx; STATIC-CLEAN -> the static
+constraint route lives and §3 writes P_vtx; DYNAMICAL-FRUSTRATED ->
+both routes fail and §3 defers the composite vertex to Paper VI;
+INCONCLUSIVE -> convention/scale collision; diagnose before verdict.
+VACUOUS trap (declared, the r5.2 discipline): a kernel readout with
+dim ker = 0 has NO content as a POSITIVE — kernel-empty is a No-Go
+statement, not a construction. Arm B's static rows are expected to be
+VACUOUS-as-POSITIVE (they are the no-go arm); Arm A's 3-arm corner
+kernel (32D expected) is the genuine kernel readout.
+
+OBJECTS (two geometries, both from the standing machinery):
+  - CORNER (Arm A): 3 arms of length L=2 per axis, meeting at ONE
+    composite vertex site v = (v_x, v_y, v_z), each v_mu a spin-1
+    register; each arm mu carries one edge site e_mu and the bond
+    constraint P^(2)(v_mu, e_mu). Six spin-1 sites total, dim = 729.
+    Boundary corner: the v_mu registers have NO further bonds — this
+    is the 3-arm corner, z_v = 1 per register, valence-safe.
+  - BULK CROSS (Arm B): full 6-arm cubic cross, L=3 per axis: three
+    chains x, y, z of 3 spin-1 sites each crossing at the composite
+    vertex (v_x, v_y, v_z) — the center spin of each chain is IN THE
+    BULK (bonds on both sides), 9 sites, dim = 19,683. Edge kernel
+    K_3 per axis (the r5.2-certified 4D per-chain AKLT kernel with
+    the center spin in the bulk), total edge kernel K_3^{ox3},
+    dim = 64. PLUS L=5 per axis (dim = 3^15 = 14,348,907 — NEVER
+    built; solved exactly on the 64D compressed edge kernel
+    K_5^{ox3}, the only exact route at that size).
+  - EDGE HAMILTONIAN: M_edges = sum_mu M_mu, M_mu = sum of P^(2) over
+    the mu-axis bonds ONLY (strictly per-axis, no cross terms — the
+    Decoupling Trap is the declared CONTROL, not a hidden option).
+  - STATIC VERTEX CONSTRAINTS: P_vtx^(J) = the SU(2)-invariant
+    projector of the composite-vertex spin J_vtx = total spin of
+    (v_x, v_y, v_z) in {0,1,2,3}; "forbid J" means ADD P_vtx^(J) to
+    M_edges (positive semidefinite addition, same convention as
+    No-Go VIII rows).
+  - DYNAMICAL VERTEX COUPLING: H_vtx = S_vx·S_vy + S_vy·S_vz +
+    S_vz·S_vx = (1/2)(J_vtx^2 - 6·1), the unique SU(2)-scalar
+    cross-axis Lie generator (eigenvalues J(J+1)/2 - 3 on sector J).
+    USED AS A HAMILTONIAN (dynamics), never added to M_edges.
+
+PRIMARY MEASUREMENTS:
+  1. (Arm A) static corner table: dim ker(M_edges + P_vtx^(J)) for
+     J in {0,1,2,3}; the J=3 row is the live one (expected: 32D
+     frustration-free kernel — the corner valence is safe).
+  2. (Arm B) bulk static table: dim ker on K_3^{ox3} (out of 64) after
+     projecting the constraint onto the edge kernel, and the exact
+     compressed lambda_min = the smallest eigenvalue of the compressed
+     operator; expected EXACT rationals: forbid J=0 -> 8/343,
+     J=1 -> 12/49, J=2 -> 120/343, J=3 -> 8/49 (seat-declared; any
+     deviation > 1e-6 is a REPLICATION CALL, not a silent pass);
+     L=5 persistence: forbid J=3 -> 0.246717 (drift direction
+     declared meaningful: bulk approach).
+  3. (Arm B) DYNAMICAL CLEANLINESS: total squared off-kernel leak
+     ||(1 - P_K) H_vtx P_K||_F^2 (expected 251.142024 on the L=3
+     cross) and per-state leak over all 64 kernel states — expected
+     min = 3.448563 > 0 (ZERO dark states; even the 1D L=3 dark
+     singlet is lifted).
+  4. (Arm A) cross-axis arm correlation <S_1x · S_1y>_K (expected
+     -0.036427) and cross-axis spillover ||[P^(1)_{0x,1x},
+     P_vtx^(3)]||_F^2 (expected 28/5 = 5.6) — the boundary-corner
+     signature of genuine cross-axis communication.
+  5. (Arm C) cross-axis propagation preview on the dim-729 corner
+     junction under L = -i[H_vtx, .] + gamma(D_x + D_y + D_z)
+     (gamma = 1 canonical; D_mu = the cov3 dissipator of the mu-axis
+     bond (v_mu, e_mu), the standing r5.1d formula; H_vtx the
+     dynamical vertex coupling): inject a single-axis defect on the
+     x-arm (the standing coherent-ket seed, x-axis) and verify the
+     burden transfers with STRICT POSITIVE weight onto y and z
+     IDENTICALLY (isotropy; S_3 axis symmetry). Burden observable:
+     the standing clock Gamma_mu = gamma·M_mu(t) with M_mu =
+     Tr(rho P^(2)_{mu-axis bond}); transfer = Gamma_y = Gamma_z > 0
+     while Gamma_x relaxes; isotropy tolerance |Gamma_y - Gamma_z|
+     / Gamma_y < 1e-9 (exact S_3 symmetry of the generator).
+
+THE f-AXIS GUARD (seat-C clause, IN the sheet, pre-declared — the
+f0_1 analogue): the isotropic 3D scaling must produce the SAME
+per-axis cov3 coefficient on every axis at every read time; any
+axis asymmetry beyond 1e-9 (machine precision, the S_3 symmetry is
+exact in the generator) invalidates the run BEFORE any verdict —
+this is the analogue of the [0.16, 0.18] band, with the band being
+machine-zero because the symmetry is exact, and any nonzero
+asymmetry being a NUMERICS failure, not a physics result.
+
+GATES (standing battery, riding BEFORE any number is read):
+  - Gate S: max ||[S_i, S_j] - i eps_ijk S_k||_F < 1e-14.
+  - GATE-CG: the P^(2)(i,j) construction cross-verified (two
+    independent constructions to < 1e-13) at adjacent pairs against
+    the r5.2-certified embed.
+  - Gate G: for EVERY projector placed in this run, per support
+    pair (i,j): ||[P, S^z_k]||_F < 1e-14 off-support, > 1.0
+    on-support (exact sqrt(15) = 3.872983 at N=4 pair; the composite
+    site-support surface is LARGER here — Gate G's role is
+    amplified, per the r5.3a register).
+
+OUTCOME SPACE (pre-declared, all four):
+  POSITIVE  -> No-Go VIIIb + dynamical-coupling route certified;
+               §3 writes the composite vertex with H_vtx.
+  NEGATIVE  -> kernel or leak contradicts the declared expectation
+               beyond tolerance -> REPLICATION CALL first (diagnose
+               to root cause BOTH sides, the r5.3a lesson), then
+               re-adjudicate.
+  INCONCLUSIVE -> convention/scale collision (e.g. compression
+               artifact at L=5, or dim overflow) -> diagnose before
+               any verdict; no promotion on a broken measurement.
+  VACUOUS  -> a kernel readout with dim ker = 0 read as POSITIVE.
+               FORBIDDEN. The static bulk rows are expected
+               kernel-empty (that IS the no-go content); the corner
+               kernel (32D expected) is the only genuine kernel
+               readout in this sheet.
+
+SEEDS / CANONICAL PARAMTERS (standing, unchanged):
+  gamma = 1; spin-1 sites; site ordering: x-axis sites first, then
+  y, then z (declared: the kron order is (x_1 x_2 ... ) (y_1 ...) (z_1
+  ...), composite vertex registers last within each axis block —
+  the exact kron layout is fixed in the script header comment and
+  Gate G verifies every placement against it).
+  Arm C seed: coherent_ket(x) on the x-arm boundary site (the
+  standing coherent-ket function, direction +x), rho_0 = |ket><ket|
+  on the full 729D space.
+  Arm C window: t in [0, 3], 13 points (the standing r5.1d H2 grid).
+
+RUN BUDGET: Arm A dim 729 exact dense; Arm B L=3 dim 19,683 exact
+dense for the kernel (null_space on 19,683D is the budget edge —
+fallback: build K_3^{ox3} analytically as the kron of the three
+4D per-axis kernels, declared equivalent by per-axis closure, Gate G
+verifies the projection support); L=5 ONLY via the 64D compressed
+route. Arm C: 729D Lindblad, dense superoperator 729^2 = 531,441D,
+expm per strobe point — the r5.2 strobe budget pattern.
+==============================================================================

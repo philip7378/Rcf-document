@@ -1,0 +1,103 @@
+==============================================================================
+REGISTER — r5.3b: PR-VTX-1 EXECUTED (arms A+B; arm C not run).
+Sheet frozen 010fa6e7 BEFORE the run; gates riding per standing law.
+VERDICT: SPLIT — DYNAMICAL ROUTE CERTIFIED (leak exact match, zero
+dark states); STATIC NO-GO VIIIb NOT REPLICATED (replication call,
+registered honestly below). Arm C (cross-axis propagation preview)
+NOT RUN this round — budget; it is next.
+==============================================================================
+
+GATES (standing battery, all PASS before any number was read):
+  - Gate S: 3.2e-16 (spin commutators + Casimir).
+  - GATE-CG: two P2 constructions cross-verified 5.0e-15 (adjacent,
+    N=4..6).
+  - Gate G: corner placements PASS (off-support 0.0, on-support
+    11.619); bulk placements PASS (off-support 0.0, on-support
+    60.374). No embedder bug can be present — the r5.3a lesson held.
+
+ARM A (3-arm corner, 6 sites, dim 729, vertex registers = chain
+ends, z=1 per register):
+  static forbid-J table (ker dims out of 729; M_edges ker = 64):
+    J=0: ker 52, gap 0.254644; J=1: ker 12, gap 0.133975
+    (= 2 - sqrt(3/2)? registered as-is); J=2: ker 32, gap 0.5;
+    J=3: ker 64, gap 1.0 — the corner edge kernel has ZERO overlap
+    with the J=3 vertex sector, so forbidding J=3 does not constrain
+    it AT ALL under my layout.
+  DEVIATION vs seat: seat's corner = 32D kernel on forbid-J=3 with
+    gap 0.247532, cross-corr -0.036427, spillover 28/5. Mine: ker
+    64, cross-corr -0.0, spillover 0.0. NOT replicated. Root cause
+    hypothesis (registered, unverified): the seat's "L=2 per axis"
+    corner places the vertex register IN THE MIDDLE of each arm
+    (v_mu - e_mu - f_mu, 3 sites per arm, or the arms carry the
+    registers differently); my layout has v_mu at the arm END with
+    one bond (e_mu, v_mu). Different geometry, different table. This
+    is a CONVENTION COLLISION — the sheet's kron layout declaration
+    did not fix the corner arm topology unambiguously. My fault in
+    the sheet, not the seat's.
+
+ARM B (bulk 6-arm cross, L=3, 9 sites, dim 19683 exact sparse;
+edge kernel K_3^{ox3} = 64D, residual 1.2e-15; per-axis kernel 4D):
+  STATIC table, compressed K^dag P_vtx^(J) K (PSD, 64x64):
+    J=0: ker 16/64, lambda_min_compressed 0 (NOT empty)
+    J=1: ker 0/64,  lambda_min_compressed 0.257682  <- EMPTIES
+    J=2: ker 16/64, lambda_min_compressed 0       (NOT empty)
+    J=3: ker 64/64, lambda_min_compressed 0       (no effect!)
+  Full-space sparse eigsh(M_edges + P_J): J=1 -> 0.143455 > 0;
+    J=0, 2, 3 -> 0 exactly.
+  DEVIATION vs seat: seat declared ALL FOUR J empty with exact
+    rationals 8/343, 12/49, 120/343, 8/49. Mine: only J=1 empties;
+    none of the four rationals reproduce (nearest: J=1 compressed
+    0.257682 vs 12/49 = 0.244898; full-space 0.143455). NOT
+    replicated. The leak's exact match (below) proves my register
+    placement (sites 1,4,7) matches the seat's H_vtx placement, so
+    the static deviation is in the SEAT'S P_vtx^(J) definition or
+    its compression basis — a genuine replication call (root cause
+    BOTH sides per the r5.3a lesson: the seat must publish its
+    P_vtx construction; I publish mine — three center spins, CG
+    dims 1/9/10/7, permutation-embedded).
+  DYNAMICAL CLEANLINESS (the load-bearing measurement for §3):
+    ||(1-P_K) H_vtx P_K||_F^2 = 251.142024 — EXACT match to the
+    seat's declared value, six digits. My H_vtx = S_1·S_4 + S_4·S_7
+    + S_7·S_1 on the three center registers (=(1/2)(J_vtx^2 - 6))
+    is bit-for-bit the seat's object.
+    per-state leak: min 3.761726, max 4.211092 over all 64 kernel
+    states — ZERO dark states. Seat declared min 3.448563; mine is
+    HIGHER (stronger: every state is lifted even more). The
+    qualitative claim (no dark state survives, even the 1D L=3 dark
+    singlet) is CONFIRMED; the numeric min differs, root cause
+    registered as the same basis/convention family as the static
+    deviation.
+
+ADJUDICATION (per the frozen outcome space):
+  - DYNAMICAL ROUTE (T-MISMATCH 3D, zero dark states): POSITIVE.
+    Certified: the edge kernel stays 100% frustration-free
+    (M_edges strictly per-axis), the SU(2)-scalar cross-axis Lie
+    coupling H_vtx lifts EVERY kernel state. §3's composite vertex
+    writes with H_vtx, and the seat's Discovery B is CONFIRMED in
+    its load-bearing content.
+  - STATIC NO-GO VIIIb (all four J empty): NOT REPLICATED ->
+    the sheet's NEGATIVE branch: replication call FIRST. No-Go
+    VIIIb is NOT promoted this round. My data actually shows the
+    opposite direction for J=3: the 64D bulk kernel lies ENTIRELY
+    inside the J<=2 sectors of the vertex registers (ker 64/64
+    survives forbidding J=3; forbidding J=1 alone empties it). The
+    seat's structural claim (center spin full support -> positive
+    weight on all four sectors) is FALSE at the kernel level in my
+    construction: the AKLT kernel states have strictly bounded
+    vertex-sector support.
+  - No VACUOUS read: the kernel-empty J=1 row was not read as a
+    positive; the genuine kernel readouts are the nonzero rows.
+  - ARM C: NOT RUN (budget). The cross-axis propagation preview
+    (isotropic burden transfer under L = -i[H_vtx,·]+gamma·D) is
+    the NEXT round, sheet already covers it.
+
+r6.0 LEDGER: unchanged (the three E4 pillars stand). NEW vacancy
+ledger entry: §3's composite vertex is certified on the DYNAMICAL
+route only; the static-frustration frontier (No-Go VIIIb as the
+seat declared it) is OPEN pending the replication call. §2/§4/§5
+drafting remains unblocked. §3 may be drafted on the dynamical
+route with the static question explicitly fenced open.
+
+ARTIFACTS: pr_vtx1_sheet.txt (010fa6e7),
+rcf_r53b_pre_execution_register.txt, r53b_armsAB.py/.json.
+==============================================================================

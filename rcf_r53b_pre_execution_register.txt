@@ -1,0 +1,55 @@
+==============================================================================
+REGISTER — r5.3b PRE-EXECUTION: PR-VTX-1 declared (sheet frozen
+010fa6e780885ea74dfc9c5d98da096b) BEFORE any number is read.
+==============================================================================
+CONTEXT: the audit on 7c555b6 signed off r5.3a in full and routed
+(b)-before-(a): draft Paper II §2–§5 only after the composite-vertex
+test fills the §3 slot. Two independent seat messages then CONVERGED
+on a sharpened version of the same test, with a major pre-flight
+discovery attached (No-Go VIIIb candidate: bulk static vertex
+constraints empty the kernel; dynamical H_vtx coupling is clean with
+zero dark states). Per the standing discipline (declare before run;
+a non-replication must be diagnosed to root cause on BOTH sides —
+the r5.3a lesson), this round REPLICATES the seat's discovery
+independently under Gate S + Gate G + GATE-CG before any adoption,
+with the seat's exact numbers pre-registered as DECLARED EXPECTATIONS
+(any deviation > 1e-6 on the rationals is a replication call, not a
+silent pass). The r6.0 route stands: (b) is the gate for §3; §2/§4/§5
+may draft in parallel; (a)-before-(b) declined — it would create a
+vacant §3 slot, the construct-by-assumption pattern that produced
+bug #10.
+THE SHEET (pr_vtx1_sheet.txt, md5 010fa6e7): 3-arm corner (dim 729,
+z=1 per register, valence-safe — the genuine kernel readout, 32D
+expected on forbid-J=3) vs bulk 6-arm cubic cross (L=3 dim 19,683
+exact, kernel K_3^{ox3} 64D; L=5 ONLY via the 64D compressed route).
+Static arm: P_vtx^(J) for J in {0,1,2,3} added to M_edges (PSD
+addition, the No-Go VIII convention). Dynamical arm: H_vtx =
+S_vx·S_vy + S_vy·S_vz + S_vz·S_vx = (1/2)(J_vtx^2 - 6) as
+HAMILTONIAN, never added to M_edges. DECLARED EXPECTATIONS (the
+seat's numbers, now replication targets): bulk forbid-J lambda_min
+8/343, 12/49, 120/343, 8/49 exactly; L=5 forbid-J=3 -> 0.246717;
+H_vtx off-kernel leak ||(1-P_K) H_vtx P_K||_F^2 = 251.142024 with
+per-state min leak 3.448563 > 0 (zero dark states, even the 1D L=3
+dark singlet lifted); corner forbid-J=3 kernel 32D with gap 0.247532,
+cross-axis arm correlation <S_1x·S_1y>_K = -0.036427, cross-axis
+spillover ||[P^(1)_{0x,1x}, P_vtx^(3)]||_F^2 = 28/5 = 5.6. Arm C
+adds the cross-axis propagation preview: single-axis x-defect under
+L = -i[H_vtx, ·] + gamma(D_x + D_y + D_z), burden clock Gamma_mu =
+gamma M_mu (the standing r5.1d/r5.2 convention), isotropy |Gamma_y -
+Gamma_z| / Gamma_y < 1e-9 (exact S_3 symmetry — machine-zero band,
+the f0_1 analogue; any nonzero asymmetry is a numerics failure that
+invalidates the run BEFORE verdict).
+OUTCOME SPACE (pre-declared): POSITIVE (No-Go VIIIb + dynamical
+route certified; §3 writes the composite with H_vtx) / NEGATIVE
+(replication call first — root cause BOTH sides — then re-adjudicate)
+/ INCONCLUSIVE (convention/scale collision; diagnose first) /
+VACUOUS (kernel-empty read as POSITIVE — FORBIDDEN; the bulk static
+rows are expected kernel-empty and carry the no-go content, the
+corner kernel is the only genuine kernel readout).
+VACANCY LEDGER AFTER THIS RUN (pre-declared): No-Go VIIIb certified
+E4 -> §3 writes with H_vtx and the slot closes; No-Go VIIIb refuted
+cleanly -> the static route lives and §3 re-scopes; both fail ->
+§3 defers the composite vertex to Paper VI and the 3D program gains
+a frontier. No outcome of this run leaves §3 with an unwritten
+obligation — that is the point of running it before drafting.
+==============================================================================

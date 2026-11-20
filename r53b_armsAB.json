@@ -1,0 +1,98 @@
+{
+  "GATE_S": {
+    "max_comm": 3.1718998303807225e-16,
+    "casimir": 5.438959822042073e-16,
+    "verdict": "PASS"
+  },
+  "GATE_CG": {
+    "max_diff_adjacent_N4to9": 5.020921489134356e-15,
+    "verdict": "PASS"
+  },
+  "ArmA_gate_G": {
+    "max_off_support": 0.0,
+    "min_on_support": 11.618950038622247,
+    "verdict": "PASS"
+  },
+  "ArmA_static_table": {
+    "0": {
+      "P_vtx_dim": 1,
+      "ker_dim": 52,
+      "lambda_min": -0.0,
+      "gap_above_ker": 0.254644008
+    },
+    "1": {
+      "P_vtx_dim": 9,
+      "ker_dim": 12,
+      "lambda_min": -0.0,
+      "gap_above_ker": 0.133974596
+    },
+    "2": {
+      "P_vtx_dim": 10,
+      "ker_dim": 32,
+      "lambda_min": -0.0,
+      "gap_above_ker": 0.5
+    },
+    "3": {
+      "P_vtx_dim": 7,
+      "ker_dim": 64,
+      "lambda_min": -0.0,
+      "gap_above_ker": 1.0
+    }
+  },
+  "ArmA_live_kernel": {
+    "dim": 64,
+    "residual": 9.85257722037527e-15,
+    "gap": 1.0
+  },
+  "ArmA_cross_corr": {
+    "S1xS1y_in_kernel": -0.0,
+    "declared": -0.036427
+  },
+  "ArmA_spillover": {
+    "norm_F2": 0.0,
+    "declared_28_5": 5.6
+  },
+  "ArmB_kernel_check": {
+    "per_axis_dim": 4,
+    "total_dim": 64,
+    "residual": 1.2330016722981561e-15
+  },
+  "ArmB_gate_G": {
+    "max_off_support": 0.0,
+    "min_on_support": 60.3738353924943,
+    "verdict": "PASS"
+  },
+  "ArmB_static_table": {
+    "0": {
+      "P_vtx_dim": 1,
+      "ker_dim_out_of_64": 16,
+      "lambda_min_compressed": -0.0
+    },
+    "1": {
+      "P_vtx_dim": 9,
+      "ker_dim_out_of_64": 0,
+      "lambda_min_compressed": 0.257682356
+    },
+    "2": {
+      "P_vtx_dim": 10,
+      "ker_dim_out_of_64": 16,
+      "lambda_min_compressed": -0.0
+    },
+    "3": {
+      "P_vtx_dim": 7,
+      "ker_dim_out_of_64": 64,
+      "lambda_min_compressed": -0.0
+    }
+  },
+  "ArmB_dynamical": {
+    "leak_F2": 251.142024,
+    "declared": 251.142024,
+    "per_state_leak_min": 3.761726,
+    "per_state_leak_max": 4.211092,
+    "declared_min": 3.448563
+  },
+  "ArmB_L5": {
+    "status": "deferred-to-script-2"
+  },
+  "elapsed_s": 6.24
+}
