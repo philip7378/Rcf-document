@@ -1,0 +1,159 @@
+==============================================================================
+REGISTER — r7.0: AUDIT 800c43c SIGNED OFF IN FULL; §3 NUMBERS
+VERIFIED; PR-METRIC-2 RUN AS FROZEN -> INCONCLUSIVE (with the
+IMPOSSIBLE-branch diagnostic recorded verbatim); THE +1.1688
+OBJECT RENAMED (multiplicativity gap); §3 DRAFTED.
+Scripts r70_metric2.py / r70_metric2.json; draft
+p2_sec3_draft.txt. (Gate S PASS on every computation; adjudication
+reported as found, no retrofit.)
+==============================================================================
+
+1. AUDIT 800c43c ACCEPTED IN FULL. Zero defects; the three r6.2
+   pins confirmed closed. The audit's §3 draft numbers were swept
+   against the corpus JSONs BEFORE drafting (r7.0 verification
+   sweep): B4 graph table (P4 ker 4 / gap 0.448956; C_3 ker 1 /
+   5/6; C_4 1/3; C_5 0.453957; K_{1,3} (7-sqrt(37))/6 = 0.152873
+   exact; K_{1,4} 0.313859; K_4 5/3; K_5 10/3; T-tree 0.166317;
+   null-space residuals <= 1.9e-15; construction agreement
+   2.9e-15; B5 valence law all-rows-consistent), bulk static table
+   (8/343, 12/49, 120/343, 8/49 compressed with the declared
+   deviations 1.6/1.8/4.1e-10; full-space lambda_min 0.016699 /
+   0.142603 / 0.265483 / 0.097265 with 0.0 deviation on every row),
+   corner (kernel 8D residual 2.0e-16; forbid-J=3 ker 32 / gap
+   0.247532; S1S3 = -0.036427; Gate G active sites {0,2,4}),
+   spillovers (4-site 5.6 / 3.7333 / 2.4889 = 28/5, 56/15, 112/45
+   exact; 6-site x9 scaling 50.4 / 33.6 / 22.4 — the audit's
+   9x-on-the-support note upheld), leak spectrum (trace 251.142024,
+   [3.448563, 4.218242], Schur-Horn sandwich with r53b's diagonal
+   [3.761726, 4.211092]), Arm C (targets -0.000134 / -0.001363 /
+   -0.003196 / +0.004921; isotropy 5.55e-17; bg pump 0.267557 ->
+   defect M_y 0.272477 at t = 1.50), C4 (<P_vtx^{(0)}> = 8/343,
+   deviation 3.5e-18), ArmB_L5 (0.246717 at dim 1,594,323). ALL
+   CONFIRMED. One wording note adopted into the §3 draft: the
+   1.59M L=5 dim is 3^13 = 1,594,323 (the 15-site 3^15 notation in
+   the audit's table caption was a typo; the certificate's dim is
+   correct as certified).
+
+2. THE RENAMING ADOPTED — "junction cocycle defect" -> JUNCTION
+   MULTIPLICATIVITY GAP M(A, C; O) := d(A,C) - [d(A,O) + d(O,C)] =
+   -ln[K(A,C)/(K(A,O)K(O,C))] (machine 1.168796 on all three
+   triangles, C3-symmetric, barycenter anchor). The audit's
+   physical reading is the registered one: it is a CORRELATION
+   quantity — the amount by which the pair correlation across the
+   junction falls below the product-of-marginals — zero on product
+   seeds, nonzero exactly when the junction entangles; NOT a metric
+   defect. The r6.2 register's "raw pair violates triangle
+   inequality" sentence is AMENDED (r70a) to: the raw -ln|K| is a
+   link-level separation / direct-pair diagnostic that is NOT
+   multiplicative on entangled kernels; the path-infimum d_int is
+   the metric closure (unchanged commitment); the +1.1688 object is
+   the entanglement signature of the junction.
+   PRODUCT-SEED GUARD (r70_metric2): on rho_arm^{(x)} (x)
+   rho_arm^{(y)} (x) rho_arm^{(z)} the cross-stub K factorizes to
+   the product of marginals and the marginals vanish (barycenter
+   variance 2/3, cross-stub K = -0.0): the gap object degenerates
+   vacuously — consistent with the pre-registered guard (there is
+   no junction entanglement signature on product seeds).
+
+3. PR-METRIC-2 RUN AS FROZEN -> VERDICT: INCONCLUSIVE (the sheet's
+   outcome space honored verbatim, no retrofit):
+   - d_int on the certified 6-node K_32 graph (3 registers, 3
+     stubs, edge weights -ln|corr|): stub-stub 3.622512 on all
+     three pairs (C3-symmetric).
+   - d_scaling (Theorem A/B -ln det C family restricted to the
+     frame: -ln[det C(u,v)/(||u||^2 ||v||^2)] on the profile
+     pairs): 0.006559 on all three pairs.
+   - The comparison FIRED the IMPOSSIBLE branch (d_int >
+     d_scaling on every pair); the sheet's prescribed diagnosis
+     resolved it as a CONSTRUCTION MISMATCH, not a state-space
+     fact: d_int's weights are site-site -ln|<S^z S^z>|
+     correlations; d_scaling's inputs are profile inner products
+     Phi_a . Phi_b; no certified site-to-profile embedding fixes a
+     common space, so EQUAL / ENVELOPE are not well-posed on this
+     frame. Verdict entered: INCONCLUSIVE. The multi-vertex lattice
+     gate owns the question (it needs the embedding map and a
+     denser frame). PR-METRIC-1's deferral is UNAFFECTED. The
+     audit's EQUAL -> tiling-prediction corollary does NOT fire;
+     the audit's "most likely INCONCLUSIVE on first pass" was the
+     registered forecast and is the outcome.
+
+4. THE INCRICLE/CHORD PREDICTED FORM REGISTERED (E0-fenced, the
+   audit's and the user's construction, machine-read off the
+   certified K_32 frame):
+   - G^prof chord distances: 1.168930 on all three stub pairs;
+     via-incenter 2r = 1.590085 (r = 0.7950); chord defect
+     -0.421155 < 0 on every pair; stub-pair angle 94.638 deg
+     (the flat-Euclidean right-angle chord form; at exactly 90 deg
+     the defect is the (sqrt(2)-2)r = -0.4783 value).
+   - REGISTER CLASS: the PREDICTED resolved geometry — three
+     additive 1D dimensions determine a triangle; stub positions
+     are the incircle touch points; the register is the incenter;
+     the correct metric is the chord, not the side-sum. E0-fenced
+     (the Gram-chord reading of the certified frame, NOT yet the
+     metric the correlation structure realizes). The pre-committed
+     lattice-gate target is unchanged and sharpened: does the
+     multi-vertex lattice carry the junction signature from the
+     raw-log gap (+1.1688) across to the chord defect (-0.4212) —
+     i.e. does the scaling / FS metric realize the chord geometry.
+   - The audit's overlap note is registered as the gluing condition
+     for the downstream lattice: finite-radius (Gram-chord) cells
+     glue at shared tangency cleanly; boundary-divergent log
+     metrics (-ln det C / Hilbert) require OVERLAPPING cells, not
+     single-point tangency.
+
+5. THE USER'S MECHANISM QUESTION — WHY AKLT's DIMENSION COMES FROM
+   VERTICES AND RCF's FROM LINKS (registered as the §3
+   architectural inversion paragraph, drafted at the top of §3):
+   - In AKLT the graph is an INPUT: the Hilbert space factorizes
+     over vertices, bonds are entangling edges drawn between
+     pre-existing nodes, and the emergent dimension is the Hausdorff
+     dimension of the graph that was put in. The vertex is
+     primitive; the link is derived (a bond operator chosen on an
+     edge of the input geometry).
+   - In the present framework the inversion is total: the LINK is
+     primitive (a 1D displacement channel certified by its bond
+     constraint), D_loc = 3 counts the independent 1D link
+     directions that close in the link algebra (Theorem II.1), and
+     the VERTEX is a DERIVED relational locus — a composite
+     register wired INSIDE the link-derived dimension, not a node
+     that pre-exists it.
+   - The No-Gos are then the inversion's own predictions:
+     No-Go VIII = the vertex-first static overload hits the
+     2-leg valence wall (z >= 3 empties the kernel — you cannot
+     build 3D by overloading vertex constraints); No-Go VIIIb =
+     every static bulk vertex constraint kills the 64D edge kernel
+     it is meant to knit (the 8/343 floor: bulk AKLT weight on
+     every sector J in {0,1,2,3}); H_vtx dynamical coupling = the
+     vertex exists as an ACTIVE relational object (the T-MISMATCH
+     leak + Arm C transfer), never as input geometry.
+   - The triangle/incircle construction is the positive face of
+     the same inversion: the three links determine the frame; the
+     vertex (register) is the INCENTER; the stubs are the touch
+     points; the junction multiplicativity gap is the angle data
+     the additive side-sums cannot see (PR-SCALE-1's cubic
+     invariant is the algebraic face of the same fact — pairwise
+     1D data do not determine the position on the circle).
+
+6. §3 DRAFTED (p2_sec3_draft.txt) — the content layer, per the
+   locked order: 3.1 No-Go VIII (B4 table, valence law); 3.2
+   No-Go VIIIb (bulk table, the 8/343 triplet mechanism,
+   corner spillovers with the norm conventions declared); 3.3
+   H_vtx T-MISMATCH + Arm C (with the r5.3d fence); 3.4 PR-LINK-1
+   E3-corner (both Grams named per PIN 2; the multiplicativity
+   gap renamed per the r7.0 amendment with the product-seed
+   degeneracy; d_int committed; PR-METRIC-2 INCONCLUSIVE entered
+   with its diagnostic; the incircle/chord predicted form
+   E0-fenced with the 94.638-deg / -0.4212 numbers). The
+   architectural-inversion paragraph (item 5) opens the section.
+   §4/§5 next per the lock; §1 last.
+
+7. LEDGER: no new defects this round; one register-wording
+   amendment (the r6.2 "triangle violation" sentence -> the
+   multiplicativity-gap object, r70a); one pre-registered gate run
+   to its honest verdict (INCONCLUSIVE, diagnostic recorded);
+   the audit's §3 numbers verified in full before drafting.
+
+ARTIFACTS: r70_metric2.py / r70_metric2.json /
+p2_sec3_draft.txt / rcf_r70_register.txt (this entry) /
+rcf_r70a_amendment.txt — one push.
+==============================================================================

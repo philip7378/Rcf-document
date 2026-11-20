@@ -1,0 +1,112 @@
+{
+  "GATE_S": {
+    "max_comm": 3.1718998303807225e-16,
+    "verdict": "PASS"
+  },
+  "M_multiplicativity_gap_K32": {
+    "definition": "M(A,C;O) = d(A,C) - [d(A,O)+d(O,C)], d = -ln|K|, O = barycenter anchor (r6.2 PIN-1 certified object)",
+    "values": {
+      "01": 1.168796266,
+      "02": 1.168796266,
+      "12": 1.168796266
+    },
+    "reading": "junction entanglement signature (renamed per r7.0 amendment): the amount by which the pair correlation across the junction falls below the product-of-marginals prediction"
+  },
+  "d_int": {
+    "graph": "6 nodes (3 registers, 3 stubs), edge weight -ln|corr| from the certified K32 correlations",
+    "stub_stub": {
+      "1,2": 3.6225122,
+      "1,3": 3.6225122,
+      "2,3": 3.6225122
+    },
+    "note": "C3-symmetric by construction (all three stub-stub pairs agree)"
+  },
+  "d_scaling": {
+    "definition": "-ln[det C(u,v) / (||u||^2 ||v||^2)], C the 2x2 profile Gram on the pair's span (log-volume ratio; the Theorem A/B -ln det C family restricted to the certified frame)",
+    "stub_stub": {
+      "1,2": 0.00655857,
+      "1,3": 0.00655857,
+      "2,3": 0.00655857
+    }
+  },
+  "PRIMARY": {
+    "comparison": {
+      "1,2": {
+        "d_int": 3.6225122,
+        "d_scaling": 0.00655857,
+        "ratio": 0.001810503,
+        "diff": -3.61595363
+      },
+      "1,3": {
+        "d_int": 3.6225122,
+        "d_scaling": 0.00655857,
+        "ratio": 0.001810503,
+        "diff": -3.61595363
+      },
+      "2,3": {
+        "d_int": 3.6225122,
+        "d_scaling": 0.00655857,
+        "ratio": 0.001810503,
+        "diff": -3.61595363
+      }
+    }
+  },
+  "GUARD_product_seed": {
+    "state": "rho_arm^{(x)} \\otimes rho_arm^{(y)} \\otimes rho_arm^{(z)}",
+    "barycenter_var": 0.666666666667,
+    "cross_stub_K": -0.0,
+    "gap": {
+      "01": null,
+      "02": null,
+      "12": null
+    },
+    "reading": "cross-stub K factorizes to the product of marginals and the marginals vanish (SU(2)-invariant arms): the multiplicativity gap object degenerates \u2014 on product seeds there IS no junction entanglement signature (consistent with the pre-registered guard; the log-distance itself is degenerate there, so the d_int = d_scaling EQUAL test on product seeds is vacuous: both distances are carried by the entangled frame only)"
+  },
+  "INCRcircle_chord_form_E0fenced": {
+    "Gram": [
+      [
+        0.632092823,
+        -0.051106217,
+        -0.051106217
+      ],
+      [
+        -0.051106217,
+        0.632092823,
+        -0.051106217
+      ],
+      [
+        -0.051106217,
+        -0.051106217,
+        0.632092823
+      ]
+    ],
+    "chord_distances": {
+      "1,2": {
+        "chord": 1.168930314,
+        "2r": 1.590085309,
+        "defect": -0.421154995
+      },
+      "1,3": {
+        "chord": 1.168930314,
+        "2r": 1.590085309,
+        "defect": -0.421154995
+      },
+      "2,3": {
+        "chord": 1.168930314,
+        "2r": 1.590085309,
+        "defect": -0.421154995
+      }
+    },
+    "stub_pair_angle_deg": 94.637563,
+    "reading": "the Gram-induced chord metric on the SAME certified frame: strictly sub-additive (defect < 0), the flat-Euclidean right-angle chord form the lattice gate is pre-committed to test; E0-fenced as the PREDICTED resolved form, not a certified closure"
+  },
+  "ADJUDICATION": {
+    "EQUAL": false,
+    "ENVELOPE(d_int <= d_scaling)": false,
+    "IMPOSSIBLE_fired": true,
+    "IMPOSSIBLE_diagnosis": "construction mismatch: d_int weights are site-site -ln|<S^z S^z>| correlations; d_scaling inputs are profile inner products Phi_a . Phi_b; no certified site->profile embedding fixes a common space, so EQUAL/ENVELOPE are not well-posed on this frame",
+    "verdict": "INCONCLUSIVE",
+    "note": "the multi-vertex lattice gate owns the question (needs the embedding map / denser frame); PR-METRIC-2 stays OPEN, outcome INCONCLUSIVE, diagnostic recorded; PR-METRIC-1's deferral unaffected; the incircle/chord form below carries the PREDICTED resolved geometry (E0-fenced)"
+  },
+  "elapsed_s": 4.84
+}

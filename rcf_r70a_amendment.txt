@@ -1,0 +1,72 @@
+==============================================================================
+AMENDMENT — r6.2 REGISTER (rcf_r62_register.txt), per the r7.0
+renaming adopted from the audit of 800c43c. The r6.2 technical
+content STANDS (all three pins, all certificates); the wording
+below is corrected so §3 and downstream registers carry the right
+object. The r6.0 lock and the drafting order are untouched.
+
+A1. r6.2 item 2 / PIN 1 — AMENDED WORDING (the object renamed):
+    "the raw pairwise -ln|K| VIOLATES the triangle inequality at
+    the junction" is replaced by the correct object statement:
+    the +1.168796 quantity is the JUNCTION MULTIPLICATIVITY GAP
+    M(A, C; O) := d(A,C) - [d(A,O) + d(O,C)] =
+    -ln[K(A,C)/(K(A,O)K(O,C))] — a CORRELATION quantity: the amount
+    by which the pair correlation across the junction falls below
+    the product-of-marginals, zero on product states, nonzero
+    exactly when the junction entangles. The raw -ln|K| is a
+    link-level separation / direct-pair diagnostic that is NOT
+    multiplicative on entangled kernels; it was never a metric
+    candidate, so "triangle violation" mis-frames it. The §3
+    commitment is unchanged: path-infimum d_int is the metric
+    closure; the gap is reported as the junction's entanglement
+    signature. (The Euclidean contrast sentence also reframed:
+    the flat-Euclidean NEGATIVE chord defect is the PREDICTED
+    resolved form under the Gram-chord metric — the incircle
+    construction — not a contrast class the raw object belongs to.)
+    Product-seed guard (r70_metric2): on product seeds the gap
+    object degenerates vacuously (marginals vanish; cross-stub K
+    factorizes); consistent with the pre-registered guard.
+
+A2. r6.2 item 2's registered K-space reading — AMENDED to match
+    A1: "SUB-multiplicative K" is retained (it is the correct
+    K-space statement of the same object: |K(A,C)| <
+    |K(A,O)||K(O,C)| on the entangled kernel), but its register
+    class is the multiplicativity gap, not a pseudometric axiom
+    failure. The "No-Go-candidate" reading is withdrawn: there is
+    no no-go, because -ln|K| was never the metric; d_int is.
+
+A3. PR-METRIC-2 OPENED AND RUN (r70_metric2, outcome space as
+    pre-registered by the audit, frozen, honored verbatim):
+    verdict INCONCLUSIVE — the comparison fired the IMPOSSIBLE
+    branch (d_int 3.622512 vs. d_scaling 0.006559 on all three
+    pairs) and the prescribed diagnosis resolved it as a
+    CONSTRUCTION MISMATCH (site-site correlation weights vs.
+    profile inner products; no certified site-to-profile embedding
+    fixes a common space, so EQUAL/ENVELOPE are not well-posed on
+    this frame). The multi-vertex lattice gate owns the question.
+    PR-METRIC-1's deferral is unaffected. The audit's
+    EQUAL-condition tiling corollary did not fire.
+
+A4. The incircle/chord construction (the user's triangle picture,
+    the audit's geometric reading) is REGISTERED as the E0-fenced
+    PREDICTED resolved form with machine numbers off the certified
+    K_32 frame: Gram-chord 1.168930, via-incenter 1.590085,
+    defect -0.421155, stub-pair angle 94.638 deg. Gluing condition
+    for the downstream lattice registered with it: finite-radius
+    (Gram-chord) cells glue at tangency; boundary-divergent log
+    metrics require overlapping cells.
+
+A5. STANDING BATTERY unchanged (Gate O, C3 = 1+2 lemma, Gate S
+    norm header carried from r6.2); this round's discipline note:
+    pre-registered outcome spaces are honored verbatim even when
+    the branch that fires is the embarrassing one — the
+    IMPOSSIBLE-branch diagnosis is recorded verbatim in the JSON
+    before the verdict line is entered (r70_metric2.json
+    ADJUDICATION).
+
+A6. §3 opens on the resolved objects (renamed gap, both Grams
+    named, 3-arm qualifier, PR-METRIC-2 INCONCLUSIVE with its
+    diagnostic, the incircle/chord predicted form E0-fenced);
+    §2 stands as drafted (r6.2); §4/§5 next per the locked order;
+    §1 last.
+==============================================================================

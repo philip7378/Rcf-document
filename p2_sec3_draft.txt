@@ -1,0 +1,303 @@
+PAPER II §3 DRAFT (r7.0) — From 1D Existence to 3D Link
+Connectivity: Graph-Valence Obstructions, Dynamical Vertex
+Coupling, and the Corner Link Frame
+====================================================================
+[Drafting baseline: r6.0 lock + r6.0a + r6.1 (PR-LINK-1 SPLIT) +
+r6.2 (pins 1-3 resolved, Gate O + C3=1+2 lemma + norm header in the
+standing battery) + r7.0 (PR-METRIC-2 INCONCLUSIVE with diagnostic;
+multiplicativity-gap renaming; incircle/chord predicted form). Every
+number below is verified this round against the corpus JSONs:
+r53a_preflightB.json (B4 table, B0 construction agreement), 
+r53c_static.json (bulk static table, corner, leak spectrum),
+r53c_armC.json (Arm C), r53d_closure.json (spillovers, 8/343),
+r53b_armsAB.json (ArmB_L5), r61_link1.json + r62_adjudicate.json
+(link frame), r70_metric2.json (PR-METRIC-2). Locked order §2 -> §3
+-> §4/§5 -> §1 last; §2 drafted at r6.2 (p2_sec2_draft.txt).]
+
+Section 3: From 1D Existence to 3D Link Connectivity — Graph-Valence
+Obstructions, Dynamical Vertex Coupling, and the Corner Link Frame
+
+Theorem II.1 (Sec. 2) derived local directional dimension D_loc = 3
+and SU(2) from complex associative rank-2 Jordan closure, feeding
+directly into Paper I Theorem 1 to select S = 1 (C^3) as the unique
+frustration-free single-violation-sector spin. This section
+determines how multi-site spin-1 structures can extend beyond Paper
+I's 1D open chain without violating the S = 1 bond condition — and
+proves by two new No-Go theorems that static existence constraints
+cannot branch into 3D on their own; cross-axis connectivity is
+forced into the dynamical Lie and link sectors.
+
+The architectural inversion relative to AKLT deserves stating once,
+plainly, because it organizes everything below. In the AKLT
+construction the graph is an input: the Hilbert space factorizes
+over vertices, bonds are entangling edges drawn between them, and
+the emergent dimension is the Hausdorff dimension of whatever graph
+was put in. In the present framework the link is primitive and
+the vertex is derived: D_loc = 3 counts independent 1D displacement
+directions that close in the link algebra (Theorem II.1), and a
+"vertex" is a relational locus — a composite register wired inside
+the link-derived dimension, not a node that pre-exists it. The
+No-Gos below are then exactly what this inversion predicts: a
+vertex-first static overload of the spin-1 bond runs into the
+valence wall (No-Go VIII), a static bulk vertex constraint kills
+the very edge kernel it is supposed to knit (No-Go VIIIb), and only
+the dynamical coupling H_vtx — the vertex as an active relational
+object, not as geometry — carries cross-axis information (Sec. 3.3).
+The corner link frame of Sec. 3.4 is the positive witness of the
+inverted order: three intact links determine a rank-3 frame in
+which the register sits as the incenter of the three stub
+directions, and the junction's multiplicativity gap (Sec. 3.4.2) is
+precisely the angle data the additive 1D logs cannot see.
+
+3.1 No-Go VIII: The Bare Spin-1 Graph-Valence Obstruction [E4]
+
+Let G = (V, E) be a finite simple graph with spin-1 sites
+H_G = (C^3)^{(x)|V|} and bond constraint sum
+M_G = sum_{(i,j) in E} P_{ij}^{(2)}, where
+P_{ij}^{(2)} = (1/6)(S_i.S_j + 1)(S_i.S_j + 2).
+
+No-Go VIII (Spin-1 Graph-Valence Wall) [E4]. Every spin-1 site
+(Sym^2(C^2) = C^3) carries only two virtual spin-1/2 valence legs.
+Consequently, M_G admits a non-empty frustration-free kernel on
+z <= 2 chains and closed loops, but loses its kernel entirely as
+soon as any single vertex reaches coordination z >= 3. Certified
+across two independent general-pair constructions agreeing to
+2.9e-15 (r53a_preflightB B0), guarded by Gate S + Gate G +
+GATE-CG:
+
+| Graph G | max degree z | dim ker M_G | lambda_min (frustrated) / gap | ground mult. |
+| :--- | :---: | :---: | :--- | :---: |
+| Open path P_4 | 2 | 4 | gap 0.448956 | 5 |
+| Closed loops C_3 / C_4 / C_5 | 2 | 1 / 1 / 1 | gaps 5/6 / 1/3 / 0.453957 (exact for C_3, C_4) | 6 / 3 / 6 |
+| Star K_{1,3} | 3 | 0 | lambda_min = (7 - sqrt(37))/6 = 0.152873 (exact) | 5 |
+| Star K_{1,4} | 4 | 0 | lambda_min = 0.313859 | 7 |
+| Tetrahedron K_4 | 3 | 0 | lambda_min = 5/3 (exact) | 11 |
+| Complete K_5 | 4 | 0 | lambda_min = 10/3 (exact) | 21 |
+| T-tree (single z=3 vertex) | 3 | 0 | lambda_min = 0.166317 | 3 |
+
+The T-tree witness proves that even a single z = 3 junction empties
+the kernel on a non-complete, non-regular graph. Paper I's bare
+single-spin-1 vertex therefore encodes 1D existence strands only
+and cannot statically branch into 2D or 3D space. [Machine support:
+r53a_preflightB.json B4 (ker dims, lambda_min, null-space residuals
+<= 1.9e-15, ground multiplicities), B4_exact_forms (the closed
+forms (7-sqrt(37))/6, 5/3, 5/6, 1/3), B5 (valence law: any vertex
+z_v >= 3, i.e. z_v > 2S = 2, => ker = {0}; all rows consistent).]
+
+3.2 No-Go VIIIb: Static Composite-Vertex Constraints Fail in the 3D
+Bulk [E4]
+
+To respect No-Go VIII (z <= 2 per spin-1 bond channel) while
+providing three orthogonal link directions aligned with Theorem
+II.1's J_3, lift each spatial locus to a 3-axis composite vertex
+H_site = C^3_x (x) C^3_y (x) C^3_z (declared network composition
+rule), with strictly per-axis edge constraints
+M_edges = M_x + M_y + M_z. On its own, M_edges is frustration-free
+at every lattice size (ker M_edges = K_x (x) K_y (x) K_z; certified
+residual 1.2e-15 on the 64D bulk kernel, r53c_static bulk_kernel),
+but decoupled.
+
+Testing every SU(2)-invariant static vertex projector P_vtx^{(J)}
+(J in {0, 1, 2, 3}; dims 1, 9, 10, 7 on the 27D center vertex;
+Gate G active sites {1, 4, 7} PASS for all four, construction
+agreement between two independent builds 2.3e-13 worst) reveals a
+sharp boundary-corner vs. bulk split (r53c_static):
+
+(1) 3-Arm Boundary Corner (L = 2 per axis, 6 sites, dim = 729,
+vertex registers (0, 2, 4), stubs (1, 3, 5)): forbidding only the
+maximal ferromagnetic sector P_vtx^{(3)} leaves a frustration-free
+32D kernel (gap above kernel 0.247532; cross-arm correlation
+<S_1.S_3>_K = -0.036427), with exact off-kernel spillover norms
+against the corner's projectors
+||[P^{(1)}, P_vtx^{(3)}]||_F^2 = 28/5 = 5.6,
+||[P^{(2)}, P_vtx^{(3)}]||_F^2 = 56/15 = 3.7333,
+||[P^{(0)}, P_vtx^{(3)}]||_F^2 = 112/45 = 2.4889
+on 4 sites (machine 5.6 / 3.7333 / 2.4889), scaling exactly x9 on
+6 sites (50.4 / 33.6 / 22.4; r53d_closure C1, GATE-P verified;
+norm convention: squared Frobenius, supports 3^4 and 3^6).
+
+(2) No-Go VIIIb (Full Bulk 6-Arm 3D Cubic Cross, L = 3 per axis,
+9 sites, dim = 19,683, vertex registers (1, 4, 7)): in the bulk,
+every nontrivial static SU(2)-invariant vertex projector empties
+the 64D edge kernel K_3^(x)3 completely:
+
+| Static vertex constraint added to bulk M_edges | dim ker (of 64) | exact compressed lambda_min | exact full-space lambda_min (dim 19,683) |
+| :--- | :---: | :--- | :---: |
+| Forbid J_vtx = 0 (dim 1) | 0 / 64 | 8/343 = 0.023324 (dev 1.6e-10) | 0.016699 |
+| Forbid J_vtx = 1 (dim 9) | 0 / 64 | 12/49 = 0.244898 (dev 1.8e-10) | 0.142603 |
+| Forbid J_vtx = 2 (dim 10) | 0 / 64 | 120/343 = 0.349854 (dev 4.1e-10) | 0.265483 |
+| Forbid J_vtx = 3 (dim 7) | 0 / 64 | 8/49 = 0.163265 (at L = 5, dim 1,594,323: 0.246717) | 0.097265 |
+
+[Machine support: r53c_static.json bulk_static (all four rows),
+target_check (full-space deviation 0.0 on every row), r53b_armsAB
+ArmB_L5 (the L = 5 compressed persistence 0.246717).]
+
+Analytic mechanism (r53d_closure C3/C4, E4): on a bulk 3-site AKLT
+chain K_3, the J = 1 triplet's middle-site reduced density matrix
+has exact eigenvalues (1/7, 2/7, 4/7) (strictly full rank; machine
+0.142857 / 0.285714 / 0.571429, trace 1.0). Across three
+orthogonal axes, the minimal J_vtx = 0 overlap is therefore
+<P_vtx^{(0)}> = (1 x 2 x 4)/7^3 = 8/343 = 0.023323615 (machine
+deviation 3.5e-18) — proving that bulk AKLT states carry strictly
+positive weight on every vertex spin sector J in {0, 1, 2, 3}, so
+no single-sector static constraint can be imposed without paying
+the 8/343 floor. The same triplet argument supplies each sector's
+compressed floor in the table.
+
+3.3 Dynamical Cross-Axis Vertex Coupling H_vtx & Arm C Transfer
+[E4 / E3]
+
+Because No-Go VIIIb eliminates static bulk vertex constraints,
+cross-axis coupling at a composite vertex must be dynamical: keep
+the frustration-free edge kernel strictly per-axis
+(M_edges = M_x + M_y + M_z, preserving Paper I's cov3 and Theorem
+B's S = 1 scaling metric verbatim on every axis) and couple the
+three vertex registers via the unique SU(2)-scalar Lie generator
+
+    H_vtx := S_{v,x}.S_{v,y} + S_{v,y}.S_{v,z} + S_{v,z}.S_{v,x}
+           = (1/2)(J_vtx^2 - 6.1).
+
+(1) Universal 3D Vertex T-MISMATCH (E4, r53c_static leak_spectrum;
+W = (1 - P_K) H_vtx V_64 on the bulk 6-arm cross, Rule S1's
+basis-independent object W^dag W): exact trace
+||(1 - P_K) H_vtx P_K||_F^2 = 251.142024 (norm convention: squared
+Frobenius, support 19,683), spectrum [3.448563, 4.218242] —
+strictly positive on all 64 kernel states, lifting even the 1D
+L = 3 dark singlet; the r53b diagonal min/max [3.761726, 4.211092]
+sit inside the certified spectral sandwich (Schur-Horn holds).
+
+(2) Baseline-Controlled Cross-Axis Transfer (E3, Arm C, r53c_armC):
+on the 6-site corner junction (dim = 729) evolving under
+L = -i[H_vtx, .] + gamma(D_x + D_y + D_z), gamma = 1, subtracting
+the reconciled-kernel background control (P_K2 (x) P_K2 (x) P_K2,
+which H_vtx pumps isotropically from 0 to 0.267557 by t = 1.50;
+defect-seed raw M_y(1.50) = 0.272477) from the x-defect seed
+(P2/5 (x) P_K2 (x) P_K2) isolates a strictly transverse-isotropic
+(|M_y - M_z| <= 5.6e-17, Tr = 1.0 throughout) two-stage cross-axis
+transfer signal:
+
+    Delta M_y(t) = Delta M_z(t) =
+      -0.000134 (t = 0.15) -> -0.001363 (t = 0.375)
+      -> -0.003196 (t = 0.75, Zeno dip)
+      -> +0.004921 (t = 1.50, positive excess transfer).
+
+[Machine support: r53c_armC.json targets (the four values),
+checks (max isotropy defect 5.55e-17, trace 1.0, positivity min
+-1.29e-7 at the Zeno dip), trajectories (bg pump 0.267557, defect
+M_y 0.272477 at t = 1.50).]
+
+Mandatory Substrate-Dynamics Scope Fence (r5.3d): the H_vtx leak
+certifies the vertex's dynamical activity; No-Go VIIIb certifies
+that no static constraint can replace it; neither is a statement
+about macroscopic spatial 3D.
+
+3.4 Link-Level Position Frame on Intact S = 1 Bonds (PR-LINK-1,
+E3-Corner)
+
+Evaluating link-level distance and direction directly on intact
+S = 1 bonds (r61_link1, r62_adjudicate, GATE-P/GATE-G/Gate-O
+verified) yields a clean split verdict — positive on 3-arm frame
+closure, open on junction distance composition.
+
+3.4.1 Closure-at-3 and C_3-Isotropy (two named Grams; PIN 2).
+On the 3-arm corner, displacement frames retain full rank 3 across
+all three regimes (bare edge kernel K_64, forbid-J = 3 kernel
+K_32, and H_vtx-coupled evolution). Two distinct C_3-circulant Gram
+matrices quantify the stub frame (both splitting 1 + 2 under C_3
+irreps — the standing lemma):
+
+  - Raw spin Gram G^spin_[mu,nu] := <S_mu^z S_nu^z>: (2/3) I_3 on
+    K_64 (the exact orthogonal Cartesian stub triple); on K_32 the
+    diagonal remains 2/3 exactly (the SU(2)-invariance operator
+    identity <(S^z)^2> = (1/3)<S^2> = 2/3; rho_32 commutes with
+    total SU(2) to 1.2e-15), with isotropic off-diagonal -0.012142.
+  - Profile-vector Gram G^prof_[mu,nu] := Phi_mu . Phi_nu (the
+    displacement-profile vectors' dot product): (2/3) I_3 on
+    K_64, tightening isotropically to diagonal 0.632093 and
+    off-diagonal -0.051106 on K_32 (det > 0, rank 3; eigenvalues
+    0.5299, 0.6831 x2 by the 1+2 split).
+
+  - 3-Arm Scope Fence (PIN 3): on four decoupled K_2 arms the stub
+    Gram is (2/3) I_4, rank 4. PR-LINK-1 therefore certifies 3-arm
+    non-degeneracy and C_3-isotropy on intact S = 1 links — not
+    dimension selection, which remains with Theorem II.1 (Sec. 2)
+    and whose static overload route No-Go VIII/VIIIb forbid.
+
+3.4.2 The Junction Multiplicativity Gap and the Distance
+Commitment (PIN 1, renamed per r7.0).
+Along any single 1D AKLT axis, the static kernel correlation
+(-1)^n (4/3^{n+1}) (base 1/3; kept distinct per Gate O / T4 from
+Paper I Theorem 8's 2/3 dipole extension eigen-rate) yields exact
+additive 1D log-distance. Across the 3-axis corner junction, the
+raw pairwise -ln|K| produces an exact C_3-symmetric gap on all
+three stub pairs:
+
+    M(A, C; O) := d(A, C) - [d(A, O) + d(O, C)] = +1.168796,
+    d = -ln|K|, O = barycenter anchor
+
+(equivalently the K-space log-ratio
+ln[K(A,C)/(K(A,O)K(O,C)] = -1.168796; direct stub-stub separation
+4.4111 vs. via-center 3.2423; on the bare uncoupled kernel
+K(e_mu, e_nu) = 0 and the object degenerates; on product seeds the
+marginals vanish and the gap object is vacuous — r70_metric2
+GUARD). The gap is a CORRELATION quantity, not a metric defect: it
+is the amount by which the pair correlation across the junction
+falls below the product-of-marginals, zero on product states,
+nonzero exactly when the junction entangles. Reading it as a
+"distance defect" was the category error: raw pairwise -ln|K| is a
+link-level separation and a direct-pair diagnostic, not a
+pseudometric on 3D frames.
+
+Spatial link distance in Paper II is therefore committed to the
+unconditional path-infimum d_int (Theorem S2, Sec. 5), with raw
+-ln|K| retained only as the direct-pair diagnostic. On the
+certified 6-node frame (3 registers, 3 stubs, edge weights
+-ln|corr| from K_32), d_int(stub, stub) = 3.622512 on all three
+pairs (C_3-symmetric).
+
+PR-METRIC-2 (r7.0, pre-registered outcome space, run as frozen):
+does d_int equal the scaling-metric distance d_scaling on the
+frame? The comparison fired the outcome space's IMPOSSIBLE branch —
+d_int (3.6225) vs. d_scaling (0.006559) — and the prescribed
+diagnosis resolved it as a CONSTRUCTION MISMATCH, not a state-space
+fact: d_int's weights are site-site -ln|<S^z S^z>| correlations
+while d_scaling's inputs are the profile inner products
+Phi_a . Phi_nu; no certified site-to-profile embedding fixes a
+common space, so EQUAL/ENVELOPE are not well-posed on this frame.
+Verdict: INCONCLUSIVE — the multi-vertex lattice gate owns the
+question (it needs the embedding map and a denser frame);
+PR-METRIC-1's deferral is unaffected.
+
+3.4.3 The Predicted Resolved Form (E0-fenced): the incircle/chord
+geometry. The geometric picture that the 3-arm data force: three
+additive 1D dimensions determine a triangle, and the stub
+positions are the touch points of its inscribed circle — the
+register sits at the incenter, equidistant (r =
+sqrt(G^prof_[mu,mu]) = 0.7950) from all three stub directions.
+On the SAME certified K_32 frame, the Gram-induced chord distance
+
+    d_G(mu, nu) = sqrt(G_mm + G_nn - 2 G_mn) = 1.168930,
+    via-incenter 2r = 1.590085,
+    chord defect = -0.421155 < 0 (stub-pair angle 94.638 deg)
+
+is strictly sub-additive on every pair — the flat-Euclidean
+right-angle chord form (the (sqrt(2) - 2)r negative defect at
+exactly 90 degrees, here -0.4212 at 94.6 degrees). This is the
+PREDICTED resolved geometry: the raw additive logs fail at the
+corner precisely because the three 1D dimensions determine a
+2-sphere of positions rather than a sum of sides, and the correct
+metric is the chord on that sphere, not the side-sum. It is
+E0-fenced: certified here only as the frame's Gram-chord reading,
+not yet as the metric the correlation structure itself realizes.
+The pre-committed lattice-gate target stands: whether a
+multi-vertex 3D lattice with plaquette/diagonal paths carries the
+junction signature from the raw-log's +1.1688 gap across to the
+chord's -0.4212 defect — i.e. whether the scaling metric / FS
+metric realizes the chord geometry — and under which metric.
+
+[STATUS: §3 content-layer complete per the locked order. Numbers
+all verified against corpus JSONs this round (r7.0 verification
+sweep + PR-METRIC-2 run). Next per the lock: §4 (Emergent Time:
+Global Arrow, Monotone Spending Clock, No-Go VII) and §5 (Scaling
+Metric: PR-SCALE-1, Theorems A & B, S1 & S2), then §1 last.]
+====================================================================
