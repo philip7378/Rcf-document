@@ -1,0 +1,167 @@
+==============================================================================
+REGISTER — r5.3d: AUDIT SIGN-OFF PROCESSED (commit 38a0049 ACCEPT IN
+FULL) + SPILLOVER PARKED ITEM CLOSED (Bug #11d, MY side) + No-Go VIIIb
+DENOMINATOR PROOF VERIFIED ANALYTICALLY + PR-VTX-1 CLOSED (category
+relocation) + PR-LINK-1 GO-WORD ACCEPTED.
+Executed per the standing discipline: every audit number was verified
+BEFORE adoption (r53d_closure.py, results r53d_closure.json, Gate S
+PASS leading, 2.3 s).
+==============================================================================
+
+1. AUDIT ACCEPTANCE — 38a0049 ACCEPTED IN FULL, no exceptions.
+   The sign-off covers exactly what the r5.3c register certified:
+   Bug #11 (U P U^T landing on (4,5,8)), Bug #11b ((sum_q S_q)^2 vs
+   sum_q S_q^2), Bug #11c (spectrum vs basis-dependent diagonal),
+   all closed; No-Go VIIIb promoted E4 (rationals 8/343, 12/49,
+   120/343, 8/49 + full-space gaps, all 0/64); corner ker 32, gap
+   0.247532, corr -0.036427; leak spectrum 3.448563/4.218242/trace
+   251.142024; Arm C control-subtracted crossover table to <=1e-6,
+   isotropy 5.6e-17.
+
+2. THE PARKED SPILLOVER — CLOSED AS MY BUG (#11d), NOT A CONVENTION
+   MISMATCH. My r5.3c note ("the seat's P^(1) definition or norm
+   convention") was WRONG — the deviation was MY operator. Machine
+   verification (r53d_closure.py, all values to <=1e-12):
+   - The pair operator SS = S_i.S_j has eigenvalues {-2, -1, +1}
+     on the J = {0, 1, 2} sectors (from J_tot^2 = S_i^2 + S_j^2 +
+     2 S_i.S_j; my first closure draft used nodes {0,2,6} and
+     produced garbage — caught by the sector projector failing
+     idempotency; the standing P2 = (SS+I)(SS+2I)/6 formula encodes
+     the correct nodes all along).
+   - MY r5.3c "P^(1)" = (SS + I)/2 is NOT a projector: values
+     {0.5, 0, 1} on the J sectors = J=2 sector plus HALF the J=0
+     sector; idempotency defect 6.75. It is the wrong object.
+   - The CORRECT J=1 projector is the audit's P^(1) = -1/2 (SS -
+     I)(SS + 2I): matches the spectral Lagrange projector to 0.0,
+     idempotency 7.2e-15, Tr = 27 = 3 x 9 on the 4-site support
+     (the audit's 2-line check, run: PASS), Tr = 243 on 6 sites.
+   - Spillover family with the CORRECT projectors (dim 81 support
+     / dim 729 full): ||[P^(1), P_vtx^(3)]||_F^2 = 5.6 = 28/5
+     [50.4 = 252/5]; ||[P^(2), P_vtx^(3)]||_F^2 = 56/15 [33.6];
+     ||[P^(0), P_vtx^(3)]||_F^2 = 112/45 [22.4] — ALL EXACT.
+   - And 2 Tr(P^(0) . P_vtx^(3)) on 6 sites = 42.0 exactly: my old
+     42 was the wrong-operator commutator norm that numerically
+     COINCIDES with the double J=0 overlap trace. Bug #11d
+     CLOSED-MY-BUG. The r5.3c register's "convention mismatch,
+     parked with the seat" entry is CORRECTED: my error, the
+     seat's numbers were right (again). The lesson line for the
+     ledger: I parked a diagnostic as "their convention" when the
+     operator in MY hand was not even a projector — always run the
+     2-line sanity (Tr, idempotency) before attributing a
+     deviation to the other side. That check is now standing law
+     alongside Gate S / Gate G / GATE-CG: GATE-P (sector
+     projectors must be idempotent with the declared trace BEFORE
+     any commutator norm is reported).
+
+3. NO-GO VIIIb DENOMINATORS — ANALYTIC PROOF VERIFIED BEFORE ADOPTION.
+   The audit's argument, machine-checked (r53d_closure.py C3/C4):
+   - The L=3 AKLT kernel is J=0 (1D) + J=1 (3D); the triplet
+     |Psi_{1,+1}> is the M=+1 vector of the J=1 block (kernel dim
+     4, M spectrum {-1,0,+1}).
+   - Its MIDDLE-SITE reduced dm is diag(1/7, 2/7, 4/7) EXACTLY
+     (machine 0.142857143/0.285714286/0.571428571).
+   - Therefore the 3-axis product of the register dm's carries
+     <P_vtx^(0)> = (1*2*4)/7^3 = 8/343 EXACTLY (machine
+     0.0233236152 to 3e-15) — the analytic origin of the J=0
+     denominator, now ADOPTED as the §3 derivation of the bulk
+     table's rational row (with the J=1,2,3 rows remaining
+     machine-certified rationals; the audit's general product
+     formula explains all four sectors the same way).
+   The No-Go VIIIb content statement stands as registered: every
+   static vertex-sector constraint empties the bulk kernel; the
+   kernel's J=3 weight (64/27 marginal overlap) is why forbidding
+   J=3 kills 0/64 rather than being vacuous.
+
+4. PR-VTX-1 — CLOSED (category relocation, not failed).
+   ADOPTED with one dispute adjudicated against the audit's
+   sharpest clause:
+   - ADOPTED: PR-VTX-1 closes as "tested whether 3D lives in an
+     intra-vertex coupling; the answer is no at the static level
+     (No-Go VIII/VIIIb are the proof); the leak and Arm C are
+     re-homed as §3 substrate-dynamics results." No-Go VIII stays
+     E4 but necessary-not-sufficient. The reframe (dimension
+     lives in the LINK structure — distance and direction as
+     inferred relational structure) is registered as §3-§4's
+     organizing principle.
+   - DISPUTE (registered, my side of it): the audit's "the leak is
+     the inevitable consequence of testing at the wrong level"
+     over-reads the certification. H_vtx = (1/2)(J_vtx^2 - 6) is
+     the SU(2)-scalar coupling the composite vertex NEEDS for the
+     junction to be dynamical at all; the leak (zero dark
+     states, spectrum 3.448563..4.218242) is load-bearing §3
+     content — the composite-vertex analogue of Paper I's
+     T-MISMATCH — not an artifact signature. What the audit got
+     right and what stands: the leak is NOT "evidence of 3D
+     emergence" and must not be titled as such; it is evidence
+     the vertex is dynamically active. Registered middle line:
+     "the leak certifies the vertex's dynamical activity (no dark
+     state), No-Go VIIIb certifies no static constraint can
+     replace it, and NEITHER is a statement about spatial 3D."
+   - Arm C likewise re-titled: intra-vertex dynamical result
+     (isotropic cross-axis transfer at the junction), §3
+     content, not 3D-emergence evidence.
+   - The T1b-2c re-opening note is registered as a PR-LINK-1
+     sub-question (cocycle closure across overlapping LINKS,
+     distinct from the local-clock cocycle No-Go VII closed).
+
+5. PR-LINK-1 — GO-WORD ACCEPTED, GATE DECLARED (not executed here).
+   The audit's go-word is accepted with the audit's own caveat
+   made load-bearing: the operational definitions of DISTANCE and
+   DIRECTION as link-level objects must be PINNED IN THE SHEET
+   before the closure question is meaningful. PR-LINK-1's sheet
+   (next round, r6.1 unless drafting displaces it) must declare:
+   (i) the link algebra generators per link (bond content = the
+   P^(<=1) kernel projector; distance = the Jordan correlation
+   decay -ln K along the link; direction = the Lie transport /
+   cov3 arrow), each as a machine-checkable object;
+   (ii) S=1 preservation: the link algebra must act within ker
+   per link (Gate G-variant: commutator with S^z_k off-link zero,
+   on-link bounded);
+   (iii) closure at 3: the number of independent commuting
+   direction operators on a link chain;
+   (iv) the cocycle question across overlapping links (the
+   re-opened T1b-2c question at link level);
+   (v) pre-committed outcome space: PASS / FAIL-preservation /
+   FAIL-closure / INCONCLUSIVE (the audit's own four, with
+   INCONCLUSIVE explicitly acceptable if the definitions do not
+   yet pin the question — no forced verdicts).
+   Standing battery rides: Gate S + Gate G + GATE-CG + GATE-P
+   (new, see item 2).
+
+6. r6.0 LEDGER — final, locked this round for the drafting gate:
+   E4 pillars: Theorem II.1 (D_loc=3 + SU(2), all-n tightening,
+   both fences: M_n(C) saturation declared-input; link-space is
+   not spatial-3D); No-Go VII (two-bond holonomy local +
+   N-independent, theorem-graded; full-chain Lie-Trotter arm
+   fenced open); No-Go VIII (z_v >= 3 -> ker M_G = {0}, 10-row
+   table, UFD skeleton); No-Go VIIIb (all four static J
+   constraints empty the bulk kernel, E4, analytic J=0 row
+   adopted). E3: Arm C junction transfer (control-subtracted);
+   Theorems A/B restored E4 (r5.1b); PR-SCALE-1/2 per r5.1c ledger.
+   E0 fences (unchanged, every citation must carry them): emergent
+   spatial 3D (multi-vertex lattice -> continuum d_s/d_H -> metric
+   bridge) is OPEN at E0; D3 (container-counting) and D7
+   (dimension-from-generator-count) remain STRUCK; the
+   Paper-I-generativity register (dark energy entry #1 by
+   election) stays out of Paper II's load path.
+   BUG LEDGER (closed, for the preface of Paper II): #10
+   (non-adjacent edge collapse, r5.3), #11 (permutation
+   orientation, r5.3b), #11b (Casimir component form, r5.3c),
+   #11c (basis-dependent diagonal, r5.3b->c), #11d
+   (non-projector "P^(1)" + premature convention attribution,
+   r5.3c->d). Pattern line: five consecutive executor-side
+   defects caught by pre-registration + cross-construction +
+   the standing gates; none touched a certified claim's content.
+   ROUTE DECISION (the user's two options): Option 1 adopted —
+   LOCK THE REGISTER FIRST. This r6.0 theorem & claim register is
+   the lock; drafting (§2 -> §3 -> §4/§5 -> §1 last, per the
+   standing architecture) opens the next round ON this lock.
+   Option 2 (draft directly) is declined for one round only:
+   the register is the artifact the audit can dispute line by
+   line before prose exists, and PR-VTX-1's re-homing needed a
+   written adjudication (item 4) that prose would have blurred.
+
+ARTIFACTS: r53d_closure.py / r53d_closure.json / rcf_r53d_register.txt
+(this entry) + the locked rcf_r60_register.txt (separate file, same
+push).
+==============================================================================

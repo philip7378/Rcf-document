@@ -1,0 +1,84 @@
+{
+  "GATE_S": {
+    "max_comm": 3.1718998303807225e-16,
+    "verdict": "PASS"
+  },
+  "C2_wrong_operator": {
+    "eigenvalues_on_J_sectors": {
+      "J0": -0.5,
+      "J1": 0.0,
+      "J2": 1.0
+    },
+    "idempotency_defect": 6.749999999999999,
+    "note": "(SS+I)/2 takes values {0.5, 0, 1} on the J sectors \u2014 it is the J=2 sector PLUS half the J=0 sector, NOT the J=1 projector (and not a projector at all)",
+    "comm2_with_P3_6site": 42.0
+  },
+  "C1_correct_projector": {
+    "seat_P1_formula_matches_spectral": 0.0,
+    "P0_formula_matches": 9.27219028695197e-16,
+    "P2_formula_matches": 1.7306664177452076e-15,
+    "idempotency_P1": 7.205338876476098e-15,
+    "trace_P1_6site": 243.00000000000006
+  },
+  "C1_spillovers": {
+    "4site": {
+      "P1": 5.599999999999998,
+      "P2": 3.7333333333333325,
+      "P0": 2.488888888888887
+    },
+    "seat_declared_4site": {
+      "P1": 5.6,
+      "P2": 3.7333333333333334,
+      "P0": 2.488888888888889
+    },
+    "6site": {
+      "P1": 50.39999999999999,
+      "P2": 33.599999999999994,
+      "P0": 22.39999999999999,
+      "seat_declared_6site": {
+        "P1": 50.4,
+        "P2": 33.6,
+        "P0": 22.4
+      },
+      "two_Tr_P0_P3": 41.99999999999996
+    }
+  },
+  "C1_correct_projector_4site": {
+    "Tr(P1)": 27.000000000000014,
+    "idempotency_err": 2.401779625492033e-15
+  },
+  "C3_triplet_middle_dm": {
+    "kernel_dim": 4,
+    "kernel_J_spectrum": [
+      0,
+      2,
+      2,
+      2
+    ],
+    "diag": [
+      0.142857143,
+      0.285714286,
+      0.571428571
+    ],
+    "declared": [
+      0.14285714285714285,
+      0.2857142857142857,
+      0.5714285714285714
+    ],
+    "M_eigenvalue": 0.9999999999999998,
+    "trace": 1.0
+  },
+  "C4_vtx0_expectation": {
+    "value": 0.023323615160349857,
+    "declared": 0.023323615160349854,
+    "deviation": 3.469446951953614e-18,
+    "note": "the analytic origin of the No-Go VIIIb J=0 denominator: the triplet middle-site dm product carries J=0 weight exactly 1*2*4/7^3"
+  },
+  "bug_11d_closure": {
+    "my_53c_42_was": "||[(SS+I)/2, P_vtx^(3)]||_F^2 \u2014 a NON-projector (rescaled SS), and separately 2Tr(P0.P3) = 42 coincidentally equals it",
+    "correct_P1_comm2_6site": 50.39999999999999,
+    "correct_P1_comm2_4site": 5.599999999999998,
+    "verdict": "CLOSED-MY-BUG"
+  },
+  "elapsed_s": 2.3
+}

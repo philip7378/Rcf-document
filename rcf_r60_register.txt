@@ -1,0 +1,234 @@
+==============================================================================
+PAPER II — r6.0 THEOREM & CLAIM REGISTER (LOCKED; the Option-1 artifact)
+Baseline: commits 929bdce -> 1cc7197 -> 8715af8 -> 46ea81d -> 38a0049
+-> this push. Every claim below carries: grade (E4 = machine +
+analytic, E3 = machine-witnessed strong, E2 = conditional/open,
+E0 = fenced open), certificate ID (script/register round), and its
+scope fence. Drafting (§2 -> §3 -> §4/§5 -> §1 last) opens ON this
+register; a prose sentence may only cite a claim as written here.
+A dispute against any line goes to the register first (audit
+protocol, unchanged).
+==============================================================================
+
+§1 — PROGRAM AND BRIDGE (written LAST; its claims live in §2-§5)
+  1.1  Paper I is the mechanism library (open expansion kernel,
+       cov3 one-way associative interference, interface walls,
+       rates (1, 2/3, 1/3), H_eff spending arrow, T-MISMATCH).
+       Grade: E4 (Paper I, certified prior). Fence: none.
+  1.2  The bridge: No-Go VIII proves the spin-1 substrate cannot
+       branch (z_v >= 3 -> ker empty); Theorem II.1 forces the
+       D=3/SU(2) link algebra; No-Go VII shapes the time
+       architecture; No-Go VIIIb kills the last static escape at
+       the composite vertex. Grade: E4 (r5.3a + r5.3c). Fence:
+       the bridge yields LINK-SPACE 3D, not spatial 3D (E0 item
+       6.2).
+  1.3  Paper-I generativity register: dark-energy entry #1 BY
+       ELECTION, out of Paper II's load path. Grade: E0
+       (illustration). Fence: cosmology-tier consumers only,
+       Paper IX territory.
+
+§2 — RECONSTRUCTED LOCAL ALGEBRA -> D_loc = 3 AND SU(2)
+  2.1  Theorem II.1: complex associative closure of the rank-2
+       Jordan link algebra (J_D = R 1 (+) R^D ~ H_n(C)) forces
+       n = 2 for EVERY n >= 1 (Jordan degree 2 vs n), hence
+       D_loc = n^2 - 1 = 3; Aut_0(H_2(C)) ~ SO(3) globally.
+       Grade: E4. Certificates: C1-C5 machine certificates (r5.3),
+       all-n tightening (r5.3a). FENCES (both mandatory on every
+       citation): (i) saturation of the full complex *-envelope
+       M_n(C) is a DECLARED INPUT — this is what rules out H_2(R),
+       H_2(H), proper Clifford subalgebras; NOT container-counting
+       (D3 stays struck); (ii) link-space 3D is not emergent
+       spatial 3D.
+  2.2  Exact Pauli-Jordan embedding + Rodrigues/SU(2) adjoint
+       rotation + Jordan identity machine certificate.
+       Grade: E4. Certificate: r5.3 pre-flight C-block.
+  2.3  S=1 selection + cov3's three spherical vector link
+       components q in {-1,0,+1}: inherited from Paper I
+       (Thm 1 & 3, E4) via r5.1b restoration. Fence: unchanged
+       Paper I scopes.
+
+§3 — FROM 1D EXISTENCE TO 3D LINK CONNECTIVITY
+  3.1  No-Go VIII (THE VALENCE WALL): for M_G = sum P_ij^(2) on
+       spin-1 sites, any vertex of valence z_v >= 3 empties the
+       kernel (ker M_G = {0}); all z_v <= 2 keeps it nonempty
+       (open chains dim 4 per chain; closed rings dim 1, the
+       unique J=0 singlet). Grade: E4. Certificates: r5.3a
+       10-row table (paths/triangle/square/C5/stars K13,K14/
+       tetra/K5/T-tree), two independent pair constructions
+       cross-verified 2.9e-15, GATE-CG; exact closed forms
+       (7-sqrt37)/6, 5/3 mult 11; UFD/Schwinger proof skeleton.
+       Fence: necessary-not-sufficient for the link closure
+       question (PR-LINK-1 pending).
+  3.2  No-Go VIIIb (THE COMPOSITE-VERTEX WALL): on the 3-axis
+       composite vertex H_site = (C^3)^{ox 3}, EVERY static
+       SU(2)-invariant vertex projector P_vtx^(J), J = 0,1,2,3,
+       empties the bulk 6-arm cross kernel. Grade: E4.
+       Certificates: r5.3c (two independent constructions — fixed
+       permutation orientation U^dag P U vs Lagrange polynomials
+       of the component-form Casimir — agreement 2.3e-13;
+       compressed rationals 8/343, 12/49, 120/343, 8/49 to
+       ~1e-10; full-space gaps 0.016699/0.142603/0.265483/
+       0.097265 exact; 0/64 all four). ANALYTIC ROW (r5.3d,
+       adopted): the L=3 triplet's middle-site dm diag(1/7,
+       2/7, 4/7) gives <P_vtx^(0)> = (1*2*4)/7^3 = 8/343
+       exactly — the sector-product origin of the denominators.
+       Fence: the no-go is the CONTENT (the kernel's J=3 weight
+       64/27 is why 0/64 is not vacuous); static frontier CLOSED.
+  3.3  The composite vertex construction: three spin-1 registers
+       (one per axis), each arm an intact S=1 AKLT chain (z <= 2
+       everywhere, M_edges strictly per-axis, 100%
+       frustration-free at every certified size); the junction
+       coupling is the SU(2)-scalar H_vtx = S_v1.S_v2 + S_v2.S_v3
+       + S_v3.S_v1 = (1/2)(J_vtx^2 - 6). Grade: E4 (algebra) +
+       E3 (transfer, 3.5). Certificates: r5.3b leak match; r5.3c
+       replication.
+  3.4  T-MISMATCH at the composite vertex (dynamical necessity):
+       H_vtx lifts EVERY kernel state — leak trace 251.142024,
+       basis-independent spectrum eigvalsh(W^dag W) in
+       [3.448563, 4.218242], ZERO dark states (not even the 1D
+       L=3 dark singlet). Grade: E4. Certificates: r5.3c (Rule S1
+       adopted: the spectrum, never a basis-dependent diagonal).
+       Fence (the r5.3d adjudication, verbatim for prose): "the
+       leak certifies the vertex's dynamical activity (no dark
+       state); No-Go VIIIb certifies no static constraint can
+       replace it; NEITHER is a statement about spatial 3D."
+       PR-VTX-1 is CLOSED as a program (category relocation:
+       dimension lives in the link structure, not the vertex;
+       the leak and Arm C are re-homed HERE as substrate
+       dynamics).
+  3.5  Arm C junction transfer (intra-vertex dynamics): under
+       L = -i[H_vtx, .] + gamma(D_x+D_y+D_z), gamma = 1, RK4
+       dt = 0.075, paired seeds with the BASELINE CONTROL, the
+       excess cross-axis signal Delta M_y = M_y^def - M_y^bg =
+       -0.000134 (t=0.15) -> -0.001363 (0.375) -> -0.003196
+       (0.75) -> +0.004921 (1.5); isotropy |M_y - M_z| <=
+       5.6e-17; trace 1; positivity >= -1.29e-07. Reading: early
+       Zeno suppression crossing over to strictly isotropic
+       positive excess transfer. Grade: E3. Certificates:
+       r5.3c_armC.py/.json. Fence: junction-level dynamical
+       result; NOT 3D-emergence evidence; the background-
+       pumping control is load-bearing (raw M_y conflates
+       0.2676 background with 0.0049 transfer).
+  3.6  Corner diagnostics: ker 32, gap 0.247532, <S_1.S_3>_K =
+       -0.036427, spillover family ||[P^(J), P_vtx^(3)]||_F^2 =
+       28/5, 56/15, 112/45 (4-site) -> 252/5, 33.6, 22.4 (6-site);
+       2 Tr(P^(0) P_vtx^(3)) = 42. Grade: E4 (r5.3d closure,
+       correct projectors; the audit's analytic values verified
+       before adoption). Fence: secondary diagnostics of the
+       corner layout.
+
+§4 — TIME (ORDERING) ARCHITECTURE
+  4.1  No-Go VII: the finite-step two-bond overlap holonomy is
+       strictly local and strictly N-INDEPENDENT (theorem-graded
+       via the Exact Partial-Trace Locality Theorem, ~1e-16 on
+       entangled seeds; the r5.2 F1 N-CONSTANT 0.191257 was the
+       product-seed shadow). Grade: E4. Certificates: r5.3
+       pre-flight A (A1/A2/A3); r5.2 execution. Fence: the
+       theorem does NOT cover (i) full-chain simultaneous
+       evolution e^{t sum L_b} (Lie-Trotter limit; fenced open),
+       (ii) multi-overlap cocycle composition beyond two bonds —
+       the link-level cocycle question is re-opened inside
+       PR-LINK-1 (r5.3d item 4), distinct from this local-clock
+       closure.
+  4.2  Chiral-active product class: off-orbit residual 0.191257
+       EXACTLY N-constant; chiral coefficient 0.174716 (= the
+       sealed 0.17 from ||J|| = sqrt(48) through det-C, 2.8%
+       deviation) reproduced by two independent pipelines.
+       Grade: E3. Certificate: r5.2 (dense r5.1d == sparse r5.2).
+       Fence: chiral-active class only; Ginibre apparent decay
+       was a seed-concentration artifact (confounded, never
+       citable as decay).
+  4.3  Local time per-seed at N=3 (multi-overlap closure open at
+       link level): Grade: E2-pending-PR-LINK-1 (the sentence
+       upgrades only after the link cocycle sub-question
+       closes).
+
+§5 — SCALING METRIC (TWO LAYERS, per the audit's architecture)
+  5.1  Local frame (Theorems A & B + PR-SCALE-1): on the full-rank
+       S=1 state space, g_rho = nabla^2(-ln det C) is geodesically
+       complete, non-compact, SO(3)-isotropic (lambda_min >= 1
+       globally; infinite log-distance to the pure boundary,
+       recovering infinite evaluation where Fubini-Study caps at
+       pi/2); uniquely non-degenerate at S in {1/2, 1}.
+       Grade: E4 (r5.1b restoration, machine-exact spectrum
+       {2.25 x5, 6.0 x3}, ray constants (1,1), ranks 3/3, 8/8,
+       8/15, trivial kernel at S=1). Fence: state-space metric,
+       not yet the inter-relation spatial metric (5.2).
+  5.2  PR-SCALE-1: orientation sign sgn(abc) is INDISPENSABLE for
+       3D volume (the dipole-ball geometry needs the signed
+       orientation). Grade: E4. Fence: direction-sign at the
+       state-space layer; the LINK-level direction object is
+       PR-LINK-1's to pin.
+  5.3  Inter-relation link distance (Theorems S1 & S2 + Paper I
+       Thm 8): per-axis exact multiplicative decay K_a(0,n) =
+       (2/3)^n -> additive 1D log-distance; SO(3) isotropy +
+       scale homogeneity across 3 axes forces d_scale = l_0
+       sqrt(sum (ln K_mu)^2) with super-multiplicativity
+       K_3D >= K_1 K_2 K_3; the unconditional path-infimum form
+       d_int = inf_gamma sum(-l_0 ln K(e)) for discrete/curved
+       networks. Grade: E3 (machine-witnessed on certified
+       objects; the uniqueness clauses are conditional on the
+       isotropy + homogeneity inputs, stated as such).
+       Fence: the metric bridge to physical space (Paper VI's
+       State-vs-Space bridge) is E0 and NOT claimed.
+  5.4  PR-SCALE-2 placement per the r5.1c ledger: stays E0 with
+       its two E4 certificates attached. Fence: unchanged.
+
+6. THE E0 FENCE REGISTER (standing; every §citation must respect)
+  6.1  Multi-vertex cubic lattice: S=1 bond survival at every
+       inter-vertex link + isotropy survival across the lattice —
+       NOT certified (the next derivation gate after PR-LINK-1).
+  6.2  Continuum limit: spectral/Hausdorff dimension d_s/d_H = 3
+       of the correlation metric — E0, no claim.
+  6.3  Metric bridge (state-space scaling metric -> physical
+       spatial metric, Paper VI) — E0, no claim.
+  6.4  D3 (container-counting) and D7 (dimension from generator
+       counts): STRUCK permanently; the Theorem II.1 fence (i)
+       exists precisely to keep §2 above them.
+
+7. OPEN GATES (declared, not executed)
+  7.1  PR-LINK-1 (r5.3d item 5, the full declaration): link
+       algebra closure at 3 + S=1 preservation + link-cocycle
+       question, sheet must PIN the operational distance/direction
+       objects BEFORE the run; outcome space PASS / FAIL-
+       preservation / FAIL-closure / INCONCLUSIVE pre-committed.
+  7.2  PR-LINK-3D (the audit's alternate): det C_stubs > 0
+       non-degenerate isotropic 3D frame at the Arm C corner —
+       may fold INTO PR-LINK-1's sheet as a sub-check or run
+       after; not separately locked here.
+  7.3  Multi-vertex lattice gate (6.1) — after PR-LINK-1.
+
+8. BUG LEDGER (for the Paper II preface; all CLOSED, none touched
+   a certified claim's content):
+  #10  non-adjacent edge collapse (r5.3 -> r5.3a; bit-for-bit
+       forensic seal; the r5.3 non-replication RETRACTED as false
+       negative).
+  #11  permutation orientation U P U^T -> sites (4,5,8) (r5.3b ->
+       r5.3c; reproduction control re-printed every digit).
+  #11b Casimir scalar-sum vs component form (r5.3c; caught by the
+       Lagrange cross-construction).
+  #11c basis-dependent leak diagonal reported as min/max (r5.3b
+       -> r5.3c; Rule S1).
+  #11d non-projector "P^(1)" = (SS+I)/2 (J=2 + half-J=0 sector
+       mix) + premature "convention mismatch" attribution
+       (r5.3c -> r5.3d; the 42 was 2 Tr(P0.P3) in coincidence).
+       LESSON (now standing law GATE-P): every sector projector
+       gets Tr + idempotency checked BEFORE any commutator norm is
+       reported; and a deviation is attributed to the other side
+       only after the operator in MY hand passes its sanity gates.
+  Pattern line: five executor-side defects, every one caught by
+  pre-registration + independent cross-construction + the standing
+  battery (Gate S + Gate G + GATE-CG + GATE-P). The discipline
+  worked; that is the preface's content.
+
+9. STANDING BATTERY (locked): Gate S (spin commutators + Casimir),
+   Gate G (site support of every embedded operator, multi-site
+   extension), GATE-CG (two-construction cross-verification),
+   GATE-P (projector sanity: Tr + idempotency before norms), Rule
+   S1 (report spectra, not basis-dependent diagonals), VACUOUS
+   trap standing (no kernel-empty row read as a positive).
+
+10. DRAFTING ORDER (locked): §2 -> §3 -> §4/§5 -> §1 last; every
+    prose sentence cites only register lines; fences travel with
+    citations verbatim.
+==============================================================================
