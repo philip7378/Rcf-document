@@ -1,0 +1,84 @@
+{
+  "GATE_S": {
+    "max_comm": 3.1718998303807225e-16,
+    "verdict": "PASS"
+  },
+  "chain_N4": {
+    "vertices": 4,
+    "edges": 3,
+    "max_degree": 2,
+    "ker_dim": 4,
+    "declared_ker": 4,
+    "lambda_min": 0.0,
+    "declared_lmin": 0.0,
+    "lowest_nonzero_mult": 5,
+    "verdict": "PASS"
+  },
+  "triangle_K3": {
+    "vertices": 3,
+    "edges": 3,
+    "max_degree": 2,
+    "ker_dim": 4,
+    "declared_ker": 1,
+    "lambda_min": 0.0,
+    "declared_lmin": 0.0,
+    "lowest_nonzero_mult": 5,
+    "verdict": "FAIL"
+  },
+  "square_C4": {
+    "vertices": 4,
+    "edges": 4,
+    "max_degree": 2,
+    "ker_dim": 4,
+    "declared_ker": 1,
+    "lambda_min": 0.0,
+    "declared_lmin": 0.0,
+    "lowest_nonzero_mult": 5,
+    "verdict": "FAIL"
+  },
+  "star_K13": {
+    "vertices": 4,
+    "edges": 3,
+    "max_degree": 3,
+    "ker_dim": 36,
+    "declared_ker": 0,
+    "lambda_min": 0.0,
+    "declared_lmin": 0.152873,
+    "lowest_nonzero_mult": 45,
+    "verdict": "FAIL"
+  },
+  "star_K14": {
+    "vertices": 5,
+    "edges": 4,
+    "max_degree": 4,
+    "ker_dim": 108,
+    "declared_ker": 0,
+    "lambda_min": 0.0,
+    "declared_lmin": 0.313859,
+    "lowest_nonzero_mult": 135,
+    "verdict": "FAIL"
+  },
+  "tetrahedron_K4": {
+    "vertices": 4,
+    "edges": 6,
+    "max_degree": 3,
+    "ker_dim": 4,
+    "declared_ker": 0,
+    "lambda_min": 0.0,
+    "declared_lmin": 1.6666666666666667,
+    "lowest_nonzero_mult": 3,
+    "verdict": "FAIL"
+  },
+  "complete_K5": {
+    "vertices": 5,
+    "edges": 10,
+    "max_degree": 4,
+    "ker_dim": 4,
+    "declared_ker": 0,
+    "lambda_min": 0.0,
+    "declared_lmin": "not declared (extra witness)",
+    "lowest_nonzero_mult": 5,
+    "verdict": "REPORT-ONLY"
+  },
+  "elapsed_s": 0.02
+}

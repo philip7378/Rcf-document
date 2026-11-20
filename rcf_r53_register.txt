@@ -1,0 +1,244 @@
+==============================================================================
+REGISTER — r5.3: PRE-FLIGHT VERIFICATION ROUND (no execution gate; the
+sign-off seats' E4-shortcut claims machine-verified BEFORE adoption).
+Result: ONE ADOPTION (the partial-trace locality theorem -> No-Go VII
+promotes, PR-T1b-2c vacated by theorem), ONE NON-REPLICATION (No-Go
+VIII's table does not reproduce under any tested construction —
+registered as a construction discrepancy, NOT adopted into the paper),
+ONE CORE CERTIFIED (Theorem II.1's D=3 Jordan-algebra elimination),
+plus the route adjudication for r6.0 and the user's interpretive
+hypothesis.
+Inputs: the three messages on commit 8715af8 (seat-A: sign-off + the
+E4 shortcut + No-Go VIII + the Paper II blueprint + the r6.0-vs-test
+question; seat-B: sign-off + skip-2c theorem + the four-pillar import
+table + three design conditions + skeleton; seat-C: the
+existence/construction/consequences triad + three scoping calls; the
+user: the dark-energy / open-expansion analogy).
+==============================================================================
+
+------------------------------------------------------------------------------
+1. PRE-FLIGHT A — THE E4 SHORTCUT: VERIFIED, ADOPTED (r53_preflightA)
+------------------------------------------------------------------------------
+The Exact Partial-Trace Locality Theorem machine-verified at ~1e-16 on
+genuinely entangled seeds (operator Schmidt ranks 9/9/81 across the
+(012)|(3) and (01)|(23) cuts; site-1 deviations nonzero):
+  A1  single generator: ||Tr_3(L0(rho)) - L0(Tr_3(rho))||_F:
+      Haar 2.0e-16, Ginibre 9.6e-17, max-entangled (012)|(3)
+      EXACTLY 0. (Seat's spot value 1.63e-16 — same scale, PASS.)
+  A2  finite-t strobe version: max 3.3e-16 over t in {.25,.5,1,2} x 3
+      seeds.
+  A3  THE DECISIVE CERTIFICATE: the site-1 output of the N=4 two-bond
+      strobe == the N=3 strobe on rho_012 for EVERY entangled input,
+      max 3.8e-16 over 4 seeds x t in {.5,1,2,3}.
+ADOPTED CONSEQUENCES (registered E4):
+  - No-Go VII's scope is now theorem-grade: the two-bond off-orbit
+    statistic is STRICTLY N-INDEPENDENT for ALL states (product AND
+    entangled), because the strobe channel acts as identity on sites
+    >= 3 and partial trace commutes with it. The r5.2 F1 N-CONSTANT
+    (exact 0.191257 at all N) was the product-seed shadow of this
+    theorem; the F2 'decay' was marginal concentration (as both
+    seats read), and pinning F2's 3-site marginal deviation would
+    have re-fed the SAME 3-site map — N-CONSTANT by construction.
+  - PR-T1b-2c is VACATED BY THEOREM. The gate's question (is the
+    two-bond statistic's N-scaling seed-dependent?) is answered
+    analytically: it cannot scale with N at all. Registered as a
+    theorem-closure, not a skipped gate.
+  - PRECISE FRONTIER (the honest fence, seat-B's clause): what the
+    theorem does NOT cover: (i) FULL-CHAIN simultaneous evolution
+    e^{t sum_b L_b} (the Lie-Trotter limit is where N-genuinely
+    enters, via bonds b >= 2 at O(t^2)-O(t^3)); (ii) multi-overlap
+    cocycle composition beyond two bonds. No-Go VII states:
+    finite-step two-bond overlap holonomy is strictly local
+    (disjoint bonds commute exactly; adjacent holonomy confined to
+    the shared site's 3-site marginal) and strictly N-independent.
+    The paper's §4 wording must carry this exact scope.
+
+------------------------------------------------------------------------------
+2. PRE-FLIGHT B — NO-GO VIII: NON-REPLICATED, NOT ADOPTED AS DECLARED
+------------------------------------------------------------------------------
+(r53_preflightB.py + r53_preflightB2.py; two independent methods:
+eigvalsh AND scipy null_space with per-vector residuals <= 5e-15.)
+The seat's table does NOT reproduce under ANY tested construction:
+  chain N=4 (z=2):    ker 4 — AGREES (and this same P^(2) reproduces
+                      the certified r5.1d/r5.2 kernel, so the machinery
+                      is sound where the seat agrees with it).
+  triangle K3:       ker 4 = the J=0 global singlet + one J=1 triplet
+                      (total-J^2 decomposition machine-verified:
+                      eigenvalues {0, 2, 2, 2}). The seat's "1" is
+                      exactly the J=0-sector count — their loop rows
+                      appear to count singlet sectors, not the
+                      J<=1 kernel.
+  square C4:         ker 4 (seat: 1) — same reading.
+  star K_{1,3}:      ker 36, lowest NONZERO eigenvalue EXACTLY 3
+                      (= z, the degree — a clean structural identity).
+                      Seat: ker 0, lambda_min 0.152873 (5-fold).
+  star K_{1,4}:      ker 108, lowest nonzero EXACTLY 4 (= z).
+                      Seat: ker 0, 0.313859.
+  tetrahedron K4:    ker 4, lowest nonzero 0.667570. Seat: ker 0,
+                      5/3 exact. 5/3 appears NOWHERE in the spectrum.
+  Variant sweep (all NON-matching): P^(2) sum (ker 36/108/4), I-P^(2)
+  sum (ker 45, lowest 3), (2/3)-scaled P^(2) (ker unchanged, lowest
+  2), S_i.S_j (lowest -6, same kernel 36), S_i.S_j + 2 (the
+  SINGLET-ONLY constraint: star kernel 0!), unnormalized CG vectors
+  (ker 36, lowest 0). The declared eigenvalues 0.152873, 0.313859,
+  5/3 exist in NONE of these spectra.
+THE ONE CONSTRUCTION THAT YIELDS AN EMPTY STAR KERNEL: the J=0-PER-
+EDGE (singlet-only) constraint. But that contradicts the seat's own
+chain row (ker 4 is the J<=1 kernel; singlet-only would give ker 2
+on the chain). So the table as declared mixes conventions at best,
+or rests on an unshared construction at worst.
+REGISTERED (the honest disposition):
+  - The z>=3 'valence obstruction' AS DECLARED is NOT certified. The
+    paper may NOT cite No-Go VIII in its declared form. The spin-1
+    vertex on the J<=1 (P^(2)) constraint is NOT valence-obstructed
+    at z=3/4: large entangled frustration-free kernels exist
+    (star K13: dim 36; K14: dim 108 — growing with z, with lowest
+    nonzero eigenvalue = z exactly).
+  - A TRUE theorem lives in the sweep, and it IS registered: under
+    the STRICTER singlet-only (J=0-per-edge) rule, the z>=3 star
+    kernel is EMPTY (machine: S.S + 2 = 0 on all three edges has
+    only the zero solution). If the seats intended the singlet-only
+    constraint, No-Go VIII becomes a different (and true) theorem
+    about THAT constraint — but then its chain row must be ker 2,
+    not 4. The discrepancy is referred back to the seats: pin the
+    exact construction (operator + convention), and the table can
+    be re-adjudicated in one round.
+  - NO sheet was frozen for this claim (it arrived post-hoc as a
+    '0.1-second test'), which is exactly why the replication step
+    existed: an unverified table will not enter the corpus. The
+    DISCIPLINE did its job; the refusal is the system working.
+
+------------------------------------------------------------------------------
+3. PRE-FLIGHT C — THEOREM II.1 CORE: CERTIFIED (r53_preflightC.py)
+------------------------------------------------------------------------------
+All five blocks PASS, each to <= 1e-14 or exact:
+  C1  dimension elimination: D + 1 = n^2 over n in 1..5, D in 1..8:
+      solutions exactly {(3,2), (8,3)}.
+  C2  the degree invariant kills D=8: the witness diag(1, omega,
+      omega^2) in H_3(C) satisfies X^3 = I exactly (1.4e-15) and NO
+      quadratic relation (min quadratic residual 2.449); spin factors
+      are degree-2 for every element; isomorphisms preserve degree ->
+      J_8 is NOT H_3(C).
+  C3  the D=3 Pauli Jordan embedding: Jordan closure exact (6.3e-16);
+      Jordan determinant = x0^2 - |s|^2 EXACT (3.6e-15); trace = 2x0
+      exact; Jordan identity exact; the SU(2) adjoint action rotates
+      the 3-vector by the exact Rodrigues rotation (9.5e-16) — this
+      is the machine-verified core of 'derives SU(2)' (the adjoint
+      action realizes SO(3) on the frame, with SU(2) its double
+      cover).
+  C4  D = 1, 2, 4, 5, 6, 7: D+1 is never a perfect square ->
+      not isomorphic to any H_n(C).
+  C5  H_n(C) with the Jordan product satisfies the Jordan identity
+      for n=2 (3.8e-15) and n=3 (9.5e-15) — both are Jordan
+      algebras; only degree separates them.
+REGISTERED: the Theorem II.1 chain (complex associative closure +
+rank-2 spin-factor isomorphism uniquely forces D_loc = 3 and derives
+SU(2) from the algebra, eliminating D = 1, 2, 4, 5, 6, 7, 8) is
+machine-certified in its core. This closes the D3 'SU(2) as
+unexplained input' defect for §2 — with the standing fence: the
+certificate covers the algebraic elimination; the paper must still
+declare the composition rule that lifts the algebra onto a network
+(the honesty guardrail both seats demand).
+
+------------------------------------------------------------------------------
+4. ROUTE ADJUDICATION — r6.0 LOCKED (the architecture-first answer)
+------------------------------------------------------------------------------
+The two seats asked the same either/or: (1) lock r6.0 as the
+Reconstructed-Algebra Architecture (formal proofs + certificates for
+No-Go VII + VIII + Theorem II.1), or (2) test the §3 3-axis composite
+vertex first. ADJUDICATED: r6.0 — architecture first — for three
+reasons, one of them new this round:
+  - The §2 algebra (Theorem II.1 core) is now CERTIFIED (pre-flight
+    C) — the paper's first load-bearing theorem is ready to write.
+  - No-Go VII is E4 with a machine-verified scope — the paper's
+    time-architecture theorem is ready to write.
+  - No-Go VIII, the claimed bridge between Paper I and II, is
+    NON-REPLICATED: the §1 'motivating lift' cannot cite it. Testing
+    the 3-axis composite vertex BEFORE the architecture is locked
+    would build §3 on the unverified obstruction. Architecture
+    first, with No-Go VIII's slot marked VACANT-PENDING-REPLICATION
+    (one round to re-adjudicate once the seats pin their
+    construction — or the §1 motivation restated on the CERTIFIED
+    singlet-only frustration theorem with its corrected chain row).
+SEAT-3'S THREE SCOPING CALLS, adjudicated:
+  - No-Go VII placement: (a) — a section in Paper II (the corpus's
+    register discipline does not bury No-Go results; a construction
+    paper that names its own boundary is stronger).
+  - PR-T1b-2c: VACATED BY THEOREM (pre-flight A) — the 'land it
+    first' option is moot; the frontier it would have measured is
+    closed analytically, and the honest paper reports the THEOREM
+    (with the r5.2 F1 curve as its machine witness), not a vacated
+    gate. Seat-C's 'land it first' instinct is satisfied
+    analytically — stronger than numerically.
+  - The §1 fence sentence: ADOPTED, seat-C's exact three-clause
+    form (scaling metric E4-scoped; 3D spatial at the E0 fence;
+    local time E3-per-seed with No-Go VII at the frontier, now with
+    the E4 scope note). §1 written LAST (seat-C's rule).
+SEAT-B'S THREE DESIGN CONDITIONS: all three adopted (r4.13 re-homes
+to Paper III / companion supplement, NOT discarded; §1 frees the
+graph G and the group; the grade firewall strict). The five-lemma
+import set (Two-Link, corrected frame, cubic invariant, RP Lyapunov,
+GNS/Hilbert) is the §1 spine.
+SEAT-B'S grade table (scaling metric E4 state-space/E0 spatial;
+time E3-per-seed -> E4-local-scope with No-Go VII; 3D link-space E4/
+spatial E0) is the registered claim table. 'Prove 3D space, time,
+metric' AS SETTLED is NOT registered — the program title names the
+program; the claim table grades the pieces (seat-C's and the last
+seat's identical point).
+The register line requested by seat-C is ENTERED verbatim:
+  'r5.2/r5.3 reframes the program as existence (Paper I) ->
+  construction (Paper II) -> consequences (Paper III); No-Go VII is
+  a construction finding, not a Paper-I retraction; Paper I grades
+  unchanged.'
+
+------------------------------------------------------------------------------
+5. THE USER'S INTERPRETIVE HYPOTHESIS — REGISTERED E0 WITH A PATH
+------------------------------------------------------------------------------
+The user proposes: Paper I's open-expansion mechanism (asymptotic
+approach to a kernel never reached in finite time, the chain
+lengthening in the effort) as the 1D mechanism-analogue of dark-
+energy-driven cosmological expansion.
+REGISTERED AT E0 (interpretive analogy, not a theorem — nothing in
+Paper I's certificates speaks to cosmology, and the discipline does
+not let mechanism-analogies ride on E4 results). BUT the analogy is
+RESEARCH-GRADE, and the corpus already holds the two formal hooks a
+serious version would need:
+  - Hook 1 (the mechanism side, E4): the open-expansion law itself —
+    the H = 0 expansion front, the (2/3)^n multiplicative length
+    decay (Paper I Thm 8), the never-in-finite-time kernel approach.
+    These are certified facts about a 1D channel.
+  - Hook 2 (the metric side, E4): Theorem S1's isotropic 3D log-
+    scaling d_scale = l0 sqrt(sum (ln K)^2) with super-
+    multiplicativity K_3D >= K1 K2 K3 — the exact structure in which
+    an 'expansion rate' could be made a metric-statement rather than
+    a postulate.
+  The honest formulation for Paper III (consequences): NOT 'this is
+  dark energy', but 'Paper I exhibits a minimal, fully certified
+  instance of the structural pattern that accelerating-expansion
+  cosmologies instantiate: an approach-to-a-limit that is never
+  completed in finite time, driving unbounded growth of the extent
+  variable'. That is a testable claim about FORMAL similarity, and
+  it would be graded by the same ladder. The upgrade path: identify
+  the observable in the spin-1 substrate that would correspond to
+  an 'acceleration' of the front (the second derivative of the
+    extent), measure it on the certified channel, and only THEN
+  compare scales. Registered as the first entry of the Paper III
+  queue, below the two load-bearing targets (the D=3 selection
+  mechanism and the multi-vertex metric bridge).
+==============================================================================
+VERDICT LINE: E4 shortcut VERIFIED (partial-trace locality ~1e-16 on
+entangled seeds; No-Go VII -> E4 with precise two-bond scope;
+PR-T1b-2c VACATED BY THEOREM). No-Go VIII NON-REPLICATED (star K13
+ker 36 / K14 ker 108 / tetra ker 4; lowest nonzero = z exactly;
+declared eigenvalues absent from every tested construction; the one
+matching construction — singlet-only — contradicts the seat's own
+chain row; NOT citable until the construction is pinned; the
+singlet-only z>=3 frustration IS true and is registered as the
+certified-true fragment). Theorem II.1 core CERTIFIED (D+1=n^2 ->
+{(3,2),(8,3)}; degree invariant kills D=8; Pauli embedding + SU(2)
+adjoint exact ~1e-15; D in {1,2,4,5,6,7} eliminated). r6.0 LOCKED
+(architecture first); No-Go VIII slot VACANT-PENDING-REPLICATION.
+==============================================================================
+ARTIFACTS (md5 on save): r53_preflightA.py/.json, r53_preflightB.py/.json,
+r53_preflightB2.py/.json, r53_preflightC.py/.json, this entry.
+==============================================================================

@@ -1,0 +1,48 @@
+{
+  "C1_dim_elimination": {
+    "solutions_(D,n)_for_D+1=n^2": [
+      [
+        3,
+        2
+      ],
+      [
+        8,
+        3
+      ]
+    ],
+    "declared": "only (3,2) and (8,3) survive",
+    "verdict": "PASS"
+  },
+  "C2_degree_invariant": {
+    "H3C_witness": "diag(1, omega, omega^2)",
+    "cubic_residual_X^3-I": 1.4010381148703524e-15,
+    "min_quadratic_residual": 2.449489742783178,
+    "reading": "the witness satisfies t^3=1 exactly and NO quadratic relation -> H_3(C) has elements of degree 3; spin factors are degree 2 -> J_8 (spin factor) NOT isomorphic to H_3(C); isomorphisms preserve degree",
+    "verdict": "PASS"
+  },
+  "C3_D3_construction": {
+    "closure_max_err": 6.280369834735101e-16,
+    "jordan_det_max_err": 3.552713678800501e-15,
+    "trace_max_err": 4.440892098500626e-16,
+    "jordan_identity_max_err": 0.0,
+    "SU2_adjoint_rotation_max_err": 9.4623719602731e-16,
+    "verdict": "PASS"
+  },
+  "C4_elimination": {
+    "checks": {
+      "D=1": "D+1 = 2 is a perfect square? NO -> not isomorphic to any H_n(C)",
+      "D=2": "D+1 = 3 is a perfect square? NO -> not isomorphic to any H_n(C)",
+      "D=4": "D+1 = 5 is a perfect square? NO -> not isomorphic to any H_n(C)",
+      "D=5": "D+1 = 6 is a perfect square? NO -> not isomorphic to any H_n(C)",
+      "D=6": "D+1 = 7 is a perfect square? NO -> not isomorphic to any H_n(C)",
+      "D=7": "D+1 = 8 is a perfect square? NO -> not isomorphic to any H_n(C)"
+    },
+    "verdict": "PASS"
+  },
+  "C5_jordan_identity": {
+    "H2C_worst": 3.7751664318895325e-15,
+    "H3C_worst": 9.481200627571548e-15,
+    "verdict": "PASS"
+  },
+  "elapsed_s": 0.037
+}

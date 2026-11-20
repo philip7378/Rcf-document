@@ -1,0 +1,94 @@
+{
+  "GATE_S": {
+    "max_comm": 3.1718998303807225e-16,
+    "verdict": "PASS"
+  },
+  "A1_single_generator": {
+    "errors": {
+      "haar_N4": "1.999e-16",
+      "haar_N4_b": "1.913e-16",
+      "ginibre_N4": "9.629e-17",
+      "maxent_0123": "0.000e+00"
+    },
+    "declared_haar": 1.63e-16,
+    "verdict": "PASS"
+  },
+  "A2_strobe_version": {
+    "errors": {
+      "t=0.25": {
+        "haar_N4": "1.980e-16",
+        "maxent_0123": "1.443e-16",
+        "ginibre_N4": "1.185e-16"
+      },
+      "t=0.5": {
+        "haar_N4": "1.916e-16",
+        "maxent_0123": "1.344e-16",
+        "ginibre_N4": "1.072e-16"
+      },
+      "t=1.0": {
+        "haar_N4": "2.518e-16",
+        "maxent_0123": "1.845e-16",
+        "ginibre_N4": "1.383e-16"
+      },
+      "t=2.0": {
+        "haar_N4": "2.680e-16",
+        "maxent_0123": "3.288e-16",
+        "ginibre_N4": "1.772e-16"
+      }
+    },
+    "verdict": "PASS"
+  },
+  "A3_decisive_certificate": {
+    "errors": {
+      "t=0.5": {
+        "haar_N4": "1.518e-16",
+        "haar_N4_b": "2.323e-16",
+        "maxent_0123": "2.082e-17",
+        "ginibre_N4": "6.118e-17"
+      },
+      "t=1.0": {
+        "haar_N4": "1.338e-16",
+        "haar_N4_b": "1.909e-16",
+        "maxent_0123": "1.110e-16",
+        "ginibre_N4": "3.358e-17"
+      },
+      "t=2.0": {
+        "haar_N4": "1.670e-16",
+        "haar_N4_b": "2.270e-16",
+        "maxent_0123": "2.994e-16",
+        "ginibre_N4": "2.114e-16"
+      },
+      "t=3.0": {
+        "haar_N4": "1.235e-16",
+        "haar_N4_b": "1.932e-16",
+        "maxent_0123": "3.833e-16",
+        "ginibre_N4": "2.501e-16"
+      }
+    },
+    "meaning": "site-1 output of the N=4 two-bond strobe == the N=3 strobe on rho_012, on ENTANGLED inputs: the two-bond statistic is strictly N-independent for ALL states",
+    "verdict": "PASS"
+  },
+  "A4_seed_entanglement": {
+    "haar_N4": {
+      "schmidt_012_3": 9,
+      "schmidt_01_23": 81,
+      "site1_deviation": 0.16838
+    },
+    "haar_N4_b": {
+      "schmidt_012_3": 9,
+      "schmidt_01_23": 81,
+      "site1_deviation": 0.185542
+    },
+    "maxent_0123": {
+      "schmidt_012_3": 9,
+      "schmidt_01_23": 9,
+      "site1_deviation": 0.816497
+    },
+    "ginibre_N4": {
+      "schmidt_012_3": 9,
+      "schmidt_01_23": 81,
+      "site1_deviation": 0.063011
+    }
+  },
+  "elapsed_s": 0.93
+}

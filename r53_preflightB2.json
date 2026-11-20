@@ -1,0 +1,88 @@
+{
+  "T1_triangle": {
+    "kernel_dim": 4,
+    "total_J2_eigenvalues": [
+      -0.0,
+      2.0,
+      2.0,
+      2.0
+    ],
+    "reading": "J(J+1) in {0,2,6,12}: J=0, J=1",
+    "max_residual": 9.255534910396615e-16
+  },
+  "T2_star_K13": {
+    "kernel_dim": 36,
+    "site0_support_eigs": [
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333,
+      1.333333
+    ],
+    "site0_rank": 27,
+    "note": "the star kernel is an entangled sector; the center site stays full-rank mixed \u2014 no single-site obstruction"
+  },
+  "T3_star_K13_spectrum": {
+    "dim": 81,
+    "ker": 36,
+    "lowest_nonzero": 2.999999999999997,
+    "target_hits": {
+      "0.152873": {
+        "count": 0,
+        "closest": 1.0720696595577844e-15
+      }
+    }
+  },
+  "T3_star_K14_spectrum": {
+    "dim": 243,
+    "ker": 108,
+    "lowest_nonzero": 3.999999999999992,
+    "target_hits": {
+      "0.313859": {
+        "count": 0,
+        "closest": 2.8872299948752773e-15
+      }
+    }
+  },
+  "T3_tetra_spectrum": {
+    "dim": 81,
+    "ker": 4,
+    "lowest_nonzero": 0.6675700502321112,
+    "target_hits": {
+      "1.6666666666666667": {
+        "count": 0,
+        "closest": 1.5450511072018842
+      }
+    }
+  },
+  "T4_alt_SdotS_star13": {
+    "lowest": -6.000000000000002,
+    "hits_0.152873": 0,
+    "ker(dim of S.S eigenvalue -2 space? count of w<-1.999)": 36
+  },
+  "T4_singlet_only_star13": {
+    "ker(S.S+2 = 0 <=> all pairs J=0)": 0
+  }
+}
