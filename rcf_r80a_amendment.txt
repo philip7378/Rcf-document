@@ -1,0 +1,103 @@
+==============================================================================
+AMENDMENT — r7.0 REGISTER + §3 DRAFT (rcf_r70_register.txt /
+p2_sec3_draft.txt at 87e16aa), per the r8.0 audits and the
+PR-METRIC-2b run. The r7.0 technical content STANDS (verification
+sweep, §3 draft, renaming); the items below are corrected.
+
+A1. THE L=5 ATTRIBUTION ERRATUM (mine). r7.0's verification claim
+    "0.246717 located in r53b_armsAB.py/json (ArmB_L5)" cited a
+    JSON entry that reads {"status": "deferred-to-script-2"} —
+    the block was deferred in r53b and COMPLETED in r53c_static
+    (compressed route). The NUMBER is real and certified (r53c,
+    on the 12-site compressed frame, full space 3^12 = 531,441);
+    the ATTRIBUTION was wrong. Corrected in §3's machine-support
+    note. Standing-rule extension now registered: a number is
+    "verified" only against the artifact that CERTIFATES it, not
+    one that mentions it.
+
+A2. THE L=5 SITE COUNT (the audits' dispute, machine-adjudicated).
+    Certified object: 12 sites (3 coalesced center registers at
+    sites 2, 7, 12 + 12 arm sites), full space 3^12 = 531,441,
+    kernel-compressed 16^3. The audit's "15 sites / 3^15 =
+    14,348,907, three distinct center registers" is a DIFFERENT,
+    uncertified construction — registered as that audit's
+    suggestion, explicitly not a claim. §3's table caption reads
+    "12-site compressed frame, dim 3^12 = 531,441: 0.246717."
+
+A3. THE CERTIFIED ANCHOR (the audit's transcription, caught by
+    machine). "c(A, O) = 0.394972" does NOT reproduce the
+    certified via-center 3.2423 (2 x 0.9289 = 1.8578). The
+    certified anchor is the sqrt(3)-normalized barycenter,
+    c(A, O) = -0.197674 (via-center 3.242268, gap 1.168796 —
+    r80_metric2b Part F reproduces both to 1e-6). The audit's
+    number is a mis-transcription; logged without reciprocal
+    rhetoric alongside my own A1.
+
+A4. r70's PR-METRIC-2 VERDICT RECLASSIFIED: INCONCLUSIVE ->
+    SPEC-INCOMPLETE (r80 Part A). Ground: the frozen outcome space
+    assumed a common space that was never declared, so the sheet
+    did not test what it claimed to test. The EQUAL -> tiling
+    corollary is UNTESTED, not refuted. PR-METRIC-1's deferral
+    unaffected. The r70 JSON's ADJUDICATION block stands as the
+    as-entered record; this amendment carries the reclass.
+
+A5. THE M-BICONDITIONAL (r70 register item 2 / r70a A1 wording)
+    — CORRECTED (r80 Part C, decisive): "zero on product states,
+    nonzero exactly when the junction entangles" is STRUCK. On
+    the separable classical seed rho_sep = 1/2(|+1>^{x6}<+1| +
+    |-1>^{x6}<-1|) the gap is M = ln 3 = 1.098612 != 0
+    (nonvanishing marginals). M is a CORRELATION-GAP object, not
+    an entanglement witness. Correct biconditional: M = 0 iff
+    1D-multiplicative (Markov) with nonvanishing marginals; M > 0
+    measures correlation loss across a coupled junction —
+    entangling or classical. §3.4.2 and §5.3 carry the corrected
+    wording.
+
+A6. ON-AXIS MULTIPLICATIVITY (r70's "base 1/3 exact multiplicative
+    decay" reading) — SHARPENED (r80 Part D): the SUMMED kernel
+    correlation carries M ~ 0.29 at L = 4..7; exact
+    multiplicativity (M = 0) belongs to the SINGLE-TERM rate
+    objects ((2/3)^n channel; signed (-1)^n (1/3)^n dominant
+    term). 1D log-additivity is a family property, not an axiom.
+    §3.4.2 and §5.3 carry the sharpened statement.
+
+A7. PR-METRIC-2b OPENED AND RUN (route (i) as pre-registered by
+    the audit; four-outcome space unchanged): verdict
+    FAMILIES-DISAGREE — d_chord 1.168930 and d_scaling 0.006559
+    both valid metrics on the DECLARED common space (the
+    certified profile span), neither equaling/bounding the
+    other; the corner frame does not adjudicate between the
+    chord and log-volume families. The multi-vertex lattice gate
+    owns the family question. The audit's EQUAL-condition tiling
+    corollary remains untested.
+
+A8. THE TRIPOD (r80 Part E, exact) — register-class upgrade of
+    the incircle prediction: the certified frame is a 3D TRIPOD
+    (lambda_A = a + 2b = 0.529880 > 0: register at height
+    h = 0.420270 above the equilateral stub triangle of
+    circumradius R = 0.674882; h^2 + R^2 = a exact; chord
+    sqrt(2 lambda_E) carried by the E-irrep; sub-additivity =
+    Euclidean pullback). The incircle is the 2D shadow; the
+    "incenter" wording is replaced by APEX. lambda_A registered
+    as the lattice gate's ORDER PARAMETER (non-planarity). E4
+    profile-frame structure / E0 physical-space interpretation.
+
+A9. §3's OPENING PARAGRAPH — two fences added: the INPUT FENCE
+    (Paper I Sec. 2 scopes Theorem 1 to a declared 1D
+    open-chain input; "link primitive" means the link's algebra
+    is derived and carries the geometry, while the 1D chain is
+    the declared minimal staging — not "no graph is input") and
+    the RETROSPECTIVE-UNIFICATION register class (the No-Gos
+    predate the inversion's formulation; consistent, strongly,
+    not pre-registered as its predictions).
+
+A10. PR-NOGO-RAW ATTRIBUTION (§4): the omega flip (XXX 2.2831 /
+     XY 0.7705) is certified in r5.1a (Gate 0 block) with
+     r51_certificates' PR-NOGO-RAW confirming the sign-flip;
+     the NESS residual 6.8e-16 belongs to r52_preflightB. §4
+     carries the correct attributions.
+
+STANDING: §2 stands (r6.2); §3 amended (r8.0, this entry);
+§4/§5 DRAFTED (r8.0); §1 last, with the title-reconciliation
+instruction embedded in the §5 draft's status note.
+==============================================================================

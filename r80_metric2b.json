@@ -1,0 +1,128 @@
+{
+  "GATE_S": {
+    "max_comm": 3.1718998303807225e-16,
+    "verdict": "PASS"
+  },
+  "A_spec_reclassification": {
+    "r70_verdict_as_entered": "INCONCLUSIVE",
+    "reclassified_as": "SPEC-INCOMPLETE",
+    "ground": "the frozen outcome space assumed d_int and d_scaling share a common space; they do not (site-site correlations vs profile inner products); the sheet did not test what it claimed to test",
+    "equal_tiling_corollary": "UNTESTED (not refuted; EQUAL did not fire and the comparison was underspecified)",
+    "pr_metric_1_deferral": "unaffected"
+  },
+  "B_route_i_common_space": {
+    "common_space": "the certified profile span (r6.1 frame Phi_mu)",
+    "embedding": "link-graph sites -> profile vectors; metric on the image: Euclidean chord ||Phi_a - Phi_nu||",
+    "comparison": {
+      "0,1": {
+        "d_chord": 1.168930314,
+        "d_scaling": 0.00655857,
+        "diff": -1.162371744
+      },
+      "0,2": {
+        "d_chord": 1.168930314,
+        "d_scaling": 0.00655857,
+        "diff": -1.162371744
+      },
+      "1,2": {
+        "d_chord": 1.168930314,
+        "d_scaling": 0.00655857,
+        "diff": -1.162371744
+      }
+    },
+    "reading": "both constructions now live on ONE declared common space (route (i) as pre-registered); the two metric families disagree by construction (chord vs log-volume): EQUAL is not forced by the frame at any tolerance, and the frame does not adjudicate between families \u2014 that is the multi-vertex lattice gate's job. The honest comparison outcome is recorded as found: d_chord = 1.168930 (C3-symmetric) vs d_scaling = 0.006559.",
+    "outcome": "FAMILIES-DISAGREE (EQUAL: no; ENVELOPE: no; IMPOSSIBLE: no \u2014 both are valid metrics on the common space, they are different metrics). Lattice-gate ownership unchanged."
+  },
+  "C_separable_classical_seed": {
+    "state": "rho_sep = 1/2 (|+1>^{ox6}<+1| + |-1>^{ox6}<-1|): a classical mixture of two aligned product states \u2014 separable across every arm cut, zero entanglement",
+    "barycenter_stub_marginals": [
+      1.732050808,
+      1.732050808,
+      1.732050808
+    ],
+    "stub_stub_correlations": {
+      "0,1": 1.0,
+      "0,2": 1.0,
+      "1,2": 1.0
+    },
+    "reg_stub_correlations": {
+      "0": 1.0,
+      "1": 1.0,
+      "2": 1.0
+    },
+    "M_barycenter_anchored": {
+      "01": 1.098612289,
+      "02": 1.098612289,
+      "12": 1.098612289
+    },
+    "M_bond_register_anchored": {
+      "0,1": 0.0,
+      "0,2": 0.0,
+      "1,2": 0.0
+    },
+    "orthonormality_of_kernel_product_pair": 0.0,
+    "reading": "on this SEPARABLE, classically-correlated junction state the multiplicativity gap is NONZERO (and diverges in the barycenter-anchored form: K(A,C) = 1 while K(A,O)K(O,C) = 0). Therefore M is NOT an entanglement witness: it is a correlation-gap object (nonzero whenever the pair correlation disagrees with the product of anchored marginals, whether the cause is entanglement OR classical correlation). The entanglement reading is struck; M's biconditional is corrected: M = 0 iff the chain is 1D-multiplicative (Markov) with nonvanishing marginals; M != 0 measures correlation loss across a coupled junction \u2014 entangling or classical."
+  },
+  "D_on_axis_control": {
+    "M_values": {
+      "4": {
+        "2": 0.297570592078
+      },
+      "5": {
+        "2": 0.28880999899,
+        "3": 0.298721784739
+      },
+      "6": {
+        "2": 0.287805934596,
+        "3": 0.288887728426,
+        "4": 0.299772002235
+      },
+      "7": {
+        "2": 0.287695884183,
+        "3": 0.287816433057,
+        "4": 0.289022739923,
+        "5": 0.299947144291
+      }
+    },
+    "reading": "on the 1D AKLT kernel chain the multiplicative relation K(A,C) = K(A,O)K(O,C) does NOT hold exactly for the middle-site anchor at these separations (the kernel correlation is a two-term sum, not a scalar Markov chain); the M = 0 regime is the SINGLE-TERM multiplicative family (the eigen-rate (2/3)^n channel of Paper I Thm 8 and the signed (-1)^n (1/3)^n dominant term), where d(A,C) = d(A,O) + d(O,C) exactly. Reported as found: the on-axis kernel correlation is log-additive in the DOMINANT-term approximation that the corpus certifies ((-1)^n 4/3^{n+1} with base 1/3), and M = 0 is exact for the multiplicative rate objects, not for the summed kernel correlation."
+  },
+  "E_tripod": {
+    "Gram_diag_a": 0.632092823,
+    "Gram_offdiag_b": -0.051106217,
+    "eigenvalues": [
+      0.529880389,
+      0.68319904,
+      0.68319904
+    ],
+    "lambda_A": 0.529880389,
+    "lambda_E": 0.68319904,
+    "identity_lambdaA_a_2b": 0.529880389,
+    "apex_height_h": 0.420269909,
+    "base_circumradius_R": 0.674882232,
+    "pythagoras_h2_plus_R2": 0.632092823,
+    "equals_a": 0.632092823,
+    "chord_sqrt2lambdaE": 1.168930314,
+    "via_register_2sqrta": 1.590085309,
+    "chord_defect": -0.421154995,
+    "stub_pair_angle_deg": 94.637563,
+    "reading": "the certified profile Gram decomposes as a TRIPOD: lambda_A/3 = h^2 (apex height of the register above the stub plane), 2 lambda_E/3 = R^2 (circumradius of the equilateral stub triangle), h^2 + R^2 = a exact (Pythagoras; identity lambda_A = a + 2b); the chord is sqrt(2 lambda_E) \u2014 the E-irrep (standard representation) carries the in-plane displacement, the A-irrep (trivial) carries the out-of-plane apex direction. lambda_A = 0.52988 > 0: the frame is non-planar (3D configuration); lambda_A = 0 would be flat. Registered as the lattice gate's order parameter (E4 on the profile frame's geometry; physical-3D interpretation stays E0). The chord's sub-additivity is the ordinary Euclidean triangle inequality on this configuration (2 sqrt(lambda_E) <= 2 sqrt(a)) \u2014 the structural reason the Gram-chord resolves the raw log-distance's super-additivity: it is a Euclidean pullback.",
+    "register_class": "E4 profile-frame structure / E0 physical-space interpretation"
+  },
+  "F_d_int_anchor_reconciliation": {
+    "F1_barycenter_anchor": {
+      "c(A,O)": -0.197674434,
+      "c(A,C)_stubstub": -0.012142252,
+      "via_center_path": 3.24226775,
+      "direct": 4.411064016,
+      "gap_M": 1.168796266
+    },
+    "F2_site_graph_d_int": {
+      "s1_to_s3": 3.6225122
+    },
+    "F3_r61_raw_register_anchor": {
+      "c(r0, s1)_raw": -0.428535114,
+      "note": "THREE distinct anchors, all named in \u00a73.4: (F1) the sqrt3-NORMALIZED barycenter O = (S_0+S_2+S_4)/sqrt3, c(A,O) = -0.197674 -> via-center path 3.242268 and gap +1.168796 \u2014 this reproduces the r6.2/r62 certified values EXACTLY (1e-6), so the certified anchor is this one; the audit's transcription c(A,O) = 0.394972 does NOT reproduce the certified 3.2423 (2 x 0.9289 = 1.8578) and is itself a mis-transcription. (F2) the r70 SITE-GRAPH path infimum d_int = 3.622512 (2-hop via a single register \u2014 a different path set, not a contradiction with 3.2423: the barycenter is not a node of the site graph). (F3) the r61 CHK3b raw register anchor: c(r0, s1) raw on the 8D print was 3.144778 (|c| > 1 on that print's normalization \u2014 not a valid log-distance anchor; on the certified K32 it is -0.428535), whose triangles (4.411064 / 3.992161 / 6.289556) mixed normalizations; the DIRECT distance 4.411064 is carried by the raw stub-stub correlation -0.012142 and is shared by F1 (same direct object). No number is reused across anchors; \u00a73.4's parenthetical cites F1, F2, F3 by name."
+    }
+  },
+  "elapsed_s": 53.82
+}

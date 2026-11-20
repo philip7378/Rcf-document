@@ -1,0 +1,296 @@
+PAPER II §5 DRAFT (r8.0) — The Scaling Metric: Volume Obstruction,
+Local S=1 Uniqueness, and Spatial Composition
+====================================================================
+[Drafting baseline: r6.0 lock + r6.0a + r6.1 + r6.2 + r7.0 + r8.0
+(PR-METRIC-2b run: SPEC-INCOMPLETE reclassification of r70's
+INCONCLUSIVE; route-(i) common-space comparison FAMILIES-DISAGREE;
+the separable-classical pin striking the entanglement reading of M;
+the tripod decomposition lambda_A = 0.529880 certified). Every
+number verified against corpus JSONs this round: r51_certificates
+(PR-SCALE-1, PR-SCALE-2, PR-T1b, PR-NOGO-RAW, PR-DIM-1),
+r51b_results (the repaired certificates — A2 spectrum, A3
+coercivity, A4 rays, B ranks, INJ), r51c_results (tensor/volume
+boundary split), r51a_results (the forensic buggy block is
+historical: its FAIL rows are the reproduced 0cbc1e7 bug, kept in
+the record as the error's certificate, not as live claims),
+r53_preflightC (C1-C5 elimination chain), r61_link1 / r62_adjudicate
+/ r70_metric2 / r80_metric2b (link frame, PR-METRIC-2/2b), r53e /
+r53_preflightB (T4 on-axis decays). Locked order §2 -> §3 -> §4/§5
+-> §1 last.]
+
+Section 5: The Scaling Metric — Volume Obstruction, Local S=1
+Uniqueness, and Spatial Composition
+
+Earlier RCF versions alternated between raw -l_0 ln|K| (additive
+and unbounded in 1D, but failing the triangle inequality and
+rotational isotropy in 3D — see the junction multiplicativity gap
+of Sec. 3.4.2) and Fubini-Study d_FS = l_0 arccos sqrt(K)
+(unconditional metric, but bounded by pi l_0/2 and non-additive
+along 1D chains). This section replaces that dilemma with the
+Scaling Metric, proving exact E4 results at both the local
+state-space level and the multi-axis spatial-scaling level, while
+fencing the multi-vertex lattice bridge honestly. Three negative
+specifications up front, so nothing reads as a placeholder:
+
+  - The scaling metric is NOT Fubini-Study: FS is scoped to the
+    pure-stratum boundary where the scaling metric diverges; the
+    two are complementary across strata (Theorem A item 3).
+  - It is NOT the raw pairwise -ln|K| (the object PR-METRIC-2
+    diagnosed: site-site correlations with no common space to the
+    profile frame; the +1.1688 junction gap is its correlation-gap
+    signature, not a metric axiom failure).
+  - It is NOT yet identified with the link-frame path-infimum
+    d_int: PR-METRIC-2b's common-space comparison returns
+    FAMILIES-DISAGREE on the certified corner (Sec. 5.3); the
+    identification question is deferred to the multi-vertex
+    lattice gate, which owns it.
+
+5.1 Why Pairwise Unsigned Logs Cannot Capture 3D Volume
+(PR-SCALE-1, E4)
+
+Let C(a, b, c) = [[1, a, b], [a, 1, c], [b, c, 1]] be a
+normalized 3-axis correlation frame with det C = 1 - (a^2 + b^2 +
+c^2) + 2abc. Across all eight sign frames at magnitude
+(|a|, |b|, |c|) = (1/2, 1/2, 1/2) (PR-SCALE-1 PASS, exact
+Fractions, r5.1 certificates):
+
+  - All eight share IDENTICAL unsigned pairwise kernels K_ij =
+    c_ij^2 in {1/4, 1/4, 1/4} and therefore identical pairwise
+    log-distances.
+  - Yet det C splits cleanly into 1/2 (rank 3 — the 60-degree 3D
+    corner, abc = +1/8) vs. 0 (rank 2 — the 120-degree flat 2D
+    plane, abc = -1/8) purely by the gauge-invariant 3-point
+    orientation sign sgn(abc).
+
+This is the algebraic face of Sec. 3's incircle geometry: pairwise
+1D data do not determine the position on the circle; the 3-point
+orientation (equivalently the apex eigenvalue lambda_A of the
+certified corner Gram) carries the volume information. Two naive
+3D patches are ruled out directly: (i) summing three 1D axis logs
+(-ln(K_1 K_2 K_3) = d_1 + d_2 + d_3) yields the l_1 Manhattan
+metric, violating SO(3) isotropy; (ii) taking sqrt(-ln K) violates
+the triangle inequality on pure quantum states (planar states
+separated by theta = 10 degrees give d(0, 2 theta) - 2 d(0, theta)
+= +0.00275 > 0; at 44.9 degrees the violation is +1.703) and
+reduces 1D Markov chains to diffusive sqrt(n) scaling.
+
+5.2 Local State-Space Scaling Metric: Theorems A and B [E4]
+
+On a local spin-S state space S(C^{2S+1}), form the 3x3 symmetric
+Jordan spin-covariance matrix
+
+    C_ij(rho) := Tr(rho (S_i o S_j)) - m_i m_j,
+    m_i := Tr(rho S_i),
+
+and restrict to the full-rank interior stratum
+M_full := {rho : det C(rho) > 0} (PR-SCALE-2 exact Fractions:
+det C = 8/27 at spin-1 1/3; 3/4 at the qubit diag(1/4, 3/4) in
+Bloch sigma-convention; coherent |+1>/|0>/|-1> frames rank 2 with
+det 1/4, 1, 1/4; r5.1 PR-DIM-1). Define the log-volume potential
+Phi(rho) := -ln det C(rho).
+
+Theorem A (Exact Scaling Metric Tensor, Uniform Coercivity &
+Infinite Evaluation) [E4; r5.1b repaired certificates, the r5.1a
+forensic block retained in the record as the bug's own
+certificate]: Because
+C(rho + t drho) = C + t dC - t^2 dm dm^T, the Hessian of Phi has
+the exact closed form (Gate S verified):
+
+    g_rho(drho, drho) = Tr(C^{-1} dC C^{-1} dC) + 2 dm^T C^{-1} dm
+    >= 0.
+
+On the spin-1 full-rank interior M_full:
+
+1. Exact reference spectrum: at rho = 1/3 in the orthonormal
+   Gell-Mann basis, spec(g_{1/3}) = {9/4 (x5, quadrupole),
+   6 (x3, dipole)} (machine 2.25 x5, 6.0 x3 exact; finite-
+   difference crosscheck pairs agree exactly: 4.125, 5.0625).
+2. Tensor bounded below, log-volume divergent (r5.1b + r5.1c):
+   by the Loewner bound C(rho) <= 1 (preceq), g_rho is uniformly
+   strictly positive-definite across M_full with exact global
+   coercivity infimum inf lambda_min(g_rho) = 1 (nematic boundary
+   scan 1.108033 -> 1.0001 as eps = 0.1 -> 0.0001; 500-state
+   Ginibre min 1.048724), while Phi = -ln det C -> +infty at the
+   rank-deficient boundary (machine 2.405172 -> 4.615195 ->
+   6.908756 -> 9.210440 on the eps ladder — the +ln(1/eps) law).
+   The split is certified as a SPLIT: tensor side bounded, volume
+   side divergent (PR-SCALE-2 tensor_bounded_below_1 = true,
+   volume_divergent_monotone = true, split_confirmed = true).
+3. Logarithmic infinite evaluation: along both the coherent ray
+   1/3 -> |+1><+1| and the nematic ray 1/3 -> |0><0|,
+   (1-p)^2 g_pp(p) -> 1.000000 as p -> 1 (machine 1.006155 ->
+   1.000059 -> 1.000001 -> 1.0 and 1.002378 -> 1.000022 -> 1.0 ->
+   1.0), so ds = sqrt(g_pp) dp ~ dp/(1-p) integrates to +infty.
+   Thus g_rho is geodesically complete on M_full — complementing
+   Fubini-Study on the pure boundary stratum rather than retiring
+   it: FS owns the pure stratum, the scaling metric owns the
+   full-rank interior, each diverging at the other's home.
+4. Unconditional Riemannian triangle inequality (Corollary):
+   because g_rho is smooth and strictly positive-definite on
+   M_full, its induced path-infimum geodesic distance
+   d_scale(rho_0, rho_1) := inf_gamma int_0^1
+   sqrt(g_gamma(dot gamma, dot gamma)) dt satisfies all metric
+   axioms unconditionally — unbounded range, no l_0 ceiling.
+
+Theorem B (Spin-1 Uniqueness of the Local Scaling Metric) [E4;
+r5.1b]: since C succ 0, g_rho(drho, drho) = 0 iff dm = 0 and
+dC = 0. Testing the Hessian rank across S(C^{2S+1}):
+
+  - S = 1/2 (dim 3): full rank 3/3;
+  - S = 1 (dim 8): full rank 8/8 ((m, Q) injective, round-trip
+    residual 1.1e-16, trivial kernel; 200 rank-2 states checked,
+    variance strictly positive, min 0.1160);
+  - S = 3/2 (dim 15): degenerate rank 8/15 — the exact
+    7-dimensional octupole kernel (machine 8 vs. declared 8;
+    kernel dim 7), degenerate for every S >= 3/2.
+
+Combined with Paper I Theorem 1 (which eliminates S = 1/2 by bond
+monogamy), S = 1 is uniquely selected as the only spin S >= 1 for
+which the 3D covariance scaling metric is non-degenerate on the
+full single-site state space.
+
+Mandatory Scope Fence: Theorems A and B certify an 8D single-site
+state-space Riemannian metric (E4) — and a complete non-compact
+3D metric on the dipole ball B^3 — NOT a multi-site 3D spatial
+manifold metric (E0-fenced; the bridge status is Sec. 5.3).
+
+5.3 Spatial Scaling Across Links: Theorems S1, S2, and the
+Tripod/Inscribed-Circle Geometry [E4 / E0]
+
+Along any single 1D AKLT axis, two distinct E4 multiplicative laws
+(Gate O / T4, r6.0a) yield exact additive 1D log-distance: the
+static AKLT kernel spin correlation (-1)^n 4/3^{n+1} (base 1/3,
+xi_AKLT = 1/ln 3 — machine: L = 4 correlations -0.444048 /
++0.146429 / -0.044048 tracking (-1)^n (1/3)^n x (4/3); L = 5, 6
+likewise, r5.3e) and Paper I Theorem 8's dipole extension-map
+eigen-rate (2/3)^n (base 2/3, xi_1 = 1/ln(3/2) = 0.405465).
+Both are single-term multiplicative objects — the certified
+on-axis control of r8.0's Part D shows the SUMMED kernel
+correlation is log-additive only in this dominant-term family,
+which is why 1D additivity is a family property, not an axiom.
+Scaling from 1D additive axes to 3D follows two exact composition
+theorems:
+
+  - Theorem S1 (Unique SO(3)-Isotropic Scaling of 1D Axis Logs)
+    [E4]: given unbounded additive 1D log-distances d_a = -l_0 ln
+    K_a along the three derived directions of Theorem II.1,
+    imposing (i) 1D log reduction F(d_1, 0, 0) = d_1, (ii) scale
+    homogeneity F(lambda d) = |lambda| F(d), and (iii) SO(3)
+    isotropy uniquely forces
+    d_scale(x, y) = l_0 sqrt((ln K_1)^2 + (ln K_2)^2 + (ln K_3)^2).
+    Consequently isotropic 3D correlations satisfy strict
+    super-multiplicativity K_3D = exp(-sqrt(sum (ln K_a)^2)) >=
+    K_1 K_2 K_3 and sub-additive right-angle chords
+    d(A, C) = sqrt(2) d(A, O) < 2 d(A, O).
+  - Theorem S2 (Unconditional Intrinsic Path-Infimum Metric on
+    General Graphs) [E4]: on any discrete relational graph with
+    adjacent link weights w(u, v) := -l_0 ln K(u, v), the path
+    infimum d_int(x, y) := inf_{gamma: x -> y} sum_k
+    (-l_0 ln K(x_k, x_{k+1})) satisfies the triangle inequality
+    unconditionally, with unbounded range [0, infinity), and
+    reduces identically to 1D log-additivity along single axes.
+    (Sec. 3.4's commitment: the metric closure of the raw pair
+    correlations; the site-graph value on the certified corner is
+    d_int = 3.622512, C3-symmetric.)
+
+Tripod / Inscribed-Circle Geometry and the PR-METRIC-2b Bridge
+(E4 profile-frame structure / E0 lattice gate): three 1D additive
+link dimensions form a triangular frame; the certified corner
+profile Gram G^prof (diag a = 0.632093, off-diag b = -0.051106)
+decomposes EXACTLY as a TRIPOD under the C_3 = 1 + 2 irrep split
+(the standing lemma):
+
+    lambda_A = a + 2b = 0.529880  (trivial irrep — apex),
+    lambda_E = a - b = 0.683199   (standard irrep, x2 — base),
+    h^2 = lambda_A/3 = 0.176627, R^2 = 2 lambda_E/3 = 0.455466,
+    h^2 + R^2 = a  (Pythagoras, exact),
+    h = 0.420270, R = 0.674882,
+
+with the register sitting at the APEX, height h above the plane of
+the equilateral stub triangle (circumradius R); the incircle
+picture of Sec. 3.4.3 is this tripod's 2D shadow. The stub-pair
+chord d_G = sqrt(2 lambda_E) = 1.168930 is carried ENTIRELY by the
+E-irrep (in-plane displacement), the via-register path 2 sqrt(a)
+= 1.590085 by both, and the chord defect -0.421155 < 0 at stub
+angle 94.638 degrees is the ordinary Euclidean triangle inequality
+on the configuration — the structural reason the Gram-chord
+resolves the raw log-distance's super-additivity: it is a
+Euclidean pullback. lambda_A is registered as the lattice gate's
+ORDER PARAMETER: lambda_A > 0 iff the register is off the stub
+plane (non-planar, 3D configuration; certified 0.529880 > 0 on
+the corner); lambda_A = 0 iff flat. The physical-3D interpretation
+stays E0; the profile-frame geometry is E4.
+
+PR-METRIC-2 (r7.0) and PR-METRIC-2b (r8.0) — the honest bridge
+status, both run as frozen and reported as found:
+
+  - PR-METRIC-2's frozen comparison fired the IMPOSSIBLE branch
+    (d_int 3.622512 site-site vs. d_scaling 0.006559 profile),
+    whose prescribed diagnosis resolved it as a construction
+    mismatch; r8.0 reclassifies the verdict SPEC-INCOMPLETE — the
+    sheet's outcome space assumed a common space that was never
+    declared, so the sheet did not test what it claimed to test.
+    The EQUAL -> tiling corollary is UNTESTED (not refuted);
+    PR-METRIC-1's deferral is unaffected.
+  - PR-METRIC-2b (route (i) as pre-registered): with the common
+    space declared — the certified profile span, link-graph sites
+    embedded via the r6.1 profile frame — the induced chord
+    metric d_chord = 1.168930 (C3-symmetric) and the Theorem A/B
+    log-volume distance d_scaling = 0.006559 both live on one
+    space and are both valid metrics; they are DIFFERENT metrics
+    (FAMILIES-DISAGREE; no branch of the four-outcome space fires
+    because neither exceeds nor equals the other by construction).
+    The corner frame does not adjudicate between the chord family
+    and the log-volume family: that is the multi-vertex lattice
+    gate's ownership, unchanged.
+  - The M-biconditional pin (r8.0 Part C): on the SEPARABLE,
+    classically-correlated junction seed rho_sep = 1/2(|+1>^{x6}\
+    <+1| + |-1>^{x6}<-1|), the junction multiplicativity gap is
+    NONZERO (M = ln 3 = 1.098612 barycenter-anchored; bond-register
+    anchored 0.0 on this seed) — so M is NOT an entanglement
+    witness; it is a correlation-gap object, nonzero for
+    classical OR quantum correlation loss across a coupled
+    junction. Sec. 3.4.2's wording is amended accordingly (r8.0a):
+    M = 0 characterizes the 1D-multiplicative (Markov) family with
+    nonvanishing marginals; M > 0 measures correlation loss across
+    a coupled junction, whatever couples it.
+
+Because PR-METRIC-2/2b leave the family question to the lattice
+gate, the bridge from microscopic multi-vertex spin-1 correlations
+to macroscopic 3D Euclidean/Riemannian geometry remains honestly
+fenced at E0 pending the multi-vertex lattice gate — with the
+tripod order parameter lambda_A and the pre-committed target
+carried from Sec. 3.4.3: track lambda_A and the chord defect
+across the lattice, under the scaling-metric / FS families, as
+plaquette/diagonal paths are added.
+
+5.4 Remark: Minkowski Signature Coupling (E2 Structural / E0
+Dynamical Boosts)
+
+Combining Sec. 4's emergent proper time d tau (the monotone
+spending clock Gamma_b / tau_b, E4) and the finite causal speed
+ceiling c (supported by Paper I's front speed and No-Go VII's
+spacelike commutativity [L_0, L_2] = 0) with Sec. 5's
+SO(3)-isotropic 3D scaling metric d l_scale^2 (Theorems A/S1),
+and requiring the causal boundary d l_scale = c d tau to be null
+(ds^2 = 0) structurally forces the relative minus sign
+
+    ds^2 = -c^2 d tau^2 + d l_scale^2,
+
+matching Sec. 2.3's E4 algebraic H_2(C) determinant cone
+det(X) = x_0^2 - |s|^2 (the SL(2, C) determinant-preservation and
+boost-vs-Lambda certificates: 2.7e-13 / 3.8e-15; Generativity
+Entry #2, PR-METRIC-1 deferred). Bridging x_0 <-> d tau and proving
+dynamical Lorentz boost invariance on a discrete dissipative
+substrate remain strictly fenced at E0 for downstream Relativity
+and Cosmology papers.
+
+[STATUS: §5 content layer complete per the locked order. §4 and §5
+drafted; ONLY §1 (Introduction, Framing, Mechanism-Library Bridge
+from Paper I, and Consolidated Claim Table) remains to finish the
+full Paper II r6.0 manuscript. Per the standing instruction: §1
+must reconcile the program title with the graded content — time
+E3-local / E2-global-pending; 3D link-space E4 / spatial E0-
+fenced; scaling metric E4 on the state space / link-space reading
+open (FAMILIES-DISAGREE, lattice gate).]
+====================================================================

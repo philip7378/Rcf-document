@@ -1,0 +1,276 @@
+PAPER II §4 DRAFT (r8.0) — Emergent Time: Global Arrow, Local
+Clocks, and No-Go VII
+====================================================================
+[Drafting baseline: r6.0 lock + r6.0a + r6.1 + r6.2 + r7.0 + r8.0.
+Every number below is verified against the corpus JSONs this round:
+r51a_results.json (Gate 0 cov3, omega_raw flip), r51b_results.json
+(the repaired A2/A3/A4/B certificates — the buggy-generator forensic
+block r5.1a's FAILs are historical, not live), r51c_results.json
+(dark-singlet, Schur freeze, commutators, spherical split),
+r51d_preflight.json (K3 seed, 95/84, 91/684, 25/342, handoff grid),
+r51d_preflight2.json (chiral splits), r51d_t1b2_results.json
+(PR-T1b-2 execution), r52_preflightA.json (A2 quarter-norm
+derivation), r52_preflightB.json (NESS, spacelike commutation,
+holonomy-burden rows), r52_t1b2b_results.json (N-split, spending
+clocks, handoff N4/N5), r51_certificates.json (T1b derivation,
+automorphism, non-inverse, PR-NOGO-RAW), r53_preflightA.json (A3
+decisive certificate 3.8e-16 — logged in the r5.3 registers).
+Locked order §2 -> §3 -> §4/§5 -> §1 last.]
+
+Section 4: Emergent Time — Global Arrow, Local Clocks, and No-Go VII
+
+SCOPE DECLARATION (first paragraph, per the standing fence): this
+section delivers the irreversible global arrow (E4), per-bond local
+causal ordering and cadence (E4/E3, per-seed where marked), and
+No-Go VII's finite-step non-integrability with its exact
+N-independence (E4). It does NOT deliver a synchronized global time
+parameter under simultaneous full-chain evolution: that object
+remains E2-pending and is fenced open at the end of Sec. 4.3 for
+Paper III, which needs the state-space/space bridge first. Nothing
+in this section should be read as a global-time construction.
+
+Paper I established that dynamics is forced by associative
+constraint algebra and identified the unified generator frame. This
+section separates global time (the irreversible arrow) from local
+time (bond-by-bond causal ordering and cadence), audits the
+candidate local clock observables against machine data, and proves
+by No-Go VII that finite-step local evolutions on overlapping bonds
+are strictly non-integrable at every chain length N.
+
+4.1 Global Time: The Non-Hermitian Arrow [E4]
+
+Under the unified Lindbladian generator frame (Symmetry Registry
+Instance #10, retiring the earlier "two channels" terminology
+across Papers I-II), evolution is governed by one non-Hermitian
+effective generator plus one jump superoperator:
+
+    i rho_dot = [H_eff, rho] + i gamma sum_{b,q}
+                L_{b,q}^{cov3} rho (L_{b,q}^{cov3})^dagger,
+    H_eff := H - (i/2) gamma M_hat,
+
+with exact norm-loss law d||psi||^2/dt = -gamma <M_hat> between
+jumps. The one-way global arrow is carried algebraically by the
+Lie-Jordan commutator inside every directed bond jump
+L_{b,q}^{cov3} = (J_{b,q} - Lambda_{b,q})/sqrt(2) (Paper I Eq. 4):
+
+    sum_q (L_b^dagger L_b - L_b L_b^dagger)
+        = P_b^{(2)} - (5/3) P_b^{(1)}   (machine: 4.4e-16 and
+        2.2e-16 per bond, N = 4, gamma = 1; r5.1a Gate 0),
+
+the two certified sides of the L L^dagger identity. On the global
+kernel K_N, the Jordan and Lie halves agree (J_q psi = Lambda_q psi
+=> L_q psi = 0), freezing the reconciled past; off K_N, their
+disagreement drives irreversible global drainage toward K_N. The
+arrow is algebraic, not thermodynamic postulate: it is the fixed
+sign of the projector mismatch above.
+
+4.2 Local Time: Lie-on-Jordan Transport and the Two Local Clock
+Observables [E4 / E3]
+
+Local causal ordering emerges because the Lie (causal) generators
+act as exact derivations of the local correlational (Jordan)
+product:
+
+    [A, B o C] = [A, B] o C + B o [A, C]   (machine residual
+    2.8e-17; r5.1 certificates PR-T1b_a),
+
+so the Lie flow alpha_t(X) = e^{t ad_A}(X) transports Jordan
+frames exactly as automorphisms (residual 1.4e-16, r5.1
+certificates PR-T1b_b), while the Jordan-on-Lie converse fails by
+the exact obstruction [A o B, C] - [A, B o C] != 0 (certified
+nonzero, r5.1 PR-T1b_c) — the local directedness seed. Spacelike
+separation is certified exactly: on disjoint bonds [h_0, h_2] = 0
+(0.0 exact) with [h_0, h_1] = 12.0 (r5.2 preflight B), the causal
+light-cone structure.
+
+Auditing local cadence on Paper I's canonical cov3 substrate
+(N = 4, gamma = 1, NESS residual 6.8e-16; r5.1a Gate 0 + r5.2
+pre-flight B) separates two distinct local clock observables:
+
+(1) Raw Local Turnover Rate omega_raw(b) := G_{H,b} / (2 M_b)
+(E3 NESS throughput; NOT a universal transient clock). At the
+continuous NESS (L(rho_ss) = 0), per-bond stationarity yields the
+exact identity G_{H,b} = -D_{J,b} = gamma(M_b - spillover_in_b),
+whence omega_raw(b) = (gamma/2)(1 - spillover_in_b/M_b). Machine
+audit (r5.1a; PR-NOGO-RAW in r5.1 certificates) proves the
+monotonicity sign of omega_raw(b) with local burden M_b flips with
+the transport probe:
+
+  - Under canonical H_XXX (M_b = [0.061203, 0.128182, 0.061203],
+    M_bar = 0.250588, G_{H,b} = [0.015795, 0.075528, 0.015795]):
+    the higher-burden interior bond ticks 2.2831x faster than the
+    boundary bonds (omega_raw = 0.294609 vs. 0.129041) — strictly
+    distinct from the 2.09x burden-profile ratio M_1/M_0.
+  - Under axial H_XY (M_b = [0.120796, 0.156567, 0.120796],
+    M_bar = 0.398159): the higher-burden interior bond ticks 0.7705x
+    SLOWER (0.210370 vs. 0.273019).
+  - During transients (PR-T1b-2, r5.1d), G_{H,b}(t) crosses zero on
+    all three seeds (ranges certified per seed: e.g. omega_0 in
+    [-0.1005, +0.1297] on the chiral-active seed) due to reversible
+    coherent H_XXX revivals.
+
+Thus omega_raw is a valid active-NESS specific throughput, not a
+monotone transient clock, and does not universally realize
+burden-lapse slowing alpha(B) = (1 + lambda B)^{-1} (extending
+Paper I No-Go V to the per-bond level; sign-flip certified: XXX
+2.2831 interior-faster vs. XY 0.7705 interior-slower on the same
+dissipator).
+
+(2) Anti-Hermitian Local Spending Clock Gamma_b(t) := gamma M_b(t)
+>= 0 (E4 positivity / E3 verified). Defined directly by the local
+anti-Hermitian part of H_eff, the local spending rate
+Gamma_b(t) = gamma Tr(rho(t) P_b^{(2)}) >= 0 and cumulative proper
+tick count tau_b(T) := int_0^T gamma M_b dt never sign-invert on
+any state or trajectory: the spending-clock arm of PR-T1b-2b
+certifies Gamma_b >= 0 at every strobe with tau_b(3) = 0.7209
+IDENTICAL across N = 3, 4, 5, 6 (class N-CONSTANT; boundary-bond
+M0 curve [0.649, 0.299, 0.2029, 0.1561] on the strobe grid; r5.2
+T1b2b SPENDING_CLOCKS), and the per-bond spending rates sum
+identically to the global norm-loss rate sum_b Gamma_b =
+gamma <M_hat> (drain-equals-minus-M certified exactly per bond:
+0.0 residual rows; r5.2 preflight B individual_generators).
+
+On Paper I's global-K_3 single-mismatch seed (r5.1d preflight; the
+2-site AKLT kernel seed of Paper I s2.1(iii), rank 4): exact
+rational normalization 95/84 = 1.130952 (machine 1.130952381), seed
+burdens M_0(0) = 1, M_1(0) = 91/684 = 0.133041 (machine
+0.133040936), dM_1/dt(0) = +25/342 = 0.073099 (machine 0.073099415)
+— the spillover handoff slope, POSITIVE: the off-bond burden rises
+first. Pure cov3 produces a clean causal handoff peak (M_1 rising
+from 0.13304 to a fine-grid peak 0.146644 at t = 0.375 — coarse
+grid 0.14659 at t = 0.5 — before decaying; trajectory rows
+[1.0, 0.59401, 0.36433, 0.23148, 0.15256, 0.10422, 0.0736,
+0.05351, 0.03988] for M_0 and [0.13304, 0.14659, 0.13428, 0.1137,
+0.09256, 0.07384, 0.05833, 0.0459, 0.03613] for M_1 on the t-grid
+[0, 0.5, ..., 4.0]; PR-T1b-2 handoff verdict PASS with best eta =
+0.0505 against the 0.05 threshold — MARGINAL PASS, reported as
+such). The 2-site contrast is certified: no spillover (M_1(0) = 5/9
+decaying from t = 0; M_0 1.0 -> 0.06848, M_1 0.55556 -> 0.06731):
+one bond, no junction, no handoff.
+
+4.3 Overlap Holonomy (PR-T1b-2) and No-Go VII: Finite-Step
+Non-Integrability [E4 / E3]
+
+Testing whether overlapping local bond clocks (L_0 on (0,1) and
+L_1 on (1,2), sharing overlap site 1) compose into a single
+synchronized time parameter exposes two mandatory non-vacuity
+traps (r5.1c, Gate S PASS throughout):
+
+  - Dark-singlet freeze at N = 3: under H_XXX + cov3, the unique
+    N = 3 NESS is the pure J = 0 AKLT singlet (purity = 1.0,
+    M_b = [0, 0], G_H = 0, single-site marginal frozen at 1/3:
+    ||rho_1 - 1/3|| = 0.0 on this seed family, 7.16e-15 declared;
+    Liouvillian gap 0.039826). Steady-state non-vacuity on H_XXX
+    starts at N = 4 (the active N = 4 NESS below).
+  - Schur single-site freeze: on any SU(2)-invariant state
+    (including the active N = 4 H_XXX + cov3 NESS, where the
+    single-site reduced states sit at 1/3 to 2.9e-16 and the
+    partial-traced overlap commutator vanishes to 1.8e-16),
+    single-site overlap observables are frozen identically; site-1
+    frame tests require SU(2)-breaking seeds, while invariant states
+    require 2-site bond observables. (The chiral-active seed's
+    site-1 marginal is genuinely unfrozen: ||rho_1 - 1/3|| =
+    0.571548.)
+
+On the 2-bond chain N = 3, all three overlap commutators are
+strictly nonzero (r5.1c BLOCK D, Gate S):
+
+    ||[L_{H_0}, L_{H_1}]||_F = 36 sqrt(2) = 50.911688,
+    ||[D_0, D_1]||_F          = 6.074875,
+    ||[L_{H_0}, D_1] + [D_0, L_{H_1}]||_F = 31.872140,
+
+giving ||[L_0, L_1]||_F = 58.498310 (excluding exact finite-t
+commutativity triply). For any product state
+rho^{(0)} (x) rho^{(1)} (x) rho^{(2)}, the pure chiral overlap
+holonomy obeys the exact identity (r5.1d, machine error 0.0 over 6
+trials):
+
+    Tr_{0,2}([L_{H_1}, L_{H_0}] rho) = i [S_1 . (<S_0> x <S_2>),
+    rho^{(1)}],
+
+governed by Paper II F3a's chiral energy current
+i[h_1, h_0] = -S_0 . (S_1 x S_2) (norm sqrt(48) = 6.928203,
+machine 6.928203, c-factor 0.9999999999999997). On the chiral-active
+seed 0.7|+x,+x,+z> + 0.3 I/27, the chiral generator splits
+orthogonally in the su(3) frame as -0.7 S_z - 0.7 (S_x o S_z)-type
+quadrupolar/dipolar components with ad_{J^2} eigenvalues {2, 6} at
+EXACTLY 50/50 Hilbert-Schmidt shares (norm_k1 = norm_k2 = 0.494975,
+orthogonality 0.0; reconstruction residual 2.5e-5 declared as
+the r5.2 preflight A tolerance note), and the chiral coefficient on
+this seed replicates at 0.174716 against the derived
+(1/4)||dC_chiral||_F = 1/(4 sqrt(2)) = 0.176777 (1.2% apart —
+seed-specific coefficient, NOT a universal constant; the derivation
+is certified, the equality to the sealed 0.17 was B1's
+replication-consistency label).
+
+Executing the frozen PR-T1b-2 sheet (r5.1d) returned an honest MIXED
+verdict: the chiral coefficient replicated on the chiral-active
+seed (B1 = 0.174716, PASS), while Branch C fired on off-orbit
+residual (0.222493 / 0.191257 / 0.126376 > 0.05 across the three
+seeds, ending at DISTINCT site-1 states det C_{01}(3) = 0.280398 vs.
+det C_{10}(3) = 0.237426 — order-of-application asymmetry, the
+holonomy itself) and B2 failed (seed-dependent overlap transition
+maps f_{01}, max relative spread 0.4896), capping the weak cocycle
+at E3-local, per-seed. The strobe asymmetry-over-t^2 at t = 0.25 on
+the zero-chiral seed is 0.0 (the SU(3) dissipative split there:
+total 0.147915 = 100% quadrupole).
+
+No-Go VII (Exact Partial-Trace Locality / N-Independence of
+Finite-Step Overlap Holonomy) [E4]. Because L_0 and L_1 act as the
+identity on all sites k >= 3 and partial trace commutes with CPTP
+maps supported on {0, 1, 2}, for every N-site state rho (product
+or entangled):
+
+    Tr_{3,...,N-1}(e^{t L_1} e^{t L_0} rho)
+        == e^{t L_1} e^{t L_0} rho_{012},
+    rho_{012} := Tr_{3,...,N-1}(rho)
+
+(certified to 3.8e-16 across genuinely entangled seeds including
+Schmidt ranks 9/9/81 at N = 4 — the r5.3 preflight A3 decisive
+certificate; the strobe version agrees at all strobed times to
+2.7e-16). Consequently, finite-step two-bond overlap holonomy never
+decays with N: the product-family residual is 0.191257 IDENTICALLY
+at N = 3, 4, 5, 6 (class N-CONSTANT; the F1 coefficient 0.174716
+likewise constant, universality band PASS). The apparent decay on
+Haar/Ginibre draws (0.098598 -> 0.02097 across N = 3..6, class
+N-MIXED) is pure marginal concentration of rho_{012} -> 1/27; and
+on the global kernel family the object is unmeasurable (0.0
+throughout — the reconciled kernel is the fixed point). The
+aggregate N-SPLIT is the registered route: the paper registers the
+split and scopes each family's reading to its own class.
+
+Spacelike Locality and the Synchronized Limit (r5.2 preflight B,
+N = 4 NESS): while overlapping bonds carry irreducible finite-step
+holonomy (||[L_1, L_0] rho_ss||_F = ||[L_2, L_1] rho_ss||_F =
+0.679584, with mirrored bond-burden rows [-0.166844, +0.289246,
+-0.119031] and [+0.119031, -0.289246, +0.166844] cancelling
+IDENTICALLY on the middle bond to 0.0, leaving a boundary dipole
+[-0.047814, 0.0, +0.047814]), disjoint (spacelike) bonds commute
+identically: [h_0, h_2]_F = 0.0 and ||[L_2, L_0] rho_ss||_F =
+1.27e-16. Synchronized global time therefore does not exist at
+finite step size; it emerges only in the continuous Lie-Trotter
+foliation limit, whose Trotter error is certified O(t^2/n) with
+machine prefactor 3.4591 vs. the analytic sqrt(48)/2 = 3.464102
+(the 0.14% gap is the seed's non-worst-case constant; monotone
+decreasing in n certified, ratio constant across n = 2..50).
+
+Honest Status Fence: global arrow (E4), monotone local spending
+clock (E4/E3), and No-Go VII (E4) are certified. Full multi-overlap
+global time under simultaneous full-chain evolution — where bonds
+b >= 2 couple back into site 1 at O(t^2 - t^3) — remains E2-PENDING
+/ fenced open for Paper III (which needs the state-space/space
+bridge of Sec. 5 first). The handoff at N = 4/N = 5 is certified
+strong (M_1 peak 0.300563 at t = 3.875, eta = 8.8507 band PASS;
+N = 6 superoperator at dim 729^2 = 531441 logged per sheet,
+blockwise strobes feasible, skipped on time budget and logged, not
+silently dropped).
+
+Gap taxonomy carried from Paper II r4.8-r4.9 (declared, not
+re-measured this round): full-space dark J = 2 gap
+(1/2) eps_4 = 0.224478 (multiplicity 40), invariant-closure dark
+J = 1 gap, and burden-response gap lambda(N) — three distinct
+objects, never conflated with the Liouvillian gap 0.039826 of the
+dark-singlet block or the Trotter prefactor above.
+[STATUS: §4 content layer complete per the locked order. Next: §5
+(The Scaling Metric), then §1 last.]
+====================================================================

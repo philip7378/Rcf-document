@@ -28,7 +28,8 @@ cannot branch into 3D on their own; cross-axis connectivity is
 forced into the dynamical Lie and link sectors.
 
 The architectural inversion relative to AKLT deserves stating once,
-plainly, because it organizes everything below. In the AKLT
+plainly, because it organizes everything below — with its input
+fence and its register class named up front. In the AKLT
 construction the graph is an input: the Hilbert space factorizes
 over vertices, bonds are entangling edges drawn between them, and
 the emergent dimension is the Hausdorff dimension of whatever graph
@@ -36,18 +37,31 @@ was put in. In the present framework the link is primitive and
 the vertex is derived: D_loc = 3 counts independent 1D displacement
 directions that close in the link algebra (Theorem II.1), and a
 "vertex" is a relational locus — a composite register wired inside
-the link-derived dimension, not a node that pre-exists it. The
-No-Gos below are then exactly what this inversion predicts: a
-vertex-first static overload of the spin-1 bond runs into the
+the link-derived dimension, not a node that pre-exists it. INPUT
+FENCE (carried to Sec. 1): Paper I Sec. 2 scopes Theorem 1 to a
+declared 1D open-chain input with SU(2) covariance and the
+composition rule, and disclaims higher-dimensional graphs; "link
+primitive" means the link's ALGEBRA is derived and carries the
+geometry (D_loc = 3 within the M_n(C)-saturation and degree-2
+fences), while the 1D chain is the declared minimal staging — not
+"no graph is input at all." REGISTER CLASS:
+RETROSPECTIVE-UNIFICATION: the No-Gos below predate the
+inversion's formulation; they read as its predictions
+retrospectively — consistent with it, strongly, but not
+pre-registered as such. What the inversion adds beyond a
+reinterpretation is that D becomes derivable rather than free:
+a vertex-first static
+overload of the spin-1 bond runs into the
 valence wall (No-Go VIII), a static bulk vertex constraint kills
 the very edge kernel it is supposed to knit (No-Go VIIIb), and only
 the dynamical coupling H_vtx — the vertex as an active relational
 object, not as geometry — carries cross-axis information (Sec. 3.3).
 The corner link frame of Sec. 3.4 is the positive witness of the
 inverted order: three intact links determine a rank-3 frame in
-which the register sits as the incenter of the three stub
-directions, and the junction's multiplicativity gap (Sec. 3.4.2) is
-precisely the angle data the additive 1D logs cannot see.
+which the register sits at the APEX of the three stub directions
+(the tripod of Sec. 3.4.3), and the junction's multiplicativity
+gap (Sec. 3.4.2) is precisely the correlation data the additive
+1D logs cannot see.
 
 3.1 No-Go VIII: The Bare Spin-1 Graph-Valence Obstruction [E4]
 
@@ -126,11 +140,19 @@ the 64D edge kernel K_3^(x)3 completely:
 | Forbid J_vtx = 0 (dim 1) | 0 / 64 | 8/343 = 0.023324 (dev 1.6e-10) | 0.016699 |
 | Forbid J_vtx = 1 (dim 9) | 0 / 64 | 12/49 = 0.244898 (dev 1.8e-10) | 0.142603 |
 | Forbid J_vtx = 2 (dim 10) | 0 / 64 | 120/343 = 0.349854 (dev 4.1e-10) | 0.265483 |
-| Forbid J_vtx = 3 (dim 7) | 0 / 64 | 8/49 = 0.163265 (at L = 5, dim 1,594,323: 0.246717) | 0.097265 |
+| Forbid J_vtx = 3 (dim 7) | 0 / 64 | 8/49 = 0.163265 (at L = 5, 12-site compressed frame, dim 3^12 = 531,441: 0.246717) | 0.097265 |
 
 [Machine support: r53c_static.json bulk_static (all four rows),
-target_check (full-space deviation 0.0 on every row), r53b_armsAB
-ArmB_L5 (the L = 5 compressed persistence 0.246717).]
+target_check (full-space deviation 0.0 on every row), the L = 5
+compressed persistence 0.246717 completed in r53c_static (the
+compressed route: the three L = 5 chains carry 3 center registers
++ 12 arm sites = 12 sites, full space 3^12 = 531,441, kernel-
+compressed to 16^3; the r53b entry was deferred-to-script-2 and
+completed in r53c — see the r8.0 erratum. A 15-site 3^15 sibling
+with three DISTINCT center registers has been suggested by the
+r8.0 audit as a fuller construction; it is NOT certified in the
+corpus and is registered here only as that suggestion, not as a
+claim).]
 
 Analytic mechanism (r53d_closure C3/C4, E4): on a bulk 3-site AKLT
 chain K_3, the J = 1 triplet's middle-site reduced density matrix
@@ -224,80 +246,138 @@ irreps — the standing lemma):
     and whose static overload route No-Go VIII/VIIIb forbid.
 
 3.4.2 The Junction Multiplicativity Gap and the Distance
-Commitment (PIN 1, renamed per r7.0).
+Commitment (PIN 1, renamed per r7.0; corrected per r8.0).
 Along any single 1D AKLT axis, the static kernel correlation
 (-1)^n (4/3^{n+1}) (base 1/3; kept distinct per Gate O / T4 from
 Paper I Theorem 8's 2/3 dipole extension eigen-rate) yields exact
-additive 1D log-distance. Across the 3-axis corner junction, the
-raw pairwise -ln|K| produces an exact C_3-symmetric gap on all
-three stub pairs:
+additive 1D log-distance IN THE SINGLE-TERM RATE FAMILY — the
+certified on-axis control (r8.0 Part D) shows the SUMMED kernel
+correlation itself carries M ~ 0.29 at L = 4..7, so 1D
+multiplicativity is a family property of the rate objects, not an
+axiom. Across the 3-axis corner junction, the raw pairwise
+-ln|K| produces an exact C_3-symmetric gap on all three stub
+pairs:
 
     M(A, C; O) := d(A, C) - [d(A, O) + d(O, C)] = +1.168796,
-    d = -ln|K|, O = barycenter anchor
+    d = -ln|K|, O = barycenter anchor (F1 below)
 
-(equivalently the K-space log-ratio
-ln[K(A,C)/(K(A,O)K(O,C)] = -1.168796; direct stub-stub separation
-4.4111 vs. via-center 3.2423; on the bare uncoupled kernel
-K(e_mu, e_nu) = 0 and the object degenerates; on product seeds the
-marginals vanish and the gap object is vacuous — r70_metric2
-GUARD). The gap is a CORRELATION quantity, not a metric defect: it
-is the amount by which the pair correlation across the junction
-falls below the product-of-marginals, zero on product states,
-nonzero exactly when the junction entangles. Reading it as a
-"distance defect" was the category error: raw pairwise -ln|K| is a
-link-level separation and a direct-pair diagnostic, not a
-pseudometric on 3D frames.
+(direct stub-stub separation 4.4111 vs. via-center 3.2423; on the
+bare uncoupled kernel K(e_mu, e_nu) = 0 and the object degenerates;
+on product seeds the marginals vanish and the gap object is
+vacuous — r70_metric2 GUARD). The gap is a CORRELATION quantity,
+not a metric defect, and NOT an entanglement witness: the
+separable-classical pin (r8.0 Part C) fires it on a zero-entanglement
+seed (rho_sep = 1/2(|+1>^{x6}<+1| + |-1>^{x6}<-1|) gives M = ln 3 =
+1.098612 barycenter-anchored, with nonvanishing marginals 1.732051
+per stub). The corrected biconditional: M = 0 iff the chain is
+1D-multiplicative (Markov) with nonvanishing marginals; M > 0
+measures correlation loss across a coupled junction — entangling
+or classical. Reading it as a "distance defect" was the category
+error: raw pairwise -ln|K| is a link-level separation and a
+direct-pair diagnostic, not a pseudometric on 3D frames.
 
 Spatial link distance in Paper II is therefore committed to the
 unconditional path-infimum d_int (Theorem S2, Sec. 5), with raw
 -ln|K| retained only as the direct-pair diagnostic. On the
 certified 6-node frame (3 registers, 3 stubs, edge weights
 -ln|corr| from K_32), d_int(stub, stub) = 3.622512 on all three
-pairs (C_3-symmetric).
+pairs (C_3-symmetric). THREE DISTINCT ANCHORS, named so that no
+two distances sit side by side unexplained: (F1) the
+sqrt(3)-normalized barycenter O = (S_0 + S_2 + S_4)/sqrt(3),
+c(A, O) = -0.197674, giving the via-center path 3.242268 and the
+certified gap +1.168796 (reproduces the r6.2 certificates exactly,
+to 1e-6); (F2) the SITE-GRAPH path-infimum d_int = 3.622512 — a
+different path set (2-hop via a single register; the barycenter is
+not a node of the site graph, so 3.622512 exceeding 3.2423 is a
+change of path set, not a contradiction); (F3) the r61 CHK-3b raw
+register anchor, whose print c(r_0, s_1) = 3.144778 has |c| > 1
+and is not a valid log-distance anchor (its triangles 4.411064 /
+3.992161 / 6.289556 mixed normalizations; the DIRECT distance
+4.411064 — carried by the raw stub-stub correlation -0.012142 — is
+the one object shared with F1).
 
-PR-METRIC-2 (r7.0, pre-registered outcome space, run as frozen):
-does d_int equal the scaling-metric distance d_scaling on the
-frame? The comparison fired the outcome space's IMPOSSIBLE branch —
-d_int (3.6225) vs. d_scaling (0.006559) — and the prescribed
-diagnosis resolved it as a CONSTRUCTION MISMATCH, not a state-space
-fact: d_int's weights are site-site -ln|<S^z S^z>| correlations
-while d_scaling's inputs are the profile inner products
-Phi_a . Phi_nu; no certified site-to-profile embedding fixes a
-common space, so EQUAL/ENVELOPE are not well-posed on this frame.
-Verdict: INCONCLUSIVE — the multi-vertex lattice gate owns the
-question (it needs the embedding map and a denser frame);
-PR-METRIC-1's deferral is unaffected.
+PR-METRIC-2 (r7.0, pre-registered outcome space, run as frozen)
+and its reclassification (r8.0): the comparison fired the
+IMPOSSIBLE branch — d_int (3.6225, site-site) vs. d_scaling
+(0.006559, profile) — and the prescribed diagnosis resolved it as
+a construction mismatch; r8.0 reclassifies the verdict
+SPEC-INCOMPLETE: the sheet's outcome space assumed a common space
+that was never declared, so the sheet did not test what it claimed
+to test. PR-METRIC-2b (route (i) as pre-registered): with the
+common space declared — the certified profile span, link-graph
+sites embedded via the r6.1 profile frame — the induced chord
+metric d_chord = 1.168930 and the Theorem A/B log-volume distance
+d_scaling = 0.006559 both live on one space and are both valid
+metrics; FAMILIES-DISAGREE: the corner frame does not adjudicate
+between the chord family and the log-volume family. Verdict: the
+multi-vertex lattice gate owns the family question; the EQUAL ->
+tiling corollary is UNTESTED (not refuted); PR-METRIC-1's deferral
+is unaffected. Sec. 5.3 carries the full bridge status.
 
-3.4.3 The Predicted Resolved Form (E0-fenced): the incircle/chord
-geometry. The geometric picture that the 3-arm data force: three
-additive 1D dimensions determine a triangle, and the stub
-positions are the touch points of its inscribed circle — the
-register sits at the incenter, equidistant (r =
-sqrt(G^prof_[mu,mu]) = 0.7950) from all three stub directions.
-On the SAME certified K_32 frame, the Gram-induced chord distance
+3.4.3 The TRIPOD: Predicted Resolved Form (E0-fenced; register
+class upgraded per r8.0 Part E from "incircle" to TRIPOD — the
+certified frame's exact 3D configuration, of which the incircle
+is the 2D shadow). Three additive 1D dimensions determine a
+triangular frame; the certified profile Gram decomposes EXACTLY
+under the C_3 = 1 + 2 irrep split (the standing lemma):
 
-    d_G(mu, nu) = sqrt(G_mm + G_nn - 2 G_mn) = 1.168930,
-    via-incenter 2r = 1.590085,
+    lambda_A = a + 2b = 0.529880  (trivial irrep — APEX),
+    lambda_E = a - b = 0.683199   (standard irrep, x2 — BASE),
+    h^2 = lambda_A/3 = 0.176627, R^2 = 2 lambda_E/3 = 0.455466,
+    h = 0.420270, R = 0.674882, h^2 + R^2 = a (exact),
+
+with the register sitting at the APEX — height h ABOVE the plane
+of the equilateral stub triangle (circumradius R) — not at the
+incenter of a flat triangle. The register's "equidistance"
+sqrt(a) = 0.7950 from all three stub directions is the slant
+length of the tripod's legs, not an inradius. On the SAME
+certified K_32 frame, the Gram-induced chord distance
+
+    d_G(mu, nu) = sqrt(G_mm + G_nn - 2 G_mn) = sqrt(2 lambda_E)
+    = 1.168930,
+    via-register 2 sqrt(a) = 1.590085,
     chord defect = -0.421155 < 0 (stub-pair angle 94.638 deg)
 
-is strictly sub-additive on every pair — the flat-Euclidean
-right-angle chord form (the (sqrt(2) - 2)r negative defect at
-exactly 90 degrees, here -0.4212 at 94.6 degrees). This is the
-PREDICTED resolved geometry: the raw additive logs fail at the
-corner precisely because the three 1D dimensions determine a
-2-sphere of positions rather than a sum of sides, and the correct
-metric is the chord on that sphere, not the side-sum. It is
-E0-fenced: certified here only as the frame's Gram-chord reading,
-not yet as the metric the correlation structure itself realizes.
-The pre-committed lattice-gate target stands: whether a
-multi-vertex 3D lattice with plaquette/diagonal paths carries the
-junction signature from the raw-log's +1.1688 gap across to the
-chord's -0.4212 defect — i.e. whether the scaling metric / FS
-metric realizes the chord geometry — and under which metric.
+is strictly sub-additive on every pair, and the sub-additivity is
+the ORDINARY Euclidean triangle inequality on the tripod
+configuration (2 sqrt(lambda_E) <= 2 sqrt(a) for any PSD Gram) —
+the structural reason the Gram-chord resolves the raw
+log-distance's super-additivity: it is a Euclidean pullback. The
+in-plane displacement Phi_a - Phi_b is carried entirely by the
+E-irrep (the standard representation); the out-of-plane apex
+direction by the A-irrep. lambda_A is registered as the lattice
+gate's ORDER PARAMETER: lambda_A > 0 iff the register is off the
+stub plane (non-planar, 3D configuration; certified 0.529880 > 0
+on the corner); lambda_A = 0 iff flat. This is the PREDICTED
+resolved geometry: the raw additive logs fail at the corner
+precisely because the three 1D dimensions determine a
+position-sphere rather than a sum of sides, and the correct metric
+is the chord, not the side-sum. Register class: E4 on the profile
+frame's geometry; E0 for the physical-3D interpretation. The
+pre-committed lattice-gate target, sharpened: track lambda_A and
+the chord defect across the lattice under the scaling-metric / FS
+families as plaquette/diagonal paths are added — whether the
+multi-vertex lattice carries the junction signature from the
+raw-log's +1.1688 gap across to the chord's -0.4212 defect, and
+whether lambda_A stays positive (non-planar) at every vertex.
 
-[STATUS: §3 content-layer complete per the locked order. Numbers
-all verified against corpus JSONs this round (r7.0 verification
-sweep + PR-METRIC-2 run). Next per the lock: §4 (Emergent Time:
-Global Arrow, Monotone Spending Clock, No-Go VII) and §5 (Scaling
-Metric: PR-SCALE-1, Theorems A & B, S1 & S2), then §1 last.]
+[STATUS: §3 content-layer complete per the locked order; §3.4
+amended per r8.0 (biconditional corrected, three anchors named,
+tripod upgrade with lambda_A order parameter, L=5 caption below).
+Numbers all verified against corpus JSONs (r7.0 sweep + PR-METRIC-2
+run; r8.0 sweep + PR-METRIC-2b run). Next per the lock: §4
+(Emergent Time: Global Arrow, Monotone Spending Clock, No-Go VII)
+and §5 (Scaling Metric: PR-SCALE-1, Theorems A & B, S1 & S2) — both
+DRAFTED this round (p2_sec4_draft.txt, p2_sec5_draft.txt) — then §1
+last. One input fence to carry into §1's framing: Paper I §2 scopes
+Theorem 1 to a declared 1D open-chain input with SU(2) covariance
+and the composition rule, and disclaims higher-dimensional graphs;
+"link primitive" therefore means the link's ALGEBRA is derived and
+carries the geometry (D_loc = 3 within the M_n(C)-saturation and
+degree-2 fences), while the 1D chain is the declared minimal
+staging — not "no graph is input at all." The register class of
+§3's opening unification paragraph is RETROSPECTIVE-UNIFICATION:
+the results (No-Go VIII/VIIIb, H_vtx, the tripod) predate the
+inversion's formulation — consistent with it, strongly, but not
+pre-registered as its predictions.]
 ====================================================================

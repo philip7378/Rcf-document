@@ -1,0 +1,209 @@
+==============================================================================
+REGISTER — r8.0: AUDITS OF 87e16aa ACCEPTED (all three); §4 AND §5
+DRAFTED AFTER FULL NUMBER VERIFICATION; PR-METRIC-2b RUN AS
+PRE-REGISTERED (route (i)) -> FAMILIES-DISAGREE; r70's INCONCLUSIVE
+RECLASSIFIED SPEC-INCOMPLETE; THE M-BICONDITIONAL PIN FIRED
+(separable-classical seed: M = ln 3 != 0 -> correlation-gap object,
+entanglement reading struck); THE TRIPOD CERTIFIED (lambda_A order
+parameter); §3.4 AMENDED (r80a). Scripts r80_metric2b.py /
+r80_metric2b.json; drafts p2_sec4_draft.txt, p2_sec5_draft.txt,
+p2_sec3_draft.txt (amended). (Gate S PASS on every computation;
+adjudications reported as found, no retrofit.)
+==============================================================================
+
+1. THE THREE AUDITS OF 87e16aa — ACCEPTED IN FULL, with the
+   following machine adjudications where they conflicted or
+   pinned:
+
+   (a) L=5 SITE COUNT — the audits disagreed with each other
+   (3^15 = 14,348,907 "15 sites, three distinct center registers"
+   vs. 3^13 = 1,594,323 "caption typo"). Machine truth: the
+   CERTIFIED L=5 object is the COMPRESSED route of r53c_static.py
+   (r53b's ArmB_L5 block was left "deferred-to-script-2" and
+   completed in r53c): three L=5 axis chains, center registers
+   COALESCED at sites 2, 7, 12 — 12 SITES, full space
+   3^12 = 531,441, kernel-compressed to 16^3 = 4,096; the
+   0.246717 certificate is on THAT object. The 15-site
+   three-distinct-registers sibling is a DIFFERENT (uncertified)
+   construction — registered as the audit's suggestion, not a
+   claim. §3's caption now reads "12-site compressed frame,
+   dim 3^12 = 531,441."
+
+   (b) THE ANCHOR — my r7.0 claim of having "verified 0.246717
+   against r53b_armsAB.json (ArmB_L5)" was WRONG: the r53b JSON
+   entry says "deferred-to-script-2"; the number was completed in
+   r53c_static. Logged as this session's erratum (pattern:
+   certificate-vs-caption verification must run against the
+   JSON that actually certifies, not the script that mentions the
+   number — the standing rule now applies to REGISTERS too).
+
+   (c) THE AUDIT'S OWN TRANSCRIPTION ERROR, machine-caught: the
+   audit's "c(A, O) = 0.394972" does NOT reproduce the certified
+   via-center 3.2423 (2 x 0.9289 = 1.8578). The certified anchor
+   is the sqrt(3)-NORMALIZED barycenter, c(A, O) = -0.197674:
+   2 x 1.621134 = 3.242268, and 4.411064 - 3.242268 = 1.168796 =
+   the certified gap (reproduced to 1e-6 in r80 F1). Registered
+   without reciprocal rhetoric; both sides' slips are now logged.
+
+2. §4/§5 NUMBERS — full verification sweep against corpus JSONs
+   BEFORE drafting (r51a/b/c/d, r52 A/B, r52_t1b2b, r53 A/B/B2/C,
+   r53e, r51_certificates). All §4/§5 master-draft numbers
+   confirmed EXCEPT one attribution: PR-NOGO-RAW's omega flip
+   (XXX 2.2831 / XY 0.7705) is certified in r5.1a (r51a_results
+   Gate 0, with r51_certificates' PR-NOGO-RAW confirming the
+   sign-flip on the N=3 seed pair), not "at r5.2"; the NESS
+   residual 6.8e-16 belongs to r52_preflightB. §4 carries the
+   correct attributions. The declared-from-register items
+   (0.224478 gap taxonomy; FS/ell_0 dilemmas) carried as
+   declared, marked not re-measured this round.
+
+3. PR-METRIC-2b RUN AS PRE-REGISTERED (route (i), four-outcome
+   space unchanged) — r80_metric2b:
+   - PART A: r70's INCONCLUSIVE is RECLASSIFIED SPEC-INCOMPLETE
+     (the audit's recommendation adopted): the frozen outcome
+     space assumed a common space that was never declared; the
+     sheet did not test what it claimed to test. The EQUAL ->
+     tiling corollary is UNTESTED (not refuted); PR-METRIC-1's
+     deferral unaffected.
+   - PART B (route (i)): with the common space DECLARED — the
+     certified profile span, link-graph sites embedded via the
+     r6.1 profile frame — the induced chord metric d_chord =
+     1.168930 (C3-symmetric on all three stub pairs) and the
+     Theorem A/B log-volume distance d_scaling = 0.006559 both
+     live on one space and are both valid metrics. VERDICT:
+     FAMILIES-DISAGREE (no branch of the four-outcome space
+     fires; neither equals, exceeds, nor bounds the other by
+     construction). The corner frame does not adjudicate between
+     the chord family and the log-volume family: the
+     multi-vertex lattice gate owns the family question.
+   - PART C (the separable-classical pin, decisive): on
+     rho_sep = 1/2(|+1>^{x6}<+1| + |-1>^{x6}<-1|) — separable
+     across every arm cut, zero entanglement, nonvanishing
+     marginals (barycenter-stub 1.732051 per stub) — the gap is
+     M = ln 3 = 1.098612 != 0 (barycenter-anchored; bond-register
+     anchored 0.0 on this seed). M IS NOT AN ENTANGLEMENT
+     WITNESS: it is a CORRELATION-GAP object, nonzero for
+     classical OR quantum correlation loss. The entanglement
+     reading is STRUCK; §3.4.2's biconditional corrected: M = 0
+     iff 1D-multiplicative (Markov) with nonvanishing marginals;
+     M > 0 measures correlation loss across a coupled junction,
+     whatever couples it.
+   - PART D (on-axis control, reported as found): the SUMMED AKLT
+     kernel correlation is NOT exactly multiplicative — M ~ 0.29
+     at L = 4..7 (0.297571 / 0.288810-0.298722 / 0.287806-0.299772
+     / 0.287696-0.299947 by separation). 1D log-additivity is a
+     family property of the SINGLE-TERM rate objects ((2/3)^n
+     channel; signed (-1)^n (1/3)^n dominant term), not an axiom
+     of the summed correlation. §5.3 and §3.4.2 carry this.
+   - PART E (TRIPOD, exact): lambda_A = a + 2b = 0.529880,
+     lambda_E = a - b = 0.683199 (x2); h^2 = lambda_A/3,
+     R^2 = 2 lambda_E/3, h = 0.420270, R = 0.674882, h^2 + R^2 = a
+     EXACT (Pythagoras); chord = sqrt(2 lambda_E) = 1.168930,
+     via-register 2 sqrt(a) = 1.590085, defect -0.421155 @
+     94.638 deg; the sub-additivity is the ordinary Euclidean
+     triangle inequality (a Euclidean pullback — the structural
+     reason the chord resolves the raw log's super-additivity).
+     The C3 = 1 + 2 irrep split IS the tripod's geometric
+     decomposition: E-irrep = in-plane displacement, A-irrep =
+     out-of-plane apex. lambda_A > 0 (certified 0.529880): the
+     frame is NON-PLANAR — a 3D configuration whose incircle
+     picture is the 2D shadow. REGISTERED as the lattice gate's
+     ORDER PARAMETER: lambda_A > 0 iff register off the stub
+     plane; lambda_A = 0 iff flat. Register class: E4
+     profile-frame structure / E0 physical-space interpretation.
+   - PART F (anchor reconciliation, for §3.4): F1 the
+     sqrt(3)-normalized barycenter (via-center 3.242268, gap
+     1.168796 — reproduces r6.2 exactly); F2 the site-graph
+     path-infimum d_int = 3.622512 (different path set — 2-hop
+     via a single register; the barycenter is not a site-graph
+     node, so > 3.2423 is a change of path set, not a
+     contradiction); F3 the r61 CHK-3b raw register anchor
+     (print 3.144778, |c| > 1: not a valid log-distance anchor;
+     its triangles mixed normalizations; direct 4.411064 is the
+     shared object). Three anchors named distinctly in §3.4; no
+     number reused across anchors.
+
+4. §4 DRAFTED (p2_sec4_draft.txt) per the master draft + the
+   auditors' flags, every number machine-verified first: scope
+   declaration (E2-pending global time) in the FIRST paragraph;
+   4.1 the arrow (Registry Instance #10; the L L^dagger identity
+   certified 4.4e-16 / 2.2e-16 per bond); 4.2 the two clocks
+   (Lie derivation 2.8e-17, automorphism 1.4e-16, non-inverse
+   certified nonzero; omega_raw flip 2.2831 vs 0.7705 with the
+   full M_b / G_Hb vectors and the transient zero-crossing
+   ranges; Gamma_b >= 0 with tau_b(3) = 0.7209 N-CONSTANT
+   (N = 3, 4, 5, 6 identical) and drain = -M exact per bond; the
+   K3 handoff seed 95/84, M_1(0) = 91/684, dM_1/dt(0) = +25/342,
+   peak 0.146644 at t = 0.375, eta = 0.0505 MARGINAL pass, 2-site
+   no-spillover contrast; spacelike [h_0, h_2] = 0 vs adjacent 12);
+   4.3 No-Go VII (commutators 50.911688 / 6.074875 / 31.872140 /
+   58.498310; the chiral identity at sqrt(48), c-factor
+   0.9999999999999997; dark-singlet N = 3 freeze (purity 1.0, gap
+   0.039826); Schur freeze (2.9e-16 / 1.8e-16); PR-T1b-2's honest
+   MIXED verdict (B1 0.174716 PASS vs the derived 1/(4 sqrt(2)) =
+   0.176777 seed-specific; B2 0.4896 FAIL; Branch-C residuals
+   0.222493 / 0.191257 / 0.126376 with det C 0.280398 vs
+   0.237426); No-Go VII's partial-trace locality 3.8e-16 on
+   entangled seeds (Schmidt 9/9/81); the N-SPLIT (F1 0.191257
+   N-CONSTANT, F2 0.098598 -> 0.02097 marginal concentration,
+   F3 0.0 unmeasurable); mirrored burden rows cancelling to 0.0
+   with boundary dipole +/-0.047814; Lie-Trotter O(t^2/n) with
+   machine prefactor 3.4591 vs analytic sqrt(48)/2 = 3.464102;
+   gap taxonomy carried as declared). The E2-pending fence ends
+   the section.
+
+5. §5 DRAFTED (p2_sec5_draft.txt) per the master draft + flags,
+   every number machine-verified first: the three "is not"
+   negative specifications UP FRONT (not FS; not raw -ln|K|;
+   not yet identified with d_int); 5.1 PR-SCALE-1 (eight sign
+   frames, identical K multiset {1/4 x3}, det {1/2, 0} by
+   sgn(abc); the ell_1 and sqrt(-ln K) patches ruled out with
+   +0.00275 / +1.703); 5.2 Theorems A and B (closed form with
+   the 2 dm^T C^{-1} dm term; spectrum {9/4 x5, 6 x3} EXACT
+   machine 2.25 / 6.0 with FD crosscheck 4.125 / 5.0625; ray
+   constants -> 1 on BOTH rays with full checkpoint ladders;
+   coercivity lambda_min >= 1 with nematic scan 1.108033 ->
+   1.0001 and 500-state Ginibre min 1.048724; log-volume
+   divergence 2.405172 -> 9.210440; det C 8/27 and 3/4; ranks
+   3/3, 8/8, 8/15 with the 7-dim octupole kernel; INJ round-trip
+   1.1e-16; the r5.1a forensic FAIL rows identified as the
+   bug's own certificate, historical; FS complementarity
+   across strata; scope fence); 5.3 Theorems S1 and S2 with the
+   certified on-axis rate objects (L = 4..6 correlations tracking
+   (-1)^n (1/3)^n (4/3), xi values 1/ln 3 and 1/ln(3/2)) + the
+   on-axis M ~ 0.29 finding; the TRIPOD geometry with all machine
+   constants; PR-METRIC-2's SPEC-INCOMPLETE + PR-METRIC-2b's
+   FAMILIES-DISAGREE + the M-pin + the lattice gate's sharpened
+   target (track lambda_A and the chord defect across the
+   lattice under the scaling / FS families); 5.4 the Minkowski
+   remark (E2 structural / E0 boosts; the SL(2, C) certificates
+   2.7e-13 / 3.8e-15). The §1 instruction is embedded: reconcile
+   the program title with the graded content (time E3-local /
+   E2-global-pending; 3D link-space E4 / spatial E0-fenced;
+   scaling metric E4 on state space / link-space reading open).
+
+6. §3.4 AMENDED (in p2_sec3_draft.txt, this round): the
+   biconditional corrected per Part C/D; the F1/F2/F3 anchor
+   parenthetical added; the tripod registered with lambda_A as
+   order parameter (register class upgraded from "incircle" to
+   TRIPOD — incircle as its 2D shadow; the "incenter" wording
+   replaced by APEX); the L=5 caption corrected (12 sites,
+   3^12 = 531,441; the 15-site sibling registered as the audit's
+   uncertified suggestion); the opening paragraph carries the
+   INPUT FENCE (Paper I's 1D-chain scope) and the
+   RETROSPECTIVE-UNIFICATION register class.
+
+7. LEDGER: two errata logged this round (mine: the r7.0
+   "ArmB_L5 verified" claim was against a deferred-to-script-2
+   JSON entry — the number is real, the attribution was wrong,
+   now corrected; the audit's: c(A, O) = 0.394972 does not
+   reproduce the certified 3.2423). One pre-registered gate run
+   to its honest verdict (FAMILIES-DISAGREE); one pin fired
+   decisively (M is not an entanglement witness); one object
+   upgraded by exact computation (tripod / lambda_A).
+
+ARTIFACTS: r80_metric2b.py / r80_metric2b.json /
+p2_sec4_draft.txt / p2_sec5_draft.txt / p2_sec3_draft.txt
+(amended) / rcf_r80_register.txt (this entry) /
+rcf_r80a_amendment.txt — one push.
+==============================================================================
