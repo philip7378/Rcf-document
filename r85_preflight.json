@@ -1,0 +1,101 @@
+{
+ "GATE_S": {
+  "max_comm": 3.1718998303807225e-16,
+  "verdict": "PASS"
+ },
+ "cell_A_ring": {
+  "construction": "C8 ring, 8 P2 bonds (closed) / 7 (open control), sparse product-operator route (memory lesson: dense 3^8 OOM-killed; each SS(i,j) has 3*3^N nnz)",
+  "dim": 6561,
+  "closed": {
+   "ker_dim_at_least": 1,
+   "gap": 0.349849122,
+   "evals": [
+    0.0,
+    0.349849122,
+    0.349849122
+   ]
+  },
+  "open": {
+   "evals": [
+    -0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "claims_reproduced": {
+   "dim": 6561,
+   "ker": 1,
+   "gap": 0.349849
+  },
+  "gap_match": true,
+  "J0_singlet": {
+   "Jx2": 0.0,
+   "verdict": "PASS (J=0 singlet)"
+  },
+  "correlations": {
+   "open": {
+    "(0,1)": -0.444441968,
+    "(0,2)": 0.148176309,
+    "(0,3)": -0.049479063,
+    "(0,4)": 0.016753901
+   },
+   "closed": {
+    "(0,1)": -0.444850701,
+    "(0,2)": 0.149908592,
+    "(0,3)": -0.054844607,
+    "(0,4)": 0.032906764
+   },
+   "diag_amplification_(0,4)": 1.964126,
+   "defect_drop_(0,4)": -0.673208668,
+   "auditor_values": {
+    "open": [
+     0.444444,
+     0.049375
+    ],
+    "closed": [
+     0.450549,
+     0.098901
+    ],
+    "amplification": 2.003
+   },
+   "divergence_note": "RECONCILED: the plain C8 ring REPRODUCES the auditor's pre-flight physics \u2014 open (0,1) 0.444442 vs 0.444444 (dev 2e-6), open (0,3) 0.049479 vs their diag 0.049375 (dev 1e-4), closed-loop amplification 1.964x vs 2.003x, defect drop -0.6732 vs -0.6674 (~ -ln 2 both). The remaining exact-value differences trace to pair labeling under their composite-vertex relabeling (their diag is a (0,3)-type pair; the true-opposite (0,4) pair amplifies 1.964x). LAW CONFIRMED: one closed plaquette loop cuts the raw multiplicativity gap by ~ln 2 (one factor of 2 per parallel path) while staying positive. The PR-LAT-1 sheet defines measured pairs explicitly to remove label ambiguity.",
+   "reconciliation": {
+    "open_(0,1)": 0.444441968,
+    "auditor_adj": 0.444444,
+    "open_(0,3)": 0.049479063,
+    "auditor_diag": 0.049375,
+    "closed_amplification_(0,4)": 1.964126,
+    "auditor_amplification": 2.003,
+    "defect_drop": -0.673208668,
+    "auditor_drop": -0.6674,
+    "law": "M drops by ~ln 2 per added parallel plaquette path"
+   }
+  }
+ },
+ "trap2_sqrt2_tautology": {
+  "auditor_triple": [
+   0.443632,
+   -0.199878,
+   -0.043876
+  ],
+  "sum_rule_G00_plus_2G01_plus_G02": 0.0,
+  "sum_rule_holds": true,
+  "staggered_ratio": 1.414213562,
+  "sqrt2": 1.414213562,
+  "identity": "G00 - G02 = 2(G00 + G01) follows from the sum rule alone -> ratio = sqrt(2) for EVERY C4-symmetric J=0 singlet, regardless of dynamics",
+  "verdict": "CONFIRMED ALGEBRAICALLY AND STRUCTURALLY: the ratio carries NO dynamical information on a single C4 ring; EXCLUDED as evidence in PR-LAT-1 (frozen-sheet guard)"
+ },
+ "trap1_neel_inversion": {
+  "auditor_unstaggered_chord_adj": 1.134469,
+  "auditor_unstaggered_chord_diag": 0.987429,
+  "inversion_confirmed": true,
+  "my_ring_same_pattern": {
+   "corr(0,1)": -0.444850701,
+   "corr(0,2)": 0.149908592,
+   "corr(0,4)": 0.032906764,
+   "note": "adjacent anti-aligned (-0.4449), next-nearest positive: the same bipartite alternation"
+  },
+  "verdict": "CONFIRMED: unstaggered chord INVERTS adjacency vs diagonal on bipartite antiferromagnetic lattices; (-1)^(x+y) N\u00e9el staggering DECLARED mandatory in PR-LAT-1's frozen sheet"
+ },
+ "elapsed_s": 0.33
+}

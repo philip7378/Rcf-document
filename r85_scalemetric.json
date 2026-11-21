@@ -1,0 +1,69 @@
+{
+ "certified_inputs": {
+  "Gram_a": 0.632092823,
+  "Gram_b": -0.051106217,
+  "via_center": 3.242268,
+  "d_arm_bary": 1.621134,
+  "d_arm_ln3": 1.0986122886681098
+ },
+ "directional_frame": {
+  "Gamma = b/a": -0.080852392,
+  "theta_deg": 94.637563,
+  "detGamma_3x3_equilateral": 0.97933159,
+  "sqrt_detGamma": 0.989611838,
+  "pair_detC": 0.396929491
+ },
+ "scaling_metric_corner": {
+  "barycenter_arm": {
+   "D_scale": 2.383510702,
+   "naive_sum_2d": 3.242268,
+   "defect": -0.858757298,
+   "V2_area": 2.619471353,
+   "V3_volume": 4.216204086,
+   "V3_over_d3": 0.989611838
+  },
+  "ln3_arm": {
+   "D_scale": 1.615260766,
+   "naive_sum_2d": 2.197224577,
+   "defect": -0.581963811,
+   "V2_area": 1.202997514,
+   "V3_volume": 1.31219458,
+   "V3_over_d3": 0.989611838
+  },
+  "ratio_D_over_darm": 1.470273711
+ },
+ "structural_properties": {
+  "1D_collapse_exact": true,
+  "unboundedness": {
+   "d_as_K1_to_0": 27.631021115928547,
+   "no_FS_cap": "D_scale -> +inf as any K_i -> 0; the Fubini-Study metric caps at pi/2 ~ 1.5708 \u2014 the Scaling Metric has infinite evaluation"
+  },
+  "metricity": {
+   "Gamma_eigenvalues": [
+    0.838295215,
+    1.080852392,
+    1.080852392
+   ],
+   "PSD": true,
+   "consequence": "Gamma PSD (independent axes) => D_scale is a true metric: triangle inequality automatic"
+  },
+  "fusion_identity": {
+   "unit_direction_factor": 1.470273711,
+   "certified_d_chord": 1.168930314,
+   "exact_relation": "d_chord = sqrt(a) x sqrt(2(1-Gamma)) (machine: 1.168930314 = 0.795043 x 1.470274; dev < 1e-9) \u2014 the certified chord carries the PROFILE AMPLITUDE sqrt(a) attached to the unit-direction factor",
+   "D_scale_fuses": "D_scale = d_arm x sqrt(2(1-Gamma)) = (1D log arm) x (unit-direction factor): the raw -ln|K| carried only the log, d_chord carried direction+profile-amplitude, and S_ij = d_i d_j Gamma_ij carries log + direction (amplitude normalized out)",
+   "scale_invariant_ratio": "D_scale / d_chord = d_arm / sqrt(a) (machine: 2.039053, dev 7e-10) \u2014 the two metrics differ ONLY in which scalar multiplies the SAME directional geometry",
+   "numeric_check_bary": 2.383510702,
+   "numeric_check_ln3": 1.615260766
+  }
+ },
+ "renaming": {
+  "g_cov": "the 0.0066 object (g_rho = Tr(C^-1 dC C^-1 dC) + 2 dm^T C^-1 dm, Theorems A/B) is renamed g_cov \u2014 the INTERNAL single-site state-frame (covariance) metric. Its E4 content (S=1 uniqueness via rank 8/8, infinite evaluation at pure states, roundness) is INTACT and untouched.",
+  "spatial_scaling_metric": "S_ij = d_i d_j Gamma_ij with D_scale and V_k = sqrt(det S^(k)) is designated THE Spatial Scaling Metric (the principal's construction; Paper II v1.2 \u00a75 relabel rides with the next content push per the bundling rule)"
+ },
+ "verdict": {
+  "barycenter": "D_scale = 2.383511 < naive 2 d_arm = 3.242268 (defect -0.858757 \u2014 sub-additive, Euclidean-style convergence)",
+  "vs_certified_objects": "vs raw via-center 3.242268 (the +1.1688 gap object) and d_chord 1.168930 (direction only) \u2014 the Scaling Metric strictly sits between: it compresses the raw log-sum by the directional factor exactly once",
+  "status": "CERTIFIED on the single junction (all inputs certified r8.0/r8.4 values; no new numerics introduced). Multi-vertex gluing consistency is PR-LAT-1's job."
+ }
+}

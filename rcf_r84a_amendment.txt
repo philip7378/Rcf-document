@@ -1,0 +1,99 @@
+==============================================================================
+MICRO-AMENDMENT r8.4a TO THE r8.4 REGISTER (supersedes specific lines;
+the sealed artifacts a139020f/c60f5ee (v1.0) and 92c1b259/450e648
+(v1.1) are UNTOUCHED — this is a register-level adjudication, per the
+artifact-vs-mention rule the register itself carries).
+==============================================================================
+
+1. PR-METRIC-2c ENVELOPE DOWNGRADED -> POINT-ORDERED-AT-CORNER
+   The r8.4 register elevated d_scaling (0.0066) < d_chord (1.1689)
+   < d_int (3.6225) to "nested families", declared "the bridge itself
+   now certified at this scope", and handed Paper III the metric
+   pillar as "ENVELOPED, not open". WITHDRAWN. The verdict object is
+   re-labeled:
+     OLD: "OUTCOME: ENVELOPE ... the three metric families are NESTED
+           ... log-volume inner, chord middle, path-infimum outer ...
+           the bridge itself now CERTIFIED at this scope."
+     NEW: "OUTCOME: POINT-ORDERED-AT-CORNER (non-structural). The
+           three valid metric families, evaluated at ONE C3-symmetric
+           point, land in a strict order — and only in an order."
+   Machine-verified grounds (r84a_downgrade checks, this round):
+     (i) ONE MEASUREMENT, THREE READINGS. The forbid-J=3 corner is
+         exactly C3-symmetric: all three stub pairs are the same
+         triple (0.00655857, 1.168930314, 3.6225122) repeated. "Strict
+         on every pair" is one data point. Any three distinct positive
+         formulas evaluated at a single point produce SOME order a <
+         b < c; that is not structure.
+     (ii) THE ORDER PROVABLY REVERSES NEAR THE BOUNDARY. By Paper II's
+         own Theorem A, d_scaling = -ln[det C / (|u|^2|v|^2)] -> +inf
+         as det C -> 0, while d_chord on a bounded S=1 Gram (diag <=
+         2/3) is capped at 2*sqrt(2/3) = 1.632993. The certified corner
+         sits at |b'|/a = 0.080853 (well-conditioned interior); the
+         order flips by |b'|/a = 0.830241. The inequality is a local
+         artifact of evaluating a well-conditioned interior point —
+         "log-volume inner, chord middle" cannot be a nesting law.
+     (iii) THE STATE-TO-SPACE BRIDGE STAYS OPEN (E0) entering Paper III.
+          Three differently normalized distance formulas at a single
+          junction do not resolve Paper VI's bridge. The three metrics
+          enter PR-LAT-1 as COMPETING CANDIDATES, not as a
+          pre-registered envelope.
+   What SURVIVES unchanged from r8.4 (all still certified):
+     - The frozen-sheet discipline itself (sheet md5 430a9ac2 verified
+       before execution); the reproduction gates (RG1/RG2/RG3 PASS);
+       the family VALUES (d_int 3.6225122 / d_chord 1.168930314 /
+       d_scaling-as-evaluated 0.00655857); the convention independence
+       of the ORDER at this point (Pearson d_int 2.406117 preserves
+       it); the Markov-ratio zero-object R = K(A,C)K(O,O)/[K(A,O)K(O,C)]
+       and the exact identity M_raw = ln|K(O,O)| - ln R (with the
+       bulk-1D AKLT check: K(O,O) = 2/3, R = 1/2, M_raw = ln(4/3),
+       M_Pearson = ln 2 — both certified limits unified);
+     - The three executor bug root-causes (missing heappush, RG1
+       path-vs-corr, the guard's wrong zero-object) stand as
+       registered;
+     - The d_int graph metric (Theorem S2) and d_chord's
+       sub-additivity at the tripod (defect -0.421155) stand.
+   What is DOWNGRADED: only the structural claim (nesting) and the
+   bridge-status escalation ("certified at this scope" -> OPEN E0;
+   "Paper III inherits ENVELOPED" -> Paper III inherits THREE
+   CANDIDATES + an unresolved bridge).
+
+2. PAPER I ENGINE ATTRIBUTION CORRECTED (D2 slip in r8.4's pin (e))
+   The r8.4 register declared "Paper I ReportLab body / Paper II
+   Tectonic body" and opened a Paper I re-typeset question. WRONG.
+   Machine-verified this round: Paper I (main.pdf, 31 pp) carries
+   Producer xdvipdfmx, Creator "LaTeX with hyperref", and Appendix B
+   states every value is a generated macro (numbers.tex). Paper I
+   was ALREADY LaTeX-built. The ONLY ReportLab artifact in the corpus
+   is the r5.0 re-baseline memo (make_r50_body.py ->
+   RCF_Paper2_r50_ReBaseline_Memo.pdf). CONSEQUENCES: the engine
+   deviation entry is REVERSED (both papers are LaTeX-family; no
+   body-typography deviation between Papers I and II); the "Paper I
+   re-typeset" question CLOSES with nothing to re-typeset. (The
+   register line is corrected here; the r8.4 register file itself
+   stays sealed as pushed — this amendment supersedes its line.)
+
+3. TRIAGED-COUNT RECONCILIATION (22 vs 20)
+   The r8.4 worklog said "22 triaged sweep FAILs"; the summary table
+   and r84_rootcause.json account for 20. The delta is a
+   PAIR-COUNTING CONVENTION, now made explicit: the 2.7e-13 / 3.8e-15
+   pair was TWO number-level sweep FAILs but ONE root-cause entry
+   (both map to the same containment defect class: prose roundings
+   demanded at full precision inside a JSON that stores
+   2.6674831e-13 / 3.7829128e-15). Adjudicated count convention going
+   forward: root causes (20) is the authoritative count; FAIL
+   instances (22) may be cited only with the convention named. No
+   content consequence; nothing was silently dropped.
+
+4. STANDING CONSEQUENCES
+   - PR-LAT-1's design inherits the auditor's two caught traps
+     (bipartite Néel staggering; the C4-singlet sqrt(2) tautology)
+     plus the honest-label discipline: scale-invariant RATIOS
+     (d_diag/d_adj across the candidate metrics) on multi-pair,
+     non-tautological cells — never raw magnitudes at one
+     C3/C4-symmetric point.
+   - The renaming of the 0.0066 object (g_cov, the internal
+     single-site state-frame metric, Theorems A/B intact) and the
+     principal's Spatial Scaling Metric S_ij = d_i d_j Gamma_ij are
+     handled in the r8.5 round proper (v1.2 §5 relabel rides with
+     the next content push, per the bundling rule).
+==============================================================================

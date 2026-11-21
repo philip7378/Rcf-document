@@ -1,0 +1,42 @@
+{
+ "round": "r8.5",
+ "task": "PR-LAT-1 \u2014 the minimal multi-vertex lattice gate",
+ "cells": {
+  "A_closed_plaquette": "C8 ring N=8, bonds (i,i+1 mod 8) P2, no extra sectors; measured pairs (0,1),(0,2),(0,3),(0,4)",
+  "A_open_control": "same ring, (7,0) removed; doubles as the 1D open control",
+  "B_dumbbell": "N=6; vertices {0,1,2},{3,4,5}; J=3-forbidden both triples; weld bond P2(1,3); vertex-A Gram + full 6x6 measured"
+ },
+ "guards": {
+  "G1": "raw K default, Pearson alongside, formulas beside values",
+  "G2": "Trap-1: (-1)^(x+y) N\u00e9el staggering declared for all bipartite chord comparisons; unstaggered reported only with inversion flag",
+  "G3": "Trap-2: staggered chord ratio on single C4-symmetric J=0 singlet EXCLUDED as evidence (sqrt(2) pinned by sum rule; machine-confirmed)",
+  "G4": "Gate F standing (V^dag f(A) V; reproduction gate at certified cell first)",
+  "G5": "No-Go VIII z<=2 verified per cell",
+  "G6": "scale-invariant ratios only for family comparison",
+  "G7": "candidates: D_scale, d_int, d_chord_staggered; g_cov not a candidate"
+ },
+ "tests": {
+  "T1_closed_loop_law": {
+   "object": "M drop on closing the plaquette",
+   "threshold": "|drop + ln2| < 0.1 -> LAW-CONFIRMED; |drop| < 0.05 -> NO-EFFECT; else MEASURED-AS-FOUND",
+   "secondary": "defect stays positive on one plaquette"
+  },
+  "T2_lambda_A_survival": {
+   "object": "min eigenvalue of vertex-A 3x3 Sz Gram on the welded dumbbell",
+   "threshold": "lambda_A > 0 -> SURVIVES; == 0 -> FLATTENED"
+  },
+  "T3_family_ratios": {
+   "object": "d(0,4)/d(0,1) per candidate family on open control + dumbbell long/short pair",
+   "reference": "Euclidean sqrt(2) within 10%",
+   "exclusion": "closed Cell A chord ratios excluded by G3"
+  }
+ },
+ "reproduction_gates": {
+  "RGA1": "ker=1, gap 0.349849 on closed Cell A",
+  "RGA2": "open (0,1) -0.444442, open (0,3) -0.049479, closed (0,4) 0.032907, <Jx^2> = 0",
+  "RGB1": "Cell B ker = 144 (claim; deviation recorded with construction delta, not silently adjusted)"
+ },
+ "no_upgrade_clause": "results register as E0-frontier evidence; no E-grade change; the spatial fence stays",
+ "sheet_frozen_before_executor": true,
+ "sheet_md5": "895fd7d504c7bf5404bebd697a750404"
+}

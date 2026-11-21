@@ -1,0 +1,96 @@
+{
+ "sheet_md5_verified": true,
+ "GATE_S": {
+  "max_comm": 3.1718998303807225e-16,
+  "verdict": "PASS"
+ },
+ "RGA1": {
+  "ker": 1,
+  "gap": 0.349849122,
+  "claims": {
+   "ker": 1,
+   "gap": 0.349849
+  },
+  "verdict": "PASS"
+ },
+ "RGA2": {
+  "open_(0,1)": -0.444441968,
+  "open_(0,3)": -0.049479063,
+  "closed_(0,4)": 0.032906764,
+  "Jx2": 0.0,
+  "claims": {
+   "open_(0,1)": -0.444442,
+   "open_(0,3)": -0.049479,
+   "closed_(0,4)": 0.032907,
+   "Jx2": 0.0
+  },
+  "verdict": "PASS"
+ },
+ "T1_closed_loop_law": {
+  "M_open": 2.467252599,
+  "M_closed": 1.794043931,
+  "drop": -0.673208668,
+  "-ln2": -0.693147181,
+  "diag_amplification": 1.964126,
+  "defect_stays_positive": true,
+  "verdict": "LAW-CONFIRMED",
+  "reading": "adding one closed plaquette loop cuts the raw multiplicativity gap by ~ln 2 (one factor of 2 per parallel path) while the defect STAYS POSITIVE on a single plaquette \u2014 the positive-defect fence holds; sub-additivity needs >= 2 loops or 3D welding"
+ },
+ "RGB1": {
+  "ker_dim": 144,
+  "claim": 144,
+  "verdict": "PASS",
+  "note": "construction: J=3-forbidden triples + weld P2(1,3); any deviation recorded with the construction delta named (not silently adjusted)"
+ },
+ "T2_lambda_A_survival": {
+  "vertex_A_Gram": {
+   "Ax,Ax": 0.666666667,
+   "Ax,Ay": -0.109844691,
+   "Ax,Az": -0.166666667,
+   "Ay,Az": -0.109844691
+  },
+  "vertex_A_eigs": [
+   0.407049026,
+   0.75961764,
+   0.833333333
+  ],
+  "lambda_A": 0.407049026,
+  "C3_to_C2_split": true,
+  "axis_label_map": "the weld bond P2(1,3) sits at MY site 1 = the auditor's x-axis: the welded axis pairs with BOTH free axes at -0.109845 while the two free axes pair at -0.166667 \u2014 structure IDENTICAL to the auditor's claims under the axis relabeling (their Ax,Ay=Ax,Az=-0.109845, Ay,Az=-0.166667)",
+  "full_6x6_rank": 6,
+  "full_eigs": [
+   0.196822755,
+   0.442725585,
+   0.53700136,
+   0.833333333,
+   0.833333333,
+   1.156783632
+  ],
+  "verdict": "SURVIVES",
+  "reading": "3D non-planarity (lambda_A > 0) SURVIVES 2-vertex welding; the x-bond breaks C3 -> C2 (G_Ax,Ay = G_Ax,Az != G_Ay,Az); the welded frame carries full 6/6 directional rank"
+ },
+ "T3_family_ratios": {
+  "ratios": {
+   "d_int_open": 4.0,
+   "d_chord_staggered_open": 0.784267065,
+   "D_scale_open_1D_axis": 4.0,
+   "d_int_dumbbell": 1.564823454,
+   "Euclidean_reference_sqrt2": 1.414213562
+  },
+  "adjudication": {
+   "d_int_open": "NOT-EUCLIDEAN",
+   "d_chord_staggered_open": "NOT-EUCLIDEAN",
+   "d_int_dumbbell": "NOT-EUCLIDEAN"
+  },
+  "exclusion_note": "closed Cell A chord ratios EXCLUDED (G3 singlet tautology); the open control is 1D (its Euclidean diagonal reference is 4-linear, not sqrt2 \u2014 recorded, not adjudicated); the dumbbell ratio is the 3D cell's first reading",
+  "dumbbell_proximity_note": "d_int dumbbell ratio 1.5648 vs sqrt(2) 1.4142 = +10.6% \u2014 NOT-EUCLIDEAN by the pre-declared 10% threshold, but CLOSE: recorded as NEAR-EUCLIDEAN-OVER (the first 3D multi-vertex ratio measurement; a 2x-larger cell would decide whether the excess converges to 0 or persists)",
+  "verdict": "CANDIDATES-REPORTED (no nesting assumed): the families' multi-pair ratios are recorded as competing candidates; family selection is NOT adjudicated at this scope (the r8.4a downgrade lesson). First 3D readings: d_int open-chain ratio 4.0 (1D linear), dumbbell long/short 1.5648 (NEAR-EUCLIDEAN-OVER at +10.6%)"
+ },
+ "elapsed_s": 4.67,
+ "all_gates": {
+  "GATE_S": "PASS",
+  "RGA1": "PASS",
+  "RGA2": "PASS",
+  "RGB1": "PASS"
+ }
+}
