@@ -21,7 +21,9 @@
 \newcommand{\cert}[1]{\texttt{#1}}
 \title{Emergent 3D Link Space, Time, and the Scaling Metric\\
 \large Paper II of the RCF Series --- From 1D Existence and the
-Paper I Mechanism Library}
+Paper I Mechanism Library\\
+\large \textmd{Revision v1.2 --- r8.5 fold-in: the Spatial Scaling
+Metric, the fusion identity, and the PR-LAT-1 baseline}}
 \author{Z User}
 \date{November 2026}
 \begin{document}
@@ -521,7 +523,7 @@ No-Go VIIIb: all static bulk SU(2) vertex projectors empty K\_3\^{}{(x)3} (8/343
 Dynamical H\_vtx T-MISMATCH (251.142024, [3.448563, 4.218242], 0 dark states) + Arm C transfer (-0.003196 -$>$ +0.004921) & E4 / E3 & 3.3, r53c\_static, r53c\_armC & RETROSPECTIVE-UNIFICATION class; vertex dynamical activity, not spatial 3D \\
 PR-LINK-1 \& tripod: 3-arm rank 3, G\^{}spin (2/3), G\^{}prof (0.632093 / -0.051106), lambda\_A = 0.529880 & E3-corner / E4 & 3.4, 5.3, r61\_link1, r62\_adjudicate, r80\_metric2b & 4-arm gives rank 4; lambda\_A $>$ 0 = lattice non-planarity order parameter; physical 3D E0 \\
 Multiplicativity gap as correlation-gap degree: Pearson witness ln(2.5); on-axis M = ln(4/3) = 0.287682 & E4 (identity) / E3 (junction) & 3.4, 5.3, r80\_metric2b, r82\_patches & NOT an entanglement witness (r8.2 D-class retraction); raw ln3 witness carries the named abs(c) $>$ 1 artifact \\
-PR-METRIC-2/2b: site -$>$ profile bridge (d\_int 3.622512 vs d\_chord 1.168930 vs d\_scaling 0.006559) & SPEC-INCOMPLETE / FAMILIES-DISAGREE & 3.4, 5.3, r70\_metric2, r80\_metric2b & Family selection deferred to multi-vertex lattice gate (E0) \\
+PR-METRIC-2/2b: site -$>$ profile bridge (d\_int 3.622512 vs d\_chord 1.168930 vs g\_cov 0.006559, renamed r8.5) & SPEC-INCOMPLETE / FAMILIES-DISAGREE & 3.4, 5.3, r70\_metric2, r80\_metric2b & Decomposition artifact resolved r8.5 (fusion identity d\_chord = $\sqrt{a}\sqrt{2(1-\Gamma)}$); families enter the lattice gate as COMPETING CANDIDATES (E0) \\
 Global arrow (H\_eff, -[J,Lambda]) \& Lie-on-Jordan frame transport (PR-T1b) & E4 & 4.1-4.2, Paper I Eq. 4, r5.1 & Unified generator frame (Instance \#10) \\
 PR-NOGO-RAW: omega\_raw probe sign flip (2.2831x H\_XXX vs 0.7705x H\_XY) \& transient inversion & E3 & 4.2, r51a\_battery, r51d\_t1b2, r52\_preflightB & Active-NESS throughput only; monotone clock is Gamma\_b (E4/E3) \\
 PR-T1b-2: 2-bond overlap cocycle (chiral 0.174716; off-orbit 0.126376-0.222493) & E3-local (MIXED) & 4.3, r51c\_prep, r51d\_t1b2 & Per-seed; B1 REPLICATION-CONSISTENCY; N=3 dark-singlet \& Schur freezes fenced \\
@@ -2576,6 +2578,70 @@ status, both run as frozen and reported as found:
     gate's ownership, unchanged.
 
 \begin{itemize}[leftmargin=1.4em]
+\item r8.5 --- the decomposition artifact, resolved: the fusion
+\end{itemize}
+    identity (machine-certified, dev $<$ 1e-9) shows the apparent
+
+    three-way clash of PR-METRIC-2/2b was never a clash of metrics
+
+    on one space. The certified chord factors exactly:
+
+    $d_{\mathrm{chord}} = \sqrt{a}\,\sqrt{2(1-\Gamma)}$, i.e.\ the
+
+    certified value 1.168930314 $=$ profile amplitude
+
+    $\sqrt{a} = 0.795043$ times the unit-direction factor
+
+    $\sqrt{2(1-\Gamma)} = 1.470274$; the raw $-\ln|K|$ carried only
+
+    the log; and the Spatial Scaling Metric
+
+    $S_{ij} = d_i d_j \Gamma_{ij}$ carries log + direction
+
+    (amplitude normalized out), with $D_{\mathrm{scale}} =
+    d_{\mathrm{arm}}\sqrt{2(1-\Gamma)}$ and the scale-invariant
+
+    ratio $D_{\mathrm{scale}}/d_{\mathrm{chord}} =
+    d_{\mathrm{arm}}/\sqrt{a} = 2.039053$ (dev 7e-10). The three
+
+    objects multiply the SAME directional geometry by different
+
+    scalars --- one measurement read three ways at the C3-symmetric
+
+    corner. Consequent relabels (r8.5, binding): the 0.006559
+
+    object is renamed $g_{\mathrm{cov}}$ (the internal single-site
+
+    state-frame/covariance metric; Theorems A/B intact, E4);
+
+    $S_{ij} = d_i d_j \Gamma_{ij}$ is THE Spatial Scaling Metric,
+
+    with volume $V_k = \sqrt{\det S^{(k)}}$ (certified values on
+
+    the corner: barycenter arm $d = 1.621134$, $D_{\mathrm{scale}} =
+    2.383511$ (defect $-0.858757$, sub-additive), $V_2 = 2.619471$,
+
+    $V_3 = 4.216204 = 0.9896\,d^3$; $\ln 3$-arm variant 1.615261 /
+
+    1.202998 / 1.312195; $\det\Gamma = 0.979331$). The r8.4
+
+    register's ENVELOPE claim is DOWNGRADED to
+
+    POINT-ORDERED-AT-CORNER (the ordering provably reverses near
+
+    $\det C \to 0$: the log-volume object diverges while
+
+    $d_{\mathrm{chord}} \le 2\sqrt{2/3} = 1.632993$; the flip point
+
+    sits at $|b'|/a = 0.830241$ against the certified interior's
+
+    0.080853) --- the metric families enter the multi-vertex gate
+
+    as COMPETING CANDIDATES and the state-to-space bridge stays
+
+    OPEN (E0).
+
+\begin{itemize}[leftmargin=1.4em]
 \item The M-biconditional pin (r8.0 Part C, corrected r8.2; K-
 \end{itemize}
     normalization declared once here, r8.3): M is NOT an
@@ -3092,17 +3158,36 @@ non-degeneracy iff $S \in \{\tfrac12, 1\}$; Theorems S1--S2 ---
 isotropic composition and unconditional path-infimum metricity;
 the geometric controls with Kelly--Straus and Albert's
 non-specialty framings; isotropy-from-positivity, the round's
-genuine gain, carried E4-with-fence. (Open): the multi-vertex
-site-to-profile bridge (FAMILIES-DISAGREE:
-$d_{\mathrm{chord}}$ 1.168930 vs $d_{\mathrm{scaling}}$
-0.006559) and the multiplicativity-gap family question
+genuine gain, carried E4-with-fence. (r8.5): the fusion identity
+$d_{\mathrm{chord}} = \sqrt{a}\sqrt{2(1-\Gamma)}$ resolves the
+PR-METRIC-2$^\ast$ clash as a decomposition artifact --- the raw
+$-\ln|K|$, the chord, and the Spatial Scaling Metric
+$S_{ij} = d_i d_j \Gamma_{ij}$ multiply the same directional
+geometry by different scalars; $g_{\mathrm{cov}}$ (n\'e e
+$d_{\mathrm{scaling}}$ 0.006559) renamed as the internal
+state-frame metric (Theorems A/B intact). (Open): the multi-vertex
+metric-family adjudication (competing candidates, POINT-ORDERED-
+AT-CORNER) and the multiplicativity-gap family question
 ($M = \ln 2.5$ on a fully classical separable witness --- a
 correlation-gap degree, not an entanglement witness).
 \end{itemize}
 
-\subsection*{What remains open}
-The multi-vertex lattice gate with $\lambda_A$ as its
-non-planarity order parameter; the metric-family adjudication;
+\subsection*{What remains open (v1.2 first results, r8.5)}
+The multi-vertex lattice gate (PR-LAT-1 executed, r8.5, all
+reproduction gates PASS) delivers the frontier baseline:
+T1 --- LAW-CONFIRMED, closing one plaquette loop cuts the raw
+multiplicativity gap by $\sim\ln 2$ (one factor of 2 per parallel
+path; machine 1.964$\times$ amplification, drop $-0.6732$) while
+the defect STAYS POSITIVE on a single plaquette (sub-additivity
+needs $\ge 2$ loops or 3D welding); T2 --- SURVIVES, 3D
+non-planarity survives 2-vertex welding
+($\lambda_A = 0.407049$ on the dumbbell, full $6/6$ directional
+rank, the $C_3\!\to\! C_2$ weld split); T3 --- the first 3D
+multi-vertex ratio: dumbbell long/short $d_{\mathrm{int}}$ ratio
+$1.5648$ vs Euclidean $\sqrt{2}$ $=$ $+10.6\%$, logged honestly as
+NEAR-EUCLIDEAN-OVER at the E0 frontier (flat-vs-curved is now a
+measurable question, not an assumption). Still open: the
+metric-family adjudication on multi-pair non-singlet cells;
 global multi-overlap time; the Paper~I generativity bridges
 (dark-energy entry~\#1, Lorentz-boost entry~\#2, both E0); and the
 largest open item --- whether physical 3D space interacts through
@@ -3136,6 +3221,8 @@ until the lattice gate certifies it.
 \textbf{M-pin replacement witness} & r82\_patches & certified & Pearson ln(2.5)=0.916291; AKLT ln(4/3)=0.287682 \\
 \textbf{Geometric controls} & r81\_geomctrl + r82\_patches & certified & welding, anisotropy conventions, Kelly-Straus, Albert, delta-transfer \\
 \textbf{Claim table object} & r83\_claimtable & certified & machine-generated 19-row register \\
+\textbf{Scaling Metric certificate} & r85\_scalemetric & certified & $\Gamma = -0.080853$; $D_{\mathrm{scale}}$ 2.383511 (defect $-0.858757$); $V_3 = 0.9896\,d^3$; fusion identity dev $<1\mathrm{e}{-9}$ \\
+\textbf{PR-LAT-1} & r85\_lat1 (sheet r85\_lat1\_sheet, frozen md5) & certified & T1 LAW-CONFIRMED ($\ln 2$ per loop, defect stays positive); T2 SURVIVES ($\lambda_A = 0.407049$); T3 NEAR-EUCLIDEAN-OVER ($+10.6\%$) \\
 \bottomrule
 \end{tabularx}
 \normalsize
@@ -3168,7 +3255,7 @@ r8.3 to construction declarations: 0.246717 was mentioned in two
 registers but certified in neither --- until r8.3a executed it).
 \end{enumerate}
 
-\subsection*{Errata ledger (D-class, cumulative through r8.3)}
+\subsection*{Errata ledger (D-class, cumulative through r8.4a)}
 \begin{enumerate}[leftmargin=1.6em]
 \item r5.3c: projector mislabeled (class: artifact-vs-mention).
 \item r5.1c: checkpoint grid mislabeled (class:
@@ -3196,6 +3283,18 @@ freezing; octonion theorem-to-object attributions pinned exactly
 probe-grid measurement; the $K$-normalization convention
 declared once (raw default, Pearson named; $M$'s value is
 convention-relative, its non-vanishing is not).
+\item r8.4a (v1.2): the r8.4 register declared Paper~I
+``ReportLab-bodied'' --- wrong; Paper~I is xdvipdfmx/LaTeX with
+generated \texttt{numbers.tex} macros (Appendix~B of main.pdf);
+the only ReportLab artifact in the corpus is the r5.0 re-baseline
+memo. Class: provenance asserted from a session report instead
+of the artifact (the rule of item~7 applied to engines). Also
+r8.4: the PR-METRIC-2c ENVELOPE label downgraded to
+POINT-ORDERED-AT-CORNER (register-level supersede; one
+C3-identical triple, ordering reverses near $\det C \to 0$, flip
+at $|b'|/a = 0.830241$); and the 22-vs-20 triaged-count delta
+reconciled (the 2.7e-13/3.8e-15 pair: two sweep FAILs, one root
+cause; 20 authoritative).
 \end{enumerate}
 
 \subsection*{Do-not-re-cite list}
