@@ -1,0 +1,110 @@
+{
+  "P1_raw_reproduction": {
+    "marginals": [
+      1.732051,
+      1.732051,
+      1.732051
+    ],
+    "stub_stub_corr": {
+      "(1, 3)": 1.0,
+      "(1, 5)": 1.0,
+      "(3, 5)": 1.0
+    },
+    "M_raw_barycenter_anchored": {
+      "1,3": 1.098612,
+      "1,5": 1.098612,
+      "3,5": 1.098612
+    },
+    "barycenter_variance": 3.0,
+    "r80_json_target": "marginals 1.732051, corr 1.0, M = 1.098612",
+    "reproduces_r80": true
+  },
+  "P1_normalization_adjudication": {
+    "raw_anchor_value": 1.732051,
+    "raw_anchor_exceeds_1": true,
+    "pearson_denominator_rms_width": 1.732051,
+    "K_pearson_AO": 1.0,
+    "note": "with the rms-normalized (Pearson) anchor, K(A,O) = K(O,C) = 1/sqrt(3)... on the aligned mixture; the correct fully-Pearson control is the replacement witness below (all |K| <= 1 by construction). The r80 Part C statement survives in SUBSTANCE (M is not an entanglement witness) because the replacement witness fires with all |K| <= 1: the conclusion did not depend on the artifact."
+  },
+  "P1_replacement_witness": {
+    "construction": "classical 3-bit mixture p(a,c,o) = (1/8)(1 + 0.5 ao + 0.5 co + 0.1 ac); strictly positive on all 8 configs (min weight 0.1/8)",
+    "min_prob": 0.0125,
+    "means": {
+      "a": 0.0,
+      "c": 0.0,
+      "o": 0.0
+    },
+    "variances": {
+      "a": 1.0,
+      "c": 1.0,
+      "o": 1.0
+    },
+    "K_pearson_AC": 0.1,
+    "K_pearson_AO": 0.5,
+    "K_pearson_CO": 0.5,
+    "all_K_within_1": true,
+    "M_pearson": 0.916291,
+    "equals_ln_2_5": -0.0,
+    "separable": true,
+    "verdict": "with ALL Pearson correlations inside [-1, 1], the multiplicativity gap is M = ln(2/5 ... ) = ln(2.5) = 0.916291 != 0 on a fully classical, fully Pearson-valid separable state: the M-pin conclusion (M is a correlation-gap degree, NOT an entanglement witness) now rests on a witness with NO normalization artifact. The original ln 3 witness is retained in the register as the raw-convention object with its |c| > 1 artifact NAMED (same class as the r6.1 F3 raw anchor)."
+  },
+  "P1_aklt_analytic": {
+    "c01_c12": 0.444444,
+    "c02": 0.148148,
+    "ratio_c01c12_over_c02": 1.333333,
+    "M_raw_analytic": 0.287682,
+    "equals_ln_4_3": 0.0,
+    "note": "-ln|c(0,n)| = n ln 3 - ln(4/3) is AFFINE in n (the constant ln(4/3) prefactor is the offset), so the summed-kernel M -> ln(4/3) = 0.287682 as L grows: the r80 Part D values (0.2976/0.2888/0.2878/0.2877 for sep 2 at L = 4..7) converge to ln(4/3) from above \u2014 the finite-L values carry the O(3^-L) second eigenvalue's correction. E3 observation -> E4 identity.",
+    "r80_part_d_sep2": [
+      0.297571,
+      0.28881,
+      0.287806,
+      0.287696
+    ],
+    "limit": 0.287682
+  },
+  "P2_L5_adjudication": {
+    "0.246717_in_any_json": [
+      "r82_patches.json"
+    ],
+    "0.246717_in_any_py": [
+      "r53b_armsAB.py"
+    ],
+    "r53b_ArmB_L5_status": {
+      "status": "deferred-to-script-2"
+    },
+    "r53c_static_has_L5_block": false,
+    "r53c_bulk_static_keys": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "r53c_certifies": "the L=3 bulk cross ONLY (64D compressed lambda_min 8/343, 12/49, 120/343, 8/49; full-space 0.016699..0.097265)",
+    "verdict": "0.246717 is certified NOWHERE in the corpus: it appears only as a TARGET in the r53b pre-execution register and pr_vtx1_sheet, whose execution block was 'deferred-to-script-2' and no later script completed it. The r80 register's claim that it was 'completed in r53c' is UNSUPPORTED BY ANY ARTIFACT \u2014 a second-order instance of the artifact-vs-mention class (the r8.0 erratum corrected the ATTRIBUTION r53b->r53c without noticing the number was never computed at all). Machine action: STRIKE 0.246717 from the manuscript (\u00a73 table + \u00a73.3 machine-support note); register the L=5 persistence test as UNTESTED (PR-VTX-1's L=5 leg reverts to OPEN). The construction facts the artifacts DO pin, for the replacement caption: three L=5 chains = 15 sites (registers at 2, 7, 12; 1-indexed centers), full space 3^15 = 14,348,907, per-axis kernel dim 16 (= 2^(L-1) = 2^4), compressed kernel 16^3 = 4,096.",
+    "construction_facts_pinned": {
+      "sites_15": 15,
+      "dim_full": 14348907,
+      "per_axis_kernel_dim_16": 16,
+      "compressed_kernel_16_cubed": 4096,
+      "registers": [
+        2,
+        7,
+        12
+      ]
+    }
+  },
+  "P3_identities": {
+    "hexagon_circumradius_over_inradius_minus1": 15.4701,
+    "note_1A": "the Hilbert unit ball on the triangle is a regular hexagon; circumradius/inradius = 2/sqrt(3): 15.47% radial anisotropy EXACTLY (E4 identity; the machine's 14.83% at eps=0.01 is the finite-radius sample).",
+    "logbarrier_signs": "g = D^2(-sum ln l_i) is POSITIVE definite on the interior (convex barrier); the r81 script differentiated +sum ln l_i and printed the negated eigenvalues (-20.38, -7.37). Correct printed pair: (+20.38, +7.37).",
+    "anisotropy_conventions": {
+      "spread_over_mean": 93.78,
+      "one_minus_min_over_max": 63.84,
+      "declaration": "every anisotropy number in \u00a75.3.1 now declares its formula beside it"
+    },
+    "ln_4_3": 0.287682,
+    "kelly_straus": "Hilbert geometry on a bounded convex domain is Riemannian iff the domain is an ellipsoid (Kelly\u2013Straus): the polygon's Finsler unit ball is the E4 classical theorem behind the bare-triangle anisotropy; named in \u00a75.3.1.",
+    "D7_framing": "exclusion properly = NON-SPECIALTY of H_3(O) (Albert): the exceptional Jordan algebra cannot arise as the A o B subalgebra of any associative algebra, and associativity is RCF's one primitive. The associator = 2 witness is the machine evidence; non-specialty is the theorem. Keep Im(O) (7D cross product) distinct from H_2(O) = J_9 (9D spin factor) in the wording."
+  }
+}

@@ -1,0 +1,143 @@
+==============================================================================
+REGISTER — r8.2: THE FOUR AUDIT PATCHES (machine-verified BEFORE
+application), §1 DRAFTED (the last section — Paper II §§1-5 all
+exist in draft), §§3+5 AMENDED. One patch came back SHARPER than
+audited: 0.246717 is certified NOWHERE — struck, not re-captioned.
+==============================================================================
+
+1. THE FOUR PATCHES, AS ADJUDICATED BY r82_patches.py/.json
+   (script + JSON pushed; all numbers machine-derived):
+
+   PATCH 1 (M-PIN, critical) — the audit's |c| > 1 finding
+   CONFIRMED and then some: the r80 raw witness reproduces
+   exactly (marginals sqrt(3) = 1.732051 > 1, M = ln 3 =
+   1.098612 on all three pairs), and the raw anchor is a
+   NORMALIZATION ARTIFACT of the un-divided sqrt3-barycenter
+   (same class as r6.1's F3 raw anchor the r80 Part F itself
+   flagged). Under the Pearson (rms-normalized) form that state
+   gives M = 0. The LOAD-BEARING replacement (machine-certified
+   now): the classical 3-bit mixture p(a,c,o) = (1/8)(1 +
+   0.5 ao + 0.5 co + 0.1 ac) — strictly positive on all 8
+   configurations (min 0.0125), means 0, variances 1, ALL
+   Pearson correlations in [-1,1] (K_AC = 0.1, K_AO = K_CO =
+   0.5) — fires M = ln(2.5) = 0.916291 with ZERO normalization
+   violation. The r8.0 conclusion (M is not an entanglement
+   witness) now rests on a clean witness; the raw ln 3 object is
+   retained in the register with its artifact NAMED.
+   BONUS E4 IDENTITY (audit's analytic upgrade, confirmed):
+   the on-axis AKLT ratio |c01||c12|/|c02| = 4/3 exactly, so the
+   summed-kernel M -> ln(4/3) = 0.287682 (r80 Part D's finite-L
+   values 0.2976/0.2888/0.2878/0.2877 converge to it from
+   above with the O(3^-L) second-eigenvalue correction) — the
+   ~0.29 baseline is upgraded from E3 observation to E4
+   identity. D-CLASS RETRACTION completed: r70's register
+   phrasing "the +1.1688 object is the entanglement signature
+   of the junction" is RETRACTED (the r70a amendment had renamed
+   the object; the physical reading is now retracted too); all
+   inheriting sentences re-adjudicated to "correlation loss."
+   Applied to §3.4.2 (two-witness form) and §5.3.
+
+   PATCH 2 (L=5 CAPTION, high) — SUPERSEDED BY A BIGGER FINDING:
+   the audit asked to pin the construction facts from
+   r53c_static.py; the machine sweep found that 0.246717
+   appears in NO JSON and in no completed block: r53b's ArmB_L5
+   is "deferred-to-script-2"; r53c_static.py contains NO L5
+   block; its bulk_static certifies the L=3 cross only. The
+   r80 register's "completed in r53c" claim is UNSUPPORTED —
+   the r8.0 erratum corrected the ATTRIBUTION (r53b -> r53c)
+   without noticing the number was NEVER COMPUTED: a
+   SECOND-ORDER artifact-vs-mention instance, logged D-class.
+   ACTION TAKEN: 0.246717 STRUCK from §3's table and
+   machine-support note; PR-VTX-1's L=5 persistence leg
+   reverts to OPEN (no claim either direction); the caption
+   now carries only the construction facts the artifacts DO
+   pin (three L=5 chains = 15 sites, center registers at 2, 7,
+   12 — 0-indexed midpoints; full space 3^15 = 14,348,907;
+   per-axis kernel dim 16 = 2^(L-1); compressed kernel 16^3 =
+   4,096). The audit's arithmetic (12 sites vs 15) is moot:
+   neither count was certified.
+
+   PATCH 3 (5.3.1 polish) — applied as audited, plus verified:
+   (i) Hessian eigenvalues printed POSITIVE (+20.38, +7.37) —
+   g = D^2(-sum ln l_i) is positive definite; the r81 script
+   had differentiated +sum ln l_i (the anisotropy ratio is
+   convention-invariant); (ii) the anisotropy formula is now
+   DECLARED beside every number: 93.78% = (max-min)/mean
+   [tensor/ds^2 convention], 63.84% = 1 - lambda_min/lambda_max,
+   and the incoming report's 82.57% is named as the third
+   (linear ds ratio) convention on the same object — all three
+   reconciled in the text; (iii) the 1A hexagon identity
+   2/sqrt(3) - 1 = 15.4701% exact (E4; the machine's 14.83% is
+   the finite-radius sample); (iv) 1B's center isotropy
+   reconciled analytically (C3-forced sum n_a n_a^T = (3/2)I
+   at the incenter exactly; anisotropy grows at finite radius
+   through the cubic O(eps^3) warping — reconciling the
+   0.005% near-center samples with the machine's 1.73%);
+   (v) Kelly-Straus named (Hilbert geometry Riemannian iff
+   ellipsoid — the polygon's Finsler unit ball is now a
+   theorem-backed exclusion); (vi) D = 7 reframed by Albert's
+   NON-SPECIALTY of H_3(O) (the associator = 2 witness is the
+   evidence; non-specialty is the theorem; associativity is
+   RCF's one primitive), with Im(O) (7D) kept distinct from
+   H_2(O) = J_9 (9D); (vii) C(D,2) = D explicitly registered
+   as a CONSISTENCY check, not a selection principle.
+
+   PATCH 4 (attribution) — applied: the polygon is excluded by
+   the MEASURED anisotropy (14.8% single-cell hexagon identity,
+   93.78% glued tensor convention) together with positivity
+   forcing the round boundary; the earlier "dead by Paper I
+   No-Go I-II" attribution is corrected in §5.3.1 (No-Go I is
+   constraint-kernel blindness, No-Go II isolated-link
+   symmetry — neither is about convex-domain shape); the
+   commutative-foil dictionary is carried as an E0 suggestive
+   reading. Klein vs Bures family note added: isotropy about
+   the center is family-independent; the radial ladders
+   differ ((1-r^2)^{-2} vs (1-r^2)^{-1}) — FAMILIES-DISAGREE
+   applies on the ball too; every 5.3.1 number now names its
+   family.
+
+2. THE USER'S CLOSING CAUTION, REGISTERED AS LAW IN BOTH §5.3.1
+   AND §1.0/§1.3: the triangle/welding construction is
+   mathematically correct as geometry but is NOT evidence that
+   physical 3D space interacts through any triangle lattice;
+   the only certified statement is that the ALGEBRA FORCES THE
+   INTERNAL CIRCLE (positivity carves the inscribed sphere;
+   isotropy derived, not postulated, E4 within the II.1 fence);
+   spatial interaction stays E0 pending the lattice gate.
+
+3. §1 DRAFTED (p2_sec1_draft.txt; the r6.0 lock's LAST section,
+   drafted only after the patches): title-grade reconciliation
+   FIRST (the contract paragraph), three-paper frame
+   (existence / construction / consequences), the
+   mechanism-library bridge with the Generativity Register
+   (entries #1 and #2 with connection costs named), the
+   vertex-vs-link inversion with the RETROSPECTIVE-
+   UNIFICATION guard stated once and binding, the deductive
+   spine for §§2-5 with every number re-verified this round
+   against the certifying JSONs (r82_patches sweep: Pearson M
+   0.916291, ln(4/3) 0.287682, tripod lambda_A/lambda_E/h/R,
+   chord/scaling/F-part values, leak spectrum, all confirmed),
+   the consolidated claim register (19 rows, each with grade,
+   certificate IDs, scope fence; the 0.246717 row carries the
+   OPEN verdict, not the number), and the honest is-not ledger
+   (time not global; 3D space not emergent here; metric family
+   not adjudicated; M not an entanglement witness; welded
+   Hilbert needs outer-boundary chords; 0.246717 not a
+   result; Paper I inputs declared; generativity entries E0).
+
+4. LEDGER UPDATE: three D-class items this round — (i) the
+   raw-witness |c| > 1 artifact (named; conclusion survived on
+   the clean witness); (ii) the 0.246717 strike (second-order
+   artifact-vs-mention; PR-VTX-1 L=5 leg OPEN); (iii) the
+   completed retraction of r70's "entanglement signature"
+   phrasing. The standing battery gains the declared-formula
+   rule for anisotropy numbers (Gate-S convention-header
+   extension).
+
+ARTIFACTS THIS ROUND: r82_patches.py / r82_patches.json /
+p2_sec1_draft.txt (new) / p2_sec3_draft.txt (amended) /
+p2_sec5_draft.txt (amended) / rcf_r82_register.txt — one push.
+Paper II status: §§1-5 ALL DRAFTED; next = compile the manuscript
+(title page, abstract, appendices with certificate
+inventories), full-text number sweep, closing register.
+==============================================================================
