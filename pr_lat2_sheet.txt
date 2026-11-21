@@ -1,0 +1,177 @@
+==============================================================================
+PR-LAT-2 — THE FROZEN SHEET (r9.2 freeze; frozen BEFORE any execution).
+The flat-vs-curved multi-plaquette decision. Binding on execution.
+==============================================================================
+
+0. WHAT THIS SHEET DECIDES
+   Whether the +10.6% dumbbell excess (r8.5 T3, d_int long/short 1.5648
+   vs sqrt(2)) is flat-finite-size, emergent curvature, frame collapse,
+   or a non-lift — the four pre-frozen branches — AND whether the r9.1
+   C4 anomaly is physical, conventional, or an open-boundary artifact.
+   The C4 re-adjudication rides THIS sheet because the closed substrate
+   is the only frame that can decide it (r9.2 EXT verdict:
+   EXT-INDETERMINATE-ON-THIS-FRAME — the open-arm channel is
+   boundary-interference contaminated; the first raw per-step ratio
+   1.5049 is a RISE, not a decay).
+
+1. THE SUBSTRATE ARMS (frozen; No-Go VIII declaration)
+   Machine-verified substrate table (r92_preflight.json):
+     P5 open chain:        z=2, lambda_0 = 0, mult 4 -> ker survives;
+     C4 single loop:      z=2, lambda_0 = 0, mult 1 -> ker survives;
+     Theta 3-parallel:    z=3, lambda_0 = 0.3304, mult 3 -> ker EMPTY
+                          (No-Go VIII);
+     Domino 2 edge-sharing loops: z=2, lambda_0 = 0, mult 1 -> ker
+                          SURVIVES (the z<=2 frustration-free survivor —
+                          the principal's No-Go VIII trap flags Theta/
+                          Fig-8, NOT Domino);
+     Fig-8 2 loops series: z=3, lambda_0 = 0.3765 (machine; the
+                          principal's table said 0.4244 — the machine
+                          value is registered as the binding one),
+                          mult 1 -> ker EMPTY (No-Go VIII).
+   BOTH ARMS RUN:
+     ARM A (bare spin-1): the z<=2 cells with a surviving kernel
+       (domino C6, 729-dim, ker 1) as the primary; the frustrated
+       z>=3 cells (fig-8, 2187-dim) as the ACTIVE-NESS secondary
+       (lambda_0 > 0 manifold, ground-state manifold of the
+       frustrated M; the NESS route is the downstream bridge, NOT
+       this sheet's object).
+     ARM B (composite vertex): the domino with one shared junction
+       lifted to a composite vertex (two spin-1 registers at the
+       shared edge, z<=2 per register), coupled by H_vtx = S.S
+       between the registers — the frustration-free multi-loop cell
+       with ker(M_edges) != {0} guaranteed. This is where det Gamma
+       and lambda_A are measured ON THE WELDED STATE.
+   2x2 square (19683-dim): the scale-up cell, run ONLY if the domino
+   resolves cleanly (memory-gated: sparse eigsh, not dense).
+
+2. THE PATH-COUNT LAW (frozen, with the C4 overshoot registered)
+   Shortest paths between the measurement pair are counted
+   combinatorially BEFORE any number; the prediction is
+     M_gap(predicted) = -ln(count):
+     domino 0<->3 (two edge-sharing squares): 3 shortest paths
+       (up-around / straight / down-around) -> -ln 3 = -1.098612;
+     fig-8 0<->6 (two loops in series): 4 paths -> -2 ln 2 = -1.386294;
+     2x2 square corner-to-opposite-corner: 6 paths -> -ln 6 = -1.791755.
+   MECHANISM PIN: shortest paths share length => share Néel sign =>
+   add constructively; longer paths alternate and cancel. The
+   bipartite staggering (-1)^(x+y) is DECLARED in the correlation
+   measurement (Sz-Sz with staggering applied; the sign convention
+   reported with every number).
+   HONEST DEVIATION REGISTERED (from the machine pre-flight): on the
+   single C4 the raw M_gap measured -0.2311 against the -ln 2 =
+   -0.6931 prediction — the path-count law OVERSHOOTS on the single
+   loop. The law is declared FALSIFIABLE on this sheet: if the
+   domino/fig-8 M_gaps also undershoot -ln(count) substantially
+   (> 30%), the law is a bound, not an identity — registered as
+   LAW-UNDERSHOOT and the deviation structure reported.
+   TRAP 2 (frozen): no sqrt(2)-type claim on a single C4-symmetric
+   singlet — the sum rule G00 + 2 G01 + G02 = 0 forces it identically.
+   The 2x cell breaks the single-ring sum rule; that is why it is the
+   decisive frame.
+
+3. THE PLAQUETTE HOLONOMY (frozen; identity declared, falsifiable)
+   K_plaq := i [h_01 + h_32, h_12 + h_03] (the two bipartite halves;
+   opposite-edge commutators = 0 machine-verified). Machine anchors
+   (r92_preflight.json, ALL EXACT): ||K_plaq||_F = 24 = sqrt(4 x 144),
+   the 4 corner chiral currents J = i[h_e1, h_e2] mutually
+   Hilbert-Schmidt orthogonal, each ||J||_F = 12; <psi_C4|K_plaq|psi>
+   = 0 (time-reversal neutral); ||K_plaq|psi_C4>|| = 16/sqrt(7) =
+   6.047432; Var = 256/7 = 36.571429.
+   THE IDENTITY DECLARED (frozen, then tested): the plaquette
+   holonomy is THE SAME quantity as the path-doubling law — the
+   prediction: on the domino, the loop-around-plaquette log-drop
+   per plaquette equals the single-C4 value (-ln 2 class), and the
+   two-plaquette drop is sub-additive in the same measure as
+   M_gap. If the domino's per-plaquette holonomy deviates from the
+   C4 anchor by > 10%, the identity is REFUTED and K_plaq is a
+   DISTINCT object from the path law — registered either way.
+   lambda_A stays the DIMENSION WITNESS (0 flat / > 0 non-planar),
+   NOT the curvature; K_plaq is the CURVATURE CANDIDATE. Both roles
+   named at every gluing step.
+
+4. THE FOUR BRANCHES (frozen from r9.0, unchanged; witnesses now
+   bound to the welded state)
+     (A) excess -> 0 and d_s = d_H = 3: FLAT Euclidean 3D emerges
+         (finite-size artifact);
+     (B) excess persists with definite scaling (~ c/Lambda^2):
+         EMERGENT CURVATURE — the first measurement of it;
+     (C) det Gamma -> 0 under gluing: the frames COLLAPSE;
+     (D) d_s != 3: the link-space 3 does not LIFT.
+   WITNESS RULE (binding, the r9.1 tautology lesson): det Gamma and
+   lambda_A are MEASURED ON THE WELDED MULTI-PLAQUETTE STATE at every
+   gluing step — NEVER carried forward from the r8.5 single-junction
+   corner. The r9.1 C1-C3 pass is re-labeled (architecture) as a
+   1D-arm scaling plugged into a FROZEN corner Gamma — a tautology
+   class the audit caught; this sheet does not repeat it.
+
+5. THE C4 RE-ADJUDICATION (frozen outcome space; runs on the closed
+   substrate)
+   The r9.1 anomaly is downgraded to OPEN-BOUNDARY-ARTIFACT-
+   CONTAMINATED (the r9.2 EXT verdict: the raw channel RISES at
+   n=1 before decaying — the fine end-correlation is suppressed below
+   the identity-block floor by antiferro boundary cancellations;
+   and the renormalized fixed point is the ALIGNED boundary block
+   |+1,+1>, <SzSz> = +0.787 — the K_ren growth was a renormalization
+   artifact). The raw-vs-metric floor gap is ln(9)-dominated
+   (2.206 vs 2.197): the normalization-base convention class.
+   ON THE CLOSED SUBSTRATE (domino/fig-8/2x2, no open ends):
+   re-run the state-vs-metric comparison with renormalization ON
+   and OFF; the outcome space:
+     C4-CONVENTION — agreement without renormalization (the anomaly
+       was the rescaling + normalization base);
+     C4-COMPOSITION — agreement once the two-site rate map is used;
+     C4-STRUCTURAL — disagreement persists scale-free on the closed
+       substrate (a real finding; the geometry paper writes it);
+     C4-INDETERMINATE — the closed cell still cannot resolve it.
+
+6. THE C5 RESIDUAL (frozen outcome space, across-L on the welded
+   cells)
+   Full n-series published; the DEFINITIONAL LIMIT registered: the
+   normalized residual -> 1 by construction as n -> inf (suppressed
+   tiers -> 0), so the 0.5 threshold can ALWAYS be crossed by
+   contracting far enough. The threshold is declared against the
+   ABSOLUTE scalar amplitude |w0| (the r0 = 1 channel, floor 1/9 on
+   the single-site maximally mixed content) alongside the
+   normalized fraction. Outcome space:
+     RIEMANNIAN-CONFIRMED — residual <= 0.5 stable/monotone across
+       L on the closed cells, or converging well below with declared
+       rate;
+     NON-RIEMANNIAN-CONFIRMED — residual monotone toward/past 0.5
+       under multi-plaquette refinement with the absolute w0 growing;
+     INDETERMINATE — oscillation without a convergent subsequence;
+       the residual is a probe signature; registered as a diagnostic
+       result, NOT a failure.
+
+7. THE METRIC FAMILY (frozen; not re-litigated)
+   After the r8.5 fusion identity: D_scale is THE primary spatial
+   metric; d_int its path-integral; d_chord its directional factor.
+   Not three rivals — a resolved decomposition. The sheet measures
+   D_scale, d_int, d_chord on each cell and reports the fusion
+   identity's residual.
+
+8. EXECUTION DISCIPLINE (binding)
+   - Gate-F: build operators in the frustration-free edge-kernel
+     compressed space K_2^{\otimes m} (compress projectors directly,
+     never polynomials of compressed operators); sparse eigsh above
+     729-dim. The L=8 OOM kill (3^8 dense eigh) is not repeated.
+   - Gate V + vec-convention header: EVERY script that stacks
+     operators into vectors declares "# vec-convention:
+     column-major" at the top, and Gate V (superoperator assembly vs
+     direct matrix-product on a random test operator, plus the
+     kron-identity spot check) runs BEFORE any projector is built.
+     This round Gate V caught two more bugs on its own test — the
+     standing law is live and binding.
+   - n-stop pre-declared: the contraction depth window on each cell
+     is declared BEFORE the numbers with its memory reason.
+   - GATE-S/P/G/O discipline per the standing sheet; ambiguity
+     fires INCONCLUSIVE, never a guess.
+
+9. OUTCOME REGISTER (what gets written down, in this order)
+   substrate table (lambda_0, mult, ker dim, z) -> path counts ->
+   staggering-declared correlations c(u,v) -> M_gap vs -ln(count)
+   (with the LAW-UNDERSHOOT check) -> det Gamma / lambda_A ON THE
+   WELDED STATE -> K_plaq per plaquette vs the C4 anchor (the
+   identity declared-or-refuted) -> the C4 re-adjudication -> the C5
+   series with |w0| -> the four-branch verdict -> the curvature
+   statement (or its honest failure mode).
+==============================================================================

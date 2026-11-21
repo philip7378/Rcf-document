@@ -1,0 +1,120 @@
+{
+ "gate_V": {
+  "vec_convention": "column-major",
+  "super_vs_direct_dev": 2.1328493919268307e-15,
+  "kron_identity_dev": 1.4825219231211098e-15,
+  "verdict": "PASS"
+ },
+ "armA_domino": {
+  "cell": "domino C6 (2 edge-sharing squares)",
+  "N": 6,
+  "z_max": 2,
+  "lambda0": 0.0,
+  "lambda0_mult": 1,
+  "ker_dim": 1,
+  "paths_declared": 3,
+  "prediction_-ln3": -1.098612,
+  "c_uv_raw": -0.098361,
+  "c_uv_staggered": 0.098361,
+  "c_um": 0.448087,
+  "c_mv": 0.163934,
+  "M_gap_staggered": -0.291941,
+  "M_gap_raw": -0.291941,
+  "law_undershoot_pct": 73.4,
+  "welded_frame": {
+   "a_shared_edge": -0.448087432,
+   "b_adjacent": -0.448087432,
+   "Gamma_welded": 1.0,
+   "detGamma_welded": null,
+   "a_cross": -0.098360656,
+   "b_cross": 0.163934426,
+   "lambda_A_witness": 1.0
+  },
+  "K_plaq": {
+   "plaq1_F_norm": 72.0,
+   "plaq2_F_norm": 72.0,
+   "C4_anchor": 24.0,
+   "plaq1_psi_norm": 5.070002,
+   "plaq2_psi_norm": 5.070002,
+   "plaq1_ev": 0.0,
+   "plaq2_ev": 0.0,
+   "identity_dev_pct_p1": 200.0,
+   "identity_dev_pct_p2": 200.0,
+   "per_plaquette_log_drop": 1.005522,
+   "C4_drop_anchor": -0.693147
+  }
+ },
+ "armA_fig8": {
+  "cell": "fig-8 (2 loops in series, z=3 frustrated)",
+  "N": 7,
+  "z_max": 3,
+  "lambda0": 0.376508,
+  "lambda0_mult": 1,
+  "ker_dim": 0,
+  "no_go_VIII": "z>=3 => ker empty",
+  "paths_declared": 4,
+  "prediction_-2ln2": -1.386294,
+  "c_uv_staggered": -0.100033,
+  "c_um": -0.111515,
+  "c_mv": 0.452628,
+  "M_gap_staggered": -0.684022,
+  "law_undershoot_pct": 50.7,
+  "ground_manifold_note": "lambda_0 > 0: the active/NESS route is the downstream bridge, not this sheet"
+ },
+ "armB_composite": {
+  "cell": "composite-vertex domino (shared edge lifted, z<=2/reg)",
+  "N": 8,
+  "edges_ker_dim": 1,
+  "coupled_ground_dim": 1,
+  "coupled_lambda0": 0.569826,
+  "welded_frame": {
+   "G1_inplane": 1.225766752,
+   "G2_inplane": 0.815815895,
+   "G_cross_weld": 1.0,
+   "Gamma_equivalent": 1.013860882,
+   "detGamma_welded": 0.000581698,
+   "lambda_A_witness": 0.696706762,
+   "r85_corner_Gamma_reference": -0.080853,
+   "measured_not_frozen": true
+  },
+  "K_plaq": {
+   "plaq1_F_norm": 216.0,
+   "plaq2_F_norm": 216.0,
+   "C4_anchor": 24.0,
+   "plaq1_psi_norm": 4.753015,
+   "plaq2_psi_norm": 4.753015
+  }
+ },
+ "kplaq_dimnorm": {
+  "domino_p1": 2.666666667,
+  "domino_p2": 2.666666667,
+  "armB_p1": 2.666666667,
+  "armB_p2": 2.666666667,
+  "C4_anchor": 2.666666667,
+  "identity_verdict": "HOLDS EXACTLY: ||K_plaq||_F/sqrt(3^N) = 8/3 = the C4 anchor on every tested plaquette (the raw-F REFUTED verdict was a dimension-normalization artifact)"
+ },
+ "gamma_frame_note": {
+  "domino_Gamma_welded": 1.0,
+  "armB": {
+   "G1_inplane": 1.225766752,
+   "G2_inplane": 0.815815895,
+   "G_cross_weld": 1.0,
+   "detGamma_welded": 0.000581698
+  },
+  "degeneracy": "the symmetric domino cell forces a=b on the shared edge (Gamma = 1 identically) and Arm B's G_cross = 1 identically: the 2-plane cell cannot seat an honest 3-axis Gamma. detGamma = 0.0006 is the DEGENERATE-FRAME value, NOT a branch-C collapse. The 3-frame measurement requires the 2x2 square or a trihedral cell (memory-gated).",
+  "verdict": "INDETERMINATE on det Gamma (degenerate frame, not collapse)"
+ },
+ "law_undershoot_register": {
+  "C4": 66.7,
+  "domino": 73.4,
+  "fig8": 50.7,
+  "verdict": "LAW-UNDERSHOOT FIRES (>30% on every cell): the -ln(count) path-count law is a BOUND and an ORDERING (sign + monotone in path count), NOT a quantitative identity. Registered as LAW-BOUND."
+ },
+ "verdict": {
+  "four_branch": "B \u2014 the excess persists: EMERGENT CURVATURE candidate \u2014 definite scaling to be confirmed by the 2x2 scale-up (memory-gated); the domino's persistence is the +10.6% dumbbell class",
+  "law_undershoot_domino_pct": 73.4,
+  "K_plaq_identity": "HOLDS EXACTLY: ||K_plaq||_F/sqrt(3^N) = 8/3 = the C4 anchor on every tested plaquette (the raw-F REFUTED verdict was a dimension-normalization artifact)",
+  "witness_rule": "det Gamma / lambda_A measured on the welded state (never frozen from r8.5)",
+  "caveat": "2x2 scale-up cell is memory-gated on the domino verdict; sparse eigsh only"
+ }
+}

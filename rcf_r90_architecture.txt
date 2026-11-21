@@ -268,32 +268,115 @@ under the numbering the corpus already carries).
      no grade upgrades ride on PR-LAT-2 without its own frozen
      sheet.
 
-10. EXECUTION ORDER (AMENDED r9.1 — T8*S HAS RUN)
-   1. DONE (r9.1): Lemma T8*S — verdict PASS-IN-LIMITS (§3 above):
-      the anomaly and the live scalar-residual trend now condition
-      everything downstream. §3 of the geometry paper writes WITH
-      the declared intermediate-depth caveat; the caveat is a
-      result, not a defect of the write-up.
-   2. NEXT: PR-LAT-2 frozen sheet (topology pins named; four
-      branches; plaquette holonomy as the curvature object with
-      lambda_A as dimension witness; the Theorem-8 contraction
-      sweep at increasing depth on the MULTI-PLAQUETTE substrate —
-      where the C5 scalar-residual trend and the C4 anomaly get
-      their decisive frame: the single-junction arm could not
-      resolve either).
-   3. THEN: the §2 energy-emergence gate (the adjudication's
-      sequencing adopted: energy BEFORE Lorentzian signature
-      BEFORE dark matter), then the §5 Type-Sign projection lemma
-      (the burden-Hessian sign computation), then the §6 dark-
-      matter-as-burden-redistribution gate with the E0 fence and
-      the RET-B7 Yukawa-screening guardrail pinned.
-   4. LAST: the architecture sheet freeze for the paper that owns
-      the bridge, under the corpus numbering (Paper VI territory
-      unless a renumbering is declared and its debts re-homed).
+10. EXECUTION ORDER (AMENDED r9.2 — T8*S AND PR-LAT-2 HAVE RUN)
+   1. DONE (r9.1): Lemma T8*S — verdict PASS-IN-LIMITS (§3 above).
+      AUDIT RE-LABEL (r9.2, the tautology catch accepted): C1-C3 as
+      executed are a 1D-arm scaling plugged into the FROZEN r8.5
+      corner Gamma — Gamma was never contracted, so C1/C2/C3 pass
+      tautologically for any positive d(n). The non-tautological
+      content of the r9.1 run is C4/C5 and the tier-rate engine
+      itself. The PR-LAT-2 sheet carries the witness rule that
+      forbids the class: det Gamma / lambda_A measured on the
+      welded state, never carried forward.
+   2. DONE (r9.2): the C4 extension test + both pre-flights +
+      PR-LAT-2 executed (§11 below).
+   3. NEXT: the 3-axis multi-plaquette cell (the 2x2 square or a
+      trihedral cell, memory-gated, sparse only) — the frame that
+      seats an honest 3-frame Gamma and decides det Gamma, the
+      provisional branch-B verdict, the C4 re-adjudication, and
+      the C5 three-branch question.
+   4. THEN: the §2 energy-emergence gate — SCOPED (r9.2, the
+      audit's collision fix): the 1D chain identities (H_XXX =
+      3M + Phi_1 - 2(N-1)I, [h_b, L_q] = -2L_q, D†(h_b) =
+      -2P², energy current sqrt(48) vs burden current sqrt(30))
+      are ALREADY E4-certified and are NOT re-run; the gate tests
+      only genuinely new multi-vertex/junction energy transport.
+      Then the §5 Type-Sign projection lemma (the burden-Hessian
+      sign computation), then the §6 dark-matter-as-burden-
+      redistribution gate with the E0 fence and the RET-B7
+      Yukawa-screening guardrail pinned.
+   5. LAST: the architecture sheet freeze for the paper that owns
+      the bridge, under the ACTIVE SERIES MAP (§12).
 
-Artifacts referenced: r90_lemmat8os.py/.json (the gate, canonical
-L = 6) + r90_lemmat8os_L4/L5.json (the frame-size sweep) +
-r90_lemmat8os_L8_INVALID.json (the memory-kill note), r85_lat1.json
-(the +10.6% baseline), r85_scalemetric.json (S_ij certificate),
-Paper I Theorems 4/7/8 (sealed main.pdf), paper2.tex v1.2.
+11. PR-LAT-2 RESULTS (r9.2, folded)
+   - K_PLAQ IDENTITY HOLDS EXACTLY after dimension normalization:
+     ||K_plaq||_F / sqrt(3^N) = 8/3 = the C4 anchor on EVERY tested
+     plaquette (C4 24/9, domino 72/27, Arm B composite likewise).
+     The raw-F "REFUTED" first read was a dimension-normalization
+     artifact — the same class as the C4 extension's ln(9) floor.
+     The plaquette holonomy and the path-doubling structure are the
+     SAME object family, normalized per ambient dimension.
+   - THE PATH-COUNT LAW IS A BOUND + ORDERING, NOT AN IDENTITY
+     (LAW-UNDERSHOOT fires on every cell: C4 66.7%, domino 73.4%,
+     fig-8 50.7%): the sign and the monotone-in-count ordering hold
+     (super-additive at 1 path, sub-additive at >= 2), the
+     quantitative -ln(count) does not. Registered as LAW-BOUND.
+   - THE GAMMA FRAME IS DEGENERATE on the symmetric 2-plane domino:
+     a = b is forced on the shared edge (Gamma = 1 identically) and
+     Arm B's G_cross = 1 identically; det Gamma = 0.0006 is the
+     DEGENERATE-FRAME value, NOT a branch-C collapse. det Gamma
+     is INDETERMINATE until a 3-axis cell runs.
+   - BRANCH B (emergent-curvature candidate) is PROVISIONAL: the
+     M_gap persistence class is real (domino -0.292, fig-8 -0.684,
+     both strictly sub-additive) but the verdict is seated on a
+     degenerate frame; the 3-axis cell decides.
+   - THE C4 ANOMALY IS DOWNGRADED to OPEN-BOUNDARY-ARTIFACT-
+     CONTAMINATED: on the open-arm frame the raw channel RISES at
+     n=1 (ratio 1.5049) before decaying — the fine end-correlation
+     is suppressed below the identity-block floor by antiferro
+     boundary cancellations; the renormalized fixed point is the
+     ALIGNED boundary block |+1,+1> (<SzSz> = +0.787), so the r9.1
+     K_ren growth was a renormalization artifact, not physics; the
+     raw-vs-metric floor gap is ln(9)-dominated (convention class).
+     Re-adjudication on the closed 3-axis substrate.
+   - STANDING LAW (Gate V, adopted r9.2): every script that stacks
+     operators into vectors declares its vec-convention header
+     (column-major) and runs Gate V (superoperator assembly vs
+     direct matrix-product on a random test operator + the
+     kron-identity spot check) BEFORE any projector is built. Gate V
+     caught two more bugs on its own test this round — the class
+     has now bitten five times in the thread; the gate is live.
+
+12. THE ACTIVE SERIES MAP (r9.2, the naming collision resolved)
+   The legacy eleven-paper numbering (where VI = Geometry, VIII =
+   Fields) is RETIRED for the active sequence; the register keeps
+   the legacy archive as history. The ACTIVE SERIES:
+     Paper I — The Algebra of Reconciliation (sealed, main.pdf);
+     Paper II — Emergent Time, 3D Space, and the Scaling Metric
+       (sealed v1.2; §4 Emergent Time is ITS deliverable);
+     Paper III — Fields & Coarse-Grained Emergent Geometry (the
+       active target: the closed r4.13 Burden/Fields backbone +
+       multi-plaquette coarse-graining + emergent curvature +
+       Lemma T8∘S + PR-LAT-2; inherits Paper II's §4 arrow
+       apparatus as construction backbone, NOT as its own title);
+     Paper IV — ENERGY IN RCF (registered occupant: the §2 gate —
+       multi-vertex/junction energy transport; the 1D identities
+       are already E4 and are cited, not re-run);
+     Paper V — DARK MATTER / DARK ENERGY AS BURDEN REDISTRIBUTION
+       (registered occupant: the §6 gate, E0-fenced, RET-B7
+       Yukawa guardrail).
+   The IV/V occupancy is registered BEFORE Paper III §1 drafting;
+   the sequence names forward. No paper title carries another
+   paper's content without a declared renumbering.
+
+13. THE FIELD-PAPER PROVENANCE RULE (r9.2, the principal's catch)
+   The previous field paper's equations were derived from Paper-I
+   1D identities PLUS legacy underived time equations. Every field
+   equation that enters Paper III must be re-derived on Paper II
+   v1.2's upgraded apparatus (kappa_OE, the strobe family, the
+   tau-scan, the secular pinch, H_eff = H - (i/2)M, Gamma_b) —
+   any equation whose time dependence still rides a legacy
+   underived postulate is flagged PROVENANCE-STALE and either
+   re-based or cut before drafting. This rule is binding on the
+   r4.13 Burden/Fields backbone the moment Paper III drafting
+   opens.
+
+Artifacts referenced: r90_lemmat8os.py/.json (the r9.1 gate,
+canonical L = 6) + r90_lemmat8os_L4/L5.json (the frame-size sweep) +
+r90_lemmat8os_L8_INVALID.json (the memory-kill note), r92_preflight.py/.json
+(the C4 extension + both pre-flights + Gate V), pr_lat2_sheet.txt (the
+frozen sheet), r92_lat2.py/.json (the PR-LAT-2 run), r85_lat1.json (the
++10.6% baseline), r85_scalemetric.json (S_ij certificate), Paper I
+Theorems 4/7/8 (sealed main.pdf), paper2.tex v1.2.
 ==============================================================================
+

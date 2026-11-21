@@ -1,0 +1,237 @@
+{
+ "gate_V": {
+  "vec_convention": "column-major",
+  "super_vs_direct_dev": 2.1328493919268307e-15,
+  "kron_identity_dev": 1.4825219231211098e-15,
+  "verdict": "PASS"
+ },
+ "ext_C4": {
+  "fine": {
+   "K_fine": 0.014637002,
+   "d_fine": 4.224202549,
+   "tier_weights_w0_w1_w2": [
+    0.111111111,
+    0.333333333,
+    0.555555556
+   ],
+   "tier_dims": {
+    "0": 1,
+    "2": 3,
+    "6": 5
+   }
+  },
+  "series": {
+   "1": {
+    "K_state_renorm": 0.057483931,
+    "K_state_raw": 0.015444609,
+    "K_metric_1site": 0.518518519,
+    "K_metric_2site": 0.320987654,
+    "gap_renorm_vs_1site": 2.199470299,
+    "gap_raw_vs_1site": 3.513715731,
+    "gap_raw_vs_2site": 3.03414265
+   },
+   "2": {
+    "K_state_renorm": 0.22615244,
+    "K_state_raw": 0.023242052,
+    "K_metric_1site": 0.320987654,
+    "K_metric_2site": 0.183813443,
+    "gap_renorm_vs_1site": 0.350193375,
+    "gap_raw_vs_1site": 2.625439425,
+    "gap_raw_vs_2site": 2.067958109
+   },
+   "3": {
+    "K_state_renorm": 0.42045817,
+    "K_state_raw": 0.022225718,
+    "K_metric_1site": 0.230452675,
+    "K_metric_2site": 0.141137022,
+    "gap_renorm_vs_1site": 0.60129947,
+    "gap_raw_vs_1site": 2.338795429,
+    "gap_raw_vs_2site": 1.848481107
+   },
+   "4": {
+    "K_state_renorm": 0.581644267,
+    "K_state_raw": 0.019525966,
+    "K_metric_1site": 0.183813443,
+    "K_metric_2site": 0.124201934,
+    "gap_renorm_vs_1site": 1.15193769,
+    "gap_raw_vs_1site": 2.24217618,
+    "gap_raw_vs_2site": 1.850163574
+   },
+   "5": {
+    "K_state_renorm": 0.700714543,
+    "K_state_raw": 0.017202539,
+    "K_metric_1site": 0.157293096,
+    "K_metric_2site": 0.116901029,
+    "gap_renorm_vs_1site": 1.493989675,
+    "gap_raw_vs_1site": 2.213053939,
+    "gap_raw_vs_2site": 1.916270698
+   },
+   "6": {
+    "K_state_renorm": 0.786974099,
+    "K_state_raw": 0.015540402,
+    "K_metric_1site": 0.141137022,
+    "K_metric_2site": 0.113681272,
+    "gap_renorm_vs_1site": 1.718464133,
+    "gap_raw_vs_1site": 2.20628796,
+    "gap_raw_vs_2site": 1.989955429
+   }
+  },
+  "raw_ratios_per_step": [
+   1.504865,
+   0.956272,
+   0.87853,
+   0.881008,
+   0.903378
+  ],
+  "r1_reference": 0.6666666666666666,
+  "C5_residual_full_series": [
+   0.214285714,
+   0.346153846,
+   0.482142857,
+   0.604477612,
+   0.706395349,
+   0.787257019
+  ],
+  "C5_absolute_scalar_amp_w0": 0.111111111,
+  "definitional_limit": "residual -> 1 as n -> inf by construction (suppressed tiers -> 0); the threshold siting must be declared against the physical channel amplitude, not the normalized fraction alone",
+  "n_stop_reason": "n = 6 at L = 6 pre-declared: the memory-feasible window on this frame (L = 8 killed at 3^8)"
+ },
+ "preflight_P1_crossover": {
+  "P5_open_chain": {
+   "note": "1 path, len 4, 0->4",
+   "N_sites": 5,
+   "z_max": 2,
+   "lambda0": -0.0,
+   "lambda0_multiplicity": 4,
+   "dim_ker": 4,
+   "no_go_VIII_substrate": "all z<=2",
+   "|c_uv|": 0.01462,
+   "|c_um|": 0.4444,
+   "|c_mv|": 0.04877,
+   "M_gap": 0.3939,
+   "path_count": 1,
+   "prediction_-ln(count)": 0.0,
+   "crossover": "super-additive"
+  },
+  "C4_1loop": {
+   "note": "2 paths len 2, 0->2",
+   "N_sites": 4,
+   "z_max": 2,
+   "lambda0": 0.0,
+   "lambda0_multiplicity": 1,
+   "dim_ker": 1,
+   "no_go_VIII_substrate": "all z<=2",
+   "|c_uv|": 0.28571,
+   "|c_um|": 0.47619,
+   "|c_mv|": 0.47619,
+   "M_gap": -0.2311,
+   "path_count": 2,
+   "prediction_-ln(count)": -0.6931,
+   "crossover": "sub-additive"
+  },
+  "Theta_3parallel": {
+   "note": "3 parallel paths len 2, 0->4",
+   "N_sites": 5,
+   "z_max": 3,
+   "lambda0": 0.3304,
+   "lambda0_multiplicity": 3,
+   "dim_ker": 3,
+   "no_go_VIII_substrate": "z>=3 shared vertex => ker forced empty",
+   "|c_uv|": 0.31157,
+   "|c_um|": 0.4347,
+   "|c_mv|": 0.4347,
+   "M_gap": -0.5001,
+   "path_count": 3,
+   "prediction_-ln(count)": -1.0986,
+   "crossover": "sub-additive"
+  },
+  "Domino_2loops_edge_sharing": {
+   "note": "2 edge-sharing squares, 3 paths len 3, 0->5",
+   "N_sites": 6,
+   "z_max": 2,
+   "lambda0": 0.0,
+   "lambda0_multiplicity": 1,
+   "dim_ker": 1,
+   "no_go_VIII_substrate": "all z<=2",
+   "|c_uv|": 0.09836,
+   "|c_um|": 0.44809,
+   "|c_mv|": 0.16393,
+   "M_gap": -0.2919,
+   "path_count": 3,
+   "prediction_-ln(count)": -1.0986,
+   "crossover": "sub-additive"
+  },
+  "Fig8_2loops_series": {
+   "note": "2 loops in series via site 3, 4 paths len 4, 0->6",
+   "N_sites": 7,
+   "z_max": 3,
+   "lambda0": 0.3765,
+   "lambda0_multiplicity": 1,
+   "dim_ker": 1,
+   "no_go_VIII_substrate": "z>=3 shared vertex => ker forced empty",
+   "|c_uv|": 0.10003,
+   "|c_um|": 0.11152,
+   "|c_mv|": 0.45263,
+   "M_gap": -0.684,
+   "path_count": 4,
+   "prediction_-ln(count)": -1.3863,
+   "crossover": "sub-additive"
+  }
+ },
+ "preflight_P2_Kplaq": {
+  "opposite_edge_commutator_h01_h32": 0.0,
+  "opposite_edge_commutator_h12_h03": 0.0,
+  "K_plaq_F_norm": 24.0,
+  "K_plaq_F_norm_sq": 576.0,
+  "4x144": 576.0,
+  "corner_current_norms": [
+   12.0,
+   12.0,
+   12.0,
+   12.0
+  ],
+  "corner_current_cross_HS": 0.0,
+  "expectation_on_ground": 0.0,
+  "curvature_variance_norm": 6.047431568,
+  "16/sqrt7": 6.047431568,
+  "variance": 36.571429,
+  "256/7": 36.571429,
+  "ground_dim": 1
+ },
+ "ext_floor_analysis": {
+  "raw_floor_K": 0.015540402,
+  "metric_floor_w0_over_wtot": 0.111111111,
+  "gap_raw1s_at_nstop": 2.20628796,
+  "ln9": 2.197224577,
+  "gap_minus_ln9": 0.009063383,
+  "scale_free_raw_ratios": [
+   1.0,
+   1.504865031,
+   1.439059933,
+   1.26425771,
+   1.113821593,
+   1.006202358
+  ],
+  "scale_free_metric_ratios": [
+   1.0,
+   0.619047618,
+   0.444444444,
+   0.354497354,
+   0.303350971,
+   0.272192828
+  ],
+  "scale_free_max_dev": 0.994615489,
+  "mechanism": "the renormalized fixed point is the ALIGNED boundary block |m0=+1,m1=+1> (weight 0.7929, <SzSz> = +0.787): the trace-1 renormalization amplifies the aligned block, NOT the identity \u2014 K_ren growth 0.057->0.787 is the ferromagnetic fixed point, not a physical growth of the coarse correlation; the raw-vs-metric floor gap is ln(9)-dominated (2.206 vs ln9 = 2.197): the Hilbert-dimension normalization between a trace-1 state channel and a dimension-weighted operator channel, plus a ~26% correction from the maximally-mixed assumption vs the true aligned boundary block"
+ },
+ "ext_verdict": {
+  "outcome": "EXT-INDETERMINATE-ON-THIS-FRAME (the honest fifth outcome): the raw channel's first per-step ratio is 1.5049 \u2014 the channel RISES before decaying, because the fine end-correlation (K_fine = 0.014637) is suppressed BELOW the identity-block floor by the antiferro boundary cancellations, and the first contraction step removes that destructive interference. On the L = 6 open-arm frame the end-correlation channel is boundary-interference dominated; the state-vs-metric comparison conflates the interference structure with the tier-rate decay. ADJUDICATION REQUIRES the multi-plaquette closed substrate (no open ends) \u2014 PR-LAT-2's frame. TWO SUB-FINDINGS DID RESOLVE: (i) the raw-vs-metric floor gap is ln(9)-dominated (2.206 vs 2.197, residue 0.009): the Hilbert-dimension normalization-base class, CONVENTION not structure; (ii) the renormalized fixed point is the ALIGNED boundary block |m0=+1,m1=+1> (weight 0.7929, <SzSz> = +0.787): the K_ren growth 0.057->0.787 is a renormalization artifact amplifying the aligned block, NOT a physical growth of the coarse correlation. EXT-2 STRUCTURAL is REFUTED at the floor level; neither EXT-1 nor EXT-3 fully fires on this frame; the r9.1 C4 anomaly is downgraded to OPEN-BOUNDARY-ARTIFACT-CONTAMINATED, to be re-adjudicated on the closed substrate.",
+  "discriminator": "UNRESOLVED on this frame: the raw-channel ratios (0.956/0.879/0.881/0.903) sit above 2/3, but the channel is boundary-interference contaminated \u2014 STRUCTURAL-FEEDBACK is NOT declarable from a contaminated channel; re-adjudicate on the closed substrate",
+  "ratios": [
+   1.504865,
+   0.956272,
+   0.87853,
+   0.881008,
+   0.903378
+  ]
+ }
+}

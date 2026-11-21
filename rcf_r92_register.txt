@@ -1,0 +1,128 @@
+==============================================================================
+REGISTER — r9.2: THE C4 EXTENSION + BOTH PRE-FLIGHTS + PR-LAT-2 EXECUTED
+(ONE COMMIT).
+==============================================================================
+
+1. THE C4 EXTENSION TEST (the go-word's pre-PR-LAT-2 item)
+   VERDICT: EXT-INDETERMINATE-ON-THIS-FRAME (the honest fifth outcome,
+   added before the run when the arithmetic forced it). On the L = 6
+   open-arm frame the end-correlation channel is BOUNDARY-INTERFERENCE
+   dominated: the raw channel's first per-step ratio is 1.5049 — a
+   RISE, not a decay — because the fine end-correlation (K_fine =
+   0.014637) is suppressed below the identity-block floor by the
+   antiferro boundary cancellations, and the first contraction step
+   removes that destructive interference.
+   SUB-FINDINGS THAT DID RESOLVE:
+   - the raw-vs-metric floor gap is ln(9)-DOMINATED (2.206 vs ln 9 =
+     2.197, residue 0.009): the Hilbert-dimension normalization base
+     between a trace-1 state channel and a dimension-weighted operator
+     channel — the CONVENTION class. EXT-2 STRUCTURAL is REFUTED at
+     the floor level: the auto-verdict had compared floors across
+     different normalizations.
+   - the renormalized fixed point is the ALIGNED boundary block
+     |m0=+1, m1=+1> (weight 0.7929, <SzSz> = +0.787): the r9.1 K_ren
+     growth 0.057 -> 0.787 was a renormalization artifact amplifying
+     the aligned block, NOT a physical growth of the coarse
+     correlation.
+   - the STRUCTURAL-FEEDBACK discriminator is UNRESOLVED on this
+     frame: the raw ratios (0.956/0.879/0.881/0.903) sit above 2/3
+     but belong to a boundary-contaminated channel; re-adjudication
+     on the closed substrate.
+   - C5 full series 0.214 -> 0.787, crosses the 0.5 threshold at
+     n = 4 (0.604) — with the DEFINITIONAL LIMIT registered (the
+     normalized residual -> 1 by construction; the threshold must
+     be declared against the absolute scalar amplitude |w0| = 1/9).
+   GATE V (the standing law, adopted): the vec-convention header +
+     the superoperator-vs-direct-matrix-product test. Gate V caught
+     TWO more bugs on its own test this round (a wrong kron identity
+     asserted in the test itself; a basis-indexing mismatch
+     3i+j vs vec_F's i+3j). The class has now bitten five times in
+     the thread; the gate is live and binding.
+
+2. THE PRINCIPAL'S TWO PRE-FLIGHTS, MACHINE-VERIFIED
+   P1 (the 5-graph crossover): confirmed with refinements —
+   - P5 super-additive +0.394 (ker mult 4);
+   - C4 sub-additive -0.2311 vs the -ln 2 = -0.6931 prediction:
+     the law OVERSHOOTS on the single loop (67%) — registered;
+   - Theta z=3 lambda_0 = 0.3304 mult 3, ker EMPTY (No-Go VIII);
+   - DOMINO z=2 lambda_0 = 0 mult 1 — the kernel SURVIVES: the
+     principal's No-Go VIII trap flags Theta/Fig-8, NOT the domino.
+     The domino is the frustration-free multi-loop cell;
+   - Fig-8 z=3 lambda_0 = 0.3765 mult 1, ker EMPTY — the MACHINE
+     value 0.3765 is the binding one (the principal's table said
+     0.4244);
+   - the crossover into strictly sub-additive at >= 2 paths is real
+     and the ordering is monotone in path count.
+   P2 (the C4 K_plaq anchors): ALL EXACT — opposite-edge commutators
+   = 0; ||K_plaq||_F = 24 = sqrt(4 x 144) with the 4 corner currents
+   mutually Hilbert-Schmidt orthogonal (each ||J||_F = 12);
+   <psi_C4|K_plaq|psi> = 0 (time-reversal neutral);
+   ||K_plaq|psi_C4>| = 16/sqrt(7) = 6.047432; Var = 256/7 =
+   36.571429.
+
+3. PR-LAT-2 EXECUTED (pr_lat2_sheet.txt frozen BEFORE the run, all
+   pins in place; sparse route after the dense 3^7 eigh OOM-kill)
+   - SUBSTRATE: domino C6 z=2, lambda_0 = 0, ker = 1 (the
+     frustration-free survivor, CONFIRMED); fig-8 z=3,
+     lambda_0 = 0.3765, ker empty (the No-Go VIII arm, on its
+     frustrated ground manifold).
+   - M_GAP (staggering declared): domino -0.291941 (3 paths,
+     prediction -1.098612, undershoot 73.4%); fig-8 -0.684022
+     (4 paths, prediction -1.386294, undershoot 50.7%).
+     LAW-UNDERSHOOT FIRES ON EVERY CELL (C4 66.7% / domino 73.4% /
+     fig-8 50.7%): the -ln(count) path-count law is a BOUND and an
+     ORDERING (sign + monotone in count), NOT a quantitative
+     identity. Registered as LAW-BOUND.
+   - K_PLAQ IDENTITY: HOLDS EXACTLY after dimension normalization —
+     ||K_plaq||_F/sqrt(3^N) = 8/3 = the C4 anchor on EVERY tested
+     plaquette (C4 24/9; domino 72/27; the Arm B composite cell
+     likewise). The first-read "REFUTED" was a dimension-
+     normalization artifact — the SAME class as the extension
+     test's ln(9) floor. The declared identity (plaquette holonomy
+     = the path-doubling family, per-ambient-dimension) HOLDS.
+   - THE WELDED GAMMA FRAME IS DEGENERATE on the symmetric 2-plane
+     domino: a = b is forced on the shared edge (Gamma = 1
+     identically; Arm B's G_cross = 1 identically); det Gamma =
+     0.0006 is the DEGENERATE-FRAME value, NOT a branch-C collapse.
+     det Gamma is INDETERMINATE until a 3-axis cell runs.
+     lambda_A witness measured on the welded state: 0.696706.
+   - FOUR-BRANCH VERDICT: branch B (the excess persists:
+     emergent-curvature candidate) — PROVISIONAL, seated on a
+     degenerate frame; the 3-axis multi-plaquette cell (2x2 square
+     or trihedral, memory-gated, sparse only) decides.
+
+4. THE AUDIT'S TWO FLAGS, RESOLVED IN THE ARCHITECTURE
+   - C1-C3 RE-LABELED (the tautology accepted): the r9.1 C1-C3 pass
+     is a 1D-arm scaling plugged into the FROZEN r8.5 corner Gamma —
+     tautological for any positive d(n); the non-tautological
+     content is C4/C5 + the tier-rate engine. The witness rule
+     (det Gamma / lambda_A measured on the welded state, never
+     carried forward) is now binding on every sheet.
+   - THE SERIES COLLISION RESOLVED: the ACTIVE SERIES MAP (§12 of
+     the architecture) RETIRES the legacy eleven-paper numbering;
+     Paper III = Fields & Coarse-Grained Emergent Geometry; Paper IV
+     = Energy in RCF (registered occupant); Paper V = Dark Matter /
+     Dark Energy as Burden Redistribution (registered occupant).
+     The energy gate is SCOPED to multi-vertex/junction transport
+     only (the 1D identities are already E4; cited, not re-run).
+   - THE FIELD-PAPER PROVENANCE RULE (the principal's catch, §13):
+     the previous field paper's equations were derived from Paper-I
+     1D + legacy UNDERIVED time equations; every field equation
+     entering Paper III must be re-derived on Paper II v1.2's
+     upgraded apparatus (kappa_OE, strobe family, tau-scan, secular
+     pinch, H_eff, Gamma_b); PROVENANCE-STALE equations are re-based
+     or cut before drafting.
+
+5. NEXT
+   The 3-axis multi-plaquette cell (2x2 square or trihedral —
+   memory-gated, sparse only): the frame that seats an honest
+   3-frame Gamma and decides det Gamma, the provisional branch-B
+   verdict, the C4 re-adjudication, and the C5 three-branch
+   question.
+
+Artifacts this round: r92_preflight.py/.json (the C4 extension +
+both pre-flights + Gate V), pr_lat2_sheet.txt (frozen BEFORE the
+run), r92_lat2.py/.json (the PR-LAT-2 execution),
+rcf_r90_architecture.txt (§10 amended, §11-13 added),
+rcf_r92_register.txt (this file). ONE COMMIT.
+==============================================================================
