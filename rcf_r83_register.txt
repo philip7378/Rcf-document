@@ -1,0 +1,181 @@
+==============================================================================
+REGISTER — r8.3: COMPILATION OF PAPER II (TWO COMMITS). r8.3a = the
+pre-compilation EXECUTION that closed the OPEN L=5 leg by machine;
+r8.3b = the AGGREGATION-ONLY compilation (D-class declaration: the
+compilation changes no grade, re-runs nothing, and re-reads no
+paragraph in isolation; every discrepancy found by the sweep got a
+register entry and a re-draft of the affected paragraph — no silent
+fixes).
+==============================================================================
+
+1. r8.3a — THE L=5 LEG CLOSED BY EXECUTION (r83_l5cert.py/.json)
+   Trigger: the audit's bonus note — with the struck per-axis
+   kernel formula corrected to dim 4 (r5.2 P3), the L=5 bulk cross
+   is only 64x64, so 0.246717 can be adjudicated by COMPUTATION
+   instead of by strike. Registered as a pre-compilation execution
+   (NOT part of aggregation).
+
+   VERDICT: 0.246717 CONFIRMED BY EXECUTION. The machine J=3
+   compressed lambda_min on the 64D L=5 bulk cross is 0.246716686
+   (sheet target 0.246717, match), lambda_max 0.272009551
+   (auditor anchor 0.272010, match). ALL FOUR J sectors: ker 0/64 —
+   No-Go VIIIb PERSISTS at bulk length 5; PR-VTX-1's L=5
+   persistence claim is machine-verified. The r8.2 strike
+   ("certified nowhere") is SUPERSEDED: the number now has a
+   certifying artifact (r83_l5cert.json). Do-not-re-cite list
+   entry #1 amended: 0.246717 is citable ONLY against
+   r83_l5cert.json.
+
+   The auditors' anchors ALL hit:
+   - J=0 product floor: machine 0.035245241 vs 8000/226981 =
+     0.03524524 — deviation 0.0 EXACT, from the M = +-1 triplet
+     middle-site dm (16, 20, 25)/61 (machine [0.262296, 0.327869,
+     0.409835] to the digit).
+   - The L -> infinity mechanism: spectra sit within 0.001-0.013
+     of the exact bulk dimension weights (1, 9, 10, 7)/27
+     (bulk single-site dm -> (1/3) 1_3), as the auditor's
+     convergence argument predicts.
+   - L=3 REPRODUCTION GATE: the script's Gram-factorized route
+     (W = V^dag (P (x) I) V via per-axis register Gram tensors)
+     reproduces r53c's certified values EXACTLY (max deviation
+     0.0 on all four rows) — conventions verified before any L=5
+     number was reported.
+   - Construction facts now DECLARED-then-EXECUTED: 15 sites,
+     3^15 = 14,348,907, registers 2/7/12, per-axis kernel dim
+     exactly 4 at every L (gate: dims {2..6} all 4), compressed
+     kernel 4^3 = 64. The 16 = 2^(L-1) formula (r5.2 P3 erratum,
+     agreeing only at L=3) is struck from the caption; the
+     16^3 = 4,096 object in the r53b sheet spec was a never-run
+     different construction.
+   - THIS SCRIPT'S OWN CAUGHT DEFECT (logged): a first-draft
+     compression route built the vertex projector as a
+     polynomial OF THE COMPRESSED J2 — WRONG (compression does
+     not commute with polynomials: V^dag J2 V squared is not
+     V^dag J2^2 V); caught by the L=3 reproduction gate BEFORE
+     any L=5 number was reported. The registered route builds
+     the projector in the 27D register space first.
+
+2. r8.3b — COMPILATION (aggregation only)
+   - The claim table is the certified object: r83_claimtable.py
+     generates the 19-row table from the section JSONs
+     (r83_claimtable.json); diff vs §1's hand-drafted table:
+     ZERO generated rows missing (the one diff row is a
+     markdown separator artifact, not a claim). §6 (Conclusion,
+     Restatement) was generated FROM that table; the abstract
+     was written from §1 + §6 + the table — its claims are a
+     subset by construction (sweep-checked).
+   - Manuscript structure: cover (Template 03 academic, dark,
+     vertical anchor — rendered via html2poster.js after
+     cover_validate.js passed; two text/line overlaps fixed by
+     shifting the content block) + TOC (46 clickable entries,
+     46 live link annotations verified in the raw PDF) +
+     abstract + §§1-5 (aggregated verbatim from the amended
+     drafts through r8.3a) + §6 + Appendix A (certificate
+     inventory WITH STATUS COLUMN: certified / superseded /
+   deferred) + Appendix B (seven-gate standing battery +
+     cumulative errata ledger + do-not-re-cite list) + Appendix
+     C (generativity register). 38 pages. Tectonic compile:
+     zero errors; check-tex PASS.
+   - pdf_qa flagged "formula overflow" on 26 pages and "TOC not
+     clickable": BOTH verified as checker false positives against
+     ground truth — pixel analysis of the worst pages (13, 27)
+     shows rightmost ink at column 435 vs margin boundary 438
+     (inside), and the TOC page carries 46 live GoTo link
+     annotations. font.check: 0 issues. toc.check: PASS.
+     meta.brand applied (Creator Z.ai).
+   - Registered cosmetic edge case: the drafts' run-in headings
+     (§3.4.1) share their title's last line with body text
+     (hard-wrapped sources); the converter splits mid-sentence
+     there — content complete, heading reads "…C_3-circulant
+     Gram" with the remainder flowing as the first body
+     sentence. No numbers affected.
+
+3. THE SEVEN-DIMENSION SWEEP (r83_sweep.py/.json): 57 checks,
+   0 FAIL after honest triage — every FAIL triaged was either a
+   sweep-script probe bug (prose roundings vs full-precision
+   carriers — fixed via ROUND_MAP; hyphenation-wrapped probe
+   strings; the r82_patches P2_L5_adjudication MIRROR of the
+   deferred status is the striking evidence, not an unexecuted
+   entry) or a legitimate context (2^{L-1} survives ONLY inside
+   the errata/do-not-re-cite lists, where naming the struck
+   formula is the point). Dimensions verified: (1) every cited
+   artifact exists; (2) deferred-to-script-2 grep — the sole
+   genuine carrier is r53b's ArmB_L5 (superseded); paper2 cites
+   r83_l5cert for 0.246717; (3) every number is contained in
+   its certifying artifact (prose roundings traced to
+   full-precision sources); (4) generated table = 19 rows,
+   grades consistent § <-> table <-> abstract; (5) the closing
+   caution IS in front matter (abstract: "not evidence that
+   physical 3D space interacts through any triangular lattice")
+   and in §5.3.1 and §6; (6) conventions declared (93.78%
+   (max-min)/mean with 63.84% alternate; 82.57% labeled the
+   prior probe-grid measurement; M = correlation-gap degree;
+   K-normalization declared once — raw default, Pearson named;
+   M = ln(4/3) marked raw-convention with the ln 2 alternative
+   named; M = ln 3 marked SUPERSEDED); (7) every is-not backed
+   (E2-pending, E0-fences, FAMILIES-DISAGREE, retraction, r83
+   execution, declared inputs, generativity E0). Struck-artifact
+   zero-check: no load-bearing 0.246717-without-r83, no
+   (-20.38, -7.37), no 2^(L-1) outside the errata lists, no
+   "entanglement signature" outside the retraction record.
+
+4. THE r8.3 AUDIT FIXES, ALL APPLIED BEFORE COMPILATION:
+   (i) §3 caption: per-axis kernel 4 not 16 = 2^(L-1) (the
+   recurrence of r5.2 P3), K_5^{(x)3} = 64 — then SUPERSEDED
+   by the r8.3a execution closing the leg entirely;
+   (ii) §5.3.1 octonion theorem-to-object attribution exact:
+   Im(O) (7D cross-product space) eliminated by O's
+   non-associativity directly (associator witness = 2, a
+   violation of Paper I's associative primitive); H_2(O) =
+   J_9 (9 = vector-part convention, dim 10 total) is SPECIAL
+   (spin factor, embeds in Cl_9 -> M_16(C)) — eliminated by
+   Theorem II.1's saturation (D + 1 = 10 is not n^2), not by
+   Albert; H_3(O) (27D Albert algebra) — eliminated by
+   Albert's NON-SPECIALTY. No Paper X D4 misattribution;
+   (iii) 82.57% relabeled the incoming report's PRIOR
+   PROBE-GRID measurement (no standard ratio on (+20.38,
+   +7.37) reproduces it — the two certified formulas are
+   93.78% and 63.84%);
+   (iv) Kelly-Straus pinned to the statement it certifies
+   (Riemannian iff ellipsoid — the polygon's unit ball is
+   non-Riemannian BECAUSE the polygon is not an ellipsoid);
+   (v) K-normalization declared once in §5.3 (binding for the
+   paper): raw convention default, Pearson named; M's formula
+   beside every value; on-axis ln(4/3) = 0.287682 in the RAW
+   convention (variance normalization would give ln 2 =
+   0.693147); the NONVANISHING is convention-independent, the
+   VALUE is convention-relative; the r8.0 ln 3 witness marked
+   SUPERSEDED (invalid normalization), same discipline as
+   0.246717.
+
+5. MANUSCRIPT md5 (frozen assembly, independently verifiable):
+   paper2_final.pdf  1ec3f0ba652bbe1c51a21015d32619e7
+   paper2.tex        a1b382e7bc86b5941a7cf114b0270c5b
+   (Cover HTML: Paper_II_cover.html; cover PDF merged as page 1
+   via pypdf, A4-normalized.)
+
+6. NEXT-ROUND MENU (post-compilation):
+   - PR-METRIC-2b re-execution with the corrected common-space
+     spec (the family question with the K-normalization now
+     declared once).
+   - PR-LINK-1 lattice gate: lambda_A as the non-planarity order
+     parameter; track lambda_A and the chord defect across the
+     lattice under the scaling-metric / FS families.
+   - Paper III queue: fields after time (the mechanism library
+     bridge + generativity entries #1/#2 obligations).
+   - SPATIAL-INTERACTION E0 — the largest open item: whether
+     physical 3D space interacts through any spatial lattice at
+     all (the closing caution is law in §5.3.1, §6, and the
+     abstract).
+   - Optional: TOC squeeze (3 entries spill to a third TOC
+     page — cosmetic); §3.4.1 run-in heading edge case.
+
+Artifacts this round: r83_l5cert.py/.json (the execution),
+r83_claimtable.py/.json (the certified table object),
+r83_convert.py (draft->LaTeX converter), r83_build.py + 
+r83_assemble.py + r83_merge.py (assembly chain),
+r83_sweep.py/.json (the seven-dimension sweep), paper2.tex,
+paper2_cover.html, paper2_final.pdf (38 pages, md5 above),
+p2_sec1/3/5_draft.txt (amended), rcf_r83_register.txt (this file).
+TWO COMMITS: (1) the manuscript bundle, (2) this register.
+==============================================================================
