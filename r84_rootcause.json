@@ -1,0 +1,147 @@
+{
+ "items": [
+  {
+   "check": "containment 0.272010 -> r83_l5cert.json",
+   "side": "PROBE-SIDE",
+   "probe_defect": "probe demanded the 6-digit PROSE ROUNDING inside the JSON; artifacts store full precision",
+   "evidence": "full-precision 0.272009551 in r83_l5cert.json: True",
+   "fixed_by": "r83_sweep ROUND_MAP (built round->full map)"
+  },
+  {
+   "check": "containment 8000/226981 -> r83_l5cert.json",
+   "side": "PROBE-SIDE",
+   "probe_defect": "probe demanded the 6-digit PROSE ROUNDING inside the JSON; artifacts store full precision",
+   "evidence": "full-precision 0.035245241 in r83_l5cert.json: True",
+   "fixed_by": "r83_sweep ROUND_MAP (built round->full map)"
+  },
+  {
+   "check": "containment 0.420270 -> r80_metric2b.json",
+   "side": "PROBE-SIDE",
+   "probe_defect": "probe demanded the 6-digit PROSE ROUNDING inside the JSON; artifacts store full precision",
+   "evidence": "full-precision 0.420269909 in r80_metric2b.json: True",
+   "fixed_by": "r83_sweep ROUND_MAP (built round->full map)"
+  },
+  {
+   "check": "containment 0.632093 -> r80_metric2b.json",
+   "side": "PROBE-SIDE",
+   "probe_defect": "probe demanded the 6-digit PROSE ROUNDING inside the JSON; artifacts store full precision",
+   "evidence": "full-precision 0.632092823 in r80_metric2b.json: True",
+   "fixed_by": "r83_sweep ROUND_MAP (built round->full map)"
+  },
+  {
+   "check": "containment 2.9e-15 -> r53a_preflightB.json",
+   "side": "PROBE-SIDE",
+   "probe_defect": "probe demanded the 6-digit PROSE ROUNDING inside the JSON; artifacts store full precision",
+   "evidence": "full-precision 2.8988303733316974e-15 in r53a_preflightB.json: True",
+   "fixed_by": "r83_sweep ROUND_MAP (built round->full map)"
+  },
+  {
+   "check": "containment 2.7e-13 -> r53e_verify.json",
+   "side": "PROBE-SIDE",
+   "probe_defect": "probe demanded the 6-digit PROSE ROUNDING inside the JSON; artifacts store full precision",
+   "evidence": "full-precision 2.6674831489956047e-13 in r53e_verify.json: True",
+   "fixed_by": "r83_sweep ROUND_MAP (built round->full map)"
+  },
+  {
+   "check": "containment 3.8e-15 -> r53e_verify.json",
+   "side": "PROBE-SIDE",
+   "probe_defect": "probe demanded the 6-digit PROSE ROUNDING inside the JSON; artifacts store full precision",
+   "evidence": "full-precision 3.7829128801460545e-15 in r53e_verify.json: True",
+   "fixed_by": "r83_sweep ROUND_MAP (built round->full map)"
+  },
+  {
+   "check": "containment 3.8e-16 -> r53_preflightA.json",
+   "side": "PROBE-SIDE",
+   "probe_defect": "probe demanded the 6-digit PROSE ROUNDING inside the JSON; artifacts store full precision",
+   "evidence": "full-precision 3.833e-16 in r53_preflightA.json: True",
+   "fixed_by": "r83_sweep ROUND_MAP (built round->full map)"
+  },
+  {
+   "check": "containment 9.5e-16 -> r53_preflightC.json",
+   "side": "PROBE-SIDE",
+   "probe_defect": "probe demanded the 6-digit PROSE ROUNDING inside the JSON; artifacts store full precision",
+   "evidence": "full-precision 9.4623719602731e-16 in r53_preflightC.json: True",
+   "fixed_by": "r83_sweep ROUND_MAP (built round->full map)"
+  },
+  {
+   "check": "existence 0.191257 -> r52_t1b2b.json",
+   "side": "PROBE-SIDE",
+   "probe_defect": "probe hardcoded a WRONG artifact filename (missing _results suffix / wrong mirror)",
+   "evidence": "correct artifact r52_t1b2b_results.json exists and carries it: True",
+   "fixed_by": "r83_sweep CERTS filename corrections"
+  },
+  {
+   "check": "existence 0.174716 -> r51d_t1b2.json",
+   "side": "PROBE-SIDE",
+   "probe_defect": "probe hardcoded a WRONG artifact filename (missing _results suffix / wrong mirror)",
+   "evidence": "correct artifact r51d_t1b2_results.json exists and carries it: True",
+   "fixed_by": "r83_sweep CERTS filename corrections"
+  },
+  {
+   "check": "existence 0.222493 -> r51d_t1b2.json",
+   "side": "PROBE-SIDE",
+   "probe_defect": "probe hardcoded a WRONG artifact filename (missing _results suffix / wrong mirror)",
+   "evidence": "correct artifact r51d_t1b2_results.json exists and carries it: True",
+   "fixed_by": "r83_sweep CERTS filename corrections"
+  },
+  {
+   "check": "existence 0.126376 -> r51d_t1b2.json",
+   "side": "PROBE-SIDE",
+   "probe_defect": "probe hardcoded a WRONG artifact filename (missing _results suffix / wrong mirror)",
+   "evidence": "correct artifact r51d_t1b2_results.json exists and carries it: True",
+   "fixed_by": "r83_sweep CERTS filename corrections"
+  },
+  {
+   "check": "existence 2.2831 -> r51a_battery.json",
+   "side": "PROBE-SIDE",
+   "probe_defect": "probe hardcoded a WRONG artifact filename (missing _results suffix / wrong mirror)",
+   "evidence": "correct artifact r51a_results.json exists and carries it: True",
+   "fixed_by": "r83_sweep CERTS filename corrections"
+  },
+  {
+   "check": "existence 0.7705 -> r51a_battery.json",
+   "side": "PROBE-SIDE",
+   "probe_defect": "probe hardcoded a WRONG artifact filename (missing _results suffix / wrong mirror)",
+   "evidence": "correct artifact r51a_results.json exists and carries it: True",
+   "fixed_by": "r83_sweep CERTS filename corrections"
+  },
+  {
+   "check": "existence 2.7e-13/3.8e-15 -> r53e_verify.json (probe pointed at r62_adjudicate.json first)",
+   "side": "PROBE-SIDE",
+   "probe_defect": "probe hardcoded a WRONG artifact filename (missing _results suffix / wrong mirror)",
+   "evidence": "correct artifact r53e_verify.json exists and carries it: True",
+   "fixed_by": "r83_sweep CERTS filename corrections"
+  },
+  {
+   "check": "status 0.916291 -> r82_patches.json marked 'deferred'",
+   "side": "PROBE-SIDE",
+   "probe_defect": "probe flagged ANY json containing the WORD 'deferred'; r82_patches.json mentions it only in the P2 verdict NOTE (describing r53b's case)",
+   "evidence": "json-status grep 'deferred-to-script-2' matches only r53b_armsAB.json's ArmB_L5 entry (the genuine, now-superseded one) and r82's P2_L5_adjudication MIRROR (the striking evidence); no number in paper2 cites either for an unexecuted value",
+   "fixed_by": "r83_sweep status rule scoped to carrying entries"
+  },
+  {
+   "check": "dim-5 closing caution 'not evidence that physical 3D space interacts' in abstract",
+   "side": "PROBE-SIDE",
+   "probe_defect": "probe string didn't survive the abstract's LaTeX line wrap (3D\\nspace); the sentence IS present",
+   "evidence": "whitespace-normalized abstract contains the full sentence: True (re-verified in r84_pins channel)",
+   "fixed_by": "r83_sweep abs_norm re.sub(ws)"
+  },
+  {
+   "check": "dim-6 'no 16 = 2^(L-1) surviving'",
+   "side": "PROBE-SIDE",
+   "probe_defect": "probe searched the WHOLE tex including Appendix B's errata ledger and do-not-re-cite list, where naming the struck formula is the POINT",
+   "evidence": "all 3 occurrences of 2^{L-1} are inside Appendix B (errata entry r8.2/r8.3 + do-not-re-cite entry); zero in \u00a7\u00a71-6 body",
+   "fixed_by": "r83_sweep tex_body split before Appendix B"
+  },
+  {
+   "check": "dim-2 deferred grep counted r82_patches.json as a carrier",
+   "side": "PROBE-SIDE",
+   "probe_defect": "r82's P2_L5_adjudication node records r53b's status as the HISTORICAL fact it adjudicated \u2014 a mirror, not an unexecuted entry of its own",
+   "evidence": "json path /P2_L5_adjudication/r53b_ArmB_L5_status/status = deferred-to-script-2 (recorded, not asserted); paper2 cites r83_l5cert for the number",
+   "fixed_by": "r83_sweep semantics: carrierset = genuine entries + adjudication mirrors, both history"
+  }
+ ],
+ "probe_side": 20,
+ "manuscript_side": 0,
+ "verdict": "ALL PROBE-SIDE \u2014 no manuscript-side issue was reclassified as probe-side; no threshold moved"
+}

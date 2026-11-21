@@ -1,0 +1,122 @@
+{
+ "reproduction_gate": {
+  "max_dev": 0.0,
+  "per_item": {
+   "L3_J0": 0.0,
+   "L3_J1": 0.0,
+   "L3_J2": 0.0,
+   "L3_J3": 0.0,
+   "L5_J0": 0.0,
+   "L5_J1": 0.0,
+   "L5_J2": 0.0,
+   "L5_J3": 0.0
+  },
+  "verdict": "PASS"
+ },
+ "closed_form": {
+  "3": {
+   "p": 1,
+   "q": 2,
+   "d": 7,
+   "dm": [
+    0.14285714285714285,
+    0.2857142857142857,
+    0.5714285714285714
+   ],
+   "floor": 0.023323615160349854,
+   "floor_frac": "8/343"
+  },
+  "5": {
+   "p": 4,
+   "q": 5,
+   "d": 61,
+   "dm": [
+    0.26229508196721313,
+    0.32786885245901637,
+    0.4098360655737705
+   ],
+   "floor": 0.03524524079107943,
+   "floor_frac": "8000/226981"
+  },
+  "7": {
+   "p": 13,
+   "q": 14,
+   "d": 547,
+   "dm": [
+    0.30895795246800734,
+    0.3327239488117002,
+    0.3583180987202925
+   ],
+   "floor": 0.036834279986359894,
+   "floor_frac": "6028568/163667323"
+  }
+ },
+ "gate_P3_L7": {
+  "dim_K7": 4,
+  "verdict": "PASS"
+ },
+ "L7_certification": {
+  "per_J": {
+   "0": {
+    "ker_out_of_64": 0,
+    "lambda_comp_min": 0.03683428,
+    "lambda_comp_max": 0.037242394
+   },
+   "1": {
+    "ker_out_of_64": 0,
+    "lambda_comp_min": 0.332115678,
+    "lambda_comp_max": 0.334550984
+   },
+   "2": {
+    "ker_out_of_64": 0,
+    "lambda_comp_min": 0.370366661,
+    "lambda_comp_max": 0.370372784
+   },
+   "3": {
+    "ker_out_of_64": 0,
+    "lambda_comp_min": 0.25783996,
+    "lambda_comp_max": 0.260681156
+   }
+  },
+  "triplet_mid_dm_by_M": {
+   "-1.0": [
+    0.308957952,
+    0.332723949,
+    0.358318099
+   ],
+   "-0.0": [
+    0.333113953,
+    0.333113953,
+    0.333772094
+   ]
+  }
+ },
+ "L7_adjudication": {
+  "dm_matches_closed_form_maxdev": 4.680073550922259e-10,
+  "dm_columns": {
+   "-1.0": [
+    0.308957952,
+    0.332723949,
+    0.358318099
+   ],
+   "-0.0": [
+    0.333113953,
+    0.333113953,
+    0.333772094
+   ]
+  },
+  "first_draft_helper_bug": "the (p,q) generator used (3^k-(-1)^k)/2, which for odd k>1 returns the LARGER pair member (k=3: 14,15 instead of 13,14; d=631 instead of 547) \u2014 caught by the machine run before any verdict was registered; corrected to lo=(3^k-1)/2",
+  "J0_floor_machine": 0.03683428,
+  "J0_floor_closed_form": 0.036834279986359894,
+  "J0_floor_dev": 1.3640102936030019e-11,
+  "J3_brackets_7_27": true,
+  "J3_halfwidths": [
+   0.0014192992592592657,
+   0.00142189674074078
+  ],
+  "ker_0_64_all_four": true,
+  "monotone_to_1_27": true,
+  "family_verdict": "CERTIFIED: the closed form (p, q, d) family holds at L = 3, 5, 7 \u2014 the J=0 floor is exactly (dm_mid)^3 at every odd length, monotone increasing to 1/27; the L=3 and L=5 machine rows upgrade to a single E4 identity family with a proved limit"
+ },
+ "elapsed_s": 79.58
+}

@@ -1,0 +1,36 @@
+{
+ "round": "r8.4",
+ "task": "PR-METRIC-2c re-execution (PR-METRIC-2b under the r8.3-declared spec)",
+ "common_space": "route (i): certified profile span; Phi_mu in R^6 from the K32 corner kernel (sites 0-5, bonds (0,1),(2,3),(4,5), registers {0,2,4}, stubs {1,3,5}, J=3-forbidden kernel)",
+ "k_normalization": "RAW default (K = <S^z_i S^z_j>); Pearson alongside; formulas beside every value",
+ "families": {
+  "F1_d_int": "path-infimum, edges -ln|K_raw(i,j)| (Theorem S2)",
+  "F2_d_chord": "||Phi_a - Phi_b|| on the profile image",
+  "F3_d_scaling": "-ln[det C(u,v)/(||u||^2||v||^2)] (Theorem A/B family)"
+ },
+ "outcome_space": [
+  "EQUAL",
+  "ENVELOPE",
+  "IMPOSSIBLE",
+  "SPEC-INCOMPLETE (now a real result \u2014 the sheet declares space + normalization)"
+ ],
+ "tolerance": {
+  "EQUAL rel tol": 0.01
+ },
+ "product_seed_guard": "separable classical product seed on the same 6 sites: M = 0 under BOTH normalizations (non-vacuous)",
+ "incircle_secondary": "EQUAL -> chord defect sub-additive; ENVELOPE -> sub-additive-strict; neither -> adjudicate from certified E_tripod without grade upgrade",
+ "reproduction_gates": {
+  "RG1": "K32 correlations reproduce r70_metric2.json <= 1e-6",
+  "RG2": "d_int/d_chord/d_scaling reproduce 3.6225122 / 1.168930314 / 0.00655857 <= 1e-6",
+  "RG3": "profile Gram a=0.632092823, b=-0.051106217 <= 1e-6"
+ },
+ "pre_declared_targets": {
+  "d_int": 3.6225122,
+  "d_chord": 1.168930314,
+  "d_scaling": 0.00655857,
+  "Gram_a": 0.632092823,
+  "Gram_b": -0.051106217
+ },
+ "sheet_frozen_before_executor": true,
+ "sheet_md5": "430a9ac267ae41347e6bfbd267ad27a2"
+}

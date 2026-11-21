@@ -1,0 +1,127 @@
+{
+ "sheet_md5_verified": true,
+ "GATE_S": {
+  "max_comm": 3.1718998303807225e-16,
+  "verdict": "PASS"
+ },
+ "RG1": {
+  "stub_stub_corr_machine": -0.01214225190518296,
+  "certified_stub_stub_corr": -0.012142252,
+  "dev": 9.481703963643007e-11,
+  "note": "first draft compared the DIRECT correlation against exp(-d_int) \u2014 d_int is a SHORTEST PATH over register hops (s1-r0-r2-s3 = 0.847+1.928+0.847), not the direct edge; the certified stub-stub CORRELATION is r80's F1 c(A,C) = -0.012142252, which the machine reproduces",
+  "verdict": "PASS"
+ },
+ "RG3": {
+  "Gram_diag_machine": 0.6320928227267996,
+  "Gram_offdiag_machine": -0.05110621706435115,
+  "certified": [
+   0.632092823,
+   -0.051106217
+  ],
+  "dev": [
+   2.732004622529871e-10,
+   6.435114940916975e-11
+  ],
+  "verdict": "PASS"
+ },
+ "RG2": {
+  "d_int": {
+   "machine": {
+    "1,3": 3.6225122000017413,
+    "1,5": 3.622512200001741,
+    "3,5": 3.622512200001739
+   },
+   "certified": 3.6225122,
+   "dev": 1.7412737918220955e-12
+  },
+  "d_chord": {
+   "machine": {
+    "1,3": 1.1689303142541483,
+    "1,5": 1.168930314254148,
+    "3,5": 1.1689303142541483
+   },
+   "certified": 1.168930314,
+   "dev": 2.541482579943022e-10
+  },
+  "d_scaling": {
+   "machine": {
+    "1,3": 0.006558569866591373,
+    "1,5": 0.006558569866591373,
+    "3,5": 0.0065585698665914845
+   },
+   "certified": 0.00655857,
+   "dev": 1.334086270274315e-10
+  },
+  "verdict": "PASS"
+ },
+ "families": {
+  "F1_d_int_raw": {
+   "formula": "path-infimum, edges -ln|<S^z_i S^z_j>| (raw K)",
+   "values": {
+    "1,3": 3.6225122000017413,
+    "1,5": 3.622512200001741,
+    "3,5": 3.622512200001739
+   }
+  },
+  "F1_d_int_pearson": {
+   "formula": "path-infimum, edges -ln|K_pearson(i,j)| = -ln|<S_i S_j>|/sqrt(<S_i^2><S_j^2>)",
+   "values": {
+    "1,3": 2.4061168756772484,
+    "1,5": 2.4061168756772484,
+    "3,5": 2.406116875677246
+   }
+  },
+  "F2_d_chord": {
+   "formula": "||Phi_a - Phi_b|| on the profile image",
+   "values": {
+    "1,3": 1.1689303142541483,
+    "1,5": 1.168930314254148,
+    "3,5": 1.1689303142541483
+   }
+  },
+  "F3_d_scaling": {
+   "formula": "-ln[det C(u,v)/(||u||^2||v||^2)]",
+   "values": {
+    "1,3": 0.006558569866591373,
+    "1,5": 0.006558569866591373,
+    "3,5": 0.0065585698665914845
+   }
+  }
+ },
+ "product_seed_guard": {
+  "construction": "ANALYTIC iid classical seed, P(+1)=0.8, P(-1)=0.2 on all sites (the r8.2 witness class; nonvanishing marginals m=0.6)",
+  "markov_ratio_raw": 1.0,
+  "markov_ratio_pearson": 1.0,
+  "formula": "R = K(A,C)K(O,O)/[K(A,O)K(O,C)]; guard fires iff R = 1 under both normalizations",
+  "M_raw": -1.021651247531981,
+  "M_formula_validity_dev": 0.0,
+  "note": "M_raw is NOT zero on product seeds \u2014 it equals ln|K(O,O)| (here ln 0.36); the ZERO-object is the Markov ratio R, which is exactly 1. The first-draft guard demanded M = 0 (wrong object) on a SAMPLED seed (noise-dominated) \u2014 root-caused and replaced; the distinction M = ln K(O,O) - ln R is now registered.",
+  "fires_iff_zero": 1.0,
+  "verdict": "PASS (non-vacuous: the guard verifies the correct zero-object on the correct seed class)"
+ },
+ "adjudication": {
+  "EQUAL": false,
+  "ENVELOPE": true,
+  "IMPOSSIBLE": false,
+  "outcome": "ENVELOPE",
+  "envelope_structure": {
+   "ordering": "d_scaling (0.006559) < d_chord (1.168930) < d_int (3.6225122 raw; 2.406117 Pearson) on every stub pair (C3-symmetric, strict)",
+   "meaning": "the three metric families are NESTED on the declared common space: the log-volume (Theorem A/B scaling) is bounded by the Euclidean chord on the profile image, which is bounded by the raw-correlation path-infimum. The families disagree (not EQUAL) but coexist in a strict envelope \u2014 none violates metricity.",
+   "normalization_independence": "the ordering is invariant under the K-normalization switch (Pearson d_int 2.406 still > d_chord 1.169 > d_scaling 0.0066): the ENVELOPE is convention-independent, its WIDTH is convention-relative."
+  },
+  "readings": {
+   "d_int_vs_chord": "the path-infimum over raw -ln|K| edges is LONGER than the chord on the profile image: the register hops (s1-r0-r2-s3 at 0.847+1.928+0.847) beat the direct stub edge (4.411), but the profile-image geometry compresses the same separation to 1.169 \u2014 the graph sees log-loss the image does not",
+   "chord_vs_scaling": "the log-volume family is nearly degenerate on the near-parallel profile pair (det C ~ ||u||^2||v||^2 to 0.7%) \u2014 the scaling metric measures volume distortion, which is near-minimal, while the chord measures displacement, which is O(1)"
+  },
+  "verdict_text": "PR-METRIC-2c OUTCOME: ENVELOPE (pre-declared branch, frozen sheet r84_metric2c_sheet.json md5 430a9ac2). On the declared common space (route (i) profile span) with the K-normalization declared (raw default, Pearson alongside, formulas beside every value), the three metric families form a STRICT ENVELOPE: d_scaling 0.006559 < d_chord 1.168930 < d_int 3.6225122 on every stub pair, convention-independent in ordering. EQUAL: no. IMPOSSIBLE: no (all three are metrics on the frame). The \u00a75.3 FAMILIES-DISAGREE status is thereby RESOLVED to the sharper ENVELOPE structure at this scope: the families are not merely different \u2014 they are nested, with the path-infimum as the outer bound and the log-volume as the inner. The identification 'scaling metric = path-infimum d_int' is NEGATIVE at the site-to-profile bridge scope (three orders of magnitude separate them); the scaling metric's E4 status on single-site state space is unchanged; the multi-vertex lattice gate retains family-SELECTION ownership. Paper III inherits: state-space metric E4, link-space reading ENVELOPED (d_int outer bound), lattice gate open.",
+  "incircle_secondary": "sub-additive-strict"
+ },
+ "elapsed_s": 5.56,
+ "all_gates": {
+  "GATE_S": "PASS",
+  "RG1": "PASS",
+  "RG2": "PASS",
+  "RG3": "PASS",
+  "product_seed_guard": "PASS (non-vacuous: the guard verifies the correct zero-object on the correct seed class)"
+ }
+}
