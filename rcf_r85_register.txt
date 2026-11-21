@@ -1,0 +1,159 @@
+==============================================================================
+REGISTER — r8.5: POST-AMENDMENT ROUND (TWO COMMITS). Contents: (1) the
+r8.4a micro-amendment (ENVELOPE downgrade, Paper I engine correction,
+count reconciliation); (2) the Scaling Metric certificate (the
+principal's formalization locked); (3) the pre-flight verification
+(two traps machine-confirmed, the auditor's pre-flight reproduced);
+(4) PR-LAT-1 — the minimal multi-vertex lattice gate — frozen sheet,
+executed, adjudicated. Paper II v1.1 stays sealed; the v1.2 §5
+relabel (g_cov rename + the Spatial Scaling Metric) rides with the
+NEXT content push per the bundling rule.
+==============================================================================
+
+1. THE r8.4a MICRO-AMENDMENT (rcf_r84a_amendment.txt)
+   (a) PR-METRIC-2c's ENVELOPE label DOWNGRADED to
+       POINT-ORDERED-AT-CORNER — register-level supersede, sealed
+       artifacts untouched. Three machine-verified grounds: the
+       C3-symmetric corner yields ONE measurement read three ways;
+       the ordering provably reverses near the boundary (d_scaling
+       -> +inf as det C -> 0 while d_chord <= 2 sqrt(2/3) = 1.632993;
+       the flip point sits at |b'|/a = 0.830241 vs the certified
+       interior 0.080853); the State-to-Space Bridge stays OPEN (E0)
+       entering Paper III. The three metrics enter PR-LAT-1 as
+       COMPETING CANDIDATES. What survives: the frozen-sheet
+       discipline, all gates, all family values, the
+       convention-independence of the order AT THIS POINT, the
+       Markov-ratio identity R = K(A,C)K(O,O)/[K(A,O)K(O,C)] with
+       M_raw = ln|K(O,O)| - ln R (bulk-1D check: K(O,O)=2/3, R=1/2,
+       M_raw = ln(4/3), M_Pearson = ln 2).
+   (b) PAPER I ENGINE ATTRIBUTION CORRECTED: main.pdf (31 pp) is
+       xdvipdfmx/LaTeX-built ("Creator: LaTeX with hyperref";
+       Appendix B: "every value is a generated macro (numbers.tex)").
+       The only ReportLab artifact in the corpus is the r5.0
+       re-baseline memo. The engine-deviation entry is REVERSED (no
+       deviation between Papers I and II); the re-typeset question
+       CLOSES.
+   (c) 22-vs-20 TRIAGED COUNT RECONCILED: the 2.7e-13/3.8e-15 pair =
+       two number-level sweep FAILs, ONE root-cause entry. Root
+       causes (20) is the authoritative count.
+
+2. THE SCALING METRIC CERTIFICATE (r85_scalemetric.py/.json)
+   The principal's formalization, machine-verified on the certified
+   K32 corner: S_ij = d_i d_j Gamma_ij with Gamma = b/a = -0.080853,
+   det Gamma = 0.979332, sqrt(det Gamma) = 0.989612:
+     - barycenter arm (d = 1.621134, half the certified via-center
+       3.242268): D_scale = 2.383511 (defect -0.858757 —
+       sub-additive), V_2 = 2.619471, V_3 = 4.216204 = 0.9896 d^3;
+     - ln 3 arm: D_scale = 1.615261, V_2 = 1.202998, V_3 = 1.312195;
+     - 1D collapse EXACT (D_scale -> -l0 ln|K| when one axis);
+     - unboundedness (no Fubini-Study pi/2 cap; infinite evaluation
+       preserved);
+     - metricity (Gamma PSD on independent axes -> triangle
+       inequality automatic);
+     - THE FUSION IDENTITY (two-level normalization, machine
+       dev < 1e-9): d_chord = sqrt(a) x sqrt(2(1-Gamma)) — the
+       certified 1.168930314 = 0.795043 x 1.470274; and the
+       scale-invariant ratio D_scale/d_chord = d_arm/sqrt(a) =
+       2.039053 (dev 7e-10). d_chord and D_scale multiply the SAME
+       directional geometry by different scalars — d_chord carried
+       direction+profile-amplitude, the raw -ln|K| carried only the
+       log, and S carries log + direction (amplitude normalized
+       out). The artificial three-way clash of PR-METRIC-2* is
+       resolved as a decomposition artifact.
+     - RENAMING registered: the 0.0066 object is g_cov (the internal
+       single-site state-frame/covariance metric; Theorems A/B E4
+       content INTACT — S=1 uniqueness via rank 8/8, infinite
+       evaluation, roundness). The Spatial Scaling Metric is
+       S_ij = d_i d_j Gamma_ij (D_scale + V_k = sqrt(det S^(k))).
+       Paper II v1.2 §5 relabel rides with the next content push.
+
+3. THE PRE-FLIGHT VERIFICATION (r85_preflight.py/.json)
+   - CELL A (C8 ring, N=8): ker = 1, gap 0.349849 — EXACT match to
+     the auditor's pre-flight; <Jx^2> = 0 (J=0 singlet). The
+     closed-loop law REPRODUCED: open (0,1) -0.444442 (auditor
+     0.444444), open (0,3) -0.049479 (their diag 0.049375),
+     closed-loop amplification 1.964x (theirs 2.003x), defect drop
+     -0.6732 (theirs -0.6674 ~ -ln 2). The plain ring IS their
+     construction; their diagonal pair is a (0,3)-type pair under
+     composite-vertex relabeling. PAIR LABELS differ, the physics
+     (ln-2-per-path) is the same — reconciled in the JSON.
+   - TRAP-2 (sqrt(2) tautology) CONFIRMED TWO WAYS: the auditor's
+     own triple satisfies G00 + 2G01 + G02 = 0 to 2.8e-17, and the
+     structural identity G00 - G02 = 2(G00 + G01) pins the staggered
+     ratio at sqrt(2) = 1.414213562 EXACTLY for EVERY C4-symmetric
+     J=0 singlet — the ratio carries NO dynamical information on a
+     single C4 ring. EXCLUDED as evidence in PR-LAT-1's frozen sheet.
+   - TRAP-1 (Néel inversion) CONFIRMED: adjacent corners anti-
+     aligned; unstaggered chord adj 1.1345 > chord diag 0.9874 —
+     adjacency inverted. (-1)^(x+y) staggering declared mandatory.
+   - MEMORY LESSON registered: dense 3^8 operators OOM-kill the
+     sandbox (688 MB per matrix); the sparse product-operator route
+     (each SS(i,j) has 3*3^N nonzeros) is the standard for N=8.
+     (The first pre-flight draft died to this; the consolidated
+     rerun uses sparse eigsh throughout.)
+
+4. PR-LAT-1 — THE MINIMAL MULTI-VERTEX LATTICE GATE
+   (r85_lat1_sheet.py/.json FROZEN, md5 895fd7d504c7bf5404bebd697a750404,
+   written and stamped BEFORE the executor; r85_lat1.py/.json executor;
+   sheet-md5 verified at load, mutation refused)
+   Cells: (A) the C8 closed plaquette + its open control (7 bonds);
+   (B) the 2-vertex 3D dumbbell (J=3-forbidden triples {0,1,2},
+   {3,4,5}, weld P2(1,3)). Guards frozen: G1 raw+Pearson formulas
+   beside values; G2 Néel staggering declared; G3 the C4-singlet
+   sqrt(2) tautology EXCLUDED; G4 Gate F standing; G5 No-Go VIII
+   z <= 2 verified per cell; G6 scale-invariant ratios only; G7
+   candidates = D_scale, d_int, d_chord_staggered (g_cov not a
+   candidate).
+   ALL REPRODUCTION GATES PASS: GATE_S; RGA1 (ker=1, gap 0.349849);
+   RGA2 (all four correlation anchors + J=0); RGB1 (dumbbell ker =
+   144 EXACT — the auditor's pre-flight reproduced in full).
+   T1 — CLOSED-LOOP TRANSPORT LAW: LAW-CONFIRMED. Drop = -0.6732 vs
+   -ln 2 = -0.6931; amplification 1.964x per parallel plaquette path;
+   THE DEFECT STAYS POSITIVE on a single plaquette (M_closed =
+   1.794 > 0) — the positive-defect fence holds; sub-additivity
+   needs >= 2 loops or 3D welding. Reading: one closed loop buys
+   exactly one factor of ~2 in the diagonal correlation (two
+   symmetric paths constructively adding), i.e. the raw
+   multiplicativity gap falls by ~ln 2 per added parallel path — the
+   first quantitative transport law on the E0 frontier.
+   T2 — NON-PLANARITY SURVIVAL: SURVIVES. lambda_A = 0.407049026
+   (EXACT match to the auditor's claimed 0.407049); vertex-A Gram
+   eigs [0.407049, 0.759618, 0.833333] strictly positive; full 6x6
+   rank 6/6; the weld breaks C3 -> C2 with the welded axis pairing
+     both free axes at -0.109845 vs the free-free pair -0.166667
+   (the auditor's split under the axis-relabel map: my weld site 1
+   = their x-axis; structure identical). 3D non-planarity survives
+   2-vertex welding — the frame does NOT flatten.
+   T3 — MULTI-PAIR FAMILY RATIOS: CANDIDATES-REPORTED (no nesting
+   assumed, per the r8.4a downgrade). d_int open-chain ratio 4.0
+   (1D linear); D_scale 1D-axis 4.0; d_chord_staggered 0.784
+   (sub-linear); the dumbbell's long/short d_int ratio = 1.5648 vs
+   Euclidean sqrt(2) = 1.4142: +10.6% — NOT-EUCLIDEAN by the frozen
+   10% threshold, recorded as NEAR-EUCLIDEAN-OVER (the first 3D
+   multi-vertex ratio measurement; whether the +10.6% excess
+   converges to 0 or persists is exactly what a 2x-larger cell
+   would decide). Closed-cell chord ratios EXCLUDED per G3.
+   NO E-GRADE UPGRADE: all results register as E0-frontier evidence
+   only; the spatial-interaction fence stays until a Paper-VI-grade
+   bridge. (Registered per the sheet's no-upgrade clause.)
+
+5. NEXT-ROUND MENU (in leverage order)
+   - PR-LAT-2: the 2x-larger lattice (16-site / 2-plaquette or the
+     12-register plaquette+stubs design from the audit) deciding
+     whether the dumbbell's +10.6% Euclidean excess converges; plus
+     a second closed loop testing the ln-2-per-path law at TWO
+     parallel paths (predicted: drop ~ -2 ln 2, defect approaching
+     0 from above).
+   - Paper II v1.2 content push: the §5 relabel (g_cov rename +
+     the Spatial Scaling Metric S_ij = d_i d_j Gamma_ij + the
+     fusion identity + the r8.4a downgrade line), bundling the
+     Paper I 5 sync patches (diptych lock) if desired.
+   - Paper III architecture (opens on the metric verdict: three
+     candidates, bridge OPEN E0, transport law on the frontier).
+
+Artifacts this round: rcf_r84a_amendment.txt, r85_scalemetric.py/
+.json, r85_preflight.py/.json, r85_lat1_sheet.py/.json (FROZEN),
+r85_lat1.py/.json, rcf_r85_register.txt (this file). TWO COMMITS:
+(1) the content bundle (amendment + certificates + sheet + gate),
+(2) this register.
+==============================================================================
