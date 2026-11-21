@@ -1,0 +1,167 @@
+{
+ "frame": {
+  "arms": 3,
+  "L_per_arm": 4,
+  "corner_Gram": [
+   0.632092823,
+   -0.051106217
+  ],
+  "Gamma_fine": -0.080852392
+ },
+ "depths": {
+  "1": {
+   "state_level": {
+    "end_correlation": -0.457531189,
+    "d": 0.781910223,
+    "D_scale": 1.149622045,
+    "V2": 0.609381979,
+    "V3": 0.473081054,
+    "defect": -0.414198401,
+    "Gamma_PSD": true,
+    "detGamma": 0.97933159
+   },
+   "metric_level": {
+    "K_metric": 0.428911761,
+    "d": 0.846504066,
+    "D_scale": 1.244592674,
+    "defect": -0.448415458
+   },
+   "state_vs_metric_d_gap": 0.064593843,
+   "tier_weights_fine": {
+    "scalar_k0": 0.044773614,
+    "dipole_k1": 0.197188055,
+    "quadrupole_k2": 0.75803833
+   },
+   "scalar_residual_after_n": 0.10438887
+  },
+  "2": {
+   "state_level": {
+    "end_correlation": -0.394368752,
+    "d": 0.93046889,
+    "D_scale": 1.368043947,
+    "V2": 0.86293789,
+    "V3": 0.797205805,
+    "defect": -0.492893832,
+    "Gamma_PSD": true,
+    "detGamma": 0.97933159
+   },
+   "metric_level": {
+    "K_metric": 0.216639231,
+    "d": 1.529521839,
+    "D_scale": 2.248815749,
+    "defect": -0.810227928
+   },
+   "state_vs_metric_d_gap": 0.599052949,
+   "tier_weights_fine": {
+    "scalar_k0": 0.044773614,
+    "dipole_k1": 0.197188055,
+    "quadrupole_k2": 0.75803833
+   },
+   "scalar_residual_after_n": 0.20667362
+  },
+  "3": {
+   "state_level": {
+    "end_correlation": -0.297528541,
+    "d": 1.212245122,
+    "D_scale": 1.782332135,
+    "V2": 1.464727095,
+    "V3": 1.762934667,
+    "defect": -0.64215811,
+    "Gamma_PSD": true,
+    "detGamma": 0.97933159
+   },
+   "metric_level": {
+    "K_metric": 0.131275198,
+    "d": 2.030459408,
+    "D_scale": 2.985331089,
+    "defect": -1.075587727
+   },
+   "state_vs_metric_d_gap": 0.818214286,
+   "tier_weights_fine": {
+    "scalar_k0": 0.044773614,
+    "dipole_k1": 0.197188055,
+    "quadrupole_k2": 0.75803833
+   },
+   "scalar_residual_after_n": 0.341066818
+  },
+  "4": {
+   "state_level": {
+    "end_correlation": -0.19773881,
+    "d": 1.62080826,
+    "D_scale": 2.383031776,
+    "V2": 2.618418782,
+    "V3": 4.213663071,
+    "defect": -0.858584745,
+    "Gamma_PSD": true,
+    "detGamma": 0.97933159
+   },
+   "metric_level": {
+    "K_metric": 0.093082839,
+    "d": 2.374265439,
+    "D_scale": 3.490820058,
+    "defect": -1.257710821
+   },
+   "state_vs_metric_d_gap": 0.753457179,
+   "tier_weights_fine": {
+    "scalar_k0": 0.044773614,
+    "dipole_k1": 0.197188055,
+    "quadrupole_k2": 0.75803833
+   },
+   "scalar_residual_after_n": 0.481008257
+  }
+ },
+ "tier_rates_r": [
+  1.0,
+  0.6666666666666666,
+  0.3333333333333333
+ ],
+ "tier_xi": [
+  Infinity,
+  2.4663034623764317,
+  0.9102392266268373
+ ],
+ "fine_reference": {
+  "end_correlation": -0.855052729,
+  "K_fine": 0.855052729,
+  "d_fine": 0.156592141,
+  "D_scale": 0.230233308,
+  "V2": 0.024440819,
+  "V3": 0.003799923,
+  "defect": -0.082950974
+ },
+ "gate_checks": {
+  "C1_metricity_Gamma_PSD": true,
+  "C2_subadditivity": true,
+  "C3_detGamma_positive": true,
+  "C4_state_metric_agreement_coarse": false,
+  "C5_scalar_residual_series": [
+   0.10438887,
+   0.20667362,
+   0.341066818,
+   0.481008257
+  ],
+  "C5_scalar_residual_full_depth": 0.481008257,
+  "gaps_by_depth": [
+   0.064593843,
+   0.599052949,
+   0.818214286,
+   0.753457179
+  ],
+  "K_state_by_depth": [
+   -0.457531189,
+   -0.394368752,
+   -0.297528541,
+   -0.19773881
+  ],
+  "K_state_ratios": [
+   0.86194944,
+   0.754442484,
+   0.664604509
+  ]
+ },
+ "verdict": {
+  "lemma": "T8 composed with S (Theorem-8 partial-trace block contraction on the Spatial Scaling Metric)",
+  "outcome": "PASS-IN-LIMITS (intermediate-depth state/metric anomaly: gaps [np.float64(0.064594), np.float64(0.599053), np.float64(0.818214), np.float64(0.753457)])",
+  "caveat": "single-junction frame (the certified r8.5 corner); multi-vertex gluing consistency remains PR-LAT-2's job; Gamma position-dependence requires the multi-plaquette substrate"
+ }
+}

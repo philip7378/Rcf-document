@@ -121,6 +121,52 @@ under the numbering the corpus already carries).
        diagnose before any verdict.
      INCONCLUSIVE — frame too small / depth range too narrow;
        scale up before verdict.
+     PASS-NON-RIEMANNIAN (added r9.1, BEFORE the run, so the gate
+       cannot silently assume Riemannianity — assuming the object
+       rather than testing it is the bug-history class): coherent at
+       every tested depth AND the residual causal-ordering structure
+       does not collapse into the metric — the r0 = 1 scalar channel
+       carries an irreducible long-range residue; Riemannianity of
+       the spatial slice is a limit, not an input. A real result, not
+       a failure.
+
+   THE RESULT (r9.1, EXECUTED — r90_lemmat8os.py/.json, the
+   canonical L = 6 frame; L = 4/5 sweep artifacts alongside):
+     VERDICT: PASS-IN-LIMITS.
+     - C1 metricity PASS (Gamma PSD, all depths);
+     - C2 sub-additivity PASS (defect negative at every depth:
+       -0.448, -0.538, -0.700, -0.930 — the convergence structure
+       survives the contraction);
+     - C3 det Gamma = 0.979331 > 0 PASS (no frame collapse);
+     - C4 THE REGISTERED ANOMALY: the state-level/metric-level gap is
+       0.006 at n = 1 (fine-limit agreement, essentially exact) but
+       PEAKS 0.717 at n = 3 and does NOT close at n = 4 (0.651). The
+       coarse limit of a 6-locality arm is not coarse enough for the
+       two compositions to re-meet. Machine diagnosis: the trace-1
+       renormalized coarse state retains MORE correlation than the
+       raw tier-rate operator decay predicts (state-level K ratios
+       0.844 / 0.736 / 0.648 per step vs the r1 = 2/3 dipole rate) —
+       the renormalization redistributes weight back into the
+       surviving channel. This is bookkeeping-vs-physical disagreement
+       at intermediate depth, exactly the class PASS-IN-LIMITS
+       exists to hold;
+     - C5 the scalar residual GROWS monotonically with depth
+       (0.0875 -> 0.1736 -> 0.2902 -> 0.4188), below the 0.5
+       PASS-NON-RIEMANNIAN threshold at full depth — but the L-sweep
+       (L4 0.481, L5 0.386, L6 0.419) shows the threshold siting is
+       frame-size-sensitive: the branch is LIVE but NOT declared on
+       this frame. PR-LAT-2's multi-plaquette substrate is where it
+       decides.
+     VERDICT STABILITY: L = 4 / 5 / 6 all return PASS-IN-LIMITS.
+     ENGINEERING NOTES (logged for the record): two implementation
+     defects were caught and fixed mid-run by the gate itself — a
+     row-major vec() corrupting the tier projectors (dims read
+     {0,2,5} instead of the certified 1/3/5) and a missing
+     metric-level renormalization; the 3^8 = 6561-dim L = 8 frame
+     exceeded memory (r90_lemmat8os_L8_INVALID.json notes the kill).
+     The fine end-correlation is L-sensitive at small L (-0.855 /
+     -0.874 / -0.825 for L = 4/5/6), the certified string-order
+     fixed point approached from below.
 
 4. THE FOUR PRE-ARCHITECTURE PINS (taken, with recommendations
    recorded as recommendations — the architecture sheet freezes
@@ -141,14 +187,71 @@ under the numbering the corpus already carries).
    DIMENSION WITNESS (0 = flat, > 0 = non-planar), NOT the
    curvature. The sheet that freezes PR-LAT-2 must name both
    roles.
-   PIN-4 (Riemannianity): a CLAIM, not an input — the third lemma
-   of the geometry paper (after T8*S and after Lorentzian
-   signature): the coarse-grained metric is Riemannian. If it
-   fails, the "smoothly curved" language collapses to a
-   non-Riemannian geometry, and that failure mode is registered
-   honestly.
+   PIN-4 (Riemannianity): SCOPED r9.1 — the claim is RIEMANNIANITY
+   OF THE SPATIAL SLICE (metricity of S_ij), NOT of the full
+   geometry. The full two-link structure (Jordan metric + Lie
+   causal order) is causal/Lorentzian in character, not
+   Riemannian; the slice's metricity is the third lemma of the
+   geometry paper (after T8*S and after Lorentzian signature). A
+   TORSION/NON-INTEGRABILITY BRANCH is added alongside: the
+   converse residual CAB - BAC is an integrability failure,
+   structurally the algebraic analogue of torsion; PR-T1b-2 already
+   measured a seed-dependent holonomy (E3-local), so the branch is a
+   live possibility, not a straw man. Graded E0 with a construction
+   path.
 
-5. THE FENCES, STATED FOR §1 OF WHATEVER PAPER OWNS THE BRIDGE
+6. THE SIGNATURE CONVERGENCE (registered r9.1, E4 consistency)
+   Three independent certified routes now converge on the same
+   opposition of signs:
+   (i) the r3.6 seed-Casimir identity  sum_q Lambda_q^2 =
+       -sum_q J_q^2 (with sum_q {J_q, Lambda_q} = 0) — the Jordan
+       and Lie halves carry OPPOSITE square signs, E4;
+   (ii) Type-Sign Coupling — the causal-chain vs spatial-antichain
+       type distinction (legacy proofs, upgrade still open);
+   (iii) the Jordan positivity cone det(x0 I + s.sigma) =
+        x0^2 - |s|^2 on H_2(C) (Tier-1, certified).
+   Three routes to the same (1,3)-type structure is a strong
+   consistency result. REGISTERED AS CONSISTENCY ONLY: promoting
+   any route to a SPACETIME Lorentzian metric still requires the
+   bridge and the boost (GAP-4.6.3 open).
+
+7. THE ATTRIBUTION RE-HOMINGS (r9.1, binding before drafting)
+   - ENTANGLEMENT is re-homed to the JORDAN/correlational link and
+     the kernel's valence-bond structure (the dark-mode theorem:
+     those coherences carry no population in any q channel).
+     Attributing entanglement to the causal (Lie) link is D7.
+   - LARGE-SCALE HOMOGENY is re-homed to AXIOM S5, the declared
+     conditional fifth primitive (v6.0 Primitive Ledger): shared
+     causal ancestry under the Initial Zero Condition is the
+     registered mechanism, NOT a derived result; Paper VII struck
+     the SU(n) transitivity D=3 argument for smuggling it.
+   - THE CAUSAL GENERATOR IS BOND-LOCAL (nearest-neighbour dipole;
+     finite propagation speed c = gamma l0, T-1; Lieb-Robinson).
+     What is global is the ORDER the local generator induces.
+     Superluminal signalling quarantined (Q-17); "shared causal
+     ancestry" language keeps Bell + relativistic causality intact.
+   - GLOBAL TIME: obstructed, not established (PR-T1b-2's weak
+     cocycle E3-local per-seed with seed-dependent holonomy).
+     Local time yes; global time is the open frontier — so "the
+     global arrow is the geometry paper's INPUT; the local
+     projection is what its signature section DERIVES."
+
+8. THE PAPER-III NAMING FIX (r9.1)
+   The r9.0 register line "Paper III stays the time paper" collides
+   with Paper II v1.2's own §4 (Emergent Time is a Paper II
+   deliverable). The honest statement: under the r4.13 split the
+   SERIES' time/cadence paper (Paper III) inherits Paper II's §4
+   arrow apparatus (kappa_OE, the strobe family, the tau-scan,
+   secular pinch) as its construction backbone; the geometry/
+   coarse-graining program this architecture governs is Paper VI
+   territory; the fields program is Paper VIII; continuum/
+   dimension is Paper VII. Any paper title that says "Fields,
+   Coarse-Graining, and Emergent Geometry" is describing Paper VI/
+   VIII content under a Paper III number and MUST declare the
+   renumbering before drafting — the architecture keeps the corpus
+   numbering as-is this round.
+
+9. THE FENCES, STATED FOR §1 OF WHATEVER PAPER OWNS THE BRIDGE
    - GAPPED-MASSLESS FENCE: r_1 = 2/3 < 1 and r_2 = 1/3 < 1 are
      strictly gapped in 1D — the raw contraction produces
      short-range (massive, screened) fields first. Whether 3D
@@ -165,17 +268,32 @@ under the numbering the corpus already carries).
      no grade upgrades ride on PR-LAT-2 without its own frozen
      sheet.
 
-6. EXECUTION ORDER (registered)
-   1. Lemma T8*S (the one computation above) — the go-word.
-   2. PR-LAT-2 frozen sheet (topology pins named; four branches;
-      plaquette holonomy as curvature object; lambda_A as dimension
-      witness; the coarse-graining sweep with the Theorem-8
-      contraction at increasing depth).
-   3. Only then: the architecture sheet for the paper that owns
+10. EXECUTION ORDER (AMENDED r9.1 — T8*S HAS RUN)
+   1. DONE (r9.1): Lemma T8*S — verdict PASS-IN-LIMITS (§3 above):
+      the anomaly and the live scalar-residual trend now condition
+      everything downstream. §3 of the geometry paper writes WITH
+      the declared intermediate-depth caveat; the caveat is a
+      result, not a defect of the write-up.
+   2. NEXT: PR-LAT-2 frozen sheet (topology pins named; four
+      branches; plaquette holonomy as the curvature object with
+      lambda_A as dimension witness; the Theorem-8 contraction
+      sweep at increasing depth on the MULTI-PLAQUETTE substrate —
+      where the C5 scalar-residual trend and the C4 anomaly get
+      their decisive frame: the single-junction arm could not
+      resolve either).
+   3. THEN: the §2 energy-emergence gate (the adjudication's
+      sequencing adopted: energy BEFORE Lorentzian signature
+      BEFORE dark matter), then the §5 Type-Sign projection lemma
+      (the burden-Hessian sign computation), then the §6 dark-
+      matter-as-burden-redistribution gate with the E0 fence and
+      the RET-B7 Yukawa-screening guardrail pinned.
+   4. LAST: the architecture sheet freeze for the paper that owns
       the bridge, under the corpus numbering (Paper VI territory
-      unless a renumbering is declared).
+      unless a renumbering is declared and its debts re-homed).
 
-Artifacts referenced: r85_lat1.json (the +10.6% baseline),
-r85_scalemetric.json (S_ij certificate), Paper I Theorems 4/7/8
-(sealed main.pdf), paper2.tex v1.2 (folded this round).
+Artifacts referenced: r90_lemmat8os.py/.json (the gate, canonical
+L = 6) + r90_lemmat8os_L4/L5.json (the frame-size sweep) +
+r90_lemmat8os_L8_INVALID.json (the memory-kill note), r85_lat1.json
+(the +10.6% baseline), r85_scalemetric.json (S_ij certificate),
+Paper I Theorems 4/7/8 (sealed main.pdf), paper2.tex v1.2.
 ==============================================================================

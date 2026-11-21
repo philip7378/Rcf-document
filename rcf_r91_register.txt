@@ -1,0 +1,108 @@
+==============================================================================
+REGISTER — r9.1: LEMMA T8∘S EXECUTED + THE FOUR-POINT ADJUDICATION
+FOLDED INTO THE ARCHITECTURE (ONE COMMIT).
+==============================================================================
+
+1. THE GATE RAN — VERDICT: PASS-IN-LIMITS (r90_lemmat8os.py/.json)
+   The r9.0 architecture's first gate, on the certified r8.5 corner
+   frame (3 arms x L = 6 spin-1 localities, AKLT ground sector, the
+   Theorem-8 tier contraction r = (1, 2/3, 1/3) applied at depths
+   n = 1..4, state-level primary + metric-level consistency):
+   - C1 metricity PASS: Gamma PSD at every depth (the spatial-slice
+     metric candidate stays valid under the contraction);
+   - C2 sub-additivity PASS: defect negative at every depth (-0.448 /
+     -0.538 / -0.700 / -0.930) — the Euclidean-style convergence
+     structure survives;
+   - C3 det Gamma = 0.979331 > 0 PASS: no frame collapse;
+   - C4 THE REGISTERED ANOMALY: state-vs-metric gap 0.006 at n = 1
+     (fine-limit agreement, essentially exact) but PEAKS 0.717 at
+     n = 3 and does NOT close at n = 4 (0.651). Machine diagnosis:
+     the trace-1 renormalized coarse state retains MORE correlation
+     than the raw tier-rate operator decay predicts (state K ratios
+     0.844 / 0.736 / 0.648 per step vs r1 = 2/3) — the
+     renormalization redistributes weight back into the surviving
+     channel. Bookkeeping-vs-physical disagreement at intermediate
+     depth: exactly the class PASS-IN-LIMITS exists to hold. The
+     verdict is honest — no grade upgrade, the caveat is a result.
+   - C5 the scalar residual GROWS monotonically (0.0875 -> 0.1736 ->
+     0.2902 -> 0.4188), below the 0.5 PASS-NON-RIEMANNIAN threshold
+     at full depth; the L-sweep (L4 0.481 / L5 0.386 / L6 0.419)
+     shows the threshold siting is frame-size-sensitive — the branch
+     is LIVE but NOT declared on this frame; PR-LAT-2's
+     multi-plaquette substrate decides it.
+   VERDICT STABILITY: L = 4 / 5 / 6 all return PASS-IN-LIMITS.
+   ENGINEERING LOG: two implementation defects caught and fixed
+   mid-run by the gate's own checks (a row-major vec() corrupting
+   the tier projectors — dims read {0,2,5} instead of the certified
+   1/3/5; and a missing metric-level renormalization); the L = 8
+   frame (3^8 = 6561-dim eigh) exceeded memory — the kill is noted
+   in r90_lemmat8os_L8_INVALID.json. The fine end-correlation is
+   L-sensitive at small L (-0.855 / -0.874 / -0.825), approaching
+   the certified string-order fixed point from below.
+
+2. THE FIVE-OUTCOME AMENDMENT LANDED BEFORE THE RUN
+   PASS-NON-RIEMANNIAN was added to the frozen outcome space BEFORE
+   execution (the three-way adjudication's demand), so the gate
+   could not silently assume Riemannianity and call the result
+   PASS — assuming the object rather than testing it is the
+   bug-history class. On this frame it did not fire (residual
+   0.4188 < 0.5) but stays live into PR-LAT-2.
+
+3. THE FOUR-POINT ADJUDICATION FOLDED INTO THE ARCHITECTURE
+   (rcf_r90_architecture.txt, sections 6-8 new, 9-10 renumbered):
+   - THREE-ROUTE SIGNATURE CONVERGENCE registered (E4 consistency
+     only): the r3.6 identity sum Lambda^2 = -sum J^2 (with the
+     orthogonality {J, Lambda} = 0), Type-Sign Coupling, and the
+     Jordan cone det = x0^2 - |s|^2 — three independent routes to
+     the same (1,3)-type opposition; promotion to a SPACETIME
+     Lorentzian metric still needs the bridge and the boost
+     (GAP-4.6.3 open).
+   - THE ATTRIBUTION RE-HOMINGS: entanglement -> the
+     Jordan/correlational link and the kernel's valence-bond
+     structure (attributing it to the causal link is D7);
+     large-scale homogeneity -> AXIOM S5, declared, not derived;
+     the causal generator is BOND-LOCAL (finite speed, T-1;
+     what is global is the ORDER it induces); global time is
+     OBSTRUCTED, not established (the local-projection statement
+     adopted: "the global arrow is the geometry paper's input;
+     the local projection is what its signature section derives").
+   - PAPER-III NAMING FIXED: "Paper III stays the time paper"
+     collided with Paper II v1.2's own §4 Emergent Time — the
+     honest statement is that the series' Paper III inherits
+     Paper II's arrow apparatus as its backbone; the
+     fields/coarse-graining/geometry program this architecture
+     governs is Paper VI / VIII / VII territory; any title
+     carrying "Fields, Coarse-Graining, and Emergent Geometry"
+     under a Paper III number must DECLARE the renumbering before
+     drafting. Corpus numbering kept as-is this round.
+   - PIN-4 SCOPED: Riemannianity is claimed for the SPATIAL SLICE
+     only (the full two-link geometry is causal/Lorentzian in
+     character); a TORSION/NON-INTEGRABILITY branch added (the
+     CAB-BAC residual as algebraic torsion; PR-T1b-2's measured
+     holonomy makes it live, not straw; E0 with a construction
+     path).
+   - THE ADJUDICATION'S SEQUENCING ADOPTED for the owning paper:
+     energy-emergence gate BEFORE the Lorentzian-signature gate
+     BEFORE the dark-matter gate, each with its frozen outcome
+     space (EMERGES-STANDARD / EMERGES-MODIFIED /
+     DOES-NOT-EMERGE for energy; DERIVED / DERIVED-SCOPED /
+     RESTATED-NOT-DERIVED for Type-Sign; the E0 + RET-B7
+     Yukawa-screening guardrail for dark matter).
+
+4. NEXT (execution order, amended now that the gate has run)
+   PR-LAT-2's frozen sheet is the next computation — the
+   multi-plaquette substrate where the C4 anomaly and the C5
+   scalar-residual trend get their decisive frame (the
+   single-junction arm could not resolve either); the topology
+   pins (2 loops in series -> -2 ln 2; 3 parallel -> -ln 3) named
+   before freeze.
+
+Artifacts this round: r90_lemmat8os.py, r90_lemmat8os.json (the
+canonical L = 6 certificate), r90_lemmat8os_L4.json,
+r90_lemmat8os_L5.json (frame-size sweep),
+r90_lemmat8os_L8_INVALID.json (the memory-kill note),
+rcf_r90_architecture.txt (amended sections 3/4/6/7/8/10),
+rcf_r9_register.txt -> superseded by rcf_r91_register.txt (this
+file). ONE COMMIT: the gate artifacts + the amended architecture +
+this register.
+==============================================================================
