@@ -1,0 +1,276 @@
+{
+ "gate_V": {
+  "vec_convention": "column-major",
+  "super_vs_direct_dev": 2.1328493919268307e-15,
+  "kron_identity_dev": 1.4825219231211098e-15,
+  "verdict": "PASS"
+ },
+ "r92_as_executed": {
+  "domino_edges": [
+   [
+    0,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    4,
+    5
+   ],
+   [
+    5,
+    0
+   ]
+  ],
+  "domino_actual_topology": "single 6-ring C6 (1 loop), NOT a domino",
+  "fig8_edges": [
+   [
+    0,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    0
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    4,
+    5
+   ],
+   [
+    5,
+    6
+   ],
+   [
+    6,
+    3
+   ]
+  ],
+  "fig8_actual_topology": "triangle (0,1,2) + 6-cycle (2,3,4,5,6)",
+  "euler_check": "6 sites z<=2 => |E|<=6 => loops<=1: a 2-loop domino at z<=2 is impossible (the audit's Euler catch CONFIRMED)"
+ },
+ "true_domino": {
+  "cell": "TRUE domino (6 sites, 7 edges, shared rung (1,4))",
+  "N": 6,
+  "edges": [
+   [
+    0,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    3,
+    0
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    4,
+    5
+   ],
+   [
+    5,
+    2
+   ]
+  ],
+  "edge_count": 7,
+  "independent_loops": 2,
+  "z_max": 3,
+  "lambda0": 0.264543,
+  "lambda0_mult": 1,
+  "ker_dim": 1,
+  "no_go_VIII": "z>=3 => ker empty",
+  "u,v,m": [
+   0,
+   3,
+   1
+  ],
+  "paths_declared": 3,
+  "c_uv": -0.505418,
+  "c_um": -0.44318,
+  "c_mv": 0.284064,
+  "M_gap": -1.389968,
+  "prediction_-ln(count)": -1.098612,
+  "undershoot_pct": -26.5
+ },
+ "true_domino_K": {
+  "K_plaq": {
+   "plaqA_edges": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     3,
+     0
+    ]
+   ],
+   "plaqB_edges": [
+    [
+     1,
+     4
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     5,
+     2
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "plaqA_F_norm": 72.0,
+   "plaqB_F_norm": 72.0,
+   "dimnorm_A": 2.666667,
+   "dimnorm_B": 2.666667,
+   "C4_dimnorm_anchor": 2.666667,
+   "expectation_A": 0.0,
+   "expectation_B": 0.0
+  },
+  "cross_plaquette": {
+   "commutator_KA_KB_F_norm": 206.455806,
+   "commutator_dimnorm": 7.646511,
+   "rung_vs_remote_edge_commutator": 0.0,
+   "rung_vs_remote_edge_commutator2": 0.0,
+   "note": "the shared rung (1,4) makes the two plaquettes NON-spectator: the cross commutator [K_A,K_B] is the genuine multi-plaquette signal; on the r9.2 C6 ring this object was structurally absent"
+  }
+ },
+ "true_fig8": {
+  "cell": "TRUE fig-8 (7 sites, 8 edges, two C4 sharing vertex 3)",
+  "N": 7,
+  "edges": [
+   [
+    0,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    3,
+    0
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    4,
+    5
+   ],
+   [
+    5,
+    6
+   ],
+   [
+    6,
+    3
+   ]
+  ],
+  "edge_count": 8,
+  "independent_loops": 2,
+  "z_max": 4,
+  "lambda0": 0.424354,
+  "lambda0_mult": 3,
+  "ker_dim": 3,
+  "no_go_VIII": "z>=3 => ker empty",
+  "u,v,m": [
+   0,
+   6,
+   3
+  ],
+  "paths_declared": 4,
+  "c_uv": 0.24812,
+  "c_um": -0.384256,
+  "c_mv": -0.384256,
+  "M_gap": -0.519053,
+  "prediction_-ln(count)": -1.386294,
+  "undershoot_pct": 62.6
+ },
+ "erratum_r92a": {
+  "bug_12a": "the r9.2 'domino' was the single ring C6: every domino-branded number in r92_lat2.json (M_gap -0.291941, K_plaq 72/27, the Gamma-frame degeneracy reading, the ker=1 'survivor' claim) belongs to the 1-loop ring cell, not a 2-loop domino",
+  "bug_12b": "the r9.2 'fig-8' was a triangle + 6-cycle, not two squares sharing a vertex",
+  "bug_12c": "the 8/3 'exact identity' is spectator tensor scaling: K_4 (x) 1_{3^{N-4}} gives ||K||_F/sqrt(3^N) = 24/9 = 8/3 identically by tensor-product arithmetic \u2014 NOT a multi-plaquette cancellation law. The TRUE domino's non-spectator K_plaq is computed here fresh.",
+  "consequence_for_verdicts": {
+   "M_gap_domino_C6_ring": "-0.291941 (ring value; the true domino value reported fresh here)",
+   "M_gap_fig8_wrong_cell": "-0.684022 (triangle+hexagon value)",
+   "K_plaq_8/3": "SPECTATOR ARTIFACT (identity vacuous as a multi-plaquette law)",
+   "four_branch_verdict": "the branch-B PROVISIONAL verdict is VOID \u2014 its substrate was C6, not the domino; re-decide on the true cells",
+   "domino_ker_survivor_claim": "CORRECT for C6 only; the TRUE domino has z=3 and No-Go VIII applies (ker empty, lambda_0 0.264543 expected)"
+  }
+ },
+ "true_cell_readings": {
+  "principal_numbers_confirmed": {
+   "domino_lambda0": 0.264543,
+   "domino_mult": 1,
+   "fig8_lambda0": 0.424354,
+   "fig8_mult": 3,
+   "note": "the audit's Euler/No-Go VIII catch and both pre-flight table values are CONFIRMED exactly by the machine; the r9.2 values (0/1 and 0.3765/1) were the WRONG CELLS' values"
+  },
+  "path_law_status": {
+   "true_domino_M_gap": -1.389968,
+   "pred_-ln3": -1.098612,
+   "overshoot_pct": 26.5,
+   "true_fig8_M_gap": -0.519053,
+   "pred_-2ln2": -1.386294,
+   "undershoot_pct": 62.6,
+   "C4_undershoot_pct": 66.7,
+   "verdict": "the law now OVERSHOOTS on the true domino and UNDERSHOOTS on C4 and the true fig-8: it is neither an upper nor a lower bound quantitatively. LAW-ORDERING only (sign + the monotone-in-count trend); every quantitative reading of -ln(count) is REFUTED. The r9.2 LAW-BOUND label is amended to LAW-ORDERING."
+  },
+  "kplaq_status": {
+   "per_plaquette_dimnorm_8/3": "STILL 8/3 on the true domino (72/27) \u2014 but each 4-site plaquette acts on 4 of 6 sites with 2 spectators either way: the dim-norm 8/3 is the 4-site plaquette value, spectator or not. As a multi-plaquette law it is VACUOUS (the audit's spectator-scaling catch CONFIRMED)",
+   "cross_plaquette_commutator_F": 206.455806,
+   "cross_dimnorm": 7.646511,
+   "rung_vs_remote_commutator": 0.0,
+   "genuine_signal": "the TRUE domino's cross-plaquette commutator [K_A,K_B] is NONZERO (dim-norm 7.646511): two plaquettes sharing a rung carry a nonvanishing cross-plaquette holonomy, and it receives contributions ONLY from the corner-current overlaps at the shared sites (the rung commutes exactly with the remote edges). THIS is the multi-plaquette curvature signal the r9.2 C6 ring was structurally incapable of producing."
+  },
+  "branch_B_status": "VOID as seated (substrate was C6); the true domino's cross-plaquette signal is the new branch-B evidence class, to be decided on the 3-axis cell"
+ }
+}

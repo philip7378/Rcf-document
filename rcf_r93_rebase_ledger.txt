@@ -1,0 +1,131 @@
+==============================================================================
+EQUATION RE-BASE LEDGER — r9.3 (binding on Paper III drafting; every
+field equation enters re-based or cut, per the provenance audit).
+==============================================================================
+
+0. STATUS OF THIS LEDGER
+   The audit's Buckets A/B are adopted with the r9.3 machine results
+   folded in. Every STALE/INCOMPLETE equation below names its
+   replacement object and its re-derivation gate. NOTHING here is a
+   silent relabeling: where the machine refuted a proposed form, the
+   refutation is registered and the form is NOT carried into Paper III.
+
+1. THE FIVE UPGRADES (Bucket A — the equations Paper III+ actually
+   runs on)
+
+   U1 — RELATIONAL SPENDING EVOLUTION (replaces every dρ/dt):
+     dρ/dτ_glob = (1/(γ⟨M̂⟩))(−i[H,ρ] + γD_cov3(ρ))
+     dτ_b/dτ_b' = M_b(ρ)/M_b'(ρ)
+     Zero external t. Freezes automatically on K_N (dτ_glob = 0).
+     The local clock ratio is the only time object in field
+     equations; κ_past is REF (r3.7 band is not τ-independent) and is
+     not used. GATE: none needed beyond Paper II §4's certified
+     τ-linear rate s_mean/τ → G_H/(2M̄) and the E3-per-seed local
+     clock — both E4.
+
+   U2 — 3D COMPOSITE-VERTEX ENERGY (replaces H_XXX as the field-level
+   Hamiltonian):
+     H_3D = Σ_{e∈E} h_e + Σ_{v∈V} H_vtx^(v)
+     h_e = S_i.S_j (intact bonds), H_vtx = ½(J_vtx² − 6·1) per the
+     Paper II §3.3 form (the r53c/r61 vertex realization
+     S_0.S_2 + S_2.S_4 + S_4.S_0 is the 3-arm corner instance).
+     FIRST-LAW STATUS (r9.3 machine, binding):
+       (i) per-bond: D_b†(h_b) = −1·P_b^(2) EXACTLY (residual
+           3.4e−14) with the certified jump normalization
+           L_{b,q} = (1/√2)(1−P2)X_q P2, L†L = P2. The thread-cited
+           −2P2 rate is a REGISTERED FACTOR-2 DISCREPANCY — resolve
+           against Paper I Eq (6)'s stated normalization before any
+           rate is quoted in Paper III. Do not silently normalize.
+       (ii) vertex: the proposed closed current identity
+           D†(H_3D) = −2ΣP2 + Σ i[H_vtx, h_ea] is REFUTED in both
+           signs and all coefficients (scan 0.5/1/1.5/2; min residual
+           75.99 against F-norms 61.89/88.18). D†(H_vtx) has ZERO
+           diagonal content in every arm J-sector: it is purely
+           OFF-DIAGONAL inter-tier coherence exchange. The
+           vertex-branched continuity law must be DERIVED from the
+           off-diagonal sector map (P0↔P1↔P2 coherences per arm),
+           and that derivation is a NAMED PRE-GATE of the §2 energy
+           gate.
+       (iii) the corner currents i[H_vtx, h_ea] exist as operators
+           (F-norm 50.912 each, trace-free, equal on the three arms
+           by corner symmetry) — they are REAL objects; what is
+           refuted is their status as the closing term of a bond-
+           sector balance.
+
+   U3 — OPERATOR-LEVEL COARSE-GRAINING (replaces the trace-1 state
+   map of r9.1/r9.2):
+     Paper I Theorem 8 applied strictly at the operator/bond-channel
+     level: E(T^(k)) = r_k T^(k), r = (1, 2/3, 1/3) — no trace-1
+     state renormalization anywhere (the r9.1/r9.2 artifacts — the
+     ln-9 floor, the |+1,+1⟩ aligned-block fixed point — were both
+     created by the state-level trace-1 convention; both are now
+     machine-registered). The 3D extension (vertex + plaquette
+     renormalization of the 1D rates) is the open derivation; m2/m1
+     = 2.7095 is cited only as the 1D value it is.
+
+   U4 — F1–F4 FIELD EQUATIONS REBUILD SPEC (r4.13 §10 is
+   PROVENANCE-STALE, all 1D; the rebuild target):
+     F1' three-component vector currents J⃗(x⃗) on the link arena;
+     F2' 3D continuity ∂_τ M + ∇·J⃗ (τ = the U1 relational clock,
+     never t);
+     F3' Yukawa/screened propagators on the Spatial Scaling Metric
+     (D_scale primary; d_int its path-integral; d_chord its
+     directional factor — the resolved decomposition, not rivals);
+     F4' 2D interface surfaces inside 3D space.
+     The old F1 (1D N=3,4 tests), F2 (1D r_k^n exponentials), F3
+     (1D scalar line current), F4 (1D bi-cone wall) are CUT as
+     field-level equations; their only surviving role is as 1D
+     consistency checks cited in an appendix.
+
+   U5 — 3D CLUSTER BURDEN HALO (re-runs the +84.4%/+32.9% finding):
+     The 1D 4-site chain proof-of-concept is INCOMPLETE for 3D
+     clusters; the re-run target is a 3D composite-vertex cluster
+     (isotropic halo formation around a tightly bound 3D vertex
+     cluster). GATE: after U2's sector-map derivation (the halo rides
+     the vertex coupling).
+
+2. THE r4.13 TIME-DEBT RE-HOMING LEDGER (the renumbering pin — no
+   debt vanishes)
+   The Active Series Map (r9.2 §12) renumbered the sequence; the
+   staged time debts were addressed to the OLD Paper III. Each debt's
+   destination:
+     κ_OE (open-expansion rate constant) → Paper II §4 (the certified
+       τ-scan/strobe family owns it).
+     Slow modes / secular-pinch mechanism → Paper II §4 (E3-per-seed
+       local clock evidence) with the pinch's field-level role, if
+       any, going to Paper III §5+.
+     Strobe family / τ-scan → Paper II §4 (already sealed there).
+     H_eff = H − (i/2)M̂ → Paper III §2 (the energy gate's U2 form
+       cites it as the generator object).
+     Γ_b (spending increments dτ_b = Γ_b dt) → SUPERSEDED by U1's
+       parameter-free dτ_b/dτ_b' ratio: the dt-bearing form is cut;
+       any surviving content is the ratio form only.
+     The Def 3.5 canonical channel → UNKNOWN (audit §2): resolve its
+       provenance before Paper III cites it.
+   ORPHANS: none so far; the ledger is checked again at §1 drafting.
+
+3. WHAT PAPER III CARRIES FORWARD, SUMMARIZED
+   The CLEAN pillar: Theorem II.1, No-Go VII/VIII/VIIIb + All-Odd-L,
+   the scaling-metric family + fusion identity, Theorems A/B, the
+   trace split, the r9.3 cross-plaquette commutator signal
+   (dim-norm 7.6465 ≠ 0 on the true domino — the first genuine
+   multi-plaquette curvature object; the C6 ring was structurally
+   incapable of producing it).
+   The re-derivation queue (gates before §2/§5/§6 drafting): U2's
+   off-diagonal sector map (§2 pre-gate), Two-Link directional
+   asymmetry (§5), burden re-base on M̂ = ΣP⁽²⁾ (§6 — object
+   staleness: the legacy B is a different operator; this is
+   re-deriving the source term).
+   The Einstein closure is declared formally OPEN unless §6's
+   re-derivation lands it; Λ_B = 0 and ρ_DE ~ (H/Γ)² are cut as
+   predictions (GAP-6.2.2 unexecuted leg).
+
+4. STANDING LAWS IN FORCE (carried)
+   Gate V (direct-anchor form — r9.3 amendment: test against
+   direct matrix-product evaluation, never an asserted identity).
+   The witness rule (det Γ / λ_A measured on the welded state, never
+   carried forward). The log-integer heuristic (suspect
+   normalization first). LAW-ORDERING (the path-count law's
+   quantitative content is refuted in both directions — the true
+   domino overshoots 26.5% while C4/fig-8 undershoot 67%/63%).
+==============================================================================

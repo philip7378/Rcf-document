@@ -1,0 +1,97 @@
+{
+ "gate_V": {
+  "vec_convention": "column-major",
+  "super_vs_direct_dev": 2.1328493919268307e-15,
+  "kron_identity_dev": 1.4825219231211098e-15,
+  "verdict": "PASS"
+ },
+ "per_bond_first_law": [
+  {
+   "bond": [
+    0,
+    1
+   ],
+   "D_adj_h_minus_-2P2": 20.124611797498087,
+   "D_adj_h_plus_-1P2": 1.201120730893088e-14,
+   "sumLdL_minus_P2": 8.11754504078928e-15,
+   "verdict": "PASS (rate -1*P2; the -2 citation is the registered factor-2 discrepancy)"
+  },
+  {
+   "bond": [
+    2,
+    3
+   ],
+   "D_adj_h_minus_-2P2": 20.12461179749811,
+   "D_adj_h_plus_-1P2": 1.3062942798643043e-14,
+   "sumLdL_minus_P2": 9.520445652107355e-15,
+   "verdict": "PASS (rate -1*P2; the -2 citation is the registered factor-2 discrepancy)"
+  },
+  {
+   "bond": [
+    4,
+    5
+   ],
+   "D_adj_h_minus_-2P2": 20.124611797498083,
+   "D_adj_h_plus_-1P2": 1.33143470191044e-14,
+   "sumLdL_minus_P2": 9.893139998494098e-15,
+   "verdict": "PASS (rate -1*P2; the -2 citation is the registered factor-2 discrepancy)"
+  }
+ ],
+ "corner_currents": {
+  "0,1": {
+   "F_norm": 50.911688245,
+   "trace": 0.0,
+   "hermitian": "yes (i[H,.] of two Hermitian ops is anti-Hermitian; J as defined is Hermitian iff [H_vtx,h_ea] is anti-Hermitian \u2014 it is)"
+  },
+  "2,3": {
+   "F_norm": 50.911688245,
+   "trace": 0.0,
+   "hermitian": "yes (i[H,.] of two Hermitian ops is anti-Hermitian; J as defined is Hermitian iff [H_vtx,h_ea] is anti-Hermitian \u2014 it is)"
+  },
+  "4,5": {
+   "F_norm": 50.911688245,
+   "trace": 0.0,
+   "hermitian": "yes (i[H,.] of two Hermitian ops is anti-Hermitian; J as defined is Hermitian iff [H_vtx,h_ea] is anti-Hermitian \u2014 it is)"
+  }
+ },
+ "first_law_full": {
+  "lhs_D_edges_H3D_minus_rhs_plus": 152.51762193267976,
+  "lhs_minus_rhs_minus": 152.51762193267976,
+  "per_bond_exact": {
+   "identity": "D\u2020(SS_b) = -1 * P2_bond EXACTLY (L\u2020L=P2 jumps)",
+   "residual_F": 3.4394881318936165e-14,
+   "coefficient_discrepancy": "the thread-cited rate D\u2020(h_b) = -2P2 is a FACTOR-2 DISCREPANCY vs the machine value on this jump normalization; registered for resolution against Paper I Eq (6) \u2014 NOT silently normalized"
+  },
+  "vertex_part": {
+   "F_norm": 61.892043,
+   "Jsum_F_norm": 88.181631,
+   "sector_block_traces": {
+    "(0,1)J0": 0.0,
+    "(0,1)J1": 0.0,
+    "(0,1)J2": 0.0,
+    "(2,3)J0": -0.0,
+    "(2,3)J1": 0.0,
+    "(2,3)J2": -0.0,
+    "(4,5)J0": 0.0,
+    "(4,5)J1": 0.0,
+    "(4,5)J2": -0.0
+   },
+   "structure": "D\u2020(H_vtx) has ZERO diagonal content in every arm J-sector: it is purely OFF-DIAGONAL inter-tier coherence exchange",
+   "coefficient_scan": {
+    "0.5": 75.99,
+    "1": 107.73,
+    "1.5": 146.04,
+    "2": 186.91
+   }
+  },
+  "verdict": "REFUTED as a closed bond-sector identity: the proposed D\u2020(H_3D) = -2\u03a3P2 + \u03a3i[H_vtx,h_ea] fails in both signs and all scanned coefficients; the vertex exchange is inter-tier coherence exchange, not a J=2-sector current. The honest object for the vertex-branched continuity is the OFF-DIAGONAL sector map, to be derived before any energy gate runs on it."
+ },
+ "trace_identity": {
+  "ground_dim": 64,
+  "Tr_rho_D_H3D": 0.0,
+  "-2_Tr_rho_P2sum": -0.0,
+  "Tr_rho_Jsum": 0.0,
+  "residual_plus": 0.0,
+  "residual_minus": 0.0
+ }
+}

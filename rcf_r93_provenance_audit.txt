@@ -1,0 +1,191 @@
+==============================================================================
+PROVENANCE AUDIT REGISTER — r9.3 (the retroactive audit; frozen BEFORE
+classification; the r9.2 forward rule now bidirectional).
+==============================================================================
+
+0. THE RULE (amended, bidirectional)
+   r9.2 registered: "every field equation entering Paper III must be
+   re-derived on Paper II v1.2's upgraded apparatus — anything still
+   riding a legacy underived time postulate is PROVENANCE-STALE."
+   r9.3 extends it RETROACTIVELY to equations already built in
+   r5.1b–r9.2, in BOTH directions:
+     forward: equation -> dependencies (the easy direction);
+     backward: struck dependency -> every equation COMPUTING it,
+     including equations that never cite it explicitly (the 0.246717
+     lesson: check what computes a quantity, not what mentions it).
+   The remedy column is BINDING: an equation that requires
+   re-derivation is STALE regardless of re-derivation cost. No silent
+   re-classification of STALE to REVISABLE because the fix is
+   expensive.
+
+1. THE FIVE CONTAMINATION MODES (classification axes)
+   Mode 1 — UNDERIVED TIME. Any equation using physical t as a
+     coordinate without deriving it from (a) the RP Lyapunov
+     parameter (global arrow, Paper II §4) or (b) the local clock
+     (Paper II §4's E3-per-seed finding). Examples: dρ/dt in the RP
+     flow, exp(−γ(f_i−f_j)²t) dephasing, dτ = α(B)dσ lapse, any t in
+     a field equation.
+   Mode 2 — 1D-ONLY LOG. Any equation using −ln|K| additively across a
+     junction, or treating the 1D log as the spatial distance, without
+     declaring WHICH object: the kernel correlation decays as (1/3)^n
+     (base 1/3) while Paper I Theorem 8's channel rate is 2/3 — the
+     r6.2 T4 ambiguity. Every scaling-metric d_i must declare its
+     object.
+   Mode 3 — LEGACY NAMING/STRUCTURE. SOE/MOE (renamed Open Expansion/
+     Open Extension), Tier 1/2 (Lie/Jordan), Master-Zero (F̂_MM),
+     "10-section" (merged to 8), Gen-3 Three-Layer (L→Q→C→Q' spine).
+     Naming-stale at minimum; possibly structurally stale.
+   Mode 4 — LEGACY BRIDGE. C_ε (not in sealed Paper I — Gen-3/Phase-B
+     material), Θ_μν^(B), Einstein closure, Λ_B = 0. Every equation
+     assuming a smooth manifold (M, g_μν) is stale at the bridge level
+     unless re-derived on Paper II v1.2.
+   Mode 5 — MISSING PAPER II UPGRADE. Two-Link Principle, F̂_MM,
+     Lie-Jordan decomposition, g_cov rename, fusion identity, Markov
+     ratio identity M_raw = ln|K(O,O)| − ln R, M-pin retraction
+     ("correlation loss, not entanglement").
+
+2. THE CLASSIFICATION (audit's predicted table, machine-checked where
+   computation exists; register-level where bookkeeping)
+   CLEAN (Paper II v1.2 certified; keep intact):
+     - Theorem II.1 (J_D ≅ H_n(C) iff (D_loc,n) = (3,2); SU(2)/SO(3);
+       the H_2(C) determinant cone det X = x0² − |s|²).
+     - No-Go VII, No-Go VIII/VIIIb, the All-Odd-L identity
+       λ_min^(J=0)(2k+1) = ((9^k−1)/(3·9^k+1))³ → 1/27.
+     - The Exact Partial-Trace Locality Theorem.
+     - The fusion identity d_chord = √a·√(2(1−Γ)) (Gram algebra).
+     - The Markov ratio identity M_raw = ln|K(O,O)| − ln R.
+     - Theorem A/B single-site state-space metric g_cov = ∇²(−ln det C)
+       with inf λ_min = 1, S = 1 uniqueness (3/3, 8/8, 8/15).
+     - The algebraic trace split Tr((J+Λ)²) = +‖J‖²_F − ‖Λ‖²_F.
+   REVISABLE (correct construction, missing scope/declaration):
+     - S_ij = d_i d_j Γ_ij: construction correct; d_i must be
+       certified as the kernel-correlation object (Mode 2 declaration);
+       no multi-vertex welding equation yet (the r9.2 Γ-degeneracy
+       showed exactly this gap); zero Lie/causal component (no
+       No-Go-VII holonomy coupling).
+     - λ_A as "dimension witness" vs "curvature": computation clean,
+       physical reading unestablished.
+     - The C4 anomaly: OPEN-BOUNDARY-ARTIFACT-CONTAMINATED (the honest
+       status; r9.2).
+     - The K_plaq anchors on C4: exact (machine-verified twice), but
+       the 8/3 "identity" is VACUOUS as a multi-plaquette law
+       (spectator scaling — Bug 12c); the genuine object is the
+       cross-plaquette commutator (r9.3: dim-norm 7.6465 ≠ 0).
+   STALE (legacy apparatus; replacement, not revision):
+     - Type-Sign Coupling (Front.docx §5.3, Gen 1) — never re-derived
+       on the Two-Link Principle (Modes 1+3).
+     - Einstein closure G_μν = κ_B Θ_μν^(B) (Phase B v1.0) — C_ε and
+       Θ_μν^(B), both legacy (Mode 4).
+     - Λ_B = 0 (Phase B v1.0 Lovelock + Bures) — same dependency
+       (Mode 4).
+     - Dark matter as Θ_μν^rel (Phase B v1.0 §8) — same (Mode 4).
+     - Energy = coarse-grained SOE generator eigenvalue (r9.0
+       definition) — SOE naming (Mode 3); the identification was
+       proposed, never derived.
+     - All dρ/dt equations in the RP flow — t is the RP Lyapunov
+       parameter presented as coordinate time (Mode 1).
+     - The whole Phase B v1.0 field paper — every equation inherits
+       C_ε and the underived time (Modes 1+4).
+     - The lapse form α(B) = 1/(1+λB) — the exact form No-Go V
+       eliminates; replace with NESS refill (E3), re-derive the lapse
+       from the certified clock observable.
+     - m² ≡ B₀ (WEP weld postulate; E=mc² RET-B5) — cut as derived.
+     - ρ_DE ~ (H/Γ)², Friedmann — unexecuted leg (GAP-6.2.2); cut as
+       prediction.
+     - OBJECT STALENESS (the deepest): the legacy field layer rides
+       F = ΣΔ†Δ (fracture) or F_MM = Σω(J²)Δ†Δ (mismatch); Paper II's
+       certified ledger rides M̂ = ΣP⁽²⁾. Θ_μν = δB/δg is built on a
+       DIFFERENT B. Re-basing is re-deriving the source term, not a
+       coefficient update.
+   UNKNOWN (needs investigation before classification):
+     - The "canonical Def 3.5 channel": Paper II v1.2 object or a
+       legacy object machine-certified but not re-derived.
+     - The t = 0, 0.5, 2, 4 checkpoint grid (r5.1c): physical-time
+       grid or parameter grid (Mode 1 relevant).
+     - κ_past band (r3.7: single τ=8 run; τ=1 measured 0.5714 outside
+       it) — REF status per the audit; the band is not
+       τ-independent.
+
+3. THE 1D vs 3D SPLIT (the audit's A/B buckets, confirmed)
+   Bucket A (incomplete — 1D or underived-t; the upgrades):
+     A1 Evolution/spending clock: external t — replace with the
+        parameter-free relational spending evolution
+        dρ/dτ_glob = (1/(γ⟨M̂⟩))(−i[H,ρ] + γD_cov3(ρ)), local clock
+        ratio dτ_b/dτ_b' = M_b(ρ)/M_b'(ρ), zero background t,
+        freezing on K_N.
+     A2 Energy: H_XXX identities are 1D — upgrade to
+        H_3D = Σ_e h_e + Σ_v H_vtx with the cross-axis corner current
+        i[H_vtx, h_ea]. FIRST-LAW STATUS (r9.3 machine): the proposed
+        closed form D†(H_3D) = −2ΣP2 + Σi[H_vtx,h] is REFUTED in both
+        signs and all coefficients; the per-bond machine law is
+        D†(SS_b) = −1·P2 exactly (the thread-cited −2 is a registered
+        factor-2 discrepancy to resolve against Paper I Eq (6)); the
+        vertex exchange is OFF-DIAGONAL inter-tier coherence, not a
+        J=2-sector current. The vertex-branched continuity must be
+        DERIVED from the off-diagonal sector map before any energy
+        gate runs on it.
+     A3 Coarse-graining: Paper I Thm 8 is 1D single-chain — re-derive
+        as a 3D vertex+plaquette map, at OPERATOR level only (no
+        trace-1 state renormalization — the r9.1/r9.2 artifact
+        source).
+     A4 F1–F4 field equations (r4.13 §10): PROVENANCE-STALE, all 1D —
+        rebuild as 3-component vector currents, 3D continuity
+        ∂_τ M + ∇·J, 3D Yukawa/screened propagators on the Scaling
+        Metric, 2D interface surfaces in 3D space.
+     A5 Cluster burden halo (+84.4%/+32.9%): 1D 4-site chain,
+        proof-of-concept only — re-run on a 3D composite-vertex
+        cluster.
+   Bucket B (already complete & 3D-native, E4 — keep intact):
+     Theorem II.1; No-Go VIII/VIIIb + All-Odd-L; the scaling metric
+     family D_scale = √(ΣΓ_ab Δd_a Δd_b), V_3 = d1d2d3√(det Γ), the
+     fusion identity; Theorems A & B; No-Go VII + the trace split.
+
+4. CONSEQUENCES FOR PAPER III (the re-scoping)
+   §4 2-link geometry: the CLEAN pillar (No-Go VII/VIIIb + scaling
+     metric + fusion identity + the r9.3 cross-plaquette signal).
+   §2 energy gate: STALE dependency (SOE naming; the r9.0
+     identification never derived) — re-derive as the Open Expansion
+     generator spectrum on Paper II v1.2, AND the First-Law
+     refutation means the vertex-branched continuity is a
+     pre-gate of its own.
+   §5 Lorentzian signature: STALE (Type-Sign Coupling) — re-derive
+     via the Two-Link Principle's directional asymmetry.
+   §6 dark matter + Λ_B: STALE (C_ε, Θ_μν^(B), Lovelock+Bures) —
+     re-derive burden-redistribution on Paper II v1.2's apparatus or
+     declare the Einstein closure formally OPEN.
+   EXECUTION ORDER (amended): provenance audit (this round) →
+   re-derivation gates (§2 Open-Expansion energy + First-Law sector
+   map; §5 Two-Link signature; §6 burden re-base) → PR-LAT-3 (the
+   3-axis multi-plaquette cell — tests the CLEAN pillar, no new
+   provenance risk) → Paper III §2–§4 drafting (geometry) → §5+
+   drafting (field program, per re-derivation outcomes).
+
+5. WRONG vs INCOMPLETE vs STALE (the remedy column, binding)
+   WRONG — numerical claims incorrect due to stale provenance.
+     Remedy: replacement. (This round's additions: the r9.2 domino/
+     fig-8 numbers were WRONG-cell values — Bug 12a/12b; the branch-B
+     verdict seated on them is VOID.)
+   INCOMPLETE — correct as far as it goes, missing Paper II v1.2
+     terms. Remedy: extension. (Bucket A.)
+   STALE — legacy terms for renamed/reconceived objects. Remedy:
+     renaming (naming-stale) or re-derivation (structural-stale).
+     The audit's cost question ("which is which") is answered
+     per-equation in §2/§3, not by a blanket guess.
+
+6. HEURISTIC (registered, from the adjudication)
+   Every anomaly in this thread that landed on a clean log-of-integer
+   turned out to be a normalization signature: ln 2 (path count/
+   Pearson), ln(4/3) (tail intercept vs diagonal), ln 9 = ln 3²
+   (dimension product), ln 3 (transfer base). A genuine dynamical
+   anomaly does not land on a clean log-of-rational. When one does,
+   suspect normalization FIRST. (r9.3's Bug 12c — the 8/3 "identity" —
+   is the fifth instance: log-integer-clean, normalization-vacuous.)
+
+7. GATE V AMENDMENT (from the adjudication, adopted)
+   Gate V must anchor on DIRECT matrix-product evaluation on a random
+   test operator, ‖L_super·vec(ρ) − vec(LρL†)‖ = 0 — never on an
+   asserted identity (the r9.2 gate tested against a wrong asserted
+   kron identity and inherited the exact class it exists to catch).
+   The r9.3 runs use the direct-anchor form; the standing law is
+   amended accordingly.
+==============================================================================

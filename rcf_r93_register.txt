@@ -1,0 +1,146 @@
+==============================================================================
+REGISTER — r9.3: THE RETROACTIVE PROVENANCE AUDIT + THE FORENSIC
+CORRECTION OF r9.2's CELLS + THE FIRST-LAW REFUTATION (ONE COMMIT).
+==============================================================================
+
+1. THE FORENSIC (the audit's catch, machine-confirmed in full)
+   Bug #12a — the r9.2 "domino" (z=2, λ₀=0, mult 1, N=6) was the
+     single 6-ring C6: the executed edge list [(0,1),(1,2),(2,3),
+     (3,4),(4,5),(5,0)] has 6 edges = 1 loop. The Euler/No-Go VIII
+     catch was RIGHT: a 6-site z≤2 graph admits at most one loop.
+     Every domino-branded number in r92_lat2.json (M_gap −0.291941,
+     K_plaq 72/27, the Γ-frame degeneracy reading, the ker=1
+     "survivor" claim) belongs to the ring cell.
+   Bug #12b — the r9.2 "fig-8" was a triangle (0,1,2) + 6-cycle
+     (2,3,4,5,6), not two squares sharing a vertex.
+   Bug #12c — the 8/3 "exact identity" is spectator tensor scaling:
+     K_4 ⊗ 1_{3^{N−4}} gives ‖K‖_F/√(3^N) = 24/9 = 8/3 identically
+     — VACUOUS as a multi-plaquette law.
+   The TRUE cells, built and verified:
+     TRUE domino (6 sites, 7 edges, shared rung (1,4)): z_max = 3,
+       λ₀ = 0.264543, mult 1 — the audit's number EXACTLY; No-Go
+       VIII applies (ker of M is empty; the ground manifold is the
+       positive-λ₀ eigenspace).
+     TRUE fig-8 (7 sites, 8 edges, two C4 sharing vertex 3): z_max
+       = 4, λ₀ = 0.424354, mult 3 — the audit's number EXACTLY.
+   PATH-LAW STATUS, amended: the true domino M_gap = −1.389968 vs
+     −ln3 = −1.098612 OVERSHOOTS by 26.5%, while C4 (66.7%) and the
+     true fig-8 (M_gap = −0.519053 vs −1.386294, 62.6%) undershoot.
+     The law is refuted quantitatively in BOTH directions: it is
+     neither an upper nor a lower bound. LAW-BOUND is amended to
+     LAW-ORDERING (sign + monotone-in-count trend only).
+   THE GENUINE SIGNAL (new, from the true domino): the cross-
+     plaquette commutator [K_A, K_B] has ‖·‖_F = 206.456 (dim-norm
+     7.646511) — NONZERO and substantial — while the shared rung
+     commutes exactly with the remote edges (commutator 0.0), so the
+     cross-plaquette holonomy is fed ONLY by the corner-current
+     overlaps at the shared sites. This is the first genuine
+     multi-plaquette curvature object in the thread; the C6 ring was
+     structurally incapable of producing it. Branch-B (emergent
+     curvature candidate) is VOID as seated; the cross-plaquette
+     signal is the new evidence class, decided on the 3-axis cell.
+
+2. THE FIRST LAW (the principal's offer, taken — and the proposed
+   form REFUTED)
+   On the certified 6-site 3-arm corner (regs 0,2,4; stubs 1,3,5;
+   ground dim 64):
+   (i) PER-BOND, EXACT: D_b†(h_b) = −1·P_b^(2) (residual 3.4e−14)
+     with the certified jumps L_{b,q} = (1/√2)(1−P2)X_q P2,
+     L†L = P2 (residual 9.3e−15), LL† = (5/3)P1 (r51a-consistent).
+     THE THREAD-CITED −2P2 RATE IS A REGISTERED FACTOR-2
+     DISCREPANCY: resolve against Paper I Eq (6)'s stated
+     normalization before any rate is quoted in Paper III. Not
+     silently normalized.
+   (ii) THE PROPOSED CLOSED FORM REFUTED: D†(H_3D) =
+     −2ΣP2 + Σ i[H_vtx, h_ea] fails in BOTH signs and all scanned
+     coefficients (0.5/1/1.5/2; min residual 75.99 against F-norms
+     D†(H_vtx) 61.89 / Σi[H_vtx,h] 88.18). The vertex part D†(H_vtx)
+     has ZERO diagonal content in every arm J-sector (J0/J1/J2 block
+     traces all < 1e−9): the vertex exchange is purely OFF-DIAGONAL
+     inter-tier coherence exchange, not a J=2-sector current. The
+     vertex-branched continuity law must be DERIVED from the
+     off-diagonal sector map — that derivation is now a NAMED
+     PRE-GATE of the §2 energy gate.
+   (iii) The corner currents i[H_vtx, h_ea] are real objects
+     (F-norm 50.912 each, trace-free, symmetric across the three
+     arms); what is refuted is their role as the closing term of a
+     bond-sector balance.
+   (iv) The trace identity holds trivially (all terms vanish on the
+     frustration-free sector: 0 = 0) — no discriminating content.
+
+3. THE PROVENANCE AUDIT (register: rcf_r93_provenance_audit.txt)
+   The r9.2 forward rule is now BIDIRECTIONAL and retroactive to
+   r5.1b–r9.2: equation → dependencies (forward) AND struck
+   dependency → every equation computing it (backward — the 0.246717
+   lesson: what COMPUTES a quantity, not what MENTIONS it). The
+   remedy column is binding: STALE is STALE regardless of
+   re-derivation cost.
+   Five contamination modes: (1) underived time; (2) 1D-only log
+   (kernel base 1/3 vs rate 2/3 — declare the object); (3) legacy
+   naming/structure (SOE/MOE, Tier 1/2, Master-Zero, F̂ vs F̂_MM);
+   (4) legacy bridge (C_ε, Θ_μν^(B), Einstein closure, Λ_B = 0);
+   (5) missing Paper II upgrade (Two-Link, F̂_MM, fusion identity,
+   Markov ratio, M-pin retraction).
+   Classification (the audit's predicted table, machine-checked
+   where computation exists):
+     CLEAN: Theorem II.1; No-Go VII/VIII/VIIIb + All-Odd-L; Exact
+       Partial-Trace Locality; fusion identity; Markov ratio;
+       Theorems A/B; the trace split; the K_plaq C4 anchors (with
+       the 8/3 vacuity noted).
+     REVISABLE: S_ij (declare the d_i object + write the welding
+       equation); λ_A's physical reading; the C4 anomaly (already
+       OPEN-BOUNDARY-ARTIFACT-CONTAMINATED); the three-route
+       signature consistency.
+     STALE: Type-Sign Coupling; Einstein closure; Λ_B = 0; dark
+       matter as Θ_μν^rel; energy-as-SOE identification; all dρ/dt
+       RP-flow equations; the entire Phase B v1.0 field paper; the
+       lapse form α(B) = 1/(1+λB) (the exact form No-Go V
+       eliminates); m² ≡ B₀ (cut); ρ_DE ~ (H/Γ)² (cut);
+       OBJECT-STALENESS: the legacy B ≠ M̂ = ΣP⁽²⁾ — the source term
+       is a different operator, re-derivation not a coefficient
+       update.
+     UNKNOWN: the Def 3.5 canonical channel; the r5.1c checkpoint
+       grid (physical-time vs parameter); κ_past band (REF — not
+       τ-independent).
+   CONSEQUENCE: Paper III §4 geometry is the CLEAN pillar; the §2/
+   §5/§6 gates all sit on stale apparatus and are re-derivation
+   gates. Execution order amended: provenance audit (this round) →
+   re-derivation gates → PR-LAT-3 → Paper III §2–§4 drafting
+   (geometry) → §5+ drafting (field program).
+
+4. THE RE-BASE LEDGER (register: rcf_r93_rebase_ledger.txt)
+   The five upgrades locked: U1 relational spending evolution
+   (zero external t); U2 H_3D with the First-Law refutation folded
+   in (the sector-map derivation is the §2 pre-gate); U3
+   operator-level Theorem-8 contraction (no trace-1 renormalization
+   anywhere); U4 the F1–F4 3D rebuild spec (old F1–F4 cut as field
+   equations, kept as 1D appendix checks); U5 the 3D cluster halo
+   re-run. Plus the r4.13 time-debt re-homing ledger (κ_OE, slow
+   modes/secular pinch, strobe/τ-scan → Paper II §4; H_eff →
+   Paper III §2; Γ_b's dt form SUPERSEDED by the U1 ratio; Def 3.5
+   UNKNOWN pending; no orphans so far).
+
+5. STANDING LAWS IN FORCE
+   Gate V, amended: anchor on direct matrix-product evaluation on a
+   random test operator, never an asserted identity (the r9.2 gate
+   tested against a wrong asserted kron identity — it inherited the
+   class it exists to catch; the r9.3 runs use the direct form).
+   The log-integer heuristic (fifth instance: Bug 12c): every
+   anomaly landing on a clean log-of-integer in this thread was a
+   normalization signature — suspect normalization FIRST.
+   The witness rule; LAW-ORDERING; the frozen-sheet discipline.
+
+6. NEXT
+   The re-derivation gates (U2's off-diagonal sector map first — it
+   is the §2 pre-gate and it is pure algebra on certified objects),
+   then PR-LAT-3 (the 3-axis multi-plaquette cell — tests the CLEAN
+   pillar, carries the cross-plaquette signal forward as the
+   branch-B evidence class).
+
+Artifacts this round: r93_forensic.py/.json (the true cells + Bug
+12 erratum + the cross-plaquette signal), r93_firstlaw.py/.json (the
+First-Law refutation + the per-bond exact law + the factor-2
+discrepancy), rcf_r93_provenance_audit.txt (the retroactive audit),
+rcf_r93_rebase_ledger.txt (the upgrades + the debt re-homing),
+rcf_r93_register.txt (this file). ONE COMMIT.
+==============================================================================
