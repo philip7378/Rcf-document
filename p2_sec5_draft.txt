@@ -245,28 +245,43 @@ status, both run as frozen and reported as found:
     The corner frame does not adjudicate between the chord family
     and the log-volume family: that is the multi-vertex lattice
     gate's ownership, unchanged.
-  - The M-biconditional pin (r8.0 Part C, corrected r8.2): M is
-    NOT an entanglement witness; it is a correlation-gap degree,
-    nonzero for classical OR quantum correlation loss across a
-    coupled junction. The r8.0 raw witness (rho_sep =
-    1/2(|+1>^{x6}<+1| + |-1>^{x6}<-1|), M = ln 3 = 1.098612
-    barycenter-anchored, bond-register anchored 0.0 on this seed)
-    carries a named normalization artifact (the un-divided
-    sqrt3-barycenter anchor c = sqrt(3) > 1; Pearson form gives
-    M = 0 on that aligned state), so the load-bearing witness is
-    the r8.2 VALID Pearson replacement: the classical 3-bit
-    mixture with all K in [-1,1] (K(A,C) = 0.1, K(A,O) =
-    K(O,C) = 0.5) fires M = ln(2.5) = 0.916291 with zero
-    normalization violation — the conclusion stands on a clean
-    witness. Sec. 3.4.2's wording is amended accordingly (r8.0a;
-    r8.2 completes the retraction of r70's "entanglement
-    signature" phrasing, D-class): M = 0 characterizes the
-    1D-multiplicative (Markov) family with nonvanishing
-    marginals; M > 0 measures correlation loss across a coupled
-    junction, whatever couples it. On the 1D axis the analytic
-    identity M = ln(4/3) = 0.287682 (affine -ln|c(0,n)| = n ln3
-    - ln(4/3); r8.0 Part D converges to it) upgrades the ~0.29
-    baseline from observation to E4 identity.
+  - The M-biconditional pin (r8.0 Part C, corrected r8.2; K-
+    normalization declared once here, r8.3): M is NOT an
+    entanglement witness; it is a correlation-gap degree, nonzero
+    for classical OR quantum correlation loss across a coupled
+    junction. NORMALIZATION CONVENTION (binding for every M value
+    in this paper): K denotes the RAW correlation unless the
+    Pearson (rms-normalized) form is named; the M formula
+    M = -ln|K(A,C)| + ln|K(A,O)| + ln|K(O,C)| is printed beside
+    every value. The r8.0 raw witness (rho_sep = 1/2(|+1>^{x6}<
+    +1| + |-1>^{x6}<-1|), M = ln 3 = 1.098612 barycenter-anchored,
+    bond-register anchored 0.0 on this seed) is SUPERSEDED — it
+    carried a normalization artifact (the un-divided sqrt3-
+    barycenter anchor c = sqrt(3) > 1; Pearson form gives M = 0 on
+    that aligned state; same |c| > 1 class as r6.1's F3 raw anchor,
+    struck per the same discipline applied to 0.246717). The
+    load-bearing witness is the r8.2 VALID Pearson replacement:
+    the classical 3-bit mixture with all K in [-1,1] (K(A,C) =
+    0.1, K(A,O) = K(O,C) = 0.5, Pearson form throughout) fires
+    M = ln(2.5) = 0.916291 with zero normalization violation —
+    the conclusion stands on a clean witness. Sec. 3.4.2's wording
+    is amended accordingly (r8.0a; r8.2 completes the retraction
+    of r70's "entanglement signature" phrasing, D-class): M = 0
+    characterizes the 1D-multiplicative (Markov) family with
+    nonvanishing marginals; M > 0 measures correlation loss across
+    a coupled junction, whatever couples it. On the 1D axis the
+    analytic identity M = ln(4/3) = 0.287682 (RAW convention: the
+    AKLT tail K(n) = (4/3)(-1/3)^n gives K(A,O)K(O,C)/K(A,C) =
+    4/3 for any geometric tail K(n) = p r^n with O midway, so M =
+    ln p exactly; under variance normalization the tail is
+    2(-1/3)^n and the value would be ln 2 = 0.693147 — the
+    NONVANISHING is convention-independent, the VALUE is
+    convention-relative, and the raw convention is the declared
+    one; r8.0 Part D converges to it) upgrades the ~0.29 baseline
+    from observation to E4 identity. The nonvanishing itself is
+    the content: the tail's extrapolated intercept exceeds the
+    diagonal K(A,A) = 1, so the kernel correlation is not a
+    normalized pure exponential.
 
 Because PR-METRIC-2/2b leave the family question to the lattice
 gate, the bridge from microscopic multi-vertex spin-1 correlations
@@ -333,18 +348,25 @@ centroid, full 360-degree sweep, eps = 0.01):
     63.84% under the alternative 1 - lambda_min/lambda_max
     convention; the formula is declared beside every anisotropy
     number in this subsection) — the outer trapezoid's aspect
-    ratio leaks into the interior. The 82.6% linear-convention
-    number (max(ds)/min(ds) - 1) from the incoming report is the
-    same object under a third convention;
+    ratio leaks into the interior. The 82.57% number from the
+    incoming experiment report is carried as that report's PRIOR
+    PROBE-GRID MEASUREMENT (its own probe spacing convention on
+    the glued cell), NOT as a third algebraic formula on the
+    eigenvalue pair (+20.38, +7.37): the two certified formulas on
+    that pair are (max-min)/mean = 93.78% and 1 - min/max =
+    63.84%, and no standard ratio on that pair reproduces
+    82.57% — the declaration is required precisely because the
+    three numbers differ;
   - the inscribed-disk Beltrami-Klein metric: EXACTLY isotropic
     (spread 3.1e-16 over the full sweep), and it stays isotropic
     under any gluing, because each cell's metric is its own
-    disk's. Two classical theorems frame this: Kelly-Straus
-    (a Hilbert geometry on a bounded convex domain is
-    Riemannian — quadratic line element — iff the domain is an
-    ellipsoid), which makes the bare polygon's Finsler unit ball
-    a theorem-backed exclusion, not just a measurement; and
-    Albert's non-specialty of H_3(O) (below).
+    disk's. The framing theorem is Kelly-Straus (a Hilbert
+    geometry on a bounded convex domain is Riemannian —
+    quadratic line element — iff the domain is an ellipsoid);
+    the attribution is pinned to the statement it certifies:
+    the bare polygon's Finsler unit ball is non-Riemannian BECAUSE
+    the polygon is not an ellipsoid — the anisotropy measurements
+    are the machine evidence, the theorem is the classification.
 
 One honest correction to the incoming experiment report: the
 welded-union Hilbert cross-ratio is a metric only when the
@@ -379,24 +401,39 @@ Test 3 (dimension sweep): C(D,2) = D holds ONLY at D = 3 among
 D = 1, 2, 3, 4, 5, 7 (machine table; a CONSISTENCY check, not a
 selection principle — promoting it would require the declared
 premise that the number of independent 2-planes equals the number
-of axes). The D = 7 route fails by ALBERT'S NON-SPECIALTY of
-H_3(O): the exceptional Jordan algebra cannot arise as the
-A o B subalgebra of any associative algebra, and associativity is
-RCF's one primitive. The machine witness is the octonion
-associator (e_1 e_2) e_4 - e_1 (e_2 e_4) = 2 ((e_1 e_2) e_4 =
-+e_7, e_1 (e_2 e_4) = -e_7, Fano-plane triples); non-specialty is
-the theorem the witness evidences. Kept distinct in the wording:
-Im(O) (the 7D non-associative cross-product space) vs. H_2(O) =
-J_9 (the 9D spin factor), both eliminated by the associativity
-axiom. Pure geometry (directed simplices + inscribed spheres +
-log metrics) exists in EVERY dimension D >= 2; the algebraic
-direction closure (Theorem II.1: C(D,2) = D and J_D closed in
-H_n(C)) is what selects D_loc = 3 uniquely. This is the clean
-division of labor the controls deliver: geometry is
-dimension-agnostic and provides the metric machinery (metrics,
-welding, isotropy); the ALGEBRA closes the dimensionality
-argument (Sec. 2); and the E0 fence on dynamical self-assembly
-into a 3D tiling stands unchanged.
+of axes). The three octonionic objects are eliminated each by its
+EXACT theorem (r8.3 audit attribution — no Paper X D4
+misattribution):
+  - Im(O), the 7-dimensional non-associative cross-product space
+    (the D = 7 candidate for J_D's vector part): eliminated
+    DIRECTLY by O's non-associativity, witnessed by the associator
+    (e_1 e_2) e_4 - e_1 (e_2 e_4) = 2 ((e_1 e_2) e_4 = +e_7,
+    e_1 (e_2 e_4) = -e_7, Fano-plane triples) — a violation of
+    Paper I's associative *-algebra primitive itself, not of any
+    external theorem;
+  - H_2(O) = J_9, the octonionic spin factor (convention: 9 =
+    vector-part dimension, total algebra dimension 10 = 1 + 9):
+    a SPECIAL Jordan algebra (every spin factor embeds into an
+    associative Clifford algebra, here Cl_9 -> M_16(C)), so
+    non-specialty does not touch it; it is eliminated by
+    Theorem II.1's M_n(C) saturation instead (D + 1 = 10 is not a
+    square n^2);
+  - H_3(O), the 27-dimensional Albert algebra (traceless part dim
+    26): eliminated by Albert's NON-SPECIALTY theorem — the
+    exceptional Jordan algebra cannot arise as the A o B = (1/2)
+    (AB + BA) subalgebra of any associative algebra, and
+    associativity is RCF's one primitive. The associator witness
+    above is the machine evidence for the Im(O) route;
+    non-specialty is the theorem for the H_3(O) route.
+Pure geometry (directed simplices + inscribed spheres + log
+metrics) exists in EVERY dimension D >= 2; the algebraic direction
+closure (Theorem II.1: C(D,2) = D and J_D closed in H_n(C)) is
+what selects D_loc = 3 uniquely. This is the clean division of
+labor the controls deliver: geometry is dimension-agnostic and
+provides the metric machinery (metrics, welding, isotropy); the
+ALGEBRA closes the dimensionality argument (Sec. 2); and the E0
+fence on dynamical self-assembly into a 3D tiling stands
+unchanged.
 
 One scope sentence, registered at the r8.2 audit's close: the
 triangle/welding construction of this subsection is MATHEMATICALLY

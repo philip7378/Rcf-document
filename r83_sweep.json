@@ -1,0 +1,455 @@
+{
+ "findings": [
+  {
+   "dim": "1/2/3",
+   "number": "0.246717",
+   "artifact": "r83_l5cert.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "0.272010",
+   "artifact": "r83_l5cert.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "0.246716686",
+   "artifact": "r83_l5cert.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "0.272009551",
+   "artifact": "r83_l5cert.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "0.035245",
+   "artifact": "r83_l5cert.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "8000/226981",
+   "artifact": "r83_l5cert.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "0.916291",
+   "artifact": "r82_patches.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "0.287682",
+   "artifact": "r82_patches.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "0.529880",
+   "artifact": "r80_metric2b.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "0.683199",
+   "artifact": "r80_metric2b.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "0.420270",
+   "artifact": "r80_metric2b.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "0.674882",
+   "artifact": "r80_metric2b.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "1.168930",
+   "artifact": "r80_metric2b.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "0.006559",
+   "artifact": "r80_metric2b.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "1.168796",
+   "artifact": "r80_metric2b.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "3.622512",
+   "artifact": "r80_metric2b.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "3.242268",
+   "artifact": "r80_metric2b.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "0.632093",
+   "artifact": "r80_metric2b.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "-0.051106",
+   "artifact": "r80_metric2b.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "251.142024",
+   "artifact": "r53c_static.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "3.448563",
+   "artifact": "r53c_static.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "4.218242",
+   "artifact": "r53c_static.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "2.9e-15",
+   "artifact": "r53a_preflightB.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "9.5e-16",
+   "artifact": "r53_preflightC.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "2.7e-13",
+   "artifact": "r62_adjudicate.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "3.8e-15",
+   "artifact": "r62_adjudicate.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "3.8e-16",
+   "artifact": "r53_preflightA.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "0.191257",
+   "artifact": "r52_t1b2b_results.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "0.174716",
+   "artifact": "r51d_t1b2_results.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "0.222493",
+   "artifact": "r51d_t1b2_results.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "0.126376",
+   "artifact": "r51d_t1b2_results.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "2.2831",
+   "artifact": "r51a_results.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "0.7705",
+   "artifact": "r51a_results.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "93.78",
+   "artifact": "r82_patches.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "63.84",
+   "artifact": "r82_patches.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "1/2/3",
+   "number": "15.47",
+   "artifact": "r82_patches.json",
+   "exists": true,
+   "contains": true,
+   "status": "certified",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "2",
+   "check": "deferred-to-script-2 grep",
+   "carriers": [
+    "r82_patches.json",
+    "r53b_armsAB.json"
+   ],
+   "expected_any": [
+    "r53b_armsAB.json",
+    "r82_patches.json"
+   ],
+   "paper2_cites_r83_for_0.246717": true,
+   "note": "r53b is the genuine (superseded) deferred entry; r82_patches P2_L5_adjudication MIRRORS that status as the striking evidence \u2014 both are history, neither is cited by paper2 for any unexecuted number",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "4",
+   "check": "generated table rows vs tex table rows",
+   "generated": 19,
+   "tex_rows_with_grades": 19,
+   "verdict": "PASS"
+  },
+  {
+   "dim": "4",
+   "check": "abstract grades present in table",
+   "abstract_grades": [
+    "E0",
+    "E2",
+    "E3",
+    "E4"
+   ],
+   "verdict": "PASS"
+  },
+  {
+   "dim": "5",
+   "check": "closing caution in front matter",
+   "in_abstract": true,
+   "in_body_and_sec6": true,
+   "verdict": "PASS"
+  },
+  {
+   "dim": "6",
+   "check": "93.78% has formula",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "6",
+   "check": "63.84% alternate",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "6",
+   "check": "82.57% labeled prior measurement",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "6",
+   "check": "M declared correlation-gap",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "6",
+   "check": "K normalization declared",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "6",
+   "check": "no (-20.38, -7.37) surviving",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "6",
+   "check": "no 16 = 2^(L-1) surviving",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "6",
+   "check": "no load-bearing M = ln 3",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "6",
+   "check": "no entanglement-signature for M",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "7",
+   "check": "time not global -> E2-pending entry",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "7",
+   "check": "3D not emergent -> E0 fence",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "7",
+   "check": "metric family open -> FAMILIES-DISAGREE",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "7",
+   "check": "M not entanglement witness -> retraction",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "7",
+   "check": "welded Hilbert / d_int backing",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "7",
+   "check": "L=5 leg resolved by execution -> r83",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "7",
+   "check": "Paper I inputs declared",
+   "verdict": "PASS"
+  },
+  {
+   "dim": "7",
+   "check": "generativity E0",
+   "verdict": "PASS"
+  }
+ ],
+ "fails": [],
+ "summary": "57 checks, 0 FAIL"
+}

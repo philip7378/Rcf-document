@@ -1,0 +1,138 @@
+{
+ "n_rows": 19,
+ "rows": [
+  {
+   "section": "2.1",
+   "claim": "Relational individuation -> position = distance + direction",
+   "grade": "E4/Framing",
+   "certificates": "PR-SCALE-1 (r5.1)",
+   "fence": "setup for J_D; not physical space"
+  },
+  {
+   "section": "2.2",
+   "claim": "Theorem II.1: J_D ~= H_n(C) iff (D_loc,n)=(3,2); derives SU(2)/SO(3)",
+   "grade": "E4",
+   "certificates": "r53_preflightC, r62_adjudicate",
+   "fence": "declared M_n(C) saturation input; D_loc=3 != d_H=3 spatial (E0)"
+  },
+  {
+   "section": "2.3",
+   "claim": "H_2(C) Lorentz cone det X = x_0^2-|s|^2; SL(2,C)->SO^+(1,3) 2.7e-13/3.8e-15",
+   "grade": "E4 (hook) / E0 (boosts)",
+   "certificates": "r53e_verify",
+   "fence": "Generativity Entry #2; boost bridge deferred"
+  },
+  {
+   "section": "3.1",
+   "claim": "No-Go VIII: bare spin-1 P^(2) empties kernel for all z>=3 (10 witnesses + T-tree)",
+   "grade": "E4",
+   "certificates": "r53a_preflightB",
+   "fence": "two-method 2.9e-15; Gate G"
+  },
+  {
+   "section": "3.2",
+   "claim": "No-Go VIIIb: all static bulk SU(2) vertex projectors empty K_3^{x3} (8/343..8/49); L=5 persistence: ker 0/64 all four J, J=3 spectrum [0.246716686, 0.272009551], J=0 floor 8000/226981",
+   "grade": "E4",
+   "certificates": "r53b_armsAB, r53c_static, r83_l5cert",
+   "fence": "analytic floor 8/343 (L=3, reproduced exactly by the r8.3a route); spectra trend to (1,9,10,7)/27"
+  },
+  {
+   "section": "3.3",
+   "claim": "Dynamical H_vtx T-MISMATCH (251.142024, [3.448563, 4.218242], 0 dark states) + Arm C transfer",
+   "grade": "E4/E3",
+   "certificates": "r53c_static, r53c_armC",
+   "fence": "RETROSPECTIVE-UNIFICATION class; vertex dynamical activity, not spatial 3D"
+  },
+  {
+   "section": "3.4",
+   "claim": "PR-LINK-1 & tripod: 3-arm rank 3, G^spin (2/3), G^prof (0.632092823 / -0.051106217), lambda_A = 0.529880389",
+   "grade": "E3-corner / E4",
+   "certificates": "r61_link1, r62_adjudicate, r80_metric2b",
+   "fence": "4-arm gives rank 4; lambda_A > 0 lattice non-planarity order parameter; physical 3D E0"
+  },
+  {
+   "section": "3.4",
+   "claim": "Multiplicativity gap as correlation-gap degree: Pearson witness ln(2.5) = 0.916291; on-axis M = ln(4/3) = 0.287682 (raw convention)",
+   "grade": "E4 (identity) / E3 (junction)",
+   "certificates": "r80_metric2b, r82_patches",
+   "fence": "NOT an entanglement witness (r8.2 D-class retraction); raw ln3 witness SUPERSEDED (|c|>1 artifact)"
+  },
+  {
+   "section": "3.4",
+   "claim": "PR-METRIC-2/2b: site -> profile bridge (d_int 3.6225122 vs d_chord 1.168930314 vs d_scaling 0.00655857)",
+   "grade": "SPEC-INCOMPLETE / FAMILIES-DISAGREE",
+   "certificates": "r70_metric2, r80_metric2b",
+   "fence": "family selection deferred to multi-vertex lattice gate (E0)"
+  },
+  {
+   "section": "4.1-4.2",
+   "claim": "Global arrow (H_eff, -[J,Lambda]) & Lie-on-Jordan frame transport (PR-T1b)",
+   "grade": "E4",
+   "certificates": "Paper I Eq. 4, r5.1",
+   "fence": "unified generator frame (Instance #10)"
+  },
+  {
+   "section": "4.2",
+   "claim": "PR-NOGO-RAW: omega_raw probe sign flip (2.2831x H_XXX vs 0.7705x H_XY) & transient inversion",
+   "grade": "E3",
+   "certificates": "r51a_battery, r51d_t1b2, r52_preflightB",
+   "fence": "active-NESS throughput only; monotone clock is Gamma_b (E4/E3)"
+  },
+  {
+   "section": "4.3",
+   "claim": "PR-T1b-2: 2-bond overlap cocycle (chiral 0.174716; off-orbit 0.126376-0.222493)",
+   "grade": "E3-local (MIXED)",
+   "certificates": "r51c_prep, r51d_t1b2",
+   "fence": "per-seed; B1 REPLICATION-CONSISTENCY; N=3 dark-singlet & Schur freezes fenced"
+  },
+  {
+   "section": "4.3",
+   "claim": "No-Go VII: exact partial-trace locality (3.8e-16); two-bond holonomy N-independent (0.191257, N=3..6)",
+   "grade": "E4",
+   "certificates": "r52_t1b2b, r53_preflightA",
+   "fence": "full-chain simultaneous arm E2-pending (Lie-Trotter O(t^2/n))"
+  },
+  {
+   "section": "2.1/5.1",
+   "claim": "PR-SCALE-1: 8 sign frames at (1/2)^3 split det C in {1/2, 0} by sgn(abc)",
+   "grade": "E4",
+   "certificates": "r5.1",
+   "fence": "unsigned pairwise logs cannot determine 3D volume"
+  },
+  {
+   "section": "5.2",
+   "claim": "Theorem A: g_rho closed form, {9/4 x5, 6 x3}, inf lambda_min = 1, (1-p)^2 g_pp -> 1",
+   "grade": "E4",
+   "certificates": "r51b_battery, r51c_prep",
+   "fence": "Riemannian triangle inequality automatic; single-site state space"
+  },
+  {
+   "section": "5.2",
+   "claim": "Theorem B: non-degenerate iff S in {1/2, 1} (3/3, 8/8, 8/15)",
+   "grade": "E4",
+   "certificates": "r51b_battery",
+   "fence": "single-site (E4), not multi-site spatial (E0)"
+  },
+  {
+   "section": "5.3",
+   "claim": "Theorems S1 & S2: isotropic l_2 1D-log composition; unconditional d_int",
+   "grade": "E4",
+   "certificates": "r60a",
+   "fence": "base 1/3 kernel correlation distinct from base 2/3 Thm-8 eigen-rate (Gate O / T4)"
+  },
+  {
+   "section": "5.3.1",
+   "claim": "Geometric controls: directed welding (0.0); bare anisotropy (hexagon identity 15.47%; 93.78%% tensor convention (max-min)/mean = 63.84%% 1-min/max); Klein disk 3.1e-16; delta-transfer ~ ln(1/delta); D=7 excluded",
+   "grade": "E4",
+   "certificates": "r81_geomctrl, r82_patches",
+   "fence": "Kelly-Straus (Riemannian iff ellipsoid); isotropy derived from positivity; triangle construction NOT evidence of spatial interaction (E0); Klein vs Bures family note"
+  },
+  {
+   "section": "5.3.1/2.2",
+   "claim": "Isotropy-from-positivity: positivity carves the inscribed sphere; Aut_0 acts isotropically",
+   "grade": "E4-with-fence",
+   "certificates": "r81_geomctrl, r53_preflightC",
+   "fence": "the round's genuine gain; family-independent isotropy, family-dependent radial ladder"
+  }
+ ]
+}

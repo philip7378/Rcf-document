@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+SC:wght@400;700;900&family=Inter:wght@300;400;500&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    @page { size: 794px 1123px; margin: 0; }
+    :root {
+      --c-bg: #162032;
+      --c-accent: #8B7E5A;
+      --c-text: #FFFFFF;
+      --c-muted: #8898A8;
+      --c-footer: #607080;
+    }
+    html, body { margin: 0; padding: 0; width: 794px; height: 1123px; background: var(--c-bg); color: var(--c-text); font-family: 'Inter', 'Noto Sans SC', sans-serif; }
+    @media screen {
+      html { height: auto; display: flex; justify-content: center; min-height: 100vh; background: var(--c-bg); }
+      body { transform-origin: top center; scale: min(1, calc(100vw / 794), calc(100vh / 1123)); margin: 0 auto; box-shadow: 0 0 60px rgba(0,0,0,0.3); }
+    }
+    .cover { width: 794px; height: 1123px; position: relative; box-sizing: border-box; }
+    .vline { position: absolute; left: 57px; top: 76px; bottom: 76px; width: 2.5px; background: var(--c-accent); }
+    .content { position: absolute; left: 100px; right: 76px; top: 0; bottom: 0; }
+    .label { position: absolute; top: 132px; left: 0px; font-size: 9pt; color: var(--c-accent); letter-spacing: 3px; text-transform: uppercase; font-family: 'Inter', 'Noto Sans SC', sans-serif; }
+    .title { position: absolute; top: 200px; font-size: 27pt; font-weight: 700; line-height: 1.35; font-family: 'Playfair Display', 'Noto Serif SC', serif; color: var(--c-text); max-width: 590px; }
+    .subtitle { position: absolute; top: 470px; font-size: 11pt; line-height: 1.65; color: var(--c-muted); max-width: 540px; }
+    .authors { position: absolute; top: 700px; left: 0px; font-size: 12pt; color: var(--c-text); }
+    .institution { position: absolute; top: 748px; left: 0px; font-size: 10pt; color: var(--c-muted); line-height: 1.4; }
+    .footer { position: absolute; bottom: 76px; left: 0px; right: 0; display: flex; justify-content: space-between; font-size: 9pt; color: var(--c-footer); }
+  </style>
+</head>
+<body>
+  <div class="cover">
+    <div class="vline"></div>
+    <div class="content">
+      <div class="label">RESEARCH PAPER &middot; RCF SERIES &middot; PAPER II</div>
+      <div class="title">Emergent 3D Link Space, Time, and the Scaling Metric</div>
+      <div class="subtitle">
+        From 1D existence and the Paper I mechanism library: the reconstructed
+        local algebra forces D<sub>loc</sub>&nbsp;=&nbsp;3 and derives SU(2)
+        (Theorem&nbsp;II.1, E4); static valence obstructions No-Go&nbsp;VIII/VIIIb
+        (E4, L=5 persistence certified by execution); emergent time as a global
+        non-Hermitian arrow with N-independent local holonomy (No-Go&nbsp;VII,
+        E4); and the scaling metric on single-site spin-1 state space
+        (Theorems&nbsp;A/B/S1/S2, E4) with isotropy derived from positivity
+        (E4-with-fence). Graded delivery per the title-grade contract: time
+        E3-local / E2-global-pending; 3D E4-link-space / E0-spatial; metric
+        E4-state-space, link-space reading open. Machine-certified under the
+        seven-gate standing battery; every number verified against the
+        artifact that computes it.
+      </div>
+      <div class="authors">Z User</div>
+      <div class="institution">Reconciliation-from-Constraints (RCF) program<br>
+      Compiled manuscript &middot; Sections 1&ndash;6 with certificate appendices</div>
+      <div class="footer">
+        <span>RCF DOCUMENT SERIES &middot; PAPER II OF III</span>
+        <span>NOVEMBER 2026 &middot; COMMITMENT r8.3</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -143,20 +143,34 @@ the 64D edge kernel K_3^(x)3 completely:
 | Forbid J_vtx = 3 (dim 7) | 0 / 64 | 8/49 = 0.163265 | 0.097265 |
 
 [Machine support: r53c_static.json bulk_static (all four rows),
-target_check (full-space deviation 0.0 on every row). The L = 5
-persistence leg is STRUCK from this table and the claim: 0.246717
-is certified NOWHERE in the corpus (r8.2 P2 machine sweep — it
-appears only as a pre-execution TARGET in r53b's register and
-pr_vtx1_sheet, whose execution block is "deferred-to-script-2"
-and was never completed in any later script; the r8.0 erratum
-corrected the ATTRIBUTION r53b -> r53c without noticing the
-number was never computed at all — a second-order
-artifact-vs-mention instance, logged D-class). The construction
-facts the artifacts DO pin for any future L = 5 run: three L = 5
-axis chains = 15 sites with center registers at sites 2, 7, 12
-(midpoints; 0-indexed), full space 3^15 = 14,348,907, per-axis
-kernel dim 16 = 2^(L-1), compressed kernel 16^3 = 4,096. PR-VTX-1's
-L = 5 leg reverts to OPEN (untested — no claim either direction).]
+target_check (full-space deviation 0.0 on every row). L = 5
+persistence leg CLOSED BY EXECUTION at r8.3a (r83_l5cert.py/.json,
+pre-compilation run): three L = 5 axis chains = 15 sites (registers
+at 2, 7, 12; 0-indexed midpoints), full space 3^15 = 14,348,907,
+edge kernel K_5^{(x)3} dim 4^3 = 64 (per-axis dim EXACTLY 4 at
+every L >= 2 — the r5.2 P3 gate; the 16 = 2^(L-1) formula was that
+erratum, agreeing only at L = 3, and the 16^3 = 4,096 object in the
+r53b sheet spec was a never-run different construction). Vertex
+projectors = spectral projectors of Jtot^2 in the 27D register
+space, compressed to the 64D kernel basis by the exact Gram-
+factorized route W = V^dag (P (x) I) V; the L = 3 reproduction
+gate reproduces r53c's certified values EXACTLY (max deviation
+0.0). L = 5 results, all four J sectors ker 0/64 — No-Go VIIIb
+persists at bulk length 5: J=0 [0.035245, 0.039039] (the exact
+product floor 8000/226981 = 0.03524524 confirmed to the digit,
+from the M = +-1 triplet middle-site dm (16, 20, 25)/61 — machine
+[0.262296, 0.327869, 0.409835]); J=1 [0.322494, 0.344170];
+J=2 [0.370075, 0.370564]; J=3 [0.246717, 0.272010] — machine
+[0.246716686, 0.272009551]. The r53b sheet target 0.246717 is
+CONFIRMED BY EXECUTION: the r8.2 strike ("certified nowhere") is
+superseded — the number now has a certifying artifact
+(r83_l5cert.json). The spectra sit within 0.001-0.013 of the exact
+bulk dimension weights (1, 9, 10, 7)/27, consistent with the
+L -> infinity convergence of the bulk single-site dm to (1/3) 1_3.
+A first-draft compression route (polynomial of the compressed J2)
+was WRONG (compression does not commute with polynomials) and was
+caught by the L = 3 reproduction gate before any L = 5 number was
+reported — logged in the r8.3a register.]
 
 Analytic mechanism (r53d_closure C3/C4, E4): on a bulk 3-site AKLT
 chain K_3, the J = 1 triplet's middle-site reduced density matrix

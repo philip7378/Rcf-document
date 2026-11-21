@@ -1,0 +1,163 @@
+{
+  "GATE_S": {
+    "max_comm": 3.1718998303807225e-16,
+    "casimir": 5.438959822042073e-16,
+    "verdict": "PASS",
+    "norm_convention": "Schrodinger S=1, S.S = 2; eigenvalues absolute; projector compression W = V^dag (P (x) I) V on orthonormal kernel columns."
+  },
+  "gate_P3_kernel_dim_4": {
+    "per_axis_kernel_dims_L2..L6": {
+      "2": 4,
+      "3": 4,
+      "4": 4,
+      "5": 4,
+      "6": 4
+    },
+    "all_dim_4": true,
+    "note": "the struck formula 16 = 2^(L-1) agreed only at L=3 (2^2 = 4) and breaks at L=5 \u2014 the r8.2 caption carried a recurrence of the r5.2 P3 erratum. The true 3-axis compressed edge kernel is 4^3 = 64 at every L; the 16^3 = 4,096 object in the r53b sheet spec was a never-run different construction."
+  },
+  "register_space_check": {
+    "J2_reg_eigenvalue_counts": {
+      "0": 1,
+      "1": 9,
+      "2": 10,
+      "3": 7
+    },
+    "P_dims": {
+      "0": 1,
+      "1": 9,
+      "2": 10,
+      "3": 7
+    },
+    "note": "27 = 1 + 9 + 10 + 7 multiplet-state counts (J=0:1, J=1:3 multiplets x3, J=2:2x5, J=3:1x7) \u2014 matches the r53c P_vtx_dim column."
+  },
+  "L3_reproduction_gate": {
+    "per_J": {
+      "0": {
+        "ker_out_of_64": 0,
+        "lambda_comp_min": 0.023323615,
+        "lambda_comp_max": 0.067055394
+      },
+      "1": {
+        "ker_out_of_64": 0,
+        "lambda_comp_min": 0.244897959,
+        "lambda_comp_max": 0.419825073
+      },
+      "2": {
+        "ker_out_of_64": 0,
+        "lambda_comp_min": 0.349854227,
+        "lambda_comp_max": 0.38483965
+      },
+      "3": {
+        "ker_out_of_64": 0,
+        "lambda_comp_min": 0.163265306,
+        "lambda_comp_max": 0.370262391
+      }
+    },
+    "r53c_certified_lambda_comp": {
+      "0": 0.023323615,
+      "1": 0.244897959,
+      "2": 0.349854227,
+      "3": 0.163265306
+    },
+    "max_dev": 0.0,
+    "M_edges_on_V": 1.7151726159190612e-16,
+    "gate": "PASS",
+    "triplet_mid_dm_by_M": {
+      "-0.999347": [
+        0.142956613,
+        0.285795397,
+        0.57124799
+      ],
+      "-0.0": [
+        0.323974999,
+        0.323974999,
+        0.352050002
+      ],
+      "0.999785": [
+        0.142889808,
+        0.285740914,
+        0.571369279
+      ]
+    },
+    "r53d_L3_anchor": "(1, 2, 4)/7 = (0.142857, 0.285714, 0.571429)"
+  },
+  "L5_certification": {
+    "construction": "three L=5 axis chains (15 sites, 3^15 = 14,348,907), kron order X(0-4) Y(5-9) Z(10-14), center registers at 2, 7, 12; edge kernel K_5^{(x)3} dim 4^3 = 64 (per-axis dim 4, gate P3); vertex projectors = spectral projectors of Jtot^2 in the 27D register space, compressed to the 64D kernel basis via the exact Gram-factorized route (W = V^dag (P (x) I) V).",
+    "per_J": {
+      "0": {
+        "ker_out_of_64": 0,
+        "lambda_comp_min": 0.035245241,
+        "lambda_comp_max": 0.03903851
+      },
+      "1": {
+        "ker_out_of_64": 0,
+        "lambda_comp_min": 0.322493953,
+        "lambda_comp_max": 0.344169776
+      },
+      "2": {
+        "ker_out_of_64": 0,
+        "lambda_comp_min": 0.370075028,
+        "lambda_comp_max": 0.370564056
+      },
+      "3": {
+        "ker_out_of_64": 0,
+        "lambda_comp_min": 0.246716686,
+        "lambda_comp_max": 0.272009551
+      }
+    },
+    "triplet_mid_dm_by_M": {
+      "-0.999986": [
+        0.262296045,
+        0.327868964,
+        0.409834991
+      ],
+      "0.0": [
+        0.329166496,
+        0.329166496,
+        0.341667008
+      ],
+      "0.999988": [
+        0.262295887,
+        0.327868945,
+        0.409835168
+      ]
+    },
+    "auditor_anchors": {
+      "J3_spectrum": [
+        0.246717,
+        0.27201
+      ],
+      "triplet_dm_Mp1": [
+        0.26229508196721313,
+        0.32786885245901637,
+        0.4098360655737705
+      ],
+      "J0_product_floor": 0.03524524079107943,
+      "J0_product_floor_value": 0.035245241,
+      "bulk_limit_weights": [
+        0.037037037037037035,
+        0.3333333333333333,
+        0.37037037037037035,
+        0.25925925925925924
+      ]
+    },
+    "anchor_checks": {
+      "J3_min_matches_sheet_target_0.246717": true,
+      "J0_min_vs_product_floor": 0.0,
+      "trend_to_bulk_weights_dev": {
+        "0": -0.001792,
+        "1": -0.010839,
+        "2": -0.000295,
+        "3": -0.012543
+      }
+    },
+    "verdict_0.246717": {
+      "r53b_sheet_target": 0.246717,
+      "machine_J3_compressed_min": 0.246716686,
+      "match": true,
+      "disposition": "CONFIRMED BY EXECUTION: the r53b sheet target 0.246717 is the J=3 compressed lambda_min on the 64D L=5 bulk cross; the number now has a certifying artifact (this one). The r8.2 strike is superseded \u2014 the L=5 leg closes as CERTIFIED (all four J sectors: ker 0/64, floors as printed). PR-VTX-1's L=5 persistence claim (the gap persists from L=3 to L=5) is machine-verified."
+    }
+  },
+  "elapsed_s": 1.71
+}

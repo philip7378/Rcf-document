@@ -1,17 +1,20 @@
 [Drafting baseline: r6.0 lock + r6.0a + r6.1 + r6.2 + r7.0 + r8.0
-+ r8.1 + r8.2 (audit patches: the M-pin's Pearson witness
++ r8.1 + r8.2 + r8.3a (audit patches: the M-pin's Pearson witness
 ln(2.5) = 0.916291 with all K in [-1,1] replacing the artifact-
 carrying ln 3 witness; the AKLT M = ln(4/3) = 0.287682 E4
-identity; 0.246717 STRUCK — certified nowhere in the corpus,
-PR-VTX-1's L=5 leg reverts OPEN; 5.3.1's convention declarations,
-Kelly-Straus / Albert non-specialty, and the anisotropy-based
-polygon exclusion). §1 drafted LAST per the lock so every claim,
-grade, certificate ID and fence below matches the committed
-text of §§2-5 one-to-one. Every number in this section was
-re-verified against the certifying corpus JSONs this round
-(r82_patches.py; the standing rule: a number is verified only
-against the artifact that certifies it, not one that mentions
-it).]
+identity; the L=5 leg CLOSED BY EXECUTION at r8.3a — 0.246717
+CONFIRMED as the J=3 compressed lambda_min on the 64D L=5 bulk
+cross (machine 0.246716686), the r8.2 strike superseded, the
+per-axis kernel formula corrected to dim 4 at every L (the 16 =
+2^(L-1) recurrence of the r5.2 P3 erratum struck from the
+caption); 5.3.1's convention declarations, Kelly-Straus / Albert
+non-specialty, and the anisotropy-based polygon exclusion). §1
+drafted LAST per the lock so every claim, grade, certificate ID
+and fence below matches the committed text of §§2-5 one-to-one.
+Every number in this section was re-verified against the
+certifying corpus JSONs this round (r82_patches.py + r83_l5cert.py;
+the standing rule: a number is verified only against the artifact
+that certifies it, not one that mentions it).]
 
 Section 1: Introduction — From 1D Existence and the Paper I
 Mechanism Library to Emergent 3D Link Space, Time, and the
@@ -242,12 +245,12 @@ beside the number.
 | :--- | :---: | :--- | :--- |
 | Relational individuation -> position = distance + direction | E4 / Framing | 2.1, PR-SCALE-1 (r5.1) | Setup for J_D; not physical space |
 | Theorem II.1: J_D ~= H_n(C) iff (D_loc,n)=(3,2); derives SU(2)/SO(3) | E4 | 2.2, r53_preflightC, r62_adjudicate | Declared M_n(C) saturation input; D_loc=3 link-space != d_H=3 spatial (E0) |
-| H_2(C) Lorentz cone det X = x_0^2 - |s|^2; SL(2,C) -> SO^+(1,3) | E4 (hook) / E0 (boosts) | 2.3, r53e_verify (2.7e-13 / 3.8e-15) | Generativity Entry #2; boost bridge deferred |
+| H_2(C) Lorentz cone det X = x_0^2 - abs(s)^2; SL(2,C) -> SO^+(1,3) | E4 (hook) / E0 (boosts) | 2.3, r53e_verify (2.7e-13 / 3.8e-15) | Generativity Entry #2; boost bridge deferred |
 | No-Go VIII: bare spin-1 P^(2) empties kernel for all z >= 3 (10 witnesses + T-tree) | E4 | 3.1, r53a_preflightB | Two-method 2.9e-15; Gate G |
-| No-Go VIIIb: all static bulk SU(2) vertex projectors empty K_3^{(x)3} (8/343..8/49) | E4 | 3.2, r53b_armsAB, r53c_static | Analytic floor 8/343; L=3 bulk cross. PR-VTX-1's L=5 persistence leg OPEN (r8.2: 0.246717 certified nowhere; struck) |
+| No-Go VIIIb: all static bulk SU(2) vertex projectors empty K_3^{(x)3} (8/343..8/49) | E4 | 3.2, r53b_armsAB, r53c_static, r83_l5cert | Analytic floor 8/343 at L=3 (reproduced exactly by the r8.3a route); L=5 persistence CERTIFIED by r8.3a execution: all four J sectors ker 0/64, J=3 spectrum [0.246717, 0.272010] (machine 0.246716686/0.272009551), J=0 floor 8000/226981 exact |
 | Dynamical H_vtx T-MISMATCH (251.142024, [3.448563, 4.218242], 0 dark states) + Arm C transfer (-0.003196 -> +0.004921) | E4 / E3 | 3.3, r53c_static, r53c_armC | RETROSPECTIVE-UNIFICATION class; vertex dynamical activity, not spatial 3D |
 | PR-LINK-1 & tripod: 3-arm rank 3, G^spin (2/3), G^prof (0.632093 / -0.051106), lambda_A = 0.529880 | E3-corner / E4 | 3.4, 5.3, r61_link1, r62_adjudicate, r80_metric2b | 4-arm gives rank 4; lambda_A > 0 = lattice non-planarity order parameter; physical 3D E0 |
-| Multiplicativity gap as correlation-gap degree: Pearson witness ln(2.5); on-axis M = ln(4/3) = 0.287682 | E4 (identity) / E3 (junction) | 3.4, 5.3, r80_metric2b, r82_patches | NOT an entanglement witness (r8.2 D-class retraction); raw ln3 witness carries named |c|>1 artifact |
+| Multiplicativity gap as correlation-gap degree: Pearson witness ln(2.5); on-axis M = ln(4/3) = 0.287682 | E4 (identity) / E3 (junction) | 3.4, 5.3, r80_metric2b, r82_patches | NOT an entanglement witness (r8.2 D-class retraction); raw ln3 witness carries the named abs(c) > 1 artifact |
 | PR-METRIC-2/2b: site -> profile bridge (d_int 3.622512 vs d_chord 1.168930 vs d_scaling 0.006559) | SPEC-INCOMPLETE / FAMILIES-DISAGREE | 3.4, 5.3, r70_metric2, r80_metric2b | Family selection deferred to multi-vertex lattice gate (E0) |
 | Global arrow (H_eff, -[J,Lambda]) & Lie-on-Jordan frame transport (PR-T1b) | E4 | 4.1-4.2, Paper I Eq. 4, r5.1 | Unified generator frame (Instance #10) |
 | PR-NOGO-RAW: omega_raw probe sign flip (2.2831x H_XXX vs 0.7705x H_XY) & transient inversion | E3 | 4.2, r51a_battery, r51d_t1b2, r52_preflightB | Active-NESS throughput only; monotone clock is Gamma_b (E4/E3) |
@@ -288,9 +291,11 @@ beside the number.
     Interface welding requires finite cross-interface
     correlation K > 0 (delta-interior transfer; exact tangency
     is +infinity under the log family).
-  - 0.246717 is not a result: the L=5 persistence leg of
-    PR-VTX-1 is OPEN (certified nowhere in the corpus; struck
-    at r8.2).
+  - The L=5 persistence leg is no longer open: r8.3a closed it by
+    execution (0.246717 confirmed as the J=3 compressed lambda_min;
+    all four J sectors empty the 64D kernel at L=5). What remains
+    honestly open is recorded above: the lattice gate, the metric
+    family adjudication, and global multi-overlap time.
   - Paper I inputs stand declared: the 1D open chain is
     staging; Thm 8's 2/3 is the dipole eigen-rate, not the
     kernel correlation (Gate O / T4 split).
