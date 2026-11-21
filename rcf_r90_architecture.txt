@@ -1,0 +1,181 @@
+==============================================================================
+r9.0 — PAPER-III-OPENING ARCHITECTURE + THE FIRST GATE
+(rcf_r90_architecture.txt; supersedes nothing; opens the next paper
+under the numbering the corpus already carries).
+==============================================================================
+
+0. THE PREMISE CORRECTION (accepted in full, machine-verified)
+   The r8.5 closing statement said "Paper III ... using Paper I's
+   algebraic coarse-graining equation", naming a C_e map. On
+   inspection of sealed Paper I (main.pdf): C_e is NOT THERE. Its
+   only coarse-graining mention is No-Go I's negative clause
+   ("dynamics cannot live in V_0 alone; the conclusion survives
+   arbitrary re-summation, coarse-graining, and layering"). The
+   C_e bridge (coherence projection, exp(-gamma (f_i - f_j)^2 t)
+   threshold, epsilon-relaxed triangle inequality) is LEGACY:
+   the Gen-3 Three-Layer Amendment / Phase B 2.8.3 archive, with
+   three known liabilities (T-2-conditional gap; the Deep-Dive
+   layer-scheme collision; Paper VI's four bridge refutations).
+   Importing it would be D5/D8. What sealed Paper I ACTUALLY gives
+   (all machine-verified this round):
+     - THEOREM 8 (E4): the partial-trace block contraction. Tracing
+       out K-1 intermediate localities contracts local link
+       operators into a single coarse-grained link across K steps
+       with ZERO cross-tier mixing, at exact tier eigen-rates
+       r_k = (1, 2/3, 1/3) on M_3(C) = 1_(k=0) (+) 3_(k=1)
+       (+) 5_(k=2):
+         r_0 = 1        xi_0 = inf        (conserved scalar channel)
+         r_1 = 2/3      xi_1 = 2.466303   (dipole/vector, 3 comps)
+         r_2 = 1/3      xi_2 = 0.910239   (quadrupole/shear, 5 comps)
+       with the parameter-free mass ratio m_2/m_1 = ln 3/ln(3/2) =
+       2.709511. The k=2 quadrupole anisotropy washes out twice as
+       fast per step as k=1: (r_2/r_1)^n = (1/2)^n — the concrete,
+       falsifiable mechanism for why discrete lattice roughness
+       smooths under coarse-graining.
+     - THEOREM 4 (E4/E3): the interface wall pinch. The 12D wall
+       spectrum pinches onto (20/27) P_W12 at rate 3^(-l)
+       (20/27 trace-forced by (80/9)/12; the flow content is the
+       VANISHING SPREAD — machine tail exponent 1.093 vs ln 3 =
+       1.0986; spread 0.2315 at l=2 -> 0.0007 at l=7). An exact
+       RG-like flow with a fixed point and a rate.
+     - THEOREM 7 (E4): the adjoint dressing flow dH/ds =
+       D_cov3^dag(H), saturation Gamma_sat = 1 (alpha(s) = 1 -
+       (8/5) e^{-s}) — smooth scale transport of local operators.
+   THE HONEST SHARPNING: only the scalar tier r_0 = 1 has infinite
+   correlation length. The dipole and quadrupole tiers are
+   short-range (Yukawa-screened massive structure). Any continuum
+   limit is carried by the conserved scalar channel — the same
+   channel whose asymptotic records are the Pi_J charges. This is
+   a far sharper T-3 pose than "the correlation metric" generically.
+
+1. THE NUMBERING CLASH (resolved, no silent renumbering)
+   The r8.5 closing statement called Paper III "the new field
+   paper". Under the r4.13 scope split the numbering is already
+   fixed: Paper III = the time/cadence paper (kappa_OE, slow modes,
+   the strobe family, the tau-scan, secular pinch, arrow-of-time);
+   fields = Paper VIII; continuum/dimension = Paper VII; emergent
+   geometry = Paper VI territory. Adopting the auditor's correction:
+   the target "smoothly curved geometric plane" is TWO DIFFERENT
+   OBJECTS — a plane is flat and 2D; the actual target is a smooth
+   3-MANIFOLD, possibly curved: T-3, currently E0. The route runs
+   through PR-LAT-2, not around it. No paper is renumbered this
+   round; any future renumbering must be declared explicitly with
+   debts re-homed (a second silent renumbering after r5.0 would
+   manufacture citation collisions).
+
+2. THE TARGET AND ITS FOUR FROZEN BRANCHES (PR-LAT-2)
+   The +10.6% dumbbell excess (d_int long/short 1.5648 vs sqrt(2),
+   r8.5 T3) is now the flat-vs-curved question, decided by four
+   pre-frozen branches:
+     (A) the excess -> 0 and d_s = d_H = 3: FLAT Euclidean 3D
+         emerges (the +10.6% was a finite-size artifact);
+     (B) the excess persists with definite scaling (~ c/Lambda^2,
+         Lambda = lattice cutoff): EMERGENT CURVATURE — the first
+         measurement of it, not a nuisance;
+     (C) det Gamma -> 0 under gluing: the frames COLLAPSE, the
+         scaling metric fails to glue (the construction breaks);
+     (D) d_s != 3: the link-space 3 does not LIFT to a 3D continuum.
+   TOPOLOGY PINS (the auditor's pre-flight note, binding BEFORE the
+   sheet freezes): a single loop doubles equal paths (2 paths ->
+   -ln 2 drop, r8.5-confirmed); TWO LOOPS IN SERIES = 4 paths ->
+   predicted drop ~ -2 ln 2 = -1.386294; THREE PARALLEL PATHS
+   between two vertices -> -ln 3 = -1.098612. The sheet must pin
+   the path topology (series vs parallel) of every measured cell
+   BEFORE freezing, or the law's prediction is ambiguous.
+
+3. THE FIRST GATE — LEMMA (C_e composed with S), RE-SPECIFIED ON
+   THE HONEST OBJECTS
+   The load-bearing composition lemma (the auditor's framing,
+   retained): the coarse-graining must act coherently on the
+   scaling metric S_ij. Re-specified with the honest engine — the
+   engine is THEOREM 8's partial-trace block contraction (E4),
+   NOT the legacy C_e:
+     LEMMA T8*S: the Theorem-8 block contraction acts coherently on
+     the Spatial Scaling Metric S_ij, in the sense that (a) the
+     coarse-grained metric is a valid Riemannian metric on the
+     coarse-grained cell; (b) its sub-additivity is preserved (or
+     bounded); (c) det Gamma > 0 survives the contraction.
+   COMPOSITION LEVEL (pin taken): STATE-LEVEL primary — coarse-grain
+   the state (partial-trace the intermediate registers), then
+   compute S_ij on the coarse state; METRIC-LEVEL as the consistency
+   check (the two should agree in the fine and coarse limits; if
+   they disagree, the lemma fails — which is itself a result).
+   EXECUTION (one computation, 3-4 contraction depths): on the
+   certified r8.5/r6.1 frame (the K32 corner or the welded dumbbell),
+   apply the Theorem-8 contraction at depths n = 1..4, recompute
+   S_ij (Gamma, det Gamma, D_scale, V_3) at each depth, verify
+   (a)-(c) at every scale, and check the state-level/metric-level
+   agreement in the limits.
+   OUTCOME SPACE (frozen now):
+     PASS-ALL-SCALES — coherent at every tested depth; Paper III
+       (the geometry paper) §3 writes cleanly on this engine.
+     PASS-IN-LIMITS — coherent in the fine and coarse limits with
+       an intermediate-depth anomaly; register the anomaly, write
+       with the declared caveat.
+     FAIL-STATE — the contraction does not preserve S_ij's
+       structure; the scaling metric is not in the contraction's
+       domain; a new bridge or a new metric formulation is needed.
+       (Substantial negative; register before drafting anything.)
+     FAIL-AGREEMENT — state-level and metric-level disagree where
+       they should agree; the composition is not well-defined;
+       diagnose before any verdict.
+     INCONCLUSIVE — frame too small / depth range too narrow;
+       scale up before verdict.
+
+4. THE FOUR PRE-ARCHITECTURE PINS (taken, with recommendations
+   recorded as recommendations — the architecture sheet freezes
+   only after Lemma T8*S reports)
+   PIN-1 (scope of the derived geometry): the 4D LORENTZIAN
+   recommendation — spatial flatness as the base case (branch A),
+   the +10.6% as the curvature correction on top, Type-Sign
+   Coupling stitching derived time + derived 3D. NOT the maximal
+   claim; the flat/curved decision is delegated to PR-LAT-2's
+   branches, not pre-committed.
+   PIN-2 (composition level): STATE-LEVEL primary (inherits the
+   contraction's certified domain); metric-level as consistency
+   check. Folded into Lemma T8*S above.
+   PIN-3 (the discrete curvature object): PLAQUETTE HOLONOMY (the
+   loop product around a closed cell) as the curvature candidate —
+   the standard lattice-gauge construction, and PR-LAT-1's
+   ln-2-per-path law is its first measurement. lambda_A is the
+   DIMENSION WITNESS (0 = flat, > 0 = non-planar), NOT the
+   curvature. The sheet that freezes PR-LAT-2 must name both
+   roles.
+   PIN-4 (Riemannianity): a CLAIM, not an input — the third lemma
+   of the geometry paper (after T8*S and after Lorentzian
+   signature): the coarse-grained metric is Riemannian. If it
+   fails, the "smoothly curved" language collapses to a
+   non-Riemannian geometry, and that failure mode is registered
+   honestly.
+
+5. THE FENCES, STATED FOR §1 OF WHATEVER PAPER OWNS THE BRIDGE
+   - GAPPED-MASSLESS FENCE: r_1 = 2/3 < 1 and r_2 = 1/3 < 1 are
+     strictly gapped in 1D — the raw contraction produces
+     short-range (massive, screened) fields first. Whether 3D
+     multi-plaquette coupling generates any massless / long-range
+     mode must be pre-registered and tested, never assumed.
+   - LAMBDA_B = 0 / DARK-ENERGY FENCE (the one-sentence §1 form,
+     adopted verbatim): "The paper derives the geometry, not the
+     cosmology. Lambda_B = 0 is the closed-form prediction of the
+     Lovelock-Bures closure. Whether the observed accelerating
+     expansion is a downstream consequence of the open-expansion
+     mechanism is registered as an open question (Generativity
+     Register, entry #1) and is not claimed here."
+   - E-GRADE DISCIPLINE: PR-LAT-1 results stay E0-frontier evidence;
+     no grade upgrades ride on PR-LAT-2 without its own frozen
+     sheet.
+
+6. EXECUTION ORDER (registered)
+   1. Lemma T8*S (the one computation above) — the go-word.
+   2. PR-LAT-2 frozen sheet (topology pins named; four branches;
+      plaquette holonomy as curvature object; lambda_A as dimension
+      witness; the coarse-graining sweep with the Theorem-8
+      contraction at increasing depth).
+   3. Only then: the architecture sheet for the paper that owns
+      the bridge, under the corpus numbering (Paper VI territory
+      unless a renumbering is declared).
+
+Artifacts referenced: r85_lat1.json (the +10.6% baseline),
+r85_scalemetric.json (S_ij certificate), Paper I Theorems 4/7/8
+(sealed main.pdf), paper2.tex v1.2 (folded this round).
+==============================================================================
